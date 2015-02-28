@@ -1,4 +1,1 @@
-xiongtx.github.io
-=================
-
-GitHub user site
+This is TX's personal website. 
