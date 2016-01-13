@@ -1,0 +1,38 @@
+---
+layout: post
+title: Code Syntax Highlighting on WordPress.com
+date: 2011-07-15 22:03:18.000000000 -05:00
+categories:
+- C++/CLI
+- WordPress.com
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+  jabber_published: '1310792658'
+  dsq_thread_id: '670306469'
+  _syntaxhighlighter_encoded: '1'
+author:
+  login: xiongtx
+  email: tianxiang.xiong@gmail.com
+  display_name: xiongtx
+  first_name: Tianxiang
+  last_name: Xiong
+---
+<p>I thought that WordPress.com blogs could not do syntax highlighting, but I was wrong! And I am so glad that I am wrong on this! Not only is there syntax highlighting for many languages available (see <a href="http://en.support.wordpress.com/code/posting-source-code/">here</a>), but the code is automatically formatted as well (<strong>edit:</strong> the syntax highlighter will remove extraneous spaces like initial indentations, but won't automatically adjust things like braces and parentheses).</p>
+<p>The only downside is that keyword colors cannot be changed; the default colors aren't bad, however.</p>
+<p>Below is a snippet of C++/CLI code used as a test.</p>
+<p>[sourcecode language="cpp"]</p>
+<p>// Open a student catalog .txt file<br />
+private: void OpenStudentCatalog(void)<br />
+{<br />
+    OpenFileDialog^ openStudentCatalog = gcnew OpenFileDialog;<br />
+    openStudentCatalog-&gt;Title = &quot;Open student catalog...&quot;;<br />
+    openStudentCatalog-&gt;Filter = &quot;Text files (*.txt)|*.txt&quot;;</p>
+<p>    if (openStudentCatalog-&gt;;ShowDialog() == System::Windows::Forms::DialogResult::OK){<br />
+	this-&gt;pathStudentCatalog = openStudentCatalog-&gt;;FileName;<br />
+    }<br />
+}</p>
+<p>[/sourcecode]</p>

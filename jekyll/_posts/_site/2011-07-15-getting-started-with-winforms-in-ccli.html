@@ -1,0 +1,83 @@
+<p>Opening a new Visual C++ WinForms project, the first object we see is the designer, which represents a blank form. The designer can be used to add/delete controls, move controls around, and change controls' basic properties such as name, text, background image, etc. More complex operations should be done within the code, however. To change from designer to code, right-click the designer and select "View code".</p>
+<p>[caption id="attachment_56" align="aligncenter" width="450" caption="The initial screen of a WinForms project"]<a class="thickbox" href="http://blog.tianxiangxiong.com/wp-content/uploads/2011/07/gettingstarted_form1.png"><img class="size-full wp-image-56" title="GettingStarted_Form1" src="assets/gettingstarted_form1.png" alt="" width="450" height="250" /></a>[/caption]</p>
+<p>A form is categorized as a header file. The default form is titled "Form1.h". As a header file, it contains the ubiquitous <span style="color:#0000ff;"><em>#pragma once</em></span> preprocessor directive by default, so that the file would be included only once.</p>
+<p>All the code used to build the form is included in a namespace, which by default has the same name as the project. DO NOT try to change this namespace's name, because resource files (kept in <span style="color:#000000;">Form1.resX</span>) use the project name as part of their identifiers. If the namespace name does not match the project name, the resource file won't be found. I learned this lesson the hard way <a href="#Default_Namespace_Story">[1]</a>.</p>
+<p>Default namespaces are included. To make my Student RecordKeeper project, I included two other useful namespaces:</p>
+<p>[sourcecode language="cpp" gutter="false"]</p>
+<p>using namespace System::IO;<br />
+using namespace System::Collections::Generic</p>
+<p>[/sourcecode]</p>
+<p><span style="color:#0000ff;"><em>System::IO</em></span> is useful for opening, reading, writing to, and closing text files. <em><span style="color:#0000ff;">System::Collections::Generic</span></em> is useful for using generic collections such as <span style="color:#800000;">List</span> and <span style="color:#800000;">Dictionary</span>.</p>
+<p><span style="color:#800000;">Form1</span> is an instance of the <span style="color:#0000ff;"><em>System::Windows::Forms::Form</em></span> class. As I understand it, in C++/CLI <span style="color:#0000ff;"><em>ref class</em></span> is used to indicate that a class is managed. The default constructor and destructor follow.</p>
+<p>The most interesting part of the code is the <span style="color:#800000;">InitializeComponent()</span> function. When I first began working with a WinForms project, I kept writing code in the body of the function and wondered why the designer would stop working. Well, turns out you shouldn't ignore big, multi-line warning comments ;). The <span style="color:#800000;">InitializeComponent()</span> function is used by the designer and is automatically updated. In short, don't touch anything within the function <a href="#Pragma_Region">[2]</a>.</p>
+<p>That's a pretty thorough introduction to a default WinForms application, I think. The full code can be seen below after uncollapsing the section.</p>
+<p>[sourcecode collapse="true" language="cpp"]</p>
+<p>#pragma once</p>
+<p>namespace Example_GettingStarted_WinForms {</p>
+<p>	using namespace System;<br />
+	using namespace System::ComponentModel;<br />
+	using namespace System::Collections;<br />
+	using namespace System::Windows::Forms;<br />
+	using namespace System::Data;<br />
+	using namespace System::Drawing;</p>
+<p>	///<br />
+&lt;summary&gt; /// Summary for Form1<br />
+ ///<br />
+ /// WARNING: If you change the name of this class, you will need to change the<br />
+ /// 'Resource File Name' property for the managed resource compiler tool<br />
+ /// associated with all .resx files this class depends on. Otherwise,<br />
+ /// the designers will not be able to interact properly with localized<br />
+ /// resources associated with this form.<br />
+ /// &lt;/summary&gt;<br />
+	public ref class Form1 : public System::Windows::Forms::Form<br />
+	{<br />
+	public:<br />
+		Form1(void)<br />
+		{<br />
+			InitializeComponent();<br />
+			//<br />
+			//TODO: Add the constructor code here<br />
+			//<br />
+		}</p>
+<p>	protected:<br />
+		///<br />
+&lt;summary&gt; /// Clean up any resources being used.<br />
+ /// &lt;/summary&gt;<br />
+		~Form1()<br />
+		{<br />
+			if (components)<br />
+			{<br />
+				delete components;<br />
+			}<br />
+		}</p>
+<p>	private:<br />
+		///<br />
+&lt;summary&gt; /// Required designer variable.<br />
+ /// &lt;/summary&gt;<br />
+		System::ComponentModel::Container ^components;</p>
+<p>#pragma region Windows Form Designer generated code<br />
+		///<br />
+&lt;summary&gt; /// Required method for Designer support - do not modify<br />
+ /// the contents of this method with the code editor.<br />
+ /// &lt;/summary&gt;<br />
+		void InitializeComponent(void)<br />
+		{<br />
+			this-&gt;SuspendLayout();<br />
+			//<br />
+			// Form1<br />
+			//<br />
+			this-&gt;AutoScaleDimensions = System::Drawing::SizeF(8, 16);<br />
+			this-&gt;AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;<br />
+			this-&gt;ClientSize = System::Drawing::Size(586, 373);<br />
+			this-&gt;Name = L&quot;Form1&quot;;<br />
+			this-&gt;Text = L&quot;Form1&quot;;<br />
+			this-&gt;ResumeLayout(false);</p>
+<p>		}<br />
+#pragma endregion<br />
+	};<br />
+}</p>
+<p>[/sourcecode]</p>
+<p><a name="Default_Namespace_Story"></a>[1] As mentioned in a previous post, I began my project (which I called Schedule_UI, even though it's not really a personal schedule maker but rather a grade recorder) in VS2010 and discovered that there is no Intellisense support for C++/CLI, so I ported my project over to VS2008. Well, when I created a new project for VS2008, I named it Schedule_UI_2008. When I copy-pasted my code from the VS2010 project into the VS2008 project, I kept the namespace as Schedule_UI.</p>
+<p>Everything worked just fine until I tried to add a background image to a button. The program simply could not find the image resource, even though it was clearly located in the Form1.resX resource file. Took me a <em>long</em> time before I found the answer.</p>
+<p><a name="Pragma_Region"></a>[2] Note that the <span style="color:#800000;">InitializeComponents()</span> function is surrounded by the pair of  directives <span style="color:#0000ff;"><em>#pragma region</em></span>/<span style="color:#0000ff;"><em>#pragma endregion</em></span>. This allows the code between the directives to be collapsed, and is useful for creating user-defined regions of code.</p>
+<p>However, there is a big disadvantage to doing this: functions within the region can no longer be collapsed! See <a href="http://connect.microsoft.com/VisualStudio/feedback/details/654313/outlining-in-a-pragma-region-block-disappears">here</a> for more information. Although the issue in the link was reported in 2011, this problem has existed since VS2005 and I've seen several Microsoft responses claiming that it would be fixed in a patch for VS2005, then in VS2008, then finally in VS2010. So I wouldn't hold my breath for it to be fixed in VS2012 or whatever the next version of Visual Studio becomes.</p>

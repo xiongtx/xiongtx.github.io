@@ -1,0 +1,31 @@
+---
+layout: post
+title: Sofa!
+date: 2011-06-30 21:31:12.000000000 -05:00
+categories:
+- C++/CLI
+- Visual Studio
+- WinForms
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  dsq_thread_id: '868904935'
+  _edit_last: '2'
+  jabber_published: '1309498279'
+author:
+  login: xiongtx
+  email: tianxiang.xiong@gmail.com
+  display_name: xiongtx
+  first_name: Tianxiang
+  last_name: Xiong
+---
+<p>I'll be using this blog to record my progress in building a Schedule/Grade Recorder using WinForms in C++/CLI. I have been working on this project for 3 weeks and it has been both a frustrating and educational experience.</p>
+<p>I was going to create this project with WPF but I am unfamiliar with C#, so I resigned myself to using WinForms, which from what I've read is already considered obsolete and being replaced by the former. I began this project with only a mediocre background in unmanaged C++ and immediately encountered several problems.</p>
+<ol>
+<li><strong>WinForms requires managed C++; that is, C++/CLI.</strong> C++/CLI is basically an extension of regular C++ that works within Microsoft's .NET framework and allows nifty features like memory management. I initially had no idea what the .NET framework or the Common Language Runtime were and boy did I have a hard time making sense of it all; my grasp of the concept is still mostly cursory but I now know enough to write code for my project.</li>
+<li><strong>Visual Studio 2010 does not have Intellisense support for C++/CLI</strong>. Intellisense is Visual Studio's auto-completion feature for code. You can read all about it and it doesn't work for C++/CLI in VS 2010 <a title="C++/CLI: Why no Intellisense?" href="http://blogs.msdn.com/b/vcblog/archive/2011/03/03/10136696.aspx" target="_blank">here</a>. I started my project in VS 2010 and started playing around with the WinForms designer and did not discover this until I began to write code. Moving my project over to VS 2008 was a pain and would cause a very serious problem down the road; more on that later. So why did I have to move my project over to VS 2008? Because...</li>
+<li><strong>Previous versions of VS cannot open projects created in VS 2010. </strong>To be honest this one makes perfect sense, but it was still very tedious to copy-paste files over to VS 2008.</li>
+</ol>
+<div>Furthermore, C++/CLI does not seem to be very popular for writing WinForms applications. Almost all the code examples on MSDN, Stack Overflow, and other websites are geared towards C#. While the functions and classes used in these codes are usually part of the Base Class Library and accessible in C++/CLI, I'd sure like to see some examples specifically targeting the language I'm using.</div>

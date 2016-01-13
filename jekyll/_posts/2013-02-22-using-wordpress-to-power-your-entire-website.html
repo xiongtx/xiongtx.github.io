@@ -1,0 +1,29 @@
+---
+layout: post
+title: Using WordPress to power your entire website
+date: 2013-02-22 19:54:07.000000000 -06:00
+categories:
+- Web development
+- Web host
+- Wordpress
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+  _wpas_done_all: '1'
+  _wpas_skip_3002896: '1'
+  _wpas_skip_3002901: '1'
+author:
+  login: xiongtx
+  email: tianxiang.xiong@gmail.com
+  display_name: xiongtx
+  first_name: Tianxiang
+  last_name: Xiong
+---
+<p>Until yesterday, I had my blog set up at the <em>subdomain</em> <tt>www.blog.tianxiangxiong.com</tt>, but nothing at the site root, <tt>www.tianxiangxiong.com</tt>. However, this subdomain simply pointed to the files at my <em>subdirectory</em>, <tt>www.tianxiangxiong.com/blog</tt>. This will cause me a lot of headache later on. </p>
+<p>Previously, the plan was to use a web development framework like Django to create my homepage. However, after my computer got stolen (long story), the plan simply petered out. It wasn't that I lost all my work--in fact, I hadn't done much besides familiarize myself with the basic aspects of Django. It's more so that I am forced to use the lab computer I acquired as part of my Pratt Fellows research program as my primary computer, and I don't feel that it's appropriate to install a lot of non-work-related software on it.</p>
+<p>Therefore, after allowing my homepage to languish for about a year, I decided to simply use WordPress to power my entire site. </p>
+<p>The process was simpler than I expecgted. I simply followed the instructions at the WordPress Codex, <a href="http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory#Pointing_your_home_site.27s_URL_to_a_subdirectory" title="Giving WordPress Its Own Directory" target="_blank">Giving WordPress Its Own Directory</a>. Though the title is rather ambiguous, it's a guide intended for individuals who want WordPress to power their site root, but have it in its own subdirectory, e.g. <tt>www.tianxiangxiong.com/blog</tt>, to avoid cluttering up their root directory. The section relevant to me is "Using a pre-existing subdirectory install". </p>
+<p>It was an easy process for the most part, but I did encounter a few problems. Recall the previous mention of subdomain and subdirectory. The key here is to use the latter for the WordPress Address URL and not the former, or else functions like previewing posts will get broken. </p>

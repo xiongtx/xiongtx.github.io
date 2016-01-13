@@ -1,0 +1,26 @@
+name: TX
+title: "TX"
+description: "Personal site of Tianxiang Xiong"
+url: "http://www.tianxiangxiong.com"
+
+author:
+  name: "Tianxiang Xiong"
+  email: "tianxiang.xiong@gmail.com"
+  github: "xiongtx"
+  twitter: "@xiongtx"
+  uri: "http://www.tianxiangxiong.com"
+
+baseurl: ""
+
+github:
+  url:"https://github.com/xiongtx/xiongtx.github.io"
+
+
+# Build settings
+
+redcarpet:
+  extensions:
+    - no_intra_emphasis
+    - tables
+    - footnotes
+    - with_toc_data

@@ -1,0 +1,11 @@
+# Jekyll generated site
+jekyll/.jekyll-metadata
+jekyll/_drafts/
+jekyll/_site/
+
+#Bundled gems
+.bundle/
+vendor/
+
+# Caches
+.sass-cache/

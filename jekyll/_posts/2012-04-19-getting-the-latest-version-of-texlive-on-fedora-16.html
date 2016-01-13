@@ -1,0 +1,51 @@
+---
+layout: post
+title: Getting the latest version of TeXLive on Fedora 16, and installing packages
+date: 2012-04-19 18:08:29.000000000 -05:00
+categories:
+- Fedora
+- LaTeX
+- Linux
+- TeX
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  dsq_thread_id: '670302040'
+  _edit_last: '2'
+  jabber_published: '1334884112'
+author:
+  login: xiongtx
+  email: tianxiang.xiong@gmail.com
+  display_name: xiongtx
+  first_name: Tianxiang
+  last_name: Xiong
+---
+<p>In line with Fedora's (and many other Linux distributions') design philosophy, all installed packages should be managed centrally through <code>yum</code>. This is great in principal, because it allows all software on the system to be updated with a single click.</p>
+<p>The downside is that not all desired packages are available through Fedora's official repositories. Or, if they are, they may not be regularly updated and properly maintained. The Fedora team also strips out package features that allow updates independent of the operating system.</p>
+<p>In this case, I wanted to use TeXLive 2011, but the pre-installed version is TeXLive 2007 (recall that this is the middle of 2012). An update seems to be in progress, but won't be 100% complete until Fedora 17 <a href="#fedora_texlive_2011">[1]</a>.</p>
+<p>Even if TeXLive 2011 was available, however, the policy on banning alternate update methods means that a part of the TeXLive distribution, <code>tlmgr</code> will be stripped out. <code>tlmgr</code> allows connection to a LaTeX repository and automates the installation/removal of LaTeX packages.</p>
+<p>Since I needed some external packages and <code>tlmgr</code>, I downloaded TeXLive manually (see <a href="http://www.tug.org/texlive/acquire-netinstall.html">here</a> for instructions). I also needed to install some packages not available via LaTeX repositories. Here's how to install packages using <code>tlmgr</code> and by hand:</p>
+<h3>By <code>tlmgr</code></h3>
+<p><code></code><code>BASH</code> is unable to find <code>tlmgr</code> without being told its location. To do so, use the <code>export</code> command. The overall process of launching <code>tlmgr</code> is</p>
+<ul>
+<li>Log into shell as root user.</li>
+<li>Run: <code>export PATH=/usr/local/texlive/2011/bin/x86_64-linux:$PATH</code></li>
+<li>Run: <code>tlmgr --gui</code></li>
+<li>Install packages via the GUI</li>
+</ul>
+<h3>By hand</h3>
+<ul>
+<li>Log into shell as root user
+	</li>
+<li>Run: <code>mkdir /usr/local/texlive/2011/texmf/tex/latex/[directory_name]</code>
+	</li>
+<li>Run: <code>mv [file_path] [new_directory_path]</code>
+	</li>
+<li>Run: <code>texhash /usr/local/texlive/2011/texmf</code>
+</li>
+</ul>
+<p><code>texhash</code> updates the package database. </p>
+<p><span style="text-decoration:underline;">Notes</span><br />
+<a name="fedora_texlive_2011"></a>[1] In the meantime, partial updates can be installed using directions found <a href="http://fedoraproject.org/wiki/Features/TeXLive">here</a><a name="unique-identifier"></a>.</p>

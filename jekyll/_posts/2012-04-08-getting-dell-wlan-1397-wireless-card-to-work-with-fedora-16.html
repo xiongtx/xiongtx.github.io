@@ -1,0 +1,37 @@
+---
+layout: post
+title: Getting Dell WLAN 1397 Wireless card to work with Fedora 16
+date: 2012-04-08 00:28:28.000000000 -05:00
+categories:
+- Fedora
+- Linux
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  jabber_published: '1333870112'
+  _edit_last: '2'
+  dsq_thread_id: '687121935'
+  toggle_page_title: '0'
+  _wpas_skip_3002896: '1'
+  _wpas_skip_3002901: '1'
+author:
+  login: xiongtx
+  email: tianxiang.xiong@gmail.com
+  display_name: xiongtx
+  first_name: Tianxiang
+  last_name: Xiong
+---
+<p>So I decided to dual-boot my computer with Linux. I've been mildly aware of wireless card problems with Linux before, but I never would have thought that it would be this difficult to get things to work right. Here's the solution, courtesy of a forum post<del datetime="2012-04-08T07:31:29+00:00"> I can't find the link to now</del>. Thanks <del datetime="2012-04-08T07:31:29+00:00">to that mysterious person</del> user <tt>stoat</tt> from fedoraforums.org (<a href="http://forums.fedoraforum.org/showthread.php?t=264315">link to post</a>) who saved me from hours (more) of frustration.</p>
+<p>The Dell WLAN 1397 Wireless card is shown to be the Broadcom BCM4312 802.11b/g LP-PHY (rev 01) card through the <code>lspci</code> command. The file needed is called</p>
+<pre>broadcom-wl-4.150.10.5.tar.bz2</pre>
+<p>It should be floating around on the internet, available through a quick search. Too bad WordPress won't allow upload of <tt>.tar.bz2</tt> files.</p>
+<p>Get the file onto Fedora through a USB, then navigate to the containing folder using the terminal. Run the following commands in the terminal</p>
+<pre>
+tar xjf broadcom-wl-r.150.10.5.tar.bz2
+cd su broadcom-wl-r.150.10.5/driver
+su 
+b43-fwcutter -w /lib/firmware wl_apsta_mimo.o
+</pre>
+<p>Finally, restart the computer. Wireless internet should be working.</p>

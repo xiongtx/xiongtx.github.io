@@ -1,0 +1,41 @@
+<p>After trying to build my website using HTML, PHP, and the Bluefish Editor for a while, I decided to learn to use a modern web application framework. Of the two popular choices I know of, Django and Ruby-on-Rails, I chose Django because I am more familiar with Python than Ruby. </p>
+<p>I also decided to learn to use Emacs as a secondary goal. Many individuals on StackOverflow suggest that spending time and effort to master a text editor such as Vim or Emacs is a sound investment. At first, I was skeptical. Aren't powerful, feature-rich IDE's such as Visual Studio and Eclipse more capable of helping me write code? Emacs is around 35 years old, and I'm wary of software 15 years older than me. </p>
+<p>Without a doubt, it's very frustrating to get started with Emacs. What's all this about <em>points</em> and <em>buffers</em>? How do I set up a Python <a href="http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" title="REPL : Wikipedia">REPL</a>? Can I get the nifty auto-completion that Eclipse provides?</p>
+<p>The problem was that I kept thinking of Emacs as <em>just</em> a text editor, akin to Notepad. It's better to think of it as an easily customizable and extensible tool that requires the user to tell it what to do. </p>
+<p><a href="http://www.yilmazhuseyin.com/" title="Huseyin Yilmaz" target="_blank">Huseyin Yilmaz</a> has written a three-part tutorial on how to configure Emacs, get it to run Python, and work with HTML and such. I followed his tutorial, and therefore won't repeat anything here.</p>
+<ol>
+<li> <a href="http://www.yilmazhuseyin.com/blog/dev/basic-emacs-setup/" title="Basic Emacs setup : Huseyin" target="_blank">Basic Emacs setup</a>
+</li>
+<li> <a href="http://www.yilmazhuseyin.com/blog/dev/emacs-setup-python-development/" title="Emacs setup for Python development : Huseyin" target="_blank">Emacs setup for Python development</a>
+</li>
+<li> <a href="http://www.yilmazhuseyin.com/blog/dev/emacs-setup-web-development/" title="Emacs setup for web development : Huseyin" target="_blank">Emacs setup for web development</a>
+</li>
+</ol>
+<p>I will, however, give brief descriptions of the components I used, if only so I'll remember what they do. </p>
+<h3>Basic Emacs setup tools</h3>
+<ol>
+<li> <a href="http://www.emacswiki.org/emacs/InteractivelyDoThings" title="IDO" target="_blank">IDO</a> - Stands for "Interactive Do". Tool that allows for quick directory and buffer switching, as well as quick file search. It's built-in for Emacs 23, so there's no need to install it separately.
+</li>
+<li> <a href="http://cx4a.org/software/auto-complete/index.html" title="Auto Complete Mode : Emacs" target="_blank">Autocomplete mode</a> - Tool that provides autocompletion for Emacs.
+</li>
+<li> <a href="http://www.nongnu.org/color-theme/#sec5" title="Color themes : Emacs" target="_blank">Color themes</a> - Color themes for Emacs. I prefer the Bharadwaj theme. Use <tt>Alt-x, color-theme-bharadwaj</tt> to select it.
+</li>
+</ol>
+<h3>Emacs setup for Python development tools</h3>
+<ol>
+<li> <a href="http://pymacs.progiciels-bpi.ca/index.html" title="Pymacs" target="_blank">pymacs</a> - Python binding for Emacs. Can be installed separately, or from Fedora repository using <tt>sudo yum install emacs-pymacs</tt>
+</li>
+<li> <a href="http://rope.sourceforge.net/" title="Rope" target="_blank">rope</a> - Python refactoring library, not specific to Emacs.
+</li>
+<li> <a href="http://pypi.python.org/pypi/ropemode" title="rope-mode" target="_blank">rope-mode</a> - Minor mode for Ropemacs.
+</li>
+<li> <a href="http://rope.sourceforge.net/ropemacs.html" title="Ropemacs" target="_blank">ropemacs</a> - Rope bindings for Emacs. pymacs, rope, and rope-mode should be installed before Ropemacs.
+</li>
+<li> <a href="http://flymake.sourceforge.net/" title="flymake" target="_blank">flymake</a> - On the fly syntax checker for Emacs. Not specific to Python. Needs pyflakes or some other tool to work.
+</li>
+<li> <a href="http://www.plope.com/Members/chrism/flymake-mode" title="flymake-mode" target="_blank">flymake-mode</a> - Minor mode for Flymake
+</li>
+<li> <a href="http://pypi.python.org/pypi/pyflakes" title="pyflakes" target="_blank">pyflakes</a> - Passive checker for Python programs.
+</li>
+</ol>
+<p>I have not tried any of the Emacs setup for web development tools yet. I'll provide updates if and when I try them. </p>

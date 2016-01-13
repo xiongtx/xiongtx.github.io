@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@import "normalize";
+@import "fonts";
+@import "solarized";
+
+/* Fonts */
+$main-font:"Roboto Mono", monospace;
+$main-color: #444;
+$font-size: 18px;
+
+$sans-font: "Roboto", sans-serif;
+$sans-font-size: 0.93em;
+
+$mono-font: "Roboto Mono", monospace;
+$mono-font-size: 0.83em;
+
+/* Colors */
+$heading-color:#222;
+$secondary-color:#777;
+$border-color:#ccc;
+$quote-border-color:#eee;
+
+@mixin font-feature-settings($features...) {
+    // scss-lint:disable VendorPrefix
+    font-feature-settings: $features;
+    -webkit-font-feature-settings: $features;
+}
+body {
+    // Enable a couple of nice font features
+    @include font-feature-settings("onum", "kern", "liga", "clig", "dlig", "calt");
+    color: $main-color;
+    font-family: $main-font;
+    font-size: $font-size;
+}
+// blah
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+@media screen and (min-width: 900px) {
+    // Larger devices
+    .container {
+	width: 900px;
+    }
+}
+.navbar {
+    border-bottom: 1px solid $border-color;
+    padding: .8em 0;
+}
+.navbar-header {
+    display: block;
+    text-align: center;
+}
+.navbar-logo {
+    display: inline-block;
+}
+.navbar-nav {
+    display: block;
+    list-style: outside none;
+    margin: 0;
+    text-align: center;
+    > li {
+	display: inline;
+    }
+}
+.page-footer {
+    border-top: 1px solid $border-color;
+    font-size: 0.86em;
+    margin-top: 5rem;
+    padding: .5rem;
+    p {
+	margin-bottom: .5rem;
+	text-align: center;
+    }
+}
+/* @media screen and (min-width: 650px) { */
+
+/*   // Larger devices */
+
+/*   .container { */
+
+/*     width: 600px; */
+
+/*   } */
+
+/*   .navbar { */
+
+/*     display: inline; */
+
+/*     margin-left: .8em; */
+
+/*     margin-right: 1.5em; */
+
+/*   } */
+
+/*   .navbar-nav { */
+
+/*     display: inline; */
+
+/*   } */
+
+/* } */
+
+@media screen and (min-width: 950px) {
+    // Larger devices
+    .container {
+	width: 900px;
+    }
+    .navbar {
+	width: 100%;
+    }
+    .navbar-header {
+	display: inline;
+	margin-left: .8em;
+	margin-right: 1.5em;
+    }
+    .navbar-nav {
+	display: inline;
+    }
+}

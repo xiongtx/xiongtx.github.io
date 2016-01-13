@@ -1,0 +1,23 @@
+<p>After several years of using LaTeX for various reports and lab write-ups, I feel that I've got a pretty comfortable set-up going. This is a far-cry from freshman year, when I spent entire nights in the computer lab (didn't have a laptop back then) trying to figure out why my document in Emacs wasn't compiling (it was inevitably because of a single misplaced symbol). </p>
+<p>Perhaps due to the steep learning curve, I find that I am one of only a few engineers who use LaTeX regularly. Everyone else seems determined to stick to Microsoft Word, or, at best, LibreOffice Writer.</p>
+<p>For general purposes, I have a document called <tt>report_prototypes.tex</tt> that includes several other files. </p>
+<ol>
+<li> The first file is called <tt>custom_headings_1.tex</tt>, which contains a lot of general preamble stuff.
+</li>
+<li> The second file is called <tt>graphics_1.tex</tt>, which contains exactly one thing: a command to generate an image page divider. It's pretty useless for now.
+</li>
+<li> The third file is called <tt>proofs_headings_1.tex</tt>, which contains stuff related to mathematical proofs.
+</li>
+</ol>
+<p>It's a fine setup, and I've even got it working on both Windows and Linux using the <tt>ifplatform</tt> package:</p>
+<p>[sourcecode language="latex"]<br />
+\usepackage{ifplatform}<br />
+\ifwindows<br />
+  \newcommand{\dropboxprefix}{D:/Dropbox/Code_Library/LaTeX}<br />
+\else<br />
+  \newcommand{\dropboxprefix}{/home/txx/Dropbox/Code_Library/LaTeX}<br />
+\fi<br />
+[/sourcecode]</p>
+<p>However, today I ran into a problem. The <tt>subfig</tt> package I've included as part of <tt>custom_headings_1.tex</tt> has been deprecated; in fact, it's been deprecated since mid-2011, and I simply hadn't known about it. The new package, <tt><a href="http://www.ctan.org/pkg/subcaption" title="subcaption package" target="_blank">subcaption</a></tt>, has much more sensible syntax. </p>
+<p>Long story short, I eagerly changed <tt>custom_headings_1.tex</tt> to use the new package, before I realized that this can't be done. The problem is that all of my old documents are dependent on <tt>custom_headings_1.tex</tt> and its <tt>subfig</tt> package. If I change it, the old documents would no longer compile. Therefore I had no choice but to create a new <tt>custom_headings_2.tex</tt> file to accomodate this tiny update. Of course, every time I make an update in the future, I'll have to create a new headings file while making sure I don't lose the old ones.</p>
+<p>In some ways this is really unavoidable. The current situation still beats including local copies of headings files with every new document by a long shot. However, it's an inconvenience I hadn't thought about when I first came up with the method of including shared headings files. It just goes to show that the best-laid plans can be stymied, or at least inconvenienced, by the smallest obstacles. </p>

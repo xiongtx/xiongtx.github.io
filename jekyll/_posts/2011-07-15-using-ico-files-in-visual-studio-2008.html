@@ -1,0 +1,31 @@
+---
+layout: post
+title: Using .ico files in Visual Studio 2008
+date: 2011-07-15 20:50:05.000000000 -05:00
+categories:
+- ".ico files"
+- Images
+- Visual Studio
+- WinForms
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+  jabber_published: '1310788252'
+author:
+  login: xiongtx
+  email: tianxiang.xiong@gmail.com
+  display_name: xiongtx
+  first_name: Tianxiang
+  last_name: Xiong
+---
+<p>Today I was putting the finishing touches on my little Student RecordKeeper project when I ran into a very peculiar problem. I had set an ErrorProvider object to show a star icon for several textboxes and comboboxes on my New Student form to show that these fields are mandatory.</p>
+<p>I wrote a function to set these ErrorProviders within the form's constructor, and created KeyUp/SelectedIndexChanged EventHandlers to have them disappear if text was typed or selections chosen within the textboxes and comboboxes. If the text was deleted (only by keystrokes, however) or the selected index set to -1, the icons would reappear.</p>
+<p>Well, when I created a new form, the icons would appear, but the stars would have white backgrounds instead of transparent backgrounds.</p>
+<p>[caption id="attachment_26" align="aligncenter" width="450" caption="Stars with ugly white backgrounds"]<a class="thickbox" href="http://blog.tianxiangxiong.com/wp-content/uploads/2011/07/starrequired_bad.png"><img src="assets/starrequired_bad.png?w=300" alt="" title="StarRequired_Bad" width="450" height="78" class="size-medium wp-image-26" /></a>[/caption]</p>
+<p>I was certain that the star .ico images had transparent backgrounds, so this was very weird. Even stranger, when text was entered into the textboxes, then deleted so that the star icon would disappear and reappear, they would reappear perfectly normal with transparent backgrounds! The white backgrounds would only be there when the form is first created.</p>
+<p>I used a different .ico file and found that it did <em>not</em> have the problem with white backgrounds. This was turning out to be quite a mystery! But as with most mysteries, this one had a mundane solution. </p>
+<p>I had converted my star images from .png to .ico files using the website <a href="http://www.convertico.com/" target="_blank">http://www.convertico.com/</a>. The different .ico file I used was downloaded directly as a .ico file. Something strange must have been going on in the conversion process. I used GIMP to simply save my .png file as a .ico file and it worked as I wanted it to. The final result is below:</p>
+<p>[caption id="attachment_29" align="aligncenter" width="450" caption="Stars with nice transparent backgrounds."]<a class="thickbox" href="http://blog.tianxiangxiong.com/wp-content/uploads/2011/07/starrequired.png"><img src="assets/starrequired.png?w=300" alt="" title="StarRequired" width="450" height="78" class="size-medium wp-image-29" /></a>[/caption]</p>
