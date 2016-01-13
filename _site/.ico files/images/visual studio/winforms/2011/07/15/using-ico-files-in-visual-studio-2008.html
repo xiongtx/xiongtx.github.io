@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+
+    <title>
+      
+      Using .ico files in Visual Studio 2008
+      
+      TX
+    </title>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+    <style>
+      body {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+
+    <div class="container">
+      <nav class="navbar navbar-default">
+	<div class="container-fluid">
+
+	  <!-- Navbar button for small viewports -->
+	  <div class="navbar-header">
+	    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+
+	    <!-- Brand -->
+	    <a class="pull-left" href="/index.html">
+	      <img alt="Brand" src="/images/logo.png" height="36" width="36" />
+	    </a>
+	  </div>
+		    <!-- Navbar links -->
+	    <div class="collapse navbar-collapse" id="main-navbar">
+	      <ul class="nav navbar-nav navbar-right">
+		<li><a href="/archive.html">Posts</a></li>
+		<li><a href="/pages/about.html">About</a></li>
+
+	      </ul>
+	    </div>
+	    </div>
+      </nav>
+
+      <!-- Content -->
+      <div id="content">
+	<article>
+  <header class="page-header">
+    <h1 class="page-title">
+      Using .ico files in Visual Studio 2008
+      
+    </h1>
+  </header>
+
+  <div class="post-info">
+  <p>
+    Posted on 2011-07-15 20:50:05 -0500
+    
+    <a href="/edit/master/_posts/2011-07-15-using-ico-files-in-visual-studio-2008.html">Edit on GitHub</a>
+    
+  </p>
+</div>
+
+<p>Today I was putting the finishing touches on my little Student RecordKeeper project when I ran into a very peculiar problem. I had set an ErrorProvider object to show a star icon for several textboxes and comboboxes on my New Student form to show that these fields are mandatory.</p>
+<p>I wrote a function to set these ErrorProviders within the form's constructor, and created KeyUp/SelectedIndexChanged EventHandlers to have them disappear if text was typed or selections chosen within the textboxes and comboboxes. If the text was deleted (only by keystrokes, however) or the selected index set to -1, the icons would reappear.</p>
+<p>Well, when I created a new form, the icons would appear, but the stars would have white backgrounds instead of transparent backgrounds.</p>
+<p>[caption id="attachment_26" align="aligncenter" width="450" caption="Stars with ugly white backgrounds"]<a class="thickbox" href="http://blog.tianxiangxiong.com/wp-content/uploads/2011/07/starrequired_bad.png"><img src="assets/starrequired_bad.png?w=300" alt="" title="StarRequired_Bad" width="450" height="78" class="size-medium wp-image-26" /></a>[/caption]</p>
+<p>I was certain that the star .ico images had transparent backgrounds, so this was very weird. Even stranger, when text was entered into the textboxes, then deleted so that the star icon would disappear and reappear, they would reappear perfectly normal with transparent backgrounds! The white backgrounds would only be there when the form is first created.</p>
+<p>I used a different .ico file and found that it did <em>not</em> have the problem with white backgrounds. This was turning out to be quite a mystery! But as with most mysteries, this one had a mundane solution. </p>
+<p>I had converted my star images from .png to .ico files using the website <a href="http://www.convertico.com/" target="_blank">http://www.convertico.com/</a>. The different .ico file I used was downloaded directly as a .ico file. Something strange must have been going on in the conversion process. I used GIMP to simply save my .png file as a .ico file and it worked as I wanted it to. The final result is below:</p>
+<p>[caption id="attachment_29" align="aligncenter" width="450" caption="Stars with nice transparent backgrounds."]<a class="thickbox" href="http://blog.tianxiangxiong.com/wp-content/uploads/2011/07/starrequired.png"><img src="assets/starrequired.png?w=300" alt="" title="StarRequired" width="450" height="78" class="size-medium wp-image-29" /></a>[/caption]</p>
+
+
+
+</article>
+
+      </div>
+
+      <!-- Footer -->
+      <footer class="page-footer">
+	<p>
+	  Powered by
+	  <a href="https://www.gnu.org/software/emacs/" target="_blank">Emacs</a>,
+	  <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>,
+	  and
+	  <a href="https://github.com" target="_blank">GitHub</a>
+	  (<a href="/pages/colophon.html">colophon</a>)
+	</p>
+	<p>
+	  I'm on <a target="_blank" href="https://github.com/xiongtx">GitHub</a>,
+	  <a target="_blank" href="http://twitter.com/@xiongtx"> Twitter</a>, and
+	  <a target="_blank" href="http://stackoverflow.com/users/864684/xiongtx">StackOverflow</a>.
+	</p>
+      </footer>
+      </div>
+
+      <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+  </body>
+
+</html>

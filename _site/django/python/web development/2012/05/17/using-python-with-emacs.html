@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+
+    <title>
+      
+      Using Python with Emacs
+      
+      TX
+    </title>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+    <style>
+      body {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+
+    <div class="container">
+      <nav class="navbar navbar-default">
+	<div class="container-fluid">
+
+	  <!-- Navbar button for small viewports -->
+	  <div class="navbar-header">
+	    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+
+	    <!-- Brand -->
+	    <a class="pull-left" href="/index.html">
+	      <img alt="Brand" src="/images/logo.png" height="36" width="36" />
+	    </a>
+	  </div>
+		    <!-- Navbar links -->
+	    <div class="collapse navbar-collapse" id="main-navbar">
+	      <ul class="nav navbar-nav navbar-right">
+		<li><a href="/archive.html">Posts</a></li>
+		<li><a href="/pages/about.html">About</a></li>
+
+	      </ul>
+	    </div>
+	    </div>
+      </nav>
+
+      <!-- Content -->
+      <div id="content">
+	<article>
+  <header class="page-header">
+    <h1 class="page-title">
+      Using Python with Emacs
+      
+    </h1>
+  </header>
+
+  <div class="post-info">
+  <p>
+    Posted on 2012-05-17 20:49:10 -0500
+    
+    <a href="/edit/master/_posts/2012-05-17-using-python-with-emacs.html">Edit on GitHub</a>
+    
+  </p>
+</div>
+
+<p>After trying to build my website using HTML, PHP, and the Bluefish Editor for a while, I decided to learn to use a modern web application framework. Of the two popular choices I know of, Django and Ruby-on-Rails, I chose Django because I am more familiar with Python than Ruby. </p>
+<p>I also decided to learn to use Emacs as a secondary goal. Many individuals on StackOverflow suggest that spending time and effort to master a text editor such as Vim or Emacs is a sound investment. At first, I was skeptical. Aren't powerful, feature-rich IDE's such as Visual Studio and Eclipse more capable of helping me write code? Emacs is around 35 years old, and I'm wary of software 15 years older than me. </p>
+<p>Without a doubt, it's very frustrating to get started with Emacs. What's all this about <em>points</em> and <em>buffers</em>? How do I set up a Python <a href="http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" title="REPL : Wikipedia">REPL</a>? Can I get the nifty auto-completion that Eclipse provides?</p>
+<p>The problem was that I kept thinking of Emacs as <em>just</em> a text editor, akin to Notepad. It's better to think of it as an easily customizable and extensible tool that requires the user to tell it what to do. </p>
+<p><a href="http://www.yilmazhuseyin.com/" title="Huseyin Yilmaz" target="_blank">Huseyin Yilmaz</a> has written a three-part tutorial on how to configure Emacs, get it to run Python, and work with HTML and such. I followed his tutorial, and therefore won't repeat anything here.</p>
+<ol>
+<li> <a href="http://www.yilmazhuseyin.com/blog/dev/basic-emacs-setup/" title="Basic Emacs setup : Huseyin" target="_blank">Basic Emacs setup</a>
+</li>
+<li> <a href="http://www.yilmazhuseyin.com/blog/dev/emacs-setup-python-development/" title="Emacs setup for Python development : Huseyin" target="_blank">Emacs setup for Python development</a>
+</li>
+<li> <a href="http://www.yilmazhuseyin.com/blog/dev/emacs-setup-web-development/" title="Emacs setup for web development : Huseyin" target="_blank">Emacs setup for web development</a>
+</li>
+</ol>
+<p>I will, however, give brief descriptions of the components I used, if only so I'll remember what they do. </p>
+<h3>Basic Emacs setup tools</h3>
+<ol>
+<li> <a href="http://www.emacswiki.org/emacs/InteractivelyDoThings" title="IDO" target="_blank">IDO</a> - Stands for "Interactive Do". Tool that allows for quick directory and buffer switching, as well as quick file search. It's built-in for Emacs 23, so there's no need to install it separately.
+</li>
+<li> <a href="http://cx4a.org/software/auto-complete/index.html" title="Auto Complete Mode : Emacs" target="_blank">Autocomplete mode</a> - Tool that provides autocompletion for Emacs.
+</li>
+<li> <a href="http://www.nongnu.org/color-theme/#sec5" title="Color themes : Emacs" target="_blank">Color themes</a> - Color themes for Emacs. I prefer the Bharadwaj theme. Use <tt>Alt-x, color-theme-bharadwaj</tt> to select it.
+</li>
+</ol>
+<h3>Emacs setup for Python development tools</h3>
+<ol>
+<li> <a href="http://pymacs.progiciels-bpi.ca/index.html" title="Pymacs" target="_blank">pymacs</a> - Python binding for Emacs. Can be installed separately, or from Fedora repository using <tt>sudo yum install emacs-pymacs</tt>
+</li>
+<li> <a href="http://rope.sourceforge.net/" title="Rope" target="_blank">rope</a> - Python refactoring library, not specific to Emacs.
+</li>
+<li> <a href="http://pypi.python.org/pypi/ropemode" title="rope-mode" target="_blank">rope-mode</a> - Minor mode for Ropemacs.
+</li>
+<li> <a href="http://rope.sourceforge.net/ropemacs.html" title="Ropemacs" target="_blank">ropemacs</a> - Rope bindings for Emacs. pymacs, rope, and rope-mode should be installed before Ropemacs.
+</li>
+<li> <a href="http://flymake.sourceforge.net/" title="flymake" target="_blank">flymake</a> - On the fly syntax checker for Emacs. Not specific to Python. Needs pyflakes or some other tool to work.
+</li>
+<li> <a href="http://www.plope.com/Members/chrism/flymake-mode" title="flymake-mode" target="_blank">flymake-mode</a> - Minor mode for Flymake
+</li>
+<li> <a href="http://pypi.python.org/pypi/pyflakes" title="pyflakes" target="_blank">pyflakes</a> - Passive checker for Python programs.
+</li>
+</ol>
+<p>I have not tried any of the Emacs setup for web development tools yet. I'll provide updates if and when I try them. </p>
+
+
+
+</article>
+
+      </div>
+
+      <!-- Footer -->
+      <footer class="page-footer">
+	<p>
+	  Powered by
+	  <a href="https://www.gnu.org/software/emacs/" target="_blank">Emacs</a>,
+	  <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>,
+	  and
+	  <a href="https://github.com" target="_blank">GitHub</a>
+	  (<a href="/pages/colophon.html">colophon</a>)
+	</p>
+	<p>
+	  I'm on <a target="_blank" href="https://github.com/xiongtx">GitHub</a>,
+	  <a target="_blank" href="http://twitter.com/@xiongtx"> Twitter</a>, and
+	  <a target="_blank" href="http://stackoverflow.com/users/864684/xiongtx">StackOverflow</a>.
+	</p>
+      </footer>
+      </div>
+
+      <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+  </body>
+
+</html>
