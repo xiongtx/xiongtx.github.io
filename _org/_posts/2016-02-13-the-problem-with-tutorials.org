@@ -1,0 +1,69 @@
+#+OPTIONS: toc:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: The Problem with Tutorials
+excerpt: Over-simplistic tutorials create bad habits that are hard to break.
+---
+#+END_HTML
+
+An issue I've noticed is that, with technology in particular, *students are
+taught the wrong way to do things before they are taught the right way*. Then
+they are expected to do things "the right way" and never do it the wrong way
+again.
+
+That, unfortunately, is not how things work. [[http://lifehacker.com/you-play-like-you-practice-473540758][If you practice like you play,
+you'll play like you practice]].
+
+First, a little background. I have recently been taking some [[https://www.coursera.org/learn/responsive-website-examples/home/welcome][Coursera courses
+on responsive web development]]. The courses uses [[https://www.meteor.com/][Meteor]] and [[https://docs.mongodb.org/manual/?_ga%3D1.167340220.386567681.1454295988][MongoDB]], with some
+introductory work in basic HTML/CSS and [[http://getbootstrap.com/][Bootstrap]].
+
+In both the Coursera lectures and the [[https://www.meteor.com/tutorials/blaze/creating-an-app][Meteor tutorials]], there is a tendency to
+do things *"quick and dirty"*, to get the student to "jump into the pool". Make
+JavaScript variables global, stick all your CSS in the same file, put your
+Meteor client and server code in the same directory, etc.
+
+By the end of the lesson, you've made something that "works", but you haven't
+learned good practices, workflows, etc. that would allow you to create. It
+wasn't until the [[https://www.coursera.org/learn/meteor-development/home/week/4][end of the third of five Coursera courses]] that we talked
+about how to organize and "clean up" the messy code we'd been working on. Oh,
+and *forget about documentation*! No tutorial would bother covering that!
+
+I certainly don't think that lessons should be bogged down in minutiae, but if
+good practices are not learned early, bad habits will form that will be
+/extremely/ difficult to break later.
+
+On the flip side, good habits are also hard to break. Ever met a developer who
+drags his feet at writing documentation? Now imagine if he'd been forced to
+write (good) documentation for all of his CS course projects. I'd bet that
+he'd still be writing documentation at work out of sheer inertia.
+
+Does it really matter that much? Documentation, by definition, does not change
+program behavior, right? Well, not at any given instant in time, but it
+strongly shapes the way that software evolves. This [[https://www.youtube.com/watch?v%3DAv0PQDVTP4A][video on literate
+programming]] by Timothy Daly explains it well.
+
+Even if that still does not convince you, consider another topic that is
+rarely covered in early tutorials: *security*.
+
+Why is so much software insecure?  It's not just that security is hard; it's
+that people don't think about it--are not taught to think about it--until
+they've already formed non-secure habits.
+
+New Meteor apps include two insecure packages, =autopublish= and =insecure=,
+by default. They're intended for "rapid prototyping", but I'll bet my last
+dollar there are Meteor apps out there with sensitive information exposed
+because the developer didn't know to, or simply forgot to, remove these
+packages! My [[http://stackoverflow.com/q/35107026/864684][StackOverflow post]] criticizing this behavior was not
+well-received.
+
+I'll end with a [[http://blogs.umb.edu/quoteunquote/2012/05/08/its-a-much-more-effective-quotation-to-attribute-it-to-aristotle-rather-than-to-will-durant/][quote]]:
+
+#+BEGIN_QUOTE
+We are what we repeatedly do. Excellence, then, is not an act, but a habit.
+#+END_QUOTE
+
+Given that we constantly learn and practice doing things the wrong way, is it
+any wonder that we do it the wrong way when it really matters that we don't?

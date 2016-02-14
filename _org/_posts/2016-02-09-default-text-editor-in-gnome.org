@@ -1,0 +1,36 @@
+#+OPTIONS: toc:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: Default editor in GNOME
+excerpt: Changing the default text editor in GNOME.
+---
+#+END_HTML
+
+Here's a quick tip: you can change the default text editor in GNOME (and
+likely any [[https://www.freedesktop.org/wiki/][Free Desktop]]) by creating a =defaults.list= file in
+=~/.local/share/applications/=.
+
+I'm using Emacsclient through a bash script taken from [[http://mjwall.com/blog/2013/10/04/how-i-use-emacs/][MJ Wall]]. After creating
+an =ec.desktop= file, where =/my-user-name/= is obviously my user name:
+
+#+BEGIN_SRC
+[Desktop Entry]
+Categories=Utility;TextEditor
+Comment=Edit files with the ec command
+Exec=/home/my-user-name/.emacs.d/ec %f
+Icon=/home/my-user-name/img/emacs.png
+MimeType=text/plain
+Name=ec
+Type=Application
+#+END_SRC
+
+I created a =defaults.list= file containing:
+
+#+BEGIN_SRC
+[Default Applications]
+text/plain=ec.desktop
+#+END_SRC
+
+And voila! Sure beats having to specify the default editor for /every/ file type!

@@ -1,0 +1,49 @@
+#+OPTIONS: toc:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: Software as a team sport
+excerpt: The importance of everyone doing things the same way.
+---
+#+END_HTML
+A major difference between working on projects at school and at work is that *work projects compel you to understand that software development is a team sport*.
+
+As with any team sport, it's important that everyone agrees to do things a certain way. The agreed-upon way does not have to be the /best/ way--in fact, it most likely isn't. It just has to be a set of rules that /everyone/ adheres to. As with any set of rules, once you understand them, you can (usually) stray with reason. The key, however, is that *following the rules should be the default behavior*.
+
+This applies to everyone and everything on a project, from the domain-specific jargon to the coding style. If we agree to call something =X=, no one should call it =Y=. If we agree to indent code by two spaces, no one should indent it by four spaces. Inconsistency leads ambiguity, which leads to confusion. And if team members are confused, how would the user fare?
+
+Getting people to follow rules is hard, not because people are reluctant to follow rules in general, but because:
+
+- The rules are unclear
+- Following the rules requires extra work
+- The purpose of the rules is unclear
+- There is already a lot of inconsistency, and [[https://xkcd.com/927/][trying to impose a standard only leads to greater inconsistency]].
+
+** The rules are unclear
+All too often, the rules are not well-specified to begin with. How can anyone follow the rules in that case?
+
+Every team should have a:
+
+- Style guide
+
+Every project should have a:
+
+- Project glossary
+
+** Following the rules requires extra work
+There is a simple reason that following the rules requires extra work: the rules are not the default. If something is a rule, then it should be the default! That is, *I should automatically follow the rules if I exert no effort at all*.
+
+The solution to this problem shouldn't be to add a checklist or reminder. It should be to automate the process in question such that the rules are automatically applied.
+
+** The purpose of the rules is unclear
+Some people hate following rules, but everyone hates following rules they don't understand. We call rules we don't understand *arbitrary rules*. Following arbitrary rules gives us the felling that someone is flaunting their authority by mandating a certain behavior.
+
+*If the purpose of a rule is not obvious, the rule may be flawed*. A rule that says that all functions in the code base should be named with standard English words for ease of reading is a rule everyone can understand, even if they may disagree with it. If, instead, we mandate that some words must be contracted a certain way (e.g. appointment to appt, remove to rmv, etc.), there may be resistance. Why contract the word one way and not another? In fact, why contract it at all?
+
+** There is already a lot of inconsistency
+For source code, there is a single solution to this problem: *refactoring*.
+
+Unfortunately, not all languages have great support for refactoring. Most languages, surprisingly, are not designed with tools and processes in mind. Newer languages like [[https://golang.org/][Go]] seem to be moving in the right direction, but that's small comfort for those of us whose best refactoring tool is Find-and-Replace.
+
+A bigger problem arises when code can be used outside of our own code base. If the user could be using some existing code, we can't just rip it out, change it up, or move it around. Bad designs and mistakes last forever. The only way to "get around" it is to write new code that will, hopefully, supersede the old code over time.

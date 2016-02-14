@@ -1,0 +1,101 @@
+---
+layout: post
+title: Software as a team sport
+excerpt: The importance of everyone doing things the same way.
+---
+<p>
+A major difference between working on projects at school and at work is that <b>work projects compel you to understand that software development is a team sport</b>.
+</p>
+
+<p>
+As with any team sport, it's important that everyone agrees to do things a certain way. The agreed-upon way does not have to be the <i>best</i> way&#x2013;in fact, it most likely isn't. It just has to be a set of rules that <i>everyone</i> adheres to. As with any set of rules, once you understand them, you can (usually) stray with reason. The key, however, is that <b>following the rules should be the default behavior</b>.
+</p>
+
+<p>
+This applies to everyone and everything on a project, from the domain-specific jargon to the coding style. If we agree to call something <code>X</code>, no one should call it <code>Y</code>. If we agree to indent code by two spaces, no one should indent it by four spaces. Inconsistency leads ambiguity, which leads to confusion. And if team members are confused, how would the user fare?
+</p>
+
+<p>
+Getting people to follow rules is hard, not because people are reluctant to follow rules in general, but because:
+</p>
+
+<ul class="org-ul">
+<li>The rules are unclear
+</li>
+<li>Following the rules requires extra work
+</li>
+<li>The purpose of the rules is unclear
+</li>
+<li>There is already a lot of inconsistency, and <a href="https://xkcd.com/927/">trying to impose a standard only leads to greater inconsistency</a>.
+</li>
+</ul>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> The rules are unclear</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+All too often, the rules are not well-specified to begin with. How can anyone follow the rules in that case?
+</p>
+
+<p>
+Every team should have a:
+</p>
+
+<ul class="org-ul">
+<li>Style guide
+</li>
+</ul>
+
+<p>
+Every project should have a:
+</p>
+
+<ul class="org-ul">
+<li>Project glossary
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Following the rules requires extra work</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+There is a simple reason that following the rules requires extra work: the rules are not the default. If something is a rule, then it should be the default! That is, <b>I should automatically follow the rules if I exert no effort at all</b>.
+</p>
+
+<p>
+The solution to this problem shouldn't be to add a checklist or reminder. It should be to automate the process in question such that the rules are automatically applied.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> The purpose of the rules is unclear</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Some people hate following rules, but everyone hates following rules they don't understand. We call rules we don't understand <b>arbitrary rules</b>. Following arbitrary rules gives us the felling that someone is flaunting their authority by mandating a certain behavior.
+</p>
+
+<p>
+<b>If the purpose of a rule is not obvious, the rule may be flawed</b>. A rule that says that all functions in the code base should be named with standard English words for ease of reading is a rule everyone can understand, even if they may disagree with it. If, instead, we mandate that some words must be contracted a certain way (e.g. appointment to appt, remove to rmv, etc.), there may be resistance. Why contract the word one way and not another? In fact, why contract it at all?
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> There is already a lot of inconsistency</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+For source code, there is a single solution to this problem: <b>refactoring</b>.
+</p>
+
+<p>
+Unfortunately, not all languages have great support for refactoring. Most languages, surprisingly, are not designed with tools and processes in mind. Newer languages like <a href="https://golang.org/">Go</a> seem to be moving in the right direction, but that's small comfort for those of us whose best refactoring tool is Find-and-Replace.
+</p>
+
+<p>
+A bigger problem arises when code can be used outside of our own code base. If the user could be using some existing code, we can't just rip it out, change it up, or move it around. Bad designs and mistakes last forever. The only way to "get around" it is to write new code that will, hopefully, supersede the old code over time.
+</p>
+</div>
+</div>
