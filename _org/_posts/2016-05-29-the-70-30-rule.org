@@ -1,0 +1,29 @@
+#+OPTIONS: toc:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: The 70/30 rule
+excerpt: Be more of a producer, less of a consumer
+---
+#+END_HTML
+
+I recently came across [[https://simpleprogrammer.com/][SimpleProgrammer.com]], a blog by John Sonmez providing advice for working programmers on improving both their professional and non-professional lives. John also has a [[https://www.youtube.com/channel/UCFxdcuY-S6yjZGq_2cjilHg][YouTube channel]] where he uploads videos with alarming regularity (multiple a day!), providing very actionable nuggets of wisdom.
+
+One concept in particular resonated with me: the [[https://www.youtube.com/watch?v%3DJcRLvNhLI1Q][70/30 rule]]. In short, the 70/30 rule is that we should:
+
+#+BEGIN_QUOTE
+Produce content 70% of the time, consume content 30% of the time.
+#+END_QUOTE
+
+"Producing" includes anything that creates value, while "consuming" is everything that /doesn't/ produce value, *including dedicated learning*.
+
+This is a problem I've been struggling with for a long time (at least the past 1.5 years): I've tried to improve my skills in various ways, including taking Coursera courses, reading time-honored books like [[http://sarabander.github.io/sicp/html/index.xhtml][SICP]], and practicing [[https://github.com/mrdavidlaing/javascript-koans][JavaScript koans]]. However, while I seemed to gain knowledge as I was doing these things, I failed to retain the knowledge over long periods of time and, worse, found that I could not /apply/ them where it mattered. I understood these topics only in the context in which they were presented to me, and could refer to them as needed, but could not make them "mine".
+
+As John points out in another excellent video, [[https://www.youtube.com/watch?v%3D341VK6KRhfQ][How Do I Learn Complex and Big Programming Topics]], the best way to learn is to *start with a goal in mind*, and learn enough to accomplish that goal.
+
+At first, I found this idea difficult--how do I know what to set as the "right" goal? How do I know what is the "right" type of Android app to build, for example, if I don't read all I can about Android first? Shouldn't I consume as much as possible so I can make the "right" decisions when I produce?
+
+As I've discovered over the past 1.5 years, and as John very quickly points out, trying to learn through consumption is inefficient. Your first app is going to be crap. So is the second. In fact, by actually building these apps, you're going to come into contact with more and more possibilities of what you /could/ do, and will never be satisfied with what you've done. That's what /true/ learning is about--getting in the thick of the action, not trying to become an expert by sitting on the sidelines.
+
+I'm going to try to apply John's advice on the 70/30 rule. It'll be hard--I struggle to think of projects to do that interest me, whereas reading a book and doing some koans is easy, since someone else has already decided the format and structure for me. But, I've spent a lot of time trying to  learn in an inefficient way, and something has to change.
