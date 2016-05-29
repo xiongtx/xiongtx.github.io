@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "normalize";
+@import "bootstrap";
 @import "fonts";
 @import "solarized";
 
@@ -32,7 +33,7 @@ body {
     font-family: $main-font;
     font-size: $font-size;
 }
-// blah
+
 .container {
     margin: 0 auto;
     padding: 0 15px;
@@ -40,39 +41,25 @@ body {
 @media screen and (min-width: 900px) {
     // Larger devices
     .container {
-	width: 900px;
+        width: 900px;
     }
 }
-.navbar {
-    border-bottom: 1px solid $border-color;
-    padding: .8em 0;
-}
-.navbar-header {
-    display: block;
-    text-align: center;
-}
-.navbar-logo {
-    display: inline-block;
-}
-.navbar-nav {
-    display: block;
-    list-style: outside none;
-    margin: 0;
-    text-align: center;
-    > li {
-	display: inline;
-    }
-}
+
 .page-footer {
     border-top: 1px solid $border-color;
     font-size: 0.86em;
     margin-top: 5rem;
     padding: .5rem;
     p {
-	margin-bottom: .5rem;
-	text-align: center;
+        margin-bottom: .5rem;
+        text-align: center;
     }
 }
+
+.navbar-brand {
+    padding: 7px;
+}
+
 /* @media screen and (min-width: 650px) { */
 
 /*   // Larger devices */
@@ -104,17 +91,17 @@ body {
 @media screen and (min-width: 950px) {
     // Larger devices
     .container {
-	width: 900px;
+        width: 900px;
     }
     .navbar {
-	width: 100%;
+        width: 100%;
     }
     .navbar-header {
-	display: inline;
-	margin-left: .8em;
-	margin-right: 1.5em;
+        display: inline;
+        margin-left: .8em;
+        margin-right: 1.5em;
     }
     .navbar-nav {
-	display: inline;
+        display: inline;
     }
 }

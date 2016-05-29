@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+
+    <title>
+      
+      Fun with Windows Forms
+      
+      
+    </title>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    <style>
+      body {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Navbar button for small viewports -->
+          <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                                          <!-- Brand -->
+            <a class="navbar-brand" href="/index.html">
+              <img alt="Brand" src="/images/logo.png" height="36" width="36" />
+            </a>
+          </div>
+
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/archive.html">Posts</a></li>
+              <li><a href="/projects.html">Projects</a></li>
+              <li><a href="/about.html">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Content -->
+      <div id="content">
+        <article>
+  <header class="page-header">
+    <h1 class="page-title">
+      Fun with Windows Forms
+      
+    </h1>
+  </header>
+
+  <div class="post-info">
+  <p>
+    Posted on 2011-06-30 00:00:00 -0500
+    
+    <a href="/edit/master/_posts/2011-06-30-fun-with-windows-forms.html">Edit on GitHub</a>
+    
+  </p>
+</div>
+
+<p>
+I'll be using this blog to record my progress in building a Schedule/Grade Recorder using WinForms in C++/CLI. I have been working on this project for 3 weeks and it has been both a frustrating and educational experience
+</p>
+
+<p>
+I was going to create this project with WPF but I am unfamiliar with C#, so I resigned myself to using WinForms, which from what I've read is already considered obsolete and being replaced by the former. I began this project with only a mediocre background in unmanaged C++ and immediately encountered several problems.
+</p>
+
+<ul class="org-ul">
+<li><b>WinForms requires managed C++</b>
+<ul class="org-ul">
+<li>That is, C++/CLI. C++/CLI is basically an extension of regular C++ that works within Microsoft's .NET framework and allows nifty features like memory management. I initially had no idea what the .NET framework or the Common Language Runtime were and boy did I have a hard time making sense of it all; my grasp of the concept is still mostly cursory but I now know enough to write code for my project.
+</li>
+</ul>
+</li>
+
+<li><b>Visual Studio 2010 does not have Intellisense support for C++/CLI</b>
+<ul class="org-ul">
+<li>Intellisense is Visual Studio's auto-completion feature for code. You can read all about it and why it doesn't work for C++/CLI in VS 2010 <a href="http://blogs.msdn.com/b/vcblog/archive/2011/03/03/10136696.aspx">here</a>. I started my project in VS 2010 and started playing around with the WinForms designer and did not discover this until I began to write code. Moving my project over to VS 2008 was a pain and would cause a very serious problem down the road; more on that later. So why did I have to move my project over to VS 2008? Because&#x2026;
+</li>
+</ul>
+</li>
+
+<li><b>Previous versions of VS cannot open projects created in VS 2010</b>
+<ul class="org-ul">
+<li>To be honest this one makes perfect sense, but it was still very tedious to copy-paste files over to VS 2008.
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+Furthermore, C++/CLI does not seem to be very popular for writing WinForms applications. Almost all the code examples on MSDN, Stack Overflow, and other websites are geared towards C#. While the functions and classes used in these codes are usually part of the Base Class Library and accessible in C++/CLI, I'd sure like to see some examples specifically targeting the language I'm using.
+</p>
+
+
+
+</article>
+
+      </div>
+
+      <!-- Footer -->
+      <footer class="page-footer">
+        <p>
+          Powered by
+          <a href="https://www.gnu.org/software/emacs/" target="_blank">Emacs</a>,
+          <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>,
+          and
+         <a href="https://github.com" target="_blank">GitHub</a>
+          (<a href="/pages/colophon.html">colophon</a>)
+        </p>
+        <p>
+          I'm on <a target="_blank" href="https://github.com/xiongtx">GitHub</a>,
+          <a target="_blank" href="http://twitter.com/@xiongtx"> Twitter</a>, and
+          <a target="_blank" href="http://stackoverflow.com/users/864684/xiongtx">StackOverflow</a>.
+        </p>
+      </footer>
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+  </body>
+
+</html>

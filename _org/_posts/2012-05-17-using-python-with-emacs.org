@@ -1,0 +1,54 @@
+#+OPTIONS: toc:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: Using Python with Emacs
+excerpt: A first taste of turning a text editor into an IDE.
+---
+#+END_HTML
+
+
+After trying to build my website using HTML, PHP, and the Bluefish Editor for a while, I decided to learn to use a modern web application framework. Of the two popular choices I know of, Django and Ruby-on-Rails, I chose Django because I am more familiar with Python than Ruby.
+
+I also decided to learn to use Emacs as a secondary goal. Many individuals on StackOverflow suggest that spending time and effort to master a text editor such as Vim or Emacs is a sound investment. At first, I was skeptical. Aren't powerful, feature-rich IDE's such as Visual Studio and Eclipse more capable of helping me write code? Emacs is around 35 years old, and I'm wary of software 15 years older than me.
+
+Without a doubt, it's very frustrating to get started with Emacs. What's all this about /points/ and /buffers/? How do I set up a Python REPL? Can I get the nifty auto-completion that Eclipse provides?
+
+The problem was that I kept thinking of Emacs as /just/ a text editor, akin to Notepad. It's better to think of it as an easily customizable and extensible tool that requires the user to tell it what to do.
+
+[[http://www.yilmazhuseyin.com/][Huseyin Yilmaz]] has written a three-part tutorial on how to configure Emacs, get it to run Python, and work with HTML and such. I followed his tutorial, and therefore won't repeat anything here.
+
+1. [[http://www.yilmazhuseyin.com/blog/dev/basic-emacs-setup/][Basic Emacs setup]]
+2. [[http://www.yilmazhuseyin.com/blog/dev/emacs-setup-python-development/][Emacs setup for Python development]]
+3. [[http://www.yilmazhuseyin.com/blog/dev/emacs-setup-web-development/][Emacs setup for web development]]
+
+I will, however, give brief descriptions of the components I used, if only so I'll remember what they do.
+
+*** Basic Emacs setup tools
+
+- [[http://www.emacswiki.org/emacs/InteractivelyDoThings][IDO]]
+  - Stands for "Interactive Do". Tool that allows for quick directory and buffer switching, as well as quick file search. It's built-in for Emacs 23, so there's no need to install it separately.
+- [[http://cx4a.org/software/auto-complete/index.html][Autocomplete mode]]
+  - Tool that provides autocompletion for Emacs.
+- [[http://www.nongnu.org/color-theme/#sec5][Color themes]]
+  - Color themes for Emacs. I prefer the Bharadwaj theme. Use =M-x, color-theme-bharadwaj= to select it.
+
+*** Emacs setup for Python development tools
+
+- [[http://pymacs.progiciels-bpi.ca/index.html][pymacs]]
+  - Python binding for Emacs. Can be installed separately, or from Fedora repository using ~sudo yum install emacs-pymacs~.
+- [[http://rope.sourceforge.net/][rope]]
+  - Python refactoring library, not specific to Emacs.
+- [[http://pypi.python.org/pypi/ropemode][rope-mode]]
+  - Minor mode for Ropemacs.
+- [[http://rope.sourceforge.net/ropemacs.html][ropemacs]]
+  - Rope bindings for Emacs. =pymacs=, =rope=, and =rope-mode= should be installed before =ropemacs=.
+- [[http://flymake.sourceforge.net/][flymake]]
+  - On-the-fly syntax checker for Emacs. Not specific to Python. Needs =pyflakes= or some other tool to work.
+- [[http://www.plope.com/Members/chrism/flymake-mode][flymake-mode]]
+  - Minor mode for =flymake=
+- [[http://pypi.python.org/pypi/pyflakes][pyflakes]]
+  - Passive checker for Python programs.
+
+I have not tried any of the Emacs setup for web development tools yet. I'll provide updates if and when I try them.

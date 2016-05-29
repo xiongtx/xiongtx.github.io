@@ -1,6 +1,6 @@
 ---
 title: TX
-subtitle: More to come...
+subtitle: Mastering technologies, one day at a time
 layout: page
 ---
 

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+
+    <title>
+      
+      Default editor in GNOME
+      
+      
+    </title>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    <style>
+      body {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Navbar button for small viewports -->
+          <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                                          <!-- Brand -->
+            <a class="navbar-brand" href="/index.html">
+              <img alt="Brand" src="/images/logo.png" height="36" width="36" />
+            </a>
+          </div>
+
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/archive.html">Posts</a></li>
+              <li><a href="/projects.html">Projects</a></li>
+              <li><a href="/about.html">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Content -->
+      <div id="content">
+        <article>
+  <header class="page-header">
+    <h1 class="page-title">
+      Default editor in GNOME
+      
+    </h1>
+  </header>
+
+  <div class="post-info">
+  <p>
+    Posted on 2016-02-09 00:00:00 -0600
+    
+    <a href="/edit/master/_posts/2016-02-09-default-text-editor-in-gnome.html">Edit on GitHub</a>
+    
+  </p>
+</div>
+
+<p>
+Here's a quick tip: you can change the default text editor in GNOME (and
+likely any <a href="https://www.freedesktop.org/wiki/">Free Desktop</a>) by creating a <code>defaults.list</code> file in
+<code>~/.local/share/applications/</code>.
+</p>
+
+<p>
+I'm using Emacsclient through a bash script taken from <a href="http://mjwall.com/blog/2013/10/04/how-i-use-emacs/">MJ Wall</a>. After creating
+an <code>ec.desktop</code> file, where <code>/my-user-name/</code> is obviously my user name:
+</p>
+
+<pre class="example">
+[Desktop Entry]
+Categories=Utility;TextEditor
+Comment=Edit files with the ec command
+Exec=/home/my-user-name/.emacs.d/ec %f
+Icon=/home/my-user-name/img/emacs.png
+MimeType=text/plain
+Name=ec
+Type=Application
+</pre>
+
+<p>
+I created a <code>defaults.list</code> file containing:
+</p>
+
+<pre class="example">
+[Default Applications]
+text/plain=ec.desktop
+</pre>
+
+<p>
+And voila! Sure beats having to specify the default editor for <i>every</i> file type!
+</p>
+
+
+
+</article>
+
+      </div>
+
+      <!-- Footer -->
+      <footer class="page-footer">
+        <p>
+          Powered by
+          <a href="https://www.gnu.org/software/emacs/" target="_blank">Emacs</a>,
+          <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>,
+          and
+         <a href="https://github.com" target="_blank">GitHub</a>
+          (<a href="/pages/colophon.html">colophon</a>)
+        </p>
+        <p>
+          I'm on <a target="_blank" href="https://github.com/xiongtx">GitHub</a>,
+          <a target="_blank" href="http://twitter.com/@xiongtx"> Twitter</a>, and
+          <a target="_blank" href="http://stackoverflow.com/users/864684/xiongtx">StackOverflow</a>.
+        </p>
+      </footer>
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+  </body>
+
+</html>
