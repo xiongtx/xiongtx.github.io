@@ -1,0 +1,33 @@
+---
+layout: post
+title: Why Functional Languages are Great
+excerpt: Will great features lead to wider adoption?
+---
+
+<p>
+<a href="http://blog.jenkster.com/2015/12/what-is-functional-programming.html">Functional programming languages</a> are great. As a math major, I'm used to functions <i>never</i> having side effects. In a functional programming language, inputs and outputs are explicit&#x2013;there's nothing "hidden" from caller. This minimizes "spooky action at a distance"&#x2013;a function call <i>here</i> won't result in something blowing up <i>there</i>.
+</p>
+
+<p>
+Most functional languages are "impure", in that they allow, though usually discourage, side effects. In <a href="https://clojure.org/">Clojure</a>, for example, you can set a dynamically bound variable, e.g. the output stream <code>*out*</code>, in one function and change the behavior of another function. There's a trade-off between purity and convenience&#x2013;as Rich Hickey said, a programming language with no side effects is good for nothing more than heating up your CPU.
+</p>
+
+<p>
+Functional languages seem to have gained some popularity lately. Newer languages like Clojure, <a href="http://elm-lang.org/">Elm</a>, <a href="http://elixir-lang.org/">Elixir</a>, etc. have gotten a lot of the more "adventurous" programmers excited, and even older languages like Java have been adding features usually associated with functional programming, like <a href="http://www.drdobbs.com/jvm/lambdas-and-streams-in-java-8-libraries/240166818">lambda and streams</a>.
+</p>
+
+<p>
+Minimizing side effects is particular important for parallel programming. Moore's law has not been applicable to processor speed for a number of years now, and its applicability to data density also seems to be reaching an end. If you want to get more out of your computer in future, odds are you'll have to do it by taking advantage of multiple cores.
+</p>
+
+<p>
+Parallel programming with mutable data structures, etc. is a nightmare even for experienced developers&#x2013;it's just too hard to mentally follow what happens when multiple threads start interacting with the same object. What is the state of the object at any given instant in time? Unless very specific design paradigms are used, it's awfully hard to say. When things are immutable, as is usually the case in functional languages, dealing with multiple threads is much easier.
+</p>
+
+<p>
+Given the advantages of functional languages, will they ever become the most popular type of programming language?
+</p>
+
+<p>
+Unlikely. Functional languages have been around for a long time&#x2013;since the first implementation of Lisp, in fact&#x2013;and they've never been very popular. History shows that most programmers love side effects. Increment this, mutate that, do \( X \) while we're also doing \( Y \) because hey, why write two methods when you can write one? Adherents of the "Turing machine school" far outnumber the "lambda calculus school", and software is worse off for it.
+</p>
