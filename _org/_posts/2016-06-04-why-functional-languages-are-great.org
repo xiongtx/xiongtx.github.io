@@ -12,7 +12,7 @@ excerpt: Will great features lead to wider adoption?
 
 Most functional languages are "impure", in that they allow, though usually discourage, side effects. In [[https://clojure.org/][Clojure]], for example, you can set a dynamically bound variable, e.g. the output stream ~*out*~, in one function and change the behavior of another function. There's a trade-off between purity and convenience--as Rich Hickey said, a programming language with no side effects is good for nothing more than heating up your CPU.
 
-Functional languages seem to have gained some popularity lately. Newer languages like Clojure, [[http://elm-lang.org/][Elm]], [[http://elixir-lang.org/][Elixir]], etc. have gotten a lot of the more "adventurous" programmers excited, and even older languages like Java have been adding features usually associated with functional programming, like [[http://www.drdobbs.com/jvm/lambdas-and-streams-in-java-8-libraries/240166818][lambda and streams]].
+Functional languages seem to have gained some popularity lately. Newer languages like Clojure, [[http://elm-lang.org/][Elm]], [[http://elixir-lang.org/][Elixir]], etc. have gotten a lot of the more "adventurous" programmers excited, and even older languages like Java have been adding features usually associated with functional programming, like [[http://www.drdobbs.com/jvm/lambdas-and-streams-in-java-8-libraries/240166818][lambdas and streams]].
 
 Minimizing side effects is particular important for parallel programming. Moore's law has not been applicable to processor speed for a number of years now, and its applicability to data density also seems to be reaching an end. If you want to get more out of your computer in future, odds are you'll have to do it by taking advantage of multiple cores.
 
