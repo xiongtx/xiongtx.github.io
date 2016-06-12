@@ -1,0 +1,69 @@
+---
+layout: post
+title: It's good to be lazy
+excerpt: Making things for lazy people takes a lot of work
+---
+<p>
+As part of my attempt to introduce good programming practices to my team at work, I created a presentation on good API design. It draws heavily on material covered by Parse CTO Kevin Lacker's <a href="https://www.youtube.com/watch?v=qCdpTji8nxo">talk at Parse Developer Day 2013</a>. The key point that Kevin makes is that
+</p>
+
+<blockquote>
+<p>
+A good API has to appeal to the most important emotion of all: laziness
+</p>
+</blockquote>
+
+<p>
+A similar sentiment is expressed by <a href="http://threevirtues.com/">Perl creator Larry Wall</a>:
+</p>
+
+<blockquote>
+<p>
+&#x2026;the three great virtues of a programmer: laziness, impatience, and hubris.
+</p>
+</blockquote>
+
+<p>
+Clojure creator Rich Hickey has also observed that <a href="https://www.infoq.com/presentations/Simple-Made-Easy">programmers favor <i>ease</i>, which is closely related to laziness, over <i>simplicity</i></a>, which is what good software design demands.
+</p>
+
+<p>
+When creating products&#x2013;especially products for other programmers&#x2013;it's important that we take the extra effort to <b>make our products useful to lazy people</b>. This means, among other things:
+</p>
+
+<ul class="org-ul">
+<li>Consistency
+<ul class="org-ul">
+<li>Every exception to a rule is itself a rule!
+</li>
+</ul>
+</li>
+<li>Completeness
+<ul class="org-ul">
+<li>Documentation as well as code!
+</li>
+</ul>
+</li>
+<li>Good defaults
+<ul class="org-ul">
+<li><a href="https://en.wikipedia.org/wiki/Convention_over_configuration">Convention over configuration</a>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+It's easy to release a product that is 90% of the way there and say, "the last bit shouldn't be too much work for the user". But if the number of users is large, or each user has to do "the last bit" many times, or if "the last bit" is not obvious, the product may end up performing at far below 90% of its full potential. Depending on the product, it may not perform at all.
+</p>
+
+<p>
+When working on a product, it can be easy to lose sight of how much mental real estate a user is willing or able to give to the product. Realizing that a user is <i>unwilling</i> to spend even 15 minutes learning to use, let alone configure and refine, your product is always a shock (if not a wound to the ego).
+</p>
+
+<p>
+User experience is something all developers and companies claim to prioritize, but few truly demonstrate it. Going the extra mile could actually have negative effects on a developer&#x2013;one may end up with a reputation as "the slow guy" on the team who takes an extra week to finish a project. That the product is easy to use and has fewer bugs is something that the user will appreciate, but may not show up in any meaningful developer metrics.
+</p>
+
+<p>
+Nonetheless, do go that extra mile. It'll make you a better developer, and you'll feel a lot better about your own work.
+</p>
