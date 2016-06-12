@@ -3,7 +3,7 @@
 #+BEGIN_HTML
 ---
 layout: post
-title: The Problem with Tutorials
+title: The problem with tutorials
 excerpt: Over-simplistic tutorials create bad habits that are hard to break.
 ---
 #+END_HTML
