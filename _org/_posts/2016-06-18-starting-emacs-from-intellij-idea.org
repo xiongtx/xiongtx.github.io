@@ -1,0 +1,41 @@
+#+OPTIONS: toc:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: Starting Emacs from IntelliJ IDEA
+excerpt: For when you really need the ultimate editor
+---
+#+END_HTML
+
+I'm a big Emacs user, but Emacs is still not up to par with "real IDEs" when it comes to doing project configuration, code analysis, refactoring, etc., which probably takes up as much type as text editing.
+
+This is especially true for large and complex languages like Java. There are a few traits that make Java particularly ill-supported for editors like Emacs:
+
+- Projects contain lots of files that are not Java source code
+- Standard libraries are large and complex
+- Third-party libraries are numerous
+- The language itself is verbose, with complex syntax
+
+I use [[https://www.jetbrains.com/idea/][IntelliJ IDEA]] when writing Java. IntelliJ IDEA is a powerful IDE, with particularly good support for autocompletion and refactoring. This is important when writing Java, which, in my experience, is a particularly error-prone language for all the reasons listed above.
+
+Sometimes, however, I really need the editing capabilities of Emacs. The IntelliJ IDEA Emacs bindings work alright most of the time, but being able to open a file directly in Emacs is a totally different animal.
+
+As it turns out, doing so is not difficult. Ken Fox from Atomic Object has a [[https://spin.atomicobject.com/2014/08/07/intellij-emacs/][great post]] on achieving this through an external command.
+
+Long story short,
+
+1. Go to /File > Settings > Tools > External Tools/ and create a new external tool.
+2. Make sure to check *Synchronize files after execution* and uncheck *Open console*.
+3. Fill in the following:
+   - *Program*: =emacsclient=; I use the =ec= script from [[http://mjwall.com/blog/2013/10/04/how-i-use-emacs/][MJ Wall]].
+   - *Parameters*: =+$LineNumber$:$ColumNumber$ $FilePath$=; confusingly, the parameters are for the =emacs= command, so you won't find them in the =emacsclient= [[http://linux.die.net/man/1/emacsclient][man page]]; check the =emacs= [[http://linux.die.net/man/1/emacsclient][man page]] instead.
+   - *Working directory*: =$ProjectFileDir$=
+4. /OK/ out of the dialog.
+
+The external tool can now be found under /Tools > External Tools/, but it would good to add a key binding for it.
+
+1. Go to /File > Settings > Keymap/
+2. Go to /External Tools > External Tools > <tool-name>/
+3. Hit /Enter/, and select *Add keyboard shortcut*
+4. Add a keyboard shortcut; I prefer =Ctrl-c e=.

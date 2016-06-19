@@ -6,7 +6,7 @@
 
     <title>
       
-      About
+      Starting Emacs from IntelliJ IDEA
       
       
     </title>
@@ -67,18 +67,89 @@
         <article>
   <header class="page-header">
     <h1 class="page-title">
-      About
+      Starting Emacs from IntelliJ IDEA
       
     </h1>
   </header>
 
-  <p>Hi, I’m TX. Healthcare IT developer, Emacs lover, and clelman code fanatic.</p>
+  <div class="post-info">
+  <p>
+    Posted on 2016-06-18 00:00:00 -0500
+    
+    <a href="/edit/master/_posts/2016-06-18-starting-emacs-from-intellij-idea.html">Edit on GitHub</a>
+    
+  </p>
+</div>
 
-<p>Here on my personal blog, I write about technologies, especially what I discover on the road to mastering them, as well as things I’m doing to improve the learning process for myself and others.</p>
+<p>
+I'm a big Emacs user, but Emacs is still not up to par with "real IDEs" when it comes to doing project configuration, code analysis, refactoring, etc., which probably takes up as much type as text editing.
+</p>
 
-<p>I also maintain another blog, <a href="http://www.healthtechreality.com/">Health Tech Reality</a>, on my experiences working in the healthcare IT industry.</p>
+<p>
+This is especially true for large and complex languages like Java. There are a few traits that make Java particularly ill-supported for editors like Emacs:
+</p>
 
-<p>You can check out some of my <a href="http://www.tianxiangxiong.com/projects">open-source projects</a>. Hopefully they’ll be of some use to you!</p>
+<ul class="org-ul">
+<li>Projects contain lots of files that are not Java source code
+</li>
+<li>Standard libraries are large and complex
+</li>
+<li>Third-party libraries are numerous
+</li>
+<li>The language itself is verbose, with complex syntax
+</li>
+</ul>
+
+<p>
+I use <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a> when writing Java. IntelliJ IDEA is a powerful IDE, with particularly good support for autocompletion and refactoring. This is important when writing Java, which, in my experience, is a particularly error-prone language for all the reasons listed above.
+</p>
+
+<p>
+Sometimes, however, I really need the editing capabilities of Emacs. The IntelliJ IDEA Emacs bindings work alright most of the time, but being able to open a file directly in Emacs is a totally different animal.
+</p>
+
+<p>
+As it turns out, doing so is not difficult. Ken Fox from Atomic Object has a <a href="https://spin.atomicobject.com/2014/08/07/intellij-emacs/">great post</a> on achieving this through an external command.
+</p>
+
+<p>
+Long story short,
+</p>
+
+<ol class="org-ol">
+<li>Go to <i>File &gt; Settings &gt; Tools &gt; External Tools</i> and create a new external tool.
+</li>
+<li>Make sure to check <b>Synchronize files after execution</b> and uncheck <b>Open console</b>.
+</li>
+<li>Fill in the following:
+<ul class="org-ul">
+<li><b>Program</b>: <code>emacsclient</code>; I use the <code>ec</code> script from <a href="http://mjwall.com/blog/2013/10/04/how-i-use-emacs/">MJ Wall</a>.
+</li>
+<li><b>Parameters</b>: <code>+$LineNumber$:$ColumNumber$ $FilePath$</code>; confusingly, the parameters are for the <code>emacs</code> command, so you won't find them in the <code>emacsclient</code> <a href="http://linux.die.net/man/1/emacsclient">man page</a>; check the <code>emacs</code> <a href="http://linux.die.net/man/1/emacsclient">man page</a> instead.
+</li>
+<li><b>Working directory</b>: <code>$ProjectFileDir$</code>
+</li>
+</ul>
+</li>
+<li><i>OK</i> out of the dialog.
+</li>
+</ol>
+
+<p>
+The external tool can now be found under <i>Tools &gt; External Tools</i>, but it would good to add a key binding for it.
+</p>
+
+<ol class="org-ol">
+<li>Go to <i>File &gt; Settings &gt; Keymap</i>
+</li>
+<li>Go to <i>External Tools &gt; External Tools &gt; &lt;tool-name&gt;</i>
+</li>
+<li>Hit <i>Enter</i>, and select <b>Add keyboard shortcut</b>
+</li>
+<li>Add a keyboard shortcut; I prefer <code>Ctrl-c e</code>.
+</li>
+</ol>
+
 
 
 </article>
