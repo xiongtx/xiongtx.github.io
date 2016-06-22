@@ -8,7 +8,7 @@ excerpt: There was a functional language on the JVM before Clojure?
 ---
 #+END_HTML
 
-I recently signed up for the [[https://www.coursera.org/learn/progfun1/lecture/FQDE1/lecture-1-5-example-square-roots-with-newtons-method][Functional Programming Principles in Scala]] specialization on Coursera. Learning from Martin Odersky, an expert in the field of functional programming (and the creator of Scala), is too good an opportunity to pass up. Though I'm quite busy at the moment, good courses like this are usually only held once a year, so if I don't take it now, I'd have to wait until next year.
+I recently signed up for the [[https://www.coursera.org/learn/progfun1][Functional Programming Principles in Scala]] specialization on Coursera. Learning from Martin Odersky, an expert in the field of functional programming (and the creator of Scala), is too good an opportunity to pass up. Though I'm quite busy at the moment, good courses like this are usually only held once a year, so if I don't take it now, I'd have to wait until next year.
 
 I've never used Scala, but I'm familiar with Java and Clojure, so neither the syntax nor the functional programming concepts are completely new to me. Furthermore, much of the course material and exercises are based on [[https://mitpress.mit.edu/sicp/][SICP]], which I've been trying to work through for a while now, so I've something of a head start when it comes to the weekly assignments.
 
