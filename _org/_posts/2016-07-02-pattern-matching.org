@@ -1,0 +1,53 @@
+#+OPTIONS: toc:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: Pattern matching
+excerpt: A great language feature for writing clean code
+---
+#+END_HTML
+
+I've long had a vague idea of what *pattern matching* is, but never really appreciate why it is a desirable feature in programming languages. We recently covered the topic of pattern matching in the [[https://www.coursera.org/learn/progfun1/lecture/cdHAM/lecture-4-6-pattern-matching][Functional Programming Principles in Scala]] course I'm taking, and I feel that I now have a much better understanding of it.
+
+The C2 wiki's [[http://c2.com/cgi/wiki?PatternMatching][page on pattern matching]] contains a much better description than [[https://en.wikipedia.org/wiki/Pattern_matching][Wikipedia's]], which is to be expected for such technical topics. In short,
+
+#+BEGIN_QUOTE
+Pattern matching is the compiler's ability to compare both the form and the content of two expressions.
+#+END_QUOTE
+
+It is a *dispatch mechanism* for choosing which variant of a function to call based on the form and content of its argument(s).
+
+The value of pattern matching is in making programming more /declarative/ and /logical/. Declarative programming lets the programmer to focus on the /what/ instead of the /how/. This allows programming at a higher level and focusing more on the problem domain, which should increase the odds that the program is correct.
+
+Coming from Clojure, I can best understand pattern matching as a combination of two familiar concepts:
+
+- [[https://clojuredocs.org/clojure.core/case][case]] expressions
+- [[http://clojure.org/guides/destructuring][Destructuring]]
+
+In languages without pattern matching, it is necessary to explicitly check the form and content of inputs, which leads to a lot of boilerplate.
+
+Consider the following implementation of ~flatten~ in Scheme:
+
+#+BEGIN_SRC scheme
+  (define (flatten x)
+    (cond ((null? x) '())
+          ((pair? x) (append (flatten (car x)) (flatten (cdr x))))
+          (else (list x))))
+#+END_SRC
+
+Here, we have to explicitly use a ~cond~ on ~x~ to decide what to do.
+
+In Scala, the [[http://stackoverflow.com/a/24128335/864684][solution]] is more declarative, and therefore easier to read and understand:
+
+#+BEGIN_SRC scala
+  def flatten(xs: List[Any]): List[Any] = xs match {
+    case List() => List()
+    case (y :: ys) :: yss => flatten(y :: ys) ::: flatten(yss)
+    case y :: ys => y :: flatten(ys)
+  }
+#+END_SRC
+
+In fact, Philip Wadler wrote a [[https://www.cs.kent.ac.uk/people/staff/dat/miranda/wadler87.pdf][whole critique of SICP]], and lack of pattern matching is the first issue he raises (along with non-mathematical synatx, lack of static and user-defined types, and lack of lazy evaluation). For more, see a [[http://www.leonardoborges.com/writings/2013/03/25/clojure-and-why-calculating-is-better-than-scheming/][critique of the critique]] by Leonardo Borges using Clojure and Haskell.
+
+Clojure supports pattern matching through a library, [[https://github.com/clojure/core.match][core.match]]. As a dispatching mechanism, however, pattern matching [[http://programmers.stackexchange.com/a/237026/194163][seems to be less idiomatic]] than [[http://clojure.org/reference/multimethods][multimethods]]. Multimethods allow dispatching on arguments based on an arbitrary *dispatching function*, which is even more general than pattern matching; however, it is less concise and, in my opinion, less elegant.
