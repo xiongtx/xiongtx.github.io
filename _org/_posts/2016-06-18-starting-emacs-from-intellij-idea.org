@@ -8,18 +8,18 @@ excerpt: For when you really need the ultimate editor
 ---
 #+END_HTML
 
-I'm a big Emacs user, but Emacs is still not up to par with "real IDEs" when it comes to doing project configuration, code analysis, refactoring, etc., which probably takes up as much type as text editing.
+I'm a big Emacs user, but Emacs is still not up to par with "real IDEs" when it comes to doing project configuration, code analysis, refactoring, etc., which take up much more time than text editing.
 
-This is especially true for large and complex languages like Java. There are a few traits that make Java particularly ill-supported for editors like Emacs:
+This is especially true for large and complex languages like Java. There are a few traits that make Java particularly difficult to support by editors like Emacs:
 
 - Projects contain lots of files that are not Java source code
 - Standard libraries are large and complex
 - Third-party libraries are numerous
-- The language itself is verbose, with complex syntax
+- The syntax is verbose and complex
 
-I use [[https://www.jetbrains.com/idea/][IntelliJ IDEA]] when writing Java. IntelliJ IDEA is a powerful IDE, with particularly good support for autocompletion and refactoring. This is important when writing Java, which, in my experience, is a particularly error-prone language for all the reasons listed above.
+I use [[https://www.jetbrains.com/idea/][IntelliJ IDEA]] when writing Java. IntelliJ IDEA is a powerful IDE, with particularly good support for autocompletion and refactoring. This is important when writing Java, which, in my experience, is a particularly tedious and error-prone language for all the reasons listed above.
 
-Sometimes, however, I really need the editing capabilities of Emacs. The IntelliJ IDEA Emacs bindings work alright most of the time, but being able to open a file directly in Emacs is a totally different animal.
+Sometimes, however, I really need the editing capabilities of Emacs. The IntelliJ IDEA Emacs bindings work fine most of the time, but being able to open a file directly in Emacs is a totally different animal.
 
 As it turns out, doing so is not difficult. Ken Fox from Atomic Object has a [[https://spin.atomicobject.com/2014/08/07/intellij-emacs/][great post]] on achieving this through an external command.
 
@@ -37,5 +37,5 @@ The external tool can now be found under /Tools > External Tools/, but it would 
 
 1. Go to /File > Settings > Keymap/
 2. Go to /External Tools > External Tools > <tool-name>/
-3. Hit /Enter/, and select *Add keyboard shortcut*
+3. Hit /Enter/, and select /Add keyboard shortcut/
 4. Add a keyboard shortcut; I prefer =Ctrl-c e=.
