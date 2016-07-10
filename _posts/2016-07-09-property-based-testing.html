@@ -1,0 +1,59 @@
+---
+layout: post
+title: Property-based testing
+excerpt: Describe what something is and let the computer generate test cases
+---
+
+<p>
+I've recently been introduced to <a href="http://blog.jessitron.com/2013/04/property-based-testing-what-is-it.html">property-based testing</a>, which takes a different approach to testing programs than the better-known unit tests.
+</p>
+
+<p>
+With unit tests, the programmer must come up with individual test cases. Therefore, the test suite is only as good as the programmer's ability to find <a href="https://en.wikipedia.org/wiki/Edge_case">edge cases</a>. Most people are not good at finding edge cases. They are, by definition, "situations that occur only at an extreme operating parameter", which are situations that we usually do not think about or encounter.
+</p>
+
+<p>
+Furthermore, the number of test cases can grow exponentially with the number of operating parameters. If there are 10 existing test cases, and a new, independent parameter with 5 (representative) values is introduced, then number of necessary test cases skyrockets to 50.
+</p>
+
+<p>
+Property-based testing moves up a level of abstraction by allowing the programmer to define <b>properties</b> of a program and letting the test framework generate test cases. This makes defining tests more declarative, which is a good thing.
+</p>
+
+<p>
+For example, suppose that we want to test the functionality of a <a href="https://en.wikipedia.org/wiki/Heap_(data_structure)">heap</a> implementation. Instead of having to construct an example heap for each test case, we can write a <b>generator</b> that creates a random heap. The example below is in Scala, taken from a <a href="https://www.coursera.org/learn/progfun2/programming/DF4y7/quickcheck">Coursera course</a> on functional programming:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-scala"><span style="color: #5F7F5F;">// </span><span style="color: #7F9F7F;">Generate a heap of type H</span>
+<span style="color: #DCDCCC; font-weight: bold;">lazy</span> <span style="color: #F0DFAF; font-weight: bold;">val</span> <span style="color: #DFAF8F;">genHeap</span><span style="color: #F0DFAF; font-weight: bold;">:</span> <span style="color: #7CB8BB;">Gen</span>[<span style="color: #BFEBBF;">H</span>] <span style="color: #F0DFAF; font-weight: bold;">=</span> <span style="color: #F0DFAF; font-weight: bold;">for</span> {
+  n <span style="color: #F0DFAF; font-weight: bold;">&lt;-</span> arbitrary[<span style="color: #BFEBBF;">A</span>]
+  h <span style="color: #F0DFAF; font-weight: bold;">&lt;-</span> frequency((<span style="color: #BFEBBF;">1</span>, const(empty)), (<span style="color: #BFEBBF;">9</span>, genHeap))
+} <span style="color: #F0DFAF; font-weight: bold;">yield</span> insert(n, h)
+</pre>
+</div>
+
+<p>
+We can then specify the properties, i.e. expected behaviors, of the heap. For example, if we insert an element into an empty heap, then delete the minimum, the resulting heap should be empty. This can be expressed as follows:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-scala">property(<span style="color: #CC9393;">"insertThenDelete"</span>) <span style="color: #F0DFAF; font-weight: bold;">=</span> forAll { (n<span style="color: #F0DFAF; font-weight: bold;">:</span> <span style="color: #7CB8BB;">A</span>) <span style="color: #F0DFAF; font-weight: bold;">=&gt;</span>
+  isEmpty(deleteMin(insert(n, empty)))
+}
+</pre>
+</div>
+
+<p>
+The test framework will use the generator to generate a (configurable) number of arbitrary heaps, then check that this property holds for all of them. The number of test cases, or <b>coverage</b>, is much greater than any unit test suite can provide.
+</p>
+
+<p>
+We can do other cool things, like <b>shrinking</b> a failing test case to include only relevant parameters with representative values. I have only begun to scratch the surface of this new testing technique, but it seems like a definite step forward from unit testing.
+</p>
+
+<p>
+Property-based testing was first introduced in the Haskell community with the <a href="https://hackage.haskell.org/package/QuickCheck">QuickCheck</a> library, which has since been ported to many other languages, including <a href="https://www.scalacheck.org/">Scala</a> and <a href="https://github.com/clojure/test.check">Clojure</a>. There are <a href="https://www.youtube.com/watch?v=zi0rHwfiX1Q">some</a> <a href="https://www.infoq.com/presentations/automated-testing-2015">great</a> <a href="https://www.infoq.com/presentations/testing-techniques-case-study">talks</a> by John Hughes, author of QuickCheck, about property-based testing and how its use has uncovered very subtle bugs in various programs.
+</p>
