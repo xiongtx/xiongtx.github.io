@@ -8,7 +8,7 @@ excerpt: A great language feature for writing clean code
 ---
 #+END_HTML
 
-I've long had a vague idea of what *pattern matching* is, but never really appreciate why it is a desirable feature in programming languages. We recently covered the topic of pattern matching in the [[https://www.coursera.org/learn/progfun1/lecture/cdHAM/lecture-4-6-pattern-matching][Functional Programming Principles in Scala]] course I'm taking, and I feel that I now have a much better understanding of it.
+I've long had a vague idea of what *pattern matching* is, but never really appreciated why it is a desirable feature in programming languages. We recently covered the topic of pattern matching in the [[https://www.coursera.org/learn/progfun1/lecture/cdHAM/lecture-4-6-pattern-matching][Functional Programming Principles in Scala]] course I'm taking, and I feel that I now have a much better understanding of it.
 
 The C2 wiki's [[http://c2.com/cgi/wiki?PatternMatching][page on pattern matching]] contains a much better description than [[https://en.wikipedia.org/wiki/Pattern_matching][Wikipedia's]], which is to be expected for such technical topics. In short,
 
