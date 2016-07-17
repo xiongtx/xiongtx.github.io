@@ -1,0 +1,70 @@
+---
+layout: post
+title: Reactive programming
+excerpt: A surprisingly hard concept to define
+---
+
+<p>
+I'm currently taking the <a href="https://www.coursera.org/learn/progfun1">Functional Programming in Scala</a> course from Coursera, which covers a bit of <b>functional reactive programming</b> (FRP). While the course is excellent overall, the material on functional reactive programming seems rushed and incomplete.
+</p>
+
+<p>
+In a <a href="https://www.coursera.org/learn/progfun2/home/week/4">single week</a>, we are introduced to FRP, latency, combinators, futures, and more. It seems like too much material to cover in a week, and fails to answer the most important question of all:
+</p>
+
+<blockquote>
+<p>
+What is reactive programming?
+</p>
+</blockquote>
+
+<p>
+As it turns out, there was a separate course, <a href="https://www.lightbend.com/blog/principle-of-reactive-programming-coursera">Principles of Reactive Programming</a>, that covered this topic exhaustively. However, it is no longer available on Coursera. I do not know whether it will still be available again; the old course page seems to redirect to the Functional Programming in Scala course.
+</p>
+
+<p>
+There is a <a href="https://www.youtube.com/watch?v=7D9QfMj_KwI">video from that course</a>, available on YouTube, that tries to answer just this question. In it, Prof. Martin Odersky provides some context on the changing requirements of web services (from 10's of servers to 1000's, hours of downtime per month to none, etc.), as well as the key properties of reactive applications:
+</p>
+
+<ul class="org-ul">
+<li>Event-driven (react to events)
+</li>
+<li>Scalable (react to load)
+</li>
+<li>Resilient (react to failures)
+</li>
+<li>Responsive (react to users)
+</li>
+</ul>
+
+<p>
+However, this is a <i>description</i>, not a <i>definition</i>. It's like saying that an elephant is large, gray, and has a long nose; I'm looking for the precise phylogenetic classification.
+</p>
+
+<p>
+Fortunately, <a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754">The Introduction to Reactive Programming You've Been Missing</a>, by André Staltz, doesn't mince words:
+</p>
+
+<blockquote>
+<p>
+Reactive programming is programming with asynchronous data streams.
+</p>
+</blockquote>
+
+<p>
+In fact, this definition meshes well with the one provided by the description of the Reactive Programming course:
+</p>
+
+<blockquote>
+<p>
+Reactive programming is an emerging discipline which combines concurrency and event-based and asynchronous systems.
+</p>
+</blockquote>
+
+<p>
+Alright&#x2013;reactive programming is about working with <b>asynchronous</b> events presented as <b>streams</b>. Functional programming is just a paradigm that makes manipulating those streams (mapping, filtering, composing, etc.) easy.
+</p>
+
+<p>
+I still wish the old Reactive Programming course was available to provide more details and implementations, but this seems like a good start.
+</p>
