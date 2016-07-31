@@ -4,9 +4,9 @@ layout: page
 
 <div class="post-info">
   <p>
-    Posted on {{ page.date | date: site.format.date_long }}
+    Posted on {{ page.date | date: '%Y-%m-%d' }}
     {% if page.path %}
-    <a href="{{ site.github.url }}/edit/master/{{ page.path }}">Edit on GitHub</a>
+    <a href="{{ site.github.url }}/edit/master/_org/{{ page.path | split: '.' % | first}}.org">Edit on GitHub</a>
     {% endif %}
   </p>
 </div>

@@ -13,8 +13,7 @@ author:
 baseurl: ""
 
 github:
-  url:"https://github.com/xiongtx/xiongtx.github.io"
-
+  url: "https://github.com/xiongtx/xiongtx.github.io"
 
 # Build settings
 
