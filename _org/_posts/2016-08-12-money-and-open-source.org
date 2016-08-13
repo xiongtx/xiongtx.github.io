@@ -1,0 +1,55 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: Crowdfunding and open-source
+excerpt: What is the right economic model for open-source software?
+---
+#+END_HTML
+
+** Open-source ideals
+
+Many software developers idealize "open-source"[fn:1] software. Software that is open-source is considered higher-quality, more trustworthy, and even morally superior.
+
+I tend to agree with these sentiments, particularly regarding the issue of trustworthiness. With proprietary software, it's all too easy to put in a quick hack--or something more malicious--without anyone knowing.
+
+** Matters of justice
+
+Proponents of open-source software--usually developers themselves--often lament that it is "unjust" for some people to put in enormous time and effort in developing the software, and others to use it while contributing nothing. This is particularly intolerable when the users are from large companies that make millions, or billions, of dollars per year.
+
+The problem, of course, is that allowing /everyone/ to view the source code and use the software is a key plank of open-source idealism. I do not know of open-source software that places restrictions on users based on where they work or what type of company they work for--and it's unclear whether such restrictions would stand up in a US court.
+
+** Making money
+
+There are a few different approaches to making money off of open-source software:
+
+- Make the open-source software depend on proprietary software
+- Have a separate license for commercial use
+- Sell support (certification, consulting, etc.)
+- Get sponsorship (from government agencies, corporations, etc.)
+- Crowdfund
+
+Making open-source software depend on proprietary software is generally viewed as violating the "spirit of open-source", and is typically pursued by companies that want to be able to call themselves "open-source" without making a real commitment to it.
+
+Having a separate license for commercial use is fairly common. Such software, however, tends to have more restrictive open-source licenses that preclude significant modification and redistribution, which /may/ be viewed as violating the spirit of open-source.
+
+Selling support tends to be favored by larger companies. There is a fundamental conflict of interest, however, in that the software /cannot be too easy to use/. Such software tends to be enterprise and monolithic, and suffer from "[[https://en.wikipedia.org/wiki/Not_invented_here][not invented here]]" syndrome. In the extreme, products may be created /for the express purpose of selling support/; such products are rarely good.
+
+Getting sponsorship removes the need to "sell", but may require "selling out" instead. Very basic sponsorship, such as displaying the sponsor's logo on the software's product page or mentioning the sponsor in blog posts and podcasts, may be enough to sustain a project with one or two developers. A larger project would requirement much more extensive sponsorship. In such cases, the sponsor may demand more--early access to the code, for example, or even input in project direction.
+
+Crowdfunding is a relatively new concept, and a route that is increasingly being taken by smaller projects and developers. The sums raised by crowdfunding are rarely enough to sustain even a single developer full-time. More often, the money is a "nice to have" that gives the developer /something/--even if just a token of appreciation and support--that motivates them to contribute spare time to a project.
+
+** All about tradeoffs
+
+In the end, there is no "right" approach to making money off of open-source software. The key questions are:
+
+- What aspects of open-source idealism can be sacrificed
+- To what degree will sacrifices be made
+- What the project will gain in return
+
+Ideally, the project establishes a set of *core value* at the beginning and maintains them. This way, the developers and users know what they're getting into from the start.
+
+* Footnotes
+
+[fn:1] I will use the term "open-source" to mean, in a general sense, software with available source code and a license that does not preclude using and modifying either. There are many types of "open-source" software out there, the details of which we will not get into.
