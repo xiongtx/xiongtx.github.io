@@ -26,11 +26,11 @@ For example, suppose that we want to test the functionality of a <a href="https:
 
 <div class="org-src-container">
 
-<pre class="src src-scala"><span style="color: #5F7F5F;">// </span><span style="color: #7F9F7F;">Generate a heap of type H</span>
-<span style="color: #DCDCCC; font-weight: bold;">lazy</span> <span style="color: #F0DFAF; font-weight: bold;">val</span> <span style="color: #DFAF8F;">genHeap</span><span style="color: #F0DFAF; font-weight: bold;">:</span> <span style="color: #7CB8BB;">Gen</span>[<span style="color: #BFEBBF;">H</span>] <span style="color: #F0DFAF; font-weight: bold;">=</span> <span style="color: #F0DFAF; font-weight: bold;">for</span> {
-  n <span style="color: #F0DFAF; font-weight: bold;">&lt;-</span> arbitrary[<span style="color: #BFEBBF;">A</span>]
-  h <span style="color: #F0DFAF; font-weight: bold;">&lt;-</span> frequency((<span style="color: #BFEBBF;">1</span>, const(empty)), (<span style="color: #BFEBBF;">9</span>, genHeap))
-} <span style="color: #F0DFAF; font-weight: bold;">yield</span> insert(n, h)
+<pre class="src src-scala">// Generate a heap of type H
+lazy val genHeap: Gen[H] = for {
+  n &lt;- arbitrary[A]
+  h &lt;- frequency((1, const(empty)), (9, genHeap))
+} yield insert(n, h)
 </pre>
 </div>
 
@@ -40,7 +40,7 @@ We can then specify the properties, i.e. expected behaviors, of the heap. For ex
 
 <div class="org-src-container">
 
-<pre class="src src-scala">property(<span style="color: #CC9393;">"insertThenDelete"</span>) <span style="color: #F0DFAF; font-weight: bold;">=</span> forAll { (n<span style="color: #F0DFAF; font-weight: bold;">:</span> <span style="color: #7CB8BB;">A</span>) <span style="color: #F0DFAF; font-weight: bold;">=&gt;</span>
+<pre class="src src-scala">property("insertThenDelete") = forAll { (n: A) =&gt;
   isEmpty(deleteMin(insert(n, empty)))
 }
 </pre>
