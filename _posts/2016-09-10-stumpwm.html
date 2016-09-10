@@ -1,0 +1,56 @@
+---
+layout: post
+title: StumpWM
+excerpt: A window manager in Common Lisp!
+---
+
+<p>
+Tiling window managers (WMs) are beloved by hackers everywhere. Not being a hacker, I never paid them much attention, but my experience with the Haskell-based <a href="http://xmonad.org/">XMonad</a> a while back was positive enough that I wanted to try a Lisp-based WM.
+</p>
+
+<p>
+For a tool like a VM, which requires a lot of tweaking, Lisp is a great choice due to its evaluate-on-the-fly capability. No need to modify a configuration file and restart the whole window system; simply redefine a command, evaluate it, and see it in action. The feedback loop is much tighter, and, as a result, a lot more tweaking can be done.
+</p>
+
+<p>
+When it comes to Lisp-based WMs, The obvious choice is <a href="https://stumpwm.github.io/">StumpWM</a>, which promises an "Emacs-like" experience. As a big Emacs fan, I was intrigued. StumpWM's philosophy is:
+</p>
+
+<ul class="org-ul">
+<li>Hack the good hack
+</li>
+<li>Debug your good hack
+</li>
+<li>Customize your window manager
+</li>
+</ul>
+
+<p>
+Which sounds good to me.
+</p>
+
+<p>
+Installing StumpWM is <a href="https://github.com/stumpwm/stumpwm#build--start-stumpwm">somewhat of a hassle</a>. The bigger problem, however, is that the <a href="https://github.com/stumpwm/stumpwm/blob/master/README.md">README</a> does not contain instructions on how to start hacking. There's a <a href="https://stumpwm.github.io/">manual</a>, but a program that prides itself on being "hackable" should put "how to hack" front and center!
+</p>
+
+<p>
+As it turns out, hacking is <a href="http://www.kaashif.co.uk/2015/06/28/hacking-stumpwm-with-common-lisp/index.html">not hard at all</a>. Using the SWANK server, which is part of the <a href="https://github.com/slime/slime">SLIME</a> Emacs package, it's as easy as putting the following in the <code>.stumpwmrc</code> file:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-common-lisp">(require :swank)
+(swank-loader:init)
+(swank:create-server :port 4004
+                     :style swank:*communication-style*
+                     :dont-close t)
+</pre>
+</div>
+
+<p>
+and calling <code>slime-connect</code> in Emacs.
+</p>
+
+<p>
+Happy <del>hacking</del> fiddling!
+</p>
