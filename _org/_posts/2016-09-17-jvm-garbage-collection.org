@@ -1,0 +1,69 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: JVM garbage collection
+excerpt: Memory management on the JVM
+---
+#+END_HTML
+
+Now that I'm [[https://www.fundingcircle.com/us/simplified-loans/?utm_source%3Dgoogle&utm_medium%3Dcpc&utm_campaign%3DBrand-Search-Alpha&utm_term%3Dfunding_cir&utm_device%3Dc&utm_placement%3D&mkwid%3Ds93IeB55P_dc&pcrid%3D75110439889&pkw%3Dfunding%2520cir&pmt%3De&gclid%3DCj0KEQjw0_O-BRCfjsCw25CYzYoBEiQAqO9BDKyTawip2PrNG9QrWf1J1O-7E2DKBVcOA6L8Toc1sWcaAjiz8P8HAQ][programming Clojure professionally]], I wanted to learn more about Java and the JVM. Much of the work we do involves Java interop with third-party libraries.
+
+Creating thin wrappers around Java libraries is a common practice in the Clojure community, which is too small to write everything it needs in Clojure (especially when there are Java libraries readily available). What's more, writing Java libraries allows sharing with other JVM languages like [[http://www.scala-lang.org/][Scala]].
+
+I started by tackling an topic about which I knew very little: the [[http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html][JVM garbage collector]] (GC). I knew that the GC is a program that occasionally runs to free memory, and thus relieve programmers of the burden of memory management, but little beyond that. I suspect that most developers are at the same level: they know that the GC exists and what it's supposed to do, but not the specifics of how it goes about doing it.
+
+Fortunately, [[http://app.pluralsight.com/author/kevin-jones][Kevin Jones of Pluralsight]] has created an excellent [[https://app.pluralsight.com/library/courses/understanding-java-vm-memory-management/table-of-contents][introductory course]] to JVM memory management. It's well worth checking out!
+
+** Memory regions
+
+The way the JVM manages memory is not as complex as I thought. Basically, memory is divided into several regions:
+
+- *Young generation*
+  - Region more frequently GC'ed
+- *Old (tenured) generation*
+  - Region less frequently GC'ed
+  - Where objects that survive a number of GCs above some threshold are copied.
+- *Permanent generation* / *metaspace*
+  - Where objects are never GC'ed
+  - Permanent generation is [[https://dzone.com/articles/java-8-permgen-metaspace][replaced by metaspace in Java 8]].
+
+The young generation is further divided into several spaces:
+
+- *Eden space*
+  - Where new objects are allocated
+- *Survivor spaces*
+  - Usually two, where objects that survive GC are copied before being *promoted* to old generation
+
+** GC process
+
+The high-level memory allocation-deallocation process goes something like this:
+
+1. A new object is allocated to Eden space
+2. Some time later, *minor collection* begins in the young generation
+3. Starting from a set of *root references*, the GC follows references and /marks/ those that it finds as "live" references.
+4. Objects referred to by live references are copied to a survivor space (call it \( S_1 \))
+5. Objects in other survivor space (call it \( S_2 \)) are copied to \( S_1 \)
+6. Objects that survive GC have their "survival counter" increased by 1
+7. Memory is /swept/ clean in Eden space and \( S_2 \)
+8. Survivor spaces are swapped, so that the next round of GC copies from \( S_1 \) to \( S_2 \)
+9. Objects whose survival counter is above a certain threshold are copied the old generation
+   - The heuristic is that an object that survives a few GCs is stick around for a long time, and therefore does not need to be checked for GC each time
+10. If the old generation has too many objects, *major collection* beings
+    - For Oracle's JVM, major collection is always followed by a minor collection; the combination is a *full GC*
+
+** Garbage collectors
+
+JVM has a number of GC algorithms available:
+
+- Serial
+- Parallel for young space, serial for old space
+- Parallel for young and old space
+- Concurrent mark-sweep (CMS) with serial young space
+- Concurrent mark-sweep with parallel young space
+- G1
+
+There are different trade-offs between these GCs, which are explained in detail by Kevin and [[http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html][Oracle]].
+
+Overall, I learned a lot in 2 hours' worth of lessons. It would be nice if Kevin had mentioned how other programming languages do GC (*reference counting* was mentioned in the context of [[https://en.wikipedia.org/wiki/Component_Object_Model][COM]]), if there are superior algorithms available, etc., but I can't really complain, since the course is clearly JVM-specific.
