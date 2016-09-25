@@ -1,0 +1,59 @@
+---
+layout: post
+title: Don't be a hacker
+excerpt: '"Hacking" is not a satisfactory way of writing software'
+---
+
+<p>
+I've recently been working on improving the help functions for Emacs (e.g. <code>describe-variable</code>). The particular file I've been looking at is <code>[[https://github.com/emacs-mirror/emacs/blob/master/lisp/help-fns.el][help-fns.el]]</code>.
+</p>
+
+<p>
+What really struck me is how <i>hacky</i> much of the functionality seems to be. The file is littered with regexps (a clear sign that data is being treated as <a href="http://c2.com/cgi/wiki?StringlyTyped">stringly typed</a>), comments on edge cases that don't work, and lamentations that such-and-such functionality simply isn't "good enough".
+</p>
+
+<p>
+This is really surprising, since the data that help functions work with are from Emacs itself. "String typing" and other workarounds are often necessary for gluing together disparate systems or working with poorly-designed interfaces, but there's really no reason to do this when all the data comes from your own system<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>.
+</p>
+
+<p>
+This leads me to a conclusion I've made for quite some time:
+</p>
+
+<blockquote>
+<p>
+"Hacking" is not a satisfactory way of writing software
+</p>
+</blockquote>
+
+<p>
+I was a math and engineering major. Briefly,
+</p>
+
+<dl class="org-dl">
+<dt> Math </dt><dd>the solution is correct
+</dd>
+<dt> Engineering </dt><dd>the solution is not exactly correct, but I have carefully analyzed the margin of error and found it to be satisfactory
+</dd>
+<dt> Hacking </dt><dd>it <i>seems</i> to work, and is <i>mostly</i> good enough for my <i>current</i> use case
+</dd>
+</dl>
+
+<p>
+Programming culture seems to value quickly putting together prototypes, which are then inevitably shipped as the final product. I don't understand this mentality. At first, I thought that it must be the business aspect that is applying pressure towards this end, but the phenomenon seems to happen with a lot of free and open-source software as well.
+</p>
+
+<p>
+Prototyping is important, but it should be the first step, not the whole step. A real solution should tackle the problem at the right level of abstraction, solving it (or even the whole class of problems like it) in an elegant way. This takes time and comprehension, which the open source world should have in plenitude.
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+I suspect the predilection for regexps is due to Emacs being viewed as a "text editor" whose "primitives" are strings, buffers, etc. Actually, Emacs Lisp has <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Sequences-Arrays-Vectors.html">many data types</a>, and strings are most often <i>not</i> the right data format to use until the final step of <b>presenting</b> data.
+</p></div>
+
+
+</div>
+</div>
