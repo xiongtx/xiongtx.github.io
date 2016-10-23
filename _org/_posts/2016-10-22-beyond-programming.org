@@ -1,0 +1,59 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: Beyond programming
+excerpt: For developers, it's not enough to "code"
+---
+#+END_HTML
+
+The rise of the [[https://newrelic.com/devops?_bt%3D51484354916&_bk%3D%252Bdev%2520%252Bops&_bm%3Db&_bn%3Dg][DevOps]] role over the past few years has been meteoric. [[https://www.pagerduty.com/][Entire companies]] now exist to serve this niche, and, by all accounts, DevOps personnel are in /very/ high demand[fn:1].
+
+Wikipedia has a nice Venn diagram showing what DevOps is:
+
+#+ATTR_HTML: :width 400px
+[[https://upload.wikimedia.org/wikipedia/commons/b/b5/Devops.svg]]
+
+As a developer, it's easy to look at this and think that it's just a rebranding of IT.
+
+Having worked with DevOps for a while, however, I've realized that it's much more than that. It's not merely that IT has moved closer to development--development has also moved closer to IT.
+
+** Everything as a service
+
+The nature of software has changed dramatically over the past few years. More web, more (micro-) services, less personal computer. In many ways, we're going [[http://www.winestockwebdesign.com/Essays/Eternal_Mainframe.html][back to Big Iron]].
+
+These days, for reasons including:
+
+- Ease of deployment
+- Scale
+- Customer lock-in
+- Intellectual property rights
+
+companies want everything to be a web service. This means an awful lot of infrastructure--so much so that it's a lot cheaper and more reliable to leverage the expertise of [[https://aws.amazon.com/][Amazon]], [[https://azure.microsoft.com/en-us/][Microsoft]], and [[https://cloud.google.com/compute/][Google]] than to manage it in-house[fn:2].
+
+IT departments, therefore, can manage a lot less hardware. They spend much more of their time with [[https://www.gnu.org/software/bash/][scripts]] and [[https://www.consul.io/][configurations]]; in other words, more programming and less wrestling cables.
+
+** Change at the speed of human availability
+
+Software that comes as a service rather than in a box is much more under the company's control, which means that it's easier to modify. And if it's /easier/ to modify, it /will/ be modified more often--and blow up more often. Amazon is one of the first companies to embrace the "software as a service" (Saar) model, and it's not an accident that their developers were among the first to wear pagers.
+
+When software is a service, it's harder to write some lines of code, throw it over the fence to QA, and move on. Developers have to *own* their code from development, to deployment, to production. Often, there /is/ no one on the other side of the fence. Funding Circle US, for example, has only one dedicated QA'er[fn:3] for /all/ development teams--nearly 30 developers in total--and no plans to hire more.
+
+Developers, therefore, have an increased responsibility to be their own QA. Often, they have to be their own IT support as well--if a deployment goes wrong due to some infrastructure issue, it's up to the developer to investigate and resolve it.
+
+** A grand unification
+
+I have long thought that software development, like most roles, will become /more/ specialized over time; the current trend, however, points towards less. Development, QA, and operations are entering each others' territories[fn:4].
+
+For the foreseeable future, it's less and less acceptable for developers to "only" write code. Spending more time on testing and infrastructure is to be expected.x
+
+* Footnotes
+
+[fn:1] Even more so than developers!
+
+[fn:2] Especially for companies that primary consume, rather than produce, software.
+
+[fn:3] A /really/ smart and productive guy
+
+[fn:4] And often stepping on each others' toes.

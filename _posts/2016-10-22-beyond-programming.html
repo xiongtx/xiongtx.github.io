@@ -1,0 +1,112 @@
+---
+layout: post
+title: Beyond programming
+excerpt: For developers, it's not enough to "code"
+---
+
+<p>
+The rise of the <a href="https://newrelic.com/devops?_bt=51484354916&_bk=%252Bdev%2520%252Bops&_bm=b&_bn=g">DevOps</a> role over the past few years has been meteoric. <a href="https://www.pagerduty.com/">Entire companies</a> now exist to serve this niche, and, by all accounts, DevOps personnel are in <i>very</i> high demand<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>.
+</p>
+
+<p>
+Wikipedia has a nice Venn diagram showing what DevOps is:
+</p>
+
+
+<div class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Devops.svg" alt="Devops.svg" width="400px" />
+</p>
+</div>
+
+<p>
+As a developer, it's easy to look at this and think that it's just a rebranding of IT.
+</p>
+
+<p>
+Having worked with DevOps for a while, however, I've realized that it's much more than that. It's not merely that IT has moved closer to development&#x2013;development has also moved closer to IT.
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Everything as a service</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+The nature of software has changed dramatically over the past few years. More web, more (micro-) services, less personal computer. In many ways, we're going <a href="http://www.winestockwebdesign.com/Essays/Eternal_Mainframe.html">back to Big Iron</a>.
+</p>
+
+<p>
+These days, for reasons including:
+</p>
+
+<ul class="org-ul">
+<li>Ease of deployment
+</li>
+<li>Scale
+</li>
+<li>Customer lock-in
+</li>
+<li>Intellectual property rights
+</li>
+</ul>
+
+<p>
+companies want everything to be a web service. This means an awful lot of infrastructure&#x2013;so much so that it's a lot cheaper and more reliable to leverage the expertise of <a href="https://aws.amazon.com/">Amazon</a>, <a href="https://azure.microsoft.com/en-us/">Microsoft</a>, and <a href="https://cloud.google.com/compute/">Google</a> than to manage it in-house<sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup>.
+</p>
+
+<p>
+IT departments, therefore, can manage a lot less hardware. They spend much more of their time with <a href="https://www.gnu.org/software/bash/">scripts</a> and <a href="https://www.consul.io/">configurations</a>; in other words, more programming and less wrestling cables.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Change at the speed of human availability</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Software that comes as a service rather than in a box is much more under the company's control, which means that it's easier to modify. And if it's <i>easier</i> to modify, it <i>will</i> be modified more often&#x2013;and blow up more often. Amazon is one of the first companies to embrace the "software as a service" (Saar) model, and it's not an accident that their developers were among the first to wear pagers.
+</p>
+
+<p>
+When software is a service, it's harder to write some lines of code, throw it over the fence to QA, and move on. Developers have to <b>own</b> their code from development, to deployment, to production. Often, there <i>is</i> no one on the other side of the fence. Funding Circle US, for example, has only one dedicated QA'er<sup><a id="fnr.3" name="fnr.3" class="footref" href="#fn.3">3</a></sup> for <i>all</i> development teams&#x2013;nearly 30 developers in total&#x2013;and no plans to hire more.
+</p>
+
+<p>
+Developers, therefore, have an increased responsibility to be their own QA. Often, they have to be their own IT support as well&#x2013;if a deployment goes wrong due to some infrastructure issue, it's up to the developer to investigate and resolve it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">A grand unification</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+I have long thought that software development, like most roles, will become <i>more</i> specialized over time; the current trend, however, points towards less. Development, QA, and operations are entering each others' territories<sup><a id="fnr.4" name="fnr.4" class="footref" href="#fn.4">4</a></sup>.
+</p>
+
+<p>
+For the foreseeable future, it's less and less acceptable for developers to "only" write code. Spending more time on testing and infrastructure is to be expected.x
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+Even more so than developers!
+</p></div>
+
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p class="footpara">
+Especially for companies that primary consume, rather than produce, software.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.3" name="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p class="footpara">
+A <i>really</i> smart and productive guy
+</p></div>
+
+<div class="footdef"><sup><a id="fn.4" name="fn.4" class="footnum" href="#fnr.4">4</a></sup> <p class="footpara">
+And often stepping on each others' toes.
+</p></div>
+
+
+</div>
+</div>
