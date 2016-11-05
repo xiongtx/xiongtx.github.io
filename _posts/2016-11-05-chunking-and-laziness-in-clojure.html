@@ -1,0 +1,205 @@
+---
+layout: post
+title: Laziness and chunking in Clojure
+excerpt: Interesting behavior with Clojure's lazy sequences
+---
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Surprises with side effects</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+One of Clojure's more surprising behaviors is the interaction between functions like <code>map</code> <sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup> and functions with side effects<sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup>.
+</p>
+
+<p>
+Let's map a side-effecting function like <code>prn</code> over a list<sup><a id="fnr.3" name="fnr.3" class="footref" href="#fn.3">3</a></sup>:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-clojure">(take 1 (map prn ''(1 2 3 4 5)))
+</pre>
+</div>
+
+<p>
+You may expect that, since there is a <code>(take 1 ...)</code>, only one number will be printed. This is indeed the case:
+</p>
+
+<pre class="example">
+1
+(nil)
+</pre>
+
+<p>
+But try doing the same to a vector:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-clojure">(take 1 (map prn [1 2 3 4 5]))
+</pre>
+</div>
+
+<p>
+We get:
+</p>
+
+<pre class="example">
+1
+2
+3
+4
+5
+(nil)
+</pre>
+
+<p>
+What's going on?
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Chunking</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+In the <a href="https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L2776">definition of <code>take</code></a>, <code>seq</code> is called on the collection. <code>seq</code> causes a lazy sequence to realize its value, i.e. the <code>(map prn ...)</code> is evaluated.
+</p>
+
+<p>
+Now we need to take a look at the <a href="https://github.com/clojure/clojure/blob/clojure-1.8.0/src/clj/clojure/core.clj#L2636">definition of <code>map</code></a>; it is sufficient to look at one arity:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-clojure">([f coll]
+   (lazy-seq
+    (when-let [s (seq coll)]
+      (if (chunked-seq? s)
+        (let [c (chunk-first s)
+              size (int (count c))
+              b (chunk-buffer size)]
+          (dotimes [i size]
+              (chunk-append b (f (.nth c i))))
+          (chunk-cons (chunk b) (map f (chunk-rest s))))
+        (cons (f (first s)) (map f (rest s)))))))
+</pre>
+</div>
+
+<p>
+The difference is that <code>[1 2 3 4 5]</code> goes down the <code>chunked-seq?</code> path, while ~'(1 2 3 4 5)~ does not.
+</p>
+
+<ul class="org-ul">
+<li><code>(seq [1 2 3 4 5])</code> returns a <code>clojure.lang.PersistentVector$ChunkedSeq</code>, which is a <b>chunked seq</b> (an instance of <code>IChunkedSeq</code>).
+</li>
+<li><code>(seq '(1 2 3 4 5))</code> simply returns a <code>clojure.lang.PersistentList</code>, which is not.
+</li>
+</ul>
+
+<p>
+From above, we see that if the collection is a chunked seq, <code>map</code> uses <code>chunk-first</code> to take elements from it. For performance reasons, <code>chunk-first</code> takes 32 elements. Therefore, <code>prn</code> is called 32 times.
+</p>
+
+<p>
+We can see this in the following:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-clojure">(take 1 (map prn (range 100)))
+</pre>
+</div>
+
+<p>
+which outputs:
+</p>
+
+<pre class="example">
+0
+1
+2
+...
+31
+(nil)
+</pre>
+
+<p>
+If the collection is <i>not</i> a chunked seq, <code>map</code> realizes only one element of it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Avoiding chunking</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+To avoid chunking, we can explicity "<a href="http://www.markhneedham.com/blog/2014/04/06/clojure-not-so-lazy-sequences-a-k-a-chunking-behaviour/">unchunk</a>" the lazy sequence:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-clojure">(defn unchunk [s]
+  (when (seq s)
+    (lazy-seq
+      (cons (first s)
+            (unchunk (next s))))))
+</pre>
+</div>
+
+<p>
+In short, <code>unchunk</code> turns the collection into something that's not chunkable (a cons cell).
+</p>
+
+<p>
+We see that:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-clojure">(take 1 (map prn (unchunk (range 100))))
+</pre>
+</div>
+
+<p>
+produces
+</p>
+
+<pre class="example">
+0
+(nil)
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Laziness and side effects</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+In general, mixing laziness and side effects is a <a href="https://stuartsierra.com/2015/08/25/clojure-donts-lazy-effects">bad idea</a>. It makes <a href="https://www.schoolofhaskell.com/school/starting-with-haskell/introduction-to-haskell/6-laziness#side-effects-and-purity">reasoning about when thing will be evaluated difficult</a>.
+</p>
+
+<p>
+If it has to be done, however, understanding chunking and when it occurs is important. Most of the time, the side effects are much costlier than printing a value.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+And <code>concat</code>, <code>reduce</code>, <code>filter</code>, and many others.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p class="footpara">
+Since <a href="https://github.com/clojure/clojure/releases/tag/1.1.0">Clojure 1.1.0</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.3" name="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p class="footpara">
+For some interactive examples, see <a href="https://github.com/iantruslove/chunking">Ian Truslove's presentation</a>.
+</p></div>
+
+
+</div>
+</div>
