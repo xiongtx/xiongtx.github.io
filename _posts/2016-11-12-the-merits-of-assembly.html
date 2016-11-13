@@ -1,0 +1,71 @@
+---
+layout: post
+title: The merits of assembly
+excerpt: Low-level programming can be enlightening
+---
+
+<p>
+Today, I went to a workshop on low-level programming at <a href="http://bradfieldcs.com/">Bradfield CS</a>, a nontraditional computer science school located in <a href="https://www.google.com/maps/place/Bradfield+School+of+Computer+Science/@37.7771207,-122.4100612,15z/data=!4m2!3m1!1s0x0:0x6fe3ed861a4c80d8?sa=X&ved=0ahUKEwjIx7_b6qTQAhWqj1QKHRMgChAQ_BIIbjAR">downtown San Francisco</a>.
+</p>
+
+<p>
+The instructors, Oz and Myles, are sharp people with a great commitment to computer science education through small-group instruction. Both have years of experience in the software field and clearly know their stuff<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>.
+</p>
+
+<p>
+The workshop was from 10:00 AM to 3:00 PM, and included 5 participants (aside from Oz and Myles). For the first hour, we briefly covered CPU architecture, the <a href="https://en.wikipedia.org/wiki/MIPS_instruction_set">MIPS</a> instruction set and why <a href="https://en.wikipedia.org/wiki/Reduced_instruction_set_computing">RISC</a> is the future rather than <a href="https://en.wikipedia.org/wiki/Complex_instruction_set_computing">CSIC</a>. For the next hour and a half, we did some <a href="http://exercism.io/languages/mips/about">MIPS exercises</a> as a group. During the remaining time, we paired up and did some more MIPS exercises.
+</p>
+
+<p>
+A single workshop is not enough to become a great assembly programmer, of course, but it highlighted some important ideas about assembly programming and why it's important.
+</p>
+
+<p>
+For example, it is well-known that <a href="https://dzone.com/articles/oracle-gets-java-running-ios">iOS does not support the JVM</a>. This is due to Apple's policy of allowing only "examined" code to be run. Without learning assembly, however, it's hard to understand <i>why</i> this "examination" requirement precludes JVM support.
+</p>
+
+<p>
+The reason is this:
+</p>
+
+<p>
+A program's memory is laid out in sections:
+</p>
+
+<ul class="org-ul">
+<li>Stack
+</li>
+<li>Heap
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Data_segment">Data segment</a>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Code_segment">Text segment</a>
+</li>
+</ul>
+
+<p>
+The text segment contains program instructions. To run the program, a <a href="https://en.wikipedia.org/wiki/Program_counter">program counter</a> (PC) is loaded with different addresses, which are the locations of different instructions to be executed. We imagine the program counter to be a pointer to the different addresses.
+</p>
+
+<p>
+The JVM, however, does just-in-time (JIT) compilation, which involves compiling bytecode to instructions stored on the heap and "jumping" the PC out of the text segment to the heap where instructions are stored.
+</p>
+
+<p>
+If the PC can jump out of the text segment to the heap, then a program could run arbitrary code (e.g. code downloaded from the internet), not just the code in its code segment (which, at least in theory, could be examined by Apple). Since Apple has promised users that its apps would only run examined code, iOS cannot support the JVM (or any JIT compiler that works this way) without a policy change.
+</p>
+
+<p>
+This becomes clear only if we delve into the low-level programming that most programmers today have no experience with. As a functional programmer, I'm very glad to have gone to this workshop and learned to see things a bit from the low-level perspective.
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+Those who are interested in increasing their computer science knowledge through mentorship and hands-on learning should definitely check out Bradfield.
+</p></div>
+
+
+</div>
+</div>

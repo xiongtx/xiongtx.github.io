@@ -1,0 +1,40 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: The merits of assembly
+excerpt: Low-level programming can be enlightening
+---
+#+END_HTML
+
+Today, I went to a workshop on low-level programming at [[http://bradfieldcs.com/][Bradfield CS]], a nontraditional computer science school located in [[https://www.google.com/maps/place/Bradfield%2BSchool%2Bof%2BComputer%2BScience/@37.7771207,-122.4100612,15z/data%3D!4m2!3m1!1s0x0:0x6fe3ed861a4c80d8?sa%3DX&ved%3D0ahUKEwjIx7_b6qTQAhWqj1QKHRMgChAQ_BIIbjAR][downtown San Francisco]].
+
+The instructors, Oz and Myles, are sharp people with a great commitment to computer science education through small-group instruction. Both have years of experience in the software field and clearly know their stuff[fn:1].
+
+The workshop was from 10:00 AM to 3:00 PM, and included 5 participants (aside from Oz and Myles). For the first hour, we briefly covered CPU architecture, the [[https://en.wikipedia.org/wiki/MIPS_instruction_set][MIPS]] instruction set and why [[https://en.wikipedia.org/wiki/Reduced_instruction_set_computing][RISC]] is the future rather than [[https://en.wikipedia.org/wiki/Complex_instruction_set_computing][CSIC]]. For the next hour and a half, we did some [[http://exercism.io/languages/mips/about][MIPS exercises]] as a group. During the remaining time, we paired up and did some more MIPS exercises.
+
+A single workshop is not enough to become a great assembly programmer, of course, but it highlighted some important ideas about assembly programming and why it's important.
+
+For example, it is well-known that [[https://dzone.com/articles/oracle-gets-java-running-ios][iOS does not support the JVM]]. This is due to Apple's policy of allowing only "examined" code to be run. Without learning assembly, however, it's hard to understand /why/ this "examination" requirement precludes JVM support.
+
+The reason is this:
+
+A program's memory is laid out in sections:
+
+- Stack
+- Heap
+- [[https://en.wikipedia.org/wiki/Data_segment][Data segment]]
+- [[https://en.wikipedia.org/wiki/Code_segment][Text segment]]
+
+The text segment contains program instructions. To run the program, a [[https://en.wikipedia.org/wiki/Program_counter][program counter]] (PC) is loaded with different addresses, which are the locations of different instructions to be executed. We imagine the program counter to be a pointer to the different addresses.
+
+The JVM, however, does just-in-time (JIT) compilation, which involves compiling bytecode to instructions stored on the heap and "jumping" the PC out of the text segment to the heap where instructions are stored.
+
+If the PC can jump out of the text segment to the heap, then a program could run arbitrary code (e.g. code downloaded from the internet), not just the code in its code segment (which, at least in theory, could be examined by Apple). Since Apple has promised users that its apps would only run examined code, iOS cannot support the JVM (or any JIT compiler that works this way) without a policy change.
+
+This becomes clear only if we delve into the low-level programming that most programmers today have no experience with. As a functional programmer, I'm very glad to have gone to this workshop and learned to see things a bit from the low-level perspective.
+
+* Footnotes
+
+[fn:1] Those who are interested in increasing their computer science knowledge through mentorship and hands-on learning should definitely check out Bradfield.
