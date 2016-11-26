@@ -1,0 +1,60 @@
+---
+layout: post
+title: A shallow dive into Erlang
+excerpt: Going to the source of great concurrency models
+---
+
+<p>
+Concurrency is increasingly important for a simple reason: <a href="http://www.intel.com/content/www/us/en/silicon-innovations/moores-law-technology.html">Moore's Law</a> is reaching its limits. That is, the number of transistors on a processor can no longer double every two years, due to fundamental laws of physics and practicalities of chip fabrication.
+</p>
+
+<p>
+As such, instead of trying to make processors faster, hardware manufacturers are putting more processors on a chip and more cores in a processor. As with <a href="https://www.ibm.com/blogs/cloud-computing/2014/04/explain-vertical-horizontal-scaling-cloud/">computing in general</a>, when vertical scaling become too difficult and expensive, horizontal scaling is the way forward.
+</p>
+
+<p>
+In fact, concurrency is so important to the future of programming that Guy Steele, creator of Scheme, declared that lists and accumulators are passé and that we <a href="https://www.infoq.com/presentations/Thinking-Parallel-Programming">need different data structures and algorithms going forward</a>.
+</p>
+
+<p>
+It's clear that concurrent systems are the future, and building concurrent systems requires concurrent languages&#x2013;that is, languages designed with a good concurrency model from the start, not ones had it shoe-horned in later<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>.
+</p>
+
+<p>
+To learn about concurrent languages, I started with <a href="https://www.erlang.org/">Erlang</a>, a language originally developed by telecom company Ericsson in the 1980's for programming network switches. As such, concurrency, fault tolerance, and avoidance of shared state were key goals from the start. Over the years, the language has evolved to become a general-purpose programming language, no longer restricted to the telecom industry<sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup>.
+</p>
+
+<p>
+The language's concurrency model is its most distinguishing feature. In Erlang, calculations take place in light-weight<sup><a id="fnr.3" name="fnr.3" class="footref" href="#fn.3">3</a></sup> processes managed by the VM. Processes do not share state&#x2013;when they communicate, they send all necessary data via messages. Thus, when a process fails, it can be quickly restarted without affecting other processes or corrupting global state.
+</p>
+
+<p>
+I've been exploring a bit of Erlang through Fred Hebert's <a href="http://learnyousomeerlang.com/">Learn You Some Erlang</a><sup><a id="fnr.4" name="fnr.4" class="footref" href="#fn.4">4</a></sup>, an approachable introduction to the language. In many ways, Erlang is like Lisp&#x2013;old and crufty, with a rabidly loyal community that trumpets its strengths and excuses its weaknesses. As such the barrier of entry for newcomers is unnecessarily high, and a Hebert's work lowers that barrier significantly.
+</p>
+
+<p>
+I'll be exploring Erlang in the weeks to come. There's also <a href="http://elixir-lang.org/">Elixir</a>, a new language for the Erlang VM that has nicer syntax, which I may also take a look at.
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+Java, for example, has a poor concurrency model, relying on the programmer to manipulate locks and threads, which is nigh-impossible to get right in a large system.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p class="footpara">
+The popular <a href="https://www.whatsapp.com/">WhatsApp</a> messenger, for example, uses an <a href="http://highscalability.com/blog/2014/2/26/the-whatsapp-architecture-facebook-bought-for-19-billion.html">Erlang backend</a>.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.3" name="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p class="footpara">
+Erlang processes really <i>are</i> lightweight&#x2013;each one only takes around 300 words of memory!
+</p></div>
+
+<div class="footdef"><sup><a id="fn.4" name="fn.4" class="footnum" href="#fnr.4">4</a></sup> <p class="footpara">
+Which is inspired by Miran Lipovača's <a href="http://learnyouahaskell.com/">Learn You a Haskell</a>
+</p></div>
+
+
+</div>
+</div>

@@ -1,0 +1,35 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: A shallow dive into Erlang
+excerpt: Going to the source of great concurrency models
+---
+#+END_HTML
+
+Concurrency is increasingly important for a simple reason: [[http://www.intel.com/content/www/us/en/silicon-innovations/moores-law-technology.html][Moore's Law]] is reaching its limits. That is, the number of transistors on a processor can no longer double every two years, due to fundamental laws of physics and practicalities of chip fabrication.
+
+As such, instead of trying to make processors faster, hardware manufacturers are putting more processors on a chip and more cores in a processor. As with [[https://www.ibm.com/blogs/cloud-computing/2014/04/explain-vertical-horizontal-scaling-cloud/][computing in general]], when vertical scaling become too difficult and expensive, horizontal scaling is the way forward.
+
+In fact, concurrency is so important to the future of programming that Guy Steele, creator of Scheme, declared that lists and accumulators are passé and that we [[https://www.infoq.com/presentations/Thinking-Parallel-Programming][need different data structures and algorithms going forward]].
+
+It's clear that concurrent systems are the future, and building concurrent systems requires concurrent languages--that is, languages designed with a good concurrency model from the start, not ones had it shoe-horned in later[fn:1].
+
+To learn about concurrent languages, I started with [[https://www.erlang.org/][Erlang]], a language originally developed by telecom company Ericsson in the 1980's for programming network switches. As such, concurrency, fault tolerance, and avoidance of shared state were key goals from the start. Over the years, the language has evolved to become a general-purpose programming language, no longer restricted to the telecom industry[fn:2].
+
+The language's concurrency model is its most distinguishing feature. In Erlang, calculations take place in light-weight[fn:3] processes managed by the VM. Processes do not share state--when they communicate, they send all necessary data via messages. Thus, when a process fails, it can be quickly restarted without affecting other processes or corrupting global state.
+
+I've been exploring a bit of Erlang through Fred Hebert's [[http://learnyousomeerlang.com/][Learn You Some Erlang]][fn:4], an approachable introduction to the language. In many ways, Erlang is like Lisp--old and crufty, with a rabidly loyal community that trumpets its strengths and excuses its weaknesses. As such the barrier of entry for newcomers is unnecessarily high, and a Hebert's work lowers that barrier significantly.
+
+I'll be exploring Erlang in the weeks to come. There's also [[http://elixir-lang.org/][Elixir]], a new language for the Erlang VM that has nicer syntax, which I may also take a look at.
+
+* Footnotes
+
+[fn:1] Java, for example, has a poor concurrency model, relying on the programmer to manipulate locks and threads, which is nigh-impossible to get right in a large system.
+
+[fn:2] The popular [[https://www.whatsapp.com/][WhatsApp]] messenger, for example, uses an [[http://highscalability.com/blog/2014/2/26/the-whatsapp-architecture-facebook-bought-for-19-billion.html][Erlang backend]].
+
+[fn:3] Erlang processes really /are/ lightweight--each one only takes around 300 words of memory!
+
+[fn:4] Which is inspired by Miran Lipovača's [[http://learnyouahaskell.com/][Learn You a Haskell]]
