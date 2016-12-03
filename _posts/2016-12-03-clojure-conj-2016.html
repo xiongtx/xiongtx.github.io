@@ -1,0 +1,33 @@
+---
+layout: post
+title: Clojure/conj 2016
+excerpt: The premier Clojure conference in the US
+---
+
+<p>
+I traveled with Funding Circle to <a href="http://2016.clojure-conj.org/">Clojure/conj 2016</a> in Austin, Texas this past week. My first Clojure conference had been Clojure West in Seattle, Washington back in in April 2016, to which I had gone alone still working for Epic.
+</p>
+
+<p>
+Traveling as a group to a conference is much more interesting&#x2013;you'll talk to more people, especially those that are interested in your company. As Funding Circle is one of the few companies committed to using Clojure for more than small one-off projects, interest in the company was high.
+</p>
+
+<p>
+There were a few interesting talks this year, though not as many that I found compelling as at Clojure West. Many <a href="http://2016.clojure-conj.org/schedule/">talks</a> were oddly specific; instead of providing high-level overviews that leave the audience excited to try new things when they get home, they were post-mortems of projects done at particular companies for narrow purposes. This sort of talk is great for a local meetup, but not the major conference of the year.
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=oyLBGkS5ICk">Rich Hickey's keynote</a>, as expected, did not disappoint. He dissects the problems with <a href="http://semver.org/">Semantic Versioning</a> (semver), one of the most popular versioning schemes, and really nails it on the head with the observation that versioning semver itself destroys the semantics of anything that uses it.
+</p>
+
+<p>
+The key take-away is that projects, from open-source libraries to commercial APIs, should <i>never</i> break backward compatibility. This is a core value of Java and Java-related technologies, so it's not surprising that Clojure is advocating this as well.
+</p>
+
+<p>
+What Rich envisions goes further than this, however; he wants to use <code>clojure.spec</code> to make guarantees about compatibility of functions, namespaces, etc., which would require packages and artifacts to be build differently. I'm not sure how practical this is&#x2013;one of Clojure's core values is interop with the host platform/ecosystem, and incompatibilities with "the Java way" will not prove popular.
+</p>
+
+<p>
+Overall, this was a fun trip, and I look forward to bigger developments at future Clojure conferences.
+</p>
