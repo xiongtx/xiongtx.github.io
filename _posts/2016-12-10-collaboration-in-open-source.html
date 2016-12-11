@@ -1,0 +1,108 @@
+---
+layout: post
+title: Collaboration in open source
+excerpt: How to organize contributors to open source projects?
+---
+
+<p>
+The <a href="https://lists.gnu.org/archive/html/emacs-devel/">emacs-devel</a> mailing list recently lit up with a new controversy, as it is wont to do from time to time, regarding a proposal for a "portable dumper". Jonathan Corbet kindly wrote up a <a href="https://lwn.net/Articles/707615/">summary of the events</a> as of the end of November.
+</p>
+
+<p>
+In short, there is a technical issue on which stakeholders have different opinions, and tensions rose steadily as discussion turned less technical and more personal. <a href="https://github.com/dcolascione">Daniel Colascione</a>, author of the portable dumper<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>, has expressed intense frustration at the unwillingness of Eli Zaretskii, current Emacs co-maintainer, to consider merging the patch. Jonathan summarizes the technical minutiae well, but the technical issues are not what's prompted such heated discussion.
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Organization and authority</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Every open-source project faces a fundamental question, one which all human organizations grapple with: <b>who gets to make decisions</b>?
+</p>
+
+<p>
+Many open-source projects, starting with <a href="https://www.perl.org/">Perl</a>, have gone with the "benevolent dictator" approach. The progenitor of the project, who may no longer contribute any code, serves as project manager and ultimate arbiter of what direction the project goes in, what code should be included, etc.
+</p>
+
+<p>
+Other projects choose to be governed by committee instead. C++, for example, has a standards committee. The problem with this approach are well known: <a href="https://en.wikipedia.org/wiki/Design_by_committee">design by committee</a> is how C++ ended up becoming the complex beast it is today. Standards committees, in particular, tend to include members whose interest are diametrically opposed with each other's, resulting in conflict<sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup> and stagnation<sup><a id="fnr.3" name="fnr.3" class="footref" href="#fn.3">3</a></sup>.
+</p>
+
+<p>
+Even worse is a model in which a committee exists, but revolves around a charismatic leader. <a href="https://www.python.org/">Python</a> has just such a model, in which complex layers of bureaucracy all lead to Guido van Rossum, resulting in awful decisions like breaking backward compatibility between <a href="https://www.digitalocean.com/community/tutorials/python-2-vs-python-3-practical-considerations-2">Python 2 and 3</a>.
+</p>
+
+<p>
+Emacs, being a project of the <a href="http://www.fsf.org/">Free Software Foundation</a> (FSF), is not governed by a benevolent dictator or committee, but rather by a "gerontocracy" of long-time contributors. In the early days Richard Stallman (rms) decided what went into Emacs, but as the project grew and an increasing proportion of his time was taken up by traveling and speaking, those who spent the most time on the project ended up becoming decision-makers.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Old and new</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Being governed by people who've been around a long time has certain advantages. For one thing, the decision-makers are Emacs experts and know what they're talking about, down to the smallest technical details.
+</p>
+
+<p>
+A major disadvantage, though, is that it raises the barrier of entry for new contributors. Putting aside the inconveniences<sup><a id="fnr.4" name="fnr.4" class="footref" href="#fn.4">4</a></sup> of actually submitting a patch for Emacs, it's very difficult to get anything accepted&#x2013;new ideas that deviate from Emacs' long-established behavior&#x2013;like the portable dumper&#x2013;are viewed with suspicion, and breaking backward compatibility is nearly always a no-no<sup><a id="fnr.5" name="fnr.5" class="footref" href="#fn.5">5</a></sup>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Don't just do something, stand there</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+To get anything accepted into Emacs, it's best for new contributors to first post an issue to the mailing list, then propose&#x2013;in words, not code&#x2013;a solution. A slow, torturous discussion<sup><a id="fnr.6" name="fnr.6" class="footref" href="#fn.6">6</a></sup> is sure to follow regarding basic strategy. At some point, the contributor should propose creating a proof of concept (POC), which should in fact be a thorough and complete solution to the problem. If the POC is too cursory, it'll need many rounds of code review, and reviewers may take a long time to go through the code, if they bother following the discussion at all.
+</p>
+
+<p>
+The key to winning over stakeholders is to demonstrate that you've thought long and hard about the patch's impact on the project and its users, and that, if it's something which will require ongoing maintenance, you'll be the one doing the maintaining. What's really at stake is demonstrating that you're a reliable and trustworthy individual who won't contribute a piece of code, then disappear, burdening other maintainers with it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Poisoning the well</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Where Daniel's good intentions went wrong is that he submitted a patch with several thousand lines of non-trivial C code, then listed a number of (good) reasons why his code should be merged. This goes against the usual process of discussing the problem with stakeholders first. Once the well's been poisoned, discussion quickly became less about the technical issues and more about a relatively new member of the community threatening its norms.
+</p>
+
+<p>
+The FSF was founded not merely as an open-source software shop, but as an ideological organization promoting a certain type of software and a way of developing that software. The process is at the heart of the project, and becoming a member of the community means following it closely. Changing the process, if it could be done at all, is a long-term effort, and certainly not something that's welcomed by a newcomer.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+And other low-level functionality for Emacs, including support for <a href="https://www.facebook.com/notes/daniel-colascione/buttery-smooth-emacs/10155313440066102/">double-buffered rendering</a>.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p class="footpara">
+See the <a href="https://en.wikipedia.org/wiki/X3J13">Common Lisp standards committee</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.3" name="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p class="footpara">
+No new Common Lisp standard has been put out since the initial version in 1994, and none are forthcoming.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.4" name="fn.4" class="footnum" href="#fnr.4">4</a></sup> <p class="footpara">
+Signing the contributor's agreement, navigating a mail-based bug tracker, corresponding via mailing list (instead of, say, GitHub issues), and so on.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.5" name="fn.5" class="footnum" href="#fnr.5">5</a></sup> <p class="footpara">
+There are advantages to maintaining backward compatibility, as the Java ecosystem has shown, but keeping big mistakes around prevent a project from moving forward.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.6" name="fn.6" class="footnum" href="#fnr.6">6</a></sup> <p class="footpara">
+More so if the issue is a deep or important one
+</p></div>
+
+
+</div>
+</div>
