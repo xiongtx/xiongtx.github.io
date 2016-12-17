@@ -1,0 +1,36 @@
+---
+layout: post
+title: Instant gratification
+excerpt: Good tools shorten the development feedback cycle
+---
+
+<p>
+A feature I really enjoy in <a href="https://github.com/clojure-emacs/cider">CIDER</a>, Emacs' Clojure interactive development environment, is the overlaying<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup> of evaluation results next to the form being evaluated.
+</p>
+
+<p>
+Normally, the evaluation results are displayed in the <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Echo-Area.html">echo area</a> at the bottom of Emacs. After every evaluation, I need to shift my gaze from the code I'm working on down to the echo area, then back. Doing this a few times is fine, but doing it hundreds of times during a coding session tires my eyes quickly.
+</p>
+
+<p>
+With CIDER, evaluation results are displayed inline. Instead of moving my eyes away from the code, I can flick them a bit to the right and see the results, then fix the code as necessary. It shortens the feedback cycle and makes development much more enjoyable.
+</p>
+
+<p>
+Artur Malabarba, author of the CIDER overlay code, also presented <a href="http://endlessparentheses.com/eval-result-overlays-in-emacs-lisp.html">a way to adapt it to Emacs Lisp</a>. Artur's implementation, however, depends on CIDER.
+</p>
+
+<p>
+I've put together a package, <a href="https://github.com/xiongtx/eros">eros</a>, that removes the dependency on CIDER and toggles the overlay feature on/off with a minor mode. I plan to put it on <a href="https://melpa.org/#/">MELPA</a> after getting some <a href="https://www.reddit.com/r/emacs/comments/5iw5ml/eros_evaluation_result_overlays_for_emacs_lisp/">feedback</a> from the community. If possible, I'd like to generalize it so evaluation overlays can be made available to other packages (such as <a href="https://github.com/slime/slime">SLIME</a>, the inspiration for CIDER).
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+An Emacs <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Overlays.html">overlay</a> is like a pop-up
+</p></div>
+
+
+</div>
+</div>

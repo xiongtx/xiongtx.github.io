@@ -1,0 +1,23 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: Instant gratification
+excerpt: Good tools shorten the development feedback cycle
+---
+#+END_HTML
+
+A feature I really enjoy in [[https://github.com/clojure-emacs/cider][CIDER]], Emacs' Clojure interactive development environment, is the overlaying[fn:1] of evaluation results next to the form being evaluated.
+
+Normally, the evaluation results are displayed in the [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Echo-Area.html][echo area]] at the bottom of Emacs. After every evaluation, I need to shift my gaze from the code I'm working on down to the echo area, then back. Doing this a few times is fine, but doing it hundreds of times during a coding session tires my eyes quickly.
+
+With CIDER, evaluation results are displayed inline. Instead of moving my eyes away from the code, I can flick them a bit to the right and see the results, then fix the code as necessary. It shortens the feedback cycle and makes development much more enjoyable.
+
+Artur Malabarba, author of the CIDER overlay code, also presented [[http://endlessparentheses.com/eval-result-overlays-in-emacs-lisp.html][a way to adapt it to Emacs Lisp]]. Artur's implementation, however, depends on CIDER.
+
+I've put together a package, [[https://github.com/xiongtx/eros][eros]], that removes the dependency on CIDER and toggles the overlay feature on/off with a minor mode. I plan to put it on [[https://melpa.org/#/][MELPA]] after getting some [[https://www.reddit.com/r/emacs/comments/5iw5ml/eros_evaluation_result_overlays_for_emacs_lisp/][feedback]] from the community. If possible, I'd like to generalize it so evaluation overlays can be made available to other packages (such as [[https://github.com/slime/slime][SLIME]], the inspiration for CIDER).
+
+* Footnotes
+
+[fn:1] An Emacs [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Overlays.html][overlay]] is like a pop-up
