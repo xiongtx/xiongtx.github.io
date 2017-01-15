@@ -1,0 +1,26 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: Technology, economics, and law
+excerpt: Social and legal reactions to the rising value of data
+---
+#+END_HTML
+
+There's an interesting observation about machine learning (ML) algorithms: as data and system size increase, choice of algorithm matters less. With large enough data sets, many algorithms have similar performance. As such, getting more data is key to having a better ML system.
+
+Furthermore, as data size increases, performance improves more and more. This is more of an arithmetic effect than anything else: going from 90% to 95% accuracy is a two-fold improvement, but going from 95% to 99% accuracy is an increase of five-fold.
+
+More data makes better systems, so companies have an imperative to acquire as much data as possible. It's no surprise, then, that the likes of Google and Facebook are leaders in machine learning, since they have gathered enormous amounts of data from users. Data clearly has value.
+
+The thing is, most people hate giving away valuable things for free. Prior to the development of agriculture, mankind did not have sophisticated ideas about land rights. Hunter-gatherers moved freely in pursuit of food, with some even migrating vast distances to keep up with their prey. As agriculture developed, however, people came to recognize the value of land. Staying in the same place year after year, working and improving the soil, became advantageous. Laws regarding land rights developed and became enormously complex.
+
+As data becomes more valuable, a similar process will no doubt take place. A greater distinction will be drawn between two types of data:
+
+- *Personal data*, like gender, age, and DNA sequence, that is inherent to individuals
+- *Behavioral data*, like which pictures you "like" on Facebook, that exist in some context
+
+Arguments will be made that personal data should be treated as personal property, which need to be paid for if companies want access. Behavioral data, on the other hand, can be argued to belong to those that own the "locations" in which the behaviors are performed. Then comes the question of whether companies should be allowed to follow you to other "locations", e.g. tracking through cookies. This will be a legal tussle not only between companies and individuals, but between different companies, as companies will not want others to "intrude" and steal "their" behavioral data.
+
+In short, as economic structures change, so do legal systems. As data becomes more valuable, more laws will be established to determine ownership of that data for the purpose of distributing that value. The current situation, in which companies "own" as much data as they can gather by hook or crook, will not last forever, and I predict few companies basing their business strategies around gathering such data will see the change coming or respond in time.
