@@ -1,0 +1,39 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: The rerise of nationalism
+excerpt: The nation-state reasserts itself--to the American advantage
+---
+#+END_HTML
+
+** Trump the nationalist
+
+The election of Donald Trump and the swiftness with which he has implemented policies has surprised and angered many--primarily those who hadn't a clue what his appeal is. His opponents castigate him as crass and uncultured, as if those were the worst possible attributes a politician could have.
+
+What they missed was his whole political message, which was consistent from the primaries to election day. Indeed, Donald Trump's entire political platform can be summarized by a single word: *nationalism*. On every policy plank, from trade to immigration, Trump had one thing to say: he's going to advance the national interest by putting "America First".
+
+There are a few who saw this, of course. Anatol Lieven of the New American Foundation published [[https://www.iiss.org/en/publications/survival/sections/2016-5e13/survival--global-politics-and-strategy-october-november-2016-ff0a/58-5-02-lieven-3a77][Clinton and Trump: Two Faces of American Nationalism]] in the September 2016 in [[https://www.iiss.org/en/publications/survival/sections/2016-5e13/survival--global-politics-and-strategy-october-november-2016-ff0a/58-5-02-lieven-3a77][IISS]]. [[http://www.latimes.com/opinion/op-ed/la-oe-goldberg-trumpism-nationalism-identity-politics-20160815-snap-story.html][Jonah Goldberg]] of the LA Times correctly identified Trump as a nationalist, but claims that it's "just identity politics in a new flannel shirt", which is a strange claim--the national identity is not just another bit player in identity politics, after all. And [[https://twitter.com/xiongtx/status/724315632116727809][yours truly warned]] all the way back in April 2016 that both Trump's Republican primary challengers and Democratic opponents were ceding important political space to him.
+
+We should not be surprised that nationalism is rising--or, rather, rerising. The period after the end of the Cold War was one during which politics, economics, and technology all led to greater internationalism. The EU, NAFTA, and the internet all came about at this time. A regression was inevitable, especially since the United States [[https://www.youtube.com/watch?v%3Dv_DWbBmTZ2g&feature%3Dyoutu.be&t%3D1m43s][created the internal system]] to fight the Cold War, which is long over.
+
+** The American advantage
+
+All sorts of accusations have been levied at the new administration, from secret deals with Russia[fn:1] to championing "white nationalism". The media, in particular, has been caught up in anti-Trump hysteria without any self-reflection as to whether their constant coverage of him throughout 2016 /may/ have given him a publicity advantage[fn:2]. Then again, we can hardly blame them; Trump, having worked in television for a long time, has a deep understanding how the media works. Namely, attacking the media gains you influence over them. Just look at how journalists hang on to Trump's every tweet; he couldn't ask for a more captive audience.
+
+In all this nonsense, however, the bigger picture is lost.
+
+The United States is rapidly losing interest in the international system it constructed, which has enormous implications for countries that depend on this system, in particular exporters like [[https://www.youtube.com/watch?v%3Dl4HZ6fOEzVM&feature%3Dyoutu.be&t%3D14m28s][Germany]] and [[https://www.youtube.com/watch?v%3Dl4HZ6fOEzVM&feature%3Dyoutu.be&t%3D21m20s][China]]. Contrary to claims of "isolationism", the US is deepening its bilateral relationships with strategic countries like the Baltics, Poland, Romania, Japan, and South Korea. Meanwhile, the domestic revolution in oil and gas over the past decade has turned one of the US's most important interactions with the world upside down, such that it's actually running an [[https://www.bloomberg.com/news/articles/2017-01-31/u-s-enjoys-first-ever-oil-trade-surplus-with-latin-america][oil trade surplus with Latin America]].
+
+It must be remembered that the United States is the world's first modern nation state. Nationalism in the US is based on creed, not mere ethnicity as it is in the Old World. A return to nationalism brings the ball the America's home court, which is greatly to the American advantage[fn:3].
+
+It is not Donald Trump's boorish behavior, then, that will characterize the new few years, but the return of nationalism to the forefront of global politics.
+
+* Footnotes
+
+[fn:1] That "liberals" are now foaming at the mouth with anti-Russian sentiment--on national security grounds, no less--is perhaps the strangest turn of events Donald Trump has brought about.
+
+[fn:2] Spoiler alert: most definitely.
+
+[fn:3] Particularly as other entities, e.g. the EU and Russia, vigorously pursue self-destruction
