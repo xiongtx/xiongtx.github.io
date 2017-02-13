@@ -1,0 +1,31 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: Decompiling Java classfiles in Emacs
+excerpt: If you have an itch, Emacs helps you scratch it
+---
+#+END_HTML
+
+Working with Clojure, I've often run into situations in which I've needed to decompile Java classfiles. This is especially true when working with packages that break backward compatibility[fn:1] (I'm looking at you, [[https://kafka.apache.org/][Kafka]]).
+
+Often, the most straightforward way to track down a bug is to look at source code, and if only bytecode is available, it's time to bring in the decompilers. There are a a number of high-quality Java decompilers available today:
+
+- [[http://www.benf.org/other/cfr/][CFR]]
+- [[https://github.com/JetBrains/intellij-community/tree/master/plugins/java-decompiler/engine][Fernflower]]
+- [[https://bitbucket.org/mstrobel/procyon][Procyon]]
+- [[https://github.com/nviennot/jd-core-java][JD-Core]]
+- [[https://github.com/Storyyeller/Krakatau][Krakatau]] (Python)
+
+and more. This is a far cry from a mere decade ago, when the best decompilers were quite poor and often proprietary.
+
+Most of these decompilers are command-line tools, however, with a few having third-party GUIs (e.g. [[http://jd.benow.ca/][JD-GUI]] for JD-Core,  [[https://github.com/deathmarine/Luyten][Luyten]] for Procyon). Fernflower is somewhat of an exception--it's a plugin, designed for use inside of [[https://www.jetbrains.com/idea/][IntelliJ IDEA]].
+
+Since relying on third-party apps is not The Emacs Way, I decided to put together a package, [[https://github.com/xiongtx/jdecomp][JDecomp]], that makes using various decompilers easy. It currently supports CFR and Fernflower, with intended support for more Java decompilers in the future.
+
+Try it out and let me know what you think. Happy hacking!
+
+* Footnotes
+
+[fn:1] Which is very much against Java culture. For more on why backward compatibility should /never/ be broken, see [[https://www.youtube.com/watch?v%3DoyLBGkS5ICk][Rich Hickey's keynote]] from [[https://clojure.org/events/2016/clojureconj][Clojure/conj 2016]].

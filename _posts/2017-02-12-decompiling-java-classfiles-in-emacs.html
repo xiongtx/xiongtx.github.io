@@ -1,0 +1,53 @@
+---
+layout: post
+title: Decompiling Java classfiles in Emacs
+excerpt: If you have an itch, Emacs helps you scratch it
+---
+
+<p>
+Working with Clojure, I've often run into situations in which I've needed to decompile Java classfiles. This is especially true when working with packages that break backward compatibility<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup> (I'm looking at you, <a href="https://kafka.apache.org/">Kafka</a>).
+</p>
+
+<p>
+Often, the most straightforward way to track down a bug is to look at source code, and if only bytecode is available, it's time to bring in the decompilers. There are a a number of high-quality Java decompilers available today:
+</p>
+
+<ul class="org-ul">
+<li><a href="http://www.benf.org/other/cfr/">CFR</a>
+</li>
+<li><a href="https://github.com/JetBrains/intellij-community/tree/master/plugins/java-decompiler/engine">Fernflower</a>
+</li>
+<li><a href="https://bitbucket.org/mstrobel/procyon">Procyon</a>
+</li>
+<li><a href="https://github.com/nviennot/jd-core-java">JD-Core</a>
+</li>
+<li><a href="https://github.com/Storyyeller/Krakatau">Krakatau</a> (Python)
+</li>
+</ul>
+
+<p>
+and more. This is a far cry from a mere decade ago, when the best decompilers were quite poor and often proprietary.
+</p>
+
+<p>
+Most of these decompilers are command-line tools, however, with a few having third-party GUIs (e.g. <a href="http://jd.benow.ca/">JD-GUI</a> for JD-Core,  <a href="https://github.com/deathmarine/Luyten">Luyten</a> for Procyon). Fernflower is somewhat of an exception&#x2013;it's a plugin, designed for use inside of <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a>.
+</p>
+
+<p>
+Since relying on third-party apps is not The Emacs Way, I decided to put together a package, <a href="https://github.com/xiongtx/jdecomp">JDecomp</a>, that makes using various decompilers easy. It currently supports CFR and Fernflower, with intended support for more Java decompilers in the future.
+</p>
+
+<p>
+Try it out and let me know what you think. Happy hacking!
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+Which is very much against Java culture. For more on why backward compatibility should <i>never</i> be broken, see <a href="https://www.youtube.com/watch?v=oyLBGkS5ICk">Rich Hickey's keynote</a> from <a href="https://clojure.org/events/2016/clojureconj">Clojure/conj 2016</a>.
+</p></div>
+
+
+</div>
+</div>
