@@ -1,0 +1,31 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: Are you one of us?
+excerpt: Interviews are as much about identity as skill
+---
+#+END_HTML
+
+Interviews are hard for both the interviewer and the interviewee. The interviewee's challenges are well-understood and easy to sympathize with; the interviewer's less so, but are no less serious.
+
+Given the lengthy, complex, /expensive/ process of bringing on a new employee, companies need to be careful about whom they onboard. Unfortunately, they don't have a lot of information with which to make that decision.
+
+This bring us to the issue of interview questions. Almost all software developers are asked to solve toy problems in interviews, whether on the whiteboard or at the keyboard. Such problems have zero direct relationship with the work any company does. Inevitably, some interviewees raise the question:
+
+> Why don't interviewers ask questions directly related to the job, instead of these toy questions?
+
+The answer is simple: it's impossible to understand how an employee will /actually/ perform at a job; an interview simply does not provide enough information. Therefore, interviews are intended to answer a different question:
+
+> Are you one of us?
+
+For a developer,
+
+1. Did you study things like algorithms, data structures, and operating system design, etc.?
+   - If you didn't, have you tried to make up for it by studying on your own?
+2. Are you interested in new technologies?
+3. Do you program for pleasure outside of work?
+4. In short, do you do the same things I do?
+
+That's really all there is to it for /most/ positions. So the next time you find yourself scowling at your copy of [[https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850/ref%3Dpd_sbs_14_t_0?_encoding%3DUTF8&psc%3D1&refRID%3DN5XHX5DQ1HF85Z9AWHES][Cracking the Coding Interview]], just remember: more than anything else, it's about proving your *legitimacy*.
