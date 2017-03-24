@@ -1,0 +1,79 @@
+---
+layout: post
+title: Clojure with-redefs gotcha
+excerpt: A Clojure compiler optimization breaks a problematic macro
+---
+
+<p>
+The <code>with-redefs</code> macro in Clojure is one of the most problematic. The <a href="https://clojuredocs.org/clojure.core/with-redefs">description</a> says:
+</p>
+
+<blockquote>
+<p>
+binding =&gt; var-symbol temp-value-expr
+</p>
+
+<p>
+Temporarily redefines Vars while executing the body.  The
+temp-value-exprs will be evaluated and each resulting value will
+replace in parallel the root value of its Var.  After the body is
+executed, the root values of all the Vars will be set back to their
+old values.  These temporary changes will be visible in all threads.
+<b>Useful for mocking out functions during testing</b>.
+</p>
+</blockquote>
+
+<p>
+The last part about being "useful for mocking out functions during testing" (emphasis mine) has encouraged many users, myself included, to use <code>with-redefs</code> frequently. However, there are some unfortunate gotchas, one of which I encountered recently.
+</p>
+
+<p>
+Take the following:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-clojure">(defn foo
+  [^long a]
+  "foo")
+
+(with-redefs [foo (fn [x] "bar")]
+  (foo "x"))
+</pre>
+</div>
+
+<p>
+We'd expect <code>(foo "x")</code> to return ~"bar"~, but it instead throws an exception:
+</p>
+
+<pre class="example">
+ClassCastException user$eval20544$fn__20545 cannot be cast to clojure.lang.IFn$LO  user/eval20544/fn--20547 (form-init538441322648284404.clj:45)
+</pre>
+
+<p>
+Getting the Var directly and applying it to ~"x"~ <i>does</i> work, however:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-clojure">(with-redefs [foo (fn [x] "bar")]
+  ((var foo) "x"))
+;; =&gt; "bar"
+</pre>
+</div>
+
+<p>
+What's going on? As it turns out, the Clojure compiler optimizes <a href="https://github.com/clojure/clojure/blob/clojure-1.8.0/src/jvm/clojure/lang/IFn.java#L97">functions whose parameters have primitive type hints</a>. The compiler "knows" that <code>foo</code> takes a <code>long</code> and returns an <code>Object</code> (<code>String</code>). By redefining <code>foo</code> to a function that takes an <code>Object</code> (the default without a type hint) and returns an <code>Object</code>, we fail to match types. Invoking the <i>Var</i> of <code>foo</code> gets around this.
+</p>
+
+<p>
+We see that <code>foo</code> <i>can</i> be redefed with a function that has the same type:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-clojure">(with-redefs [foo (fn [^long x] "bar")]
+  (foo 1))
+;; =&gt; "bar"
+</pre>
+</div>
