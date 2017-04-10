@@ -1,0 +1,29 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: Just-in-time education
+excerpt: On the need to interleave school and work
+---
+#+END_HTML
+
+Here's a programming metaphor that I just thought of:
+
+#+BEGIN_QUOTE
+Our current model of education is *ahead-of-time* (AOT) education. We should explore *just-in-time* (JIT) education instead.
+#+END_QUOTE
+
+Just as programs used to be compiled ahead-of-time, in their entirety, for specific hardware architectures, we approach education as something to do "before" adult life, for a specific line of work.
+
+This approach is inflexible, and even good students suffer from the Pareto Principle in not knowing what part of their education will be important to them later on. Lots of effort may be spent on things that never become relevant, while too little may be spent on things that end up being used a lot.
+
+Instead, we should explore a model of education in which education and work are interleaved. Work-study programs and internships are a step the right direction, but they usually occur /in parallel/ to education.
+
+What I'm proposing is a model in which someone could start working as a programmer, realize that they need to learn more about distributed systems, take a quarter off to increase their expertise, and get back to their job with improved knowledge and greater productivity.
+
+If they continue working on distributed systems, they may then decide to take their knowledge to the next level by taking more courses, or even going off to get a degree. If they don't encounter greater challenges in distributed systems, however, they could move on to other things.
+
+This is similar to how JIT compilers initially interpret code, compile it if it seems to be used frequently, and compile it with better optimization if it's used /very/ frequently. Effort is proportional to utility.
+
+I am not suggesting that this model is right for everyone--it certainly isn't a good fit for aspiring academics or startups that may not be around two quarters from now--but the workforce as a whole will become more productive if it is able to regularly increase its knowledge in small bits.
