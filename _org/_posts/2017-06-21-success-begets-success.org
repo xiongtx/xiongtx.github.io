@@ -1,0 +1,33 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: Success begets success
+excerpt: To become successful, first become successful
+---
+#+END_HTML
+
+"Sports teaches values" is an old (yet true) cliché. Of all the lessons that sports teaches, the most important is perhaps:
+
+#+BEGIN_QUOTE
+Success begets success
+#+END_QUOTE
+
+This is a common catch-22 people tend to trip over. Variations include:
+
+- To grow your network, you must first know lots of people
+- To get a job, you must first have a job
+- To make money, you must first have money
+
+And so on.
+
+What's the way out of this mess? To recognize that the success you start with is not equal to the success you hope to achieve. Bigger successes are built atop of smaller ones.
+
+As such, *incentive* is incredibly important in getting someone /started/ in doing something. A person with no achievement in an area will not overcome the inertia to continue doing nothing unless an incentive drives them to act. Once they get started and achieve /something/, they may gain a taste for success and work towards bigger goals.
+
+This is an oft-overlooked issue in education. Instead of bemoaning students' lack of interest in subjects like math and engineering, schools and educators should ask themselves: what is the incentive for a student to /start/ working hard in these areas?
+
+Achievement in sport brings *external rewards*, such as peer respect, especially in K-12 education. Achievement in academics,  particularly math and engineering, does not bring the same rewards. The /internal/ reward of intellectual satisfaction may drive the best students, but not average ones. The tangible achievement of attending a good university is, from the student's perspective, a /highly/ delayed gratification.
+
+Incentive initializes success, and success begets success. The educational system would do well to learn this lesson.
