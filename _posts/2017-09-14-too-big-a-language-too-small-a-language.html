@@ -1,0 +1,89 @@
+---
+layout: post
+title: Too big a language, too small a language
+excerpt: Programming languages should be as practical as necessary, but no more
+---
+
+<p>
+I've recently been looking into some Lisp classics, namely:
+</p>
+
+<ul class="org-ul">
+<li><a href="http://norvig.com/paip.html">Paradigms of Artificial Intelligence Programming</a> (PAIP), by Peter Norvig
+</li>
+<li><a href="https://mitpress.mit.edu/books/art-metaobject-protocol">The Art of the Metaobject Protocol</a> (AMOP), by Kiczales, Rivières, and Bobrow
+</li>
+</ul>
+
+<p>
+and, of course, <a href="http://sarabander.github.io/sicp/html/index.xhtml#SEC_Contents">Structure and Interpretation of Computer Programs</a> (SICP) by Abelson and Sussman<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>.
+</p>
+
+<p>
+PAIP and AMOP are about Common Lisp (CL). SICP is about building computer programs and happens to use Scheme. The contrast between the two languages is dramatic, but both are in a different ways responsible for Lisp never going "mainstream".
+</p>
+
+<p>
+Though both Lisps, Common Lisp and Scheme are opposites in their design philosophies. Scheme is a small language; Scheme's R6RS standard is only <a href="http://www.r6rs.org/final/r6rs.pdf">90 pages long</a>, <i>including indices</i>. The CL ANSI standard is <a href="http://xahlee.info/comp/Common_Lisp_quotations.html">over 1,000 pages</a>, as is the "informal" standard, <a href="https://www.cs.cmu.edu/Groups/AI/html/cltl/cltl2.html">Common Lisp the Language, Second Edition</a> (Ctcl2) by Guy Steele<sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup>.
+</p>
+
+<p>
+Scheme prides itself on <i>minimalism</i>. It's so minimal, in fact, that there are very few libraries for doing anything "practical"<sup><a id="fnr.3" name="fnr.3" class="footref" href="#fn.3">3</a></sup>. A popular joke is that Scheme is the best language&#x2013;for writing Scheme interpreters. Indeed, that pedagogical use case <i>does</i> seem to be the reason most working programmers touch Scheme at all.
+</p>
+
+<p>
+In contrast, Common Lisp prides itself on <i>maximalism</i>. It describes itself as an "industrial-strength" Lisp, and was intented to be the One True Lisp, a Lisp to end all Lisps<sup><a id="fnr.4" name="fnr.4" class="footref" href="#fn.4">4</a></sup>. No surprise, then, that it became an archetypal case of <a href="https://en.wikipedia.org/wiki/Design_by_committee">design by committee</a>. Though the committee was <a href="https://en.wikipedia.org/wiki/X3J13">full of brilliant people</a>, it was also riddled with compatibility conerns, conflicting corporate interests, and big egos. As Dan Weinreb, co-founder of <a href="https://en.wikipedia.org/wiki/Symbolics">Symbolics</a> and a committee member, <a href="http://people.csail.mit.edu/gregs/ll1-discuss-archive-html/msg02374.html">later recalled</a>:
+</p>
+
+<blockquote>
+<p>
+We at Symbolics were forced to insist on [Common Lisp being a Lisp-2], in the face of everyone's knowing that it was not what we would have done absent compatibility constraints.
+</p>
+</blockquote>
+
+<p>
+The inclusion of the <a href="http://www.lispworks.com/documentation/lw51/CLHS/Body/m_loop.htm">loop</a> macro, one of the committee's <a href="http://paulgraham.com/loop.html">most controversial decisions</a><sup><a id="fnr.5" name="fnr.5" class="footref" href="#fn.5">5</a></sup>, was another case of one faction's interests winning out over good language design.
+</p>
+
+<p>
+The result is an enormous language with over 700 functions and not one but <i>two</i> major DSLs (for <code>loop</code> and <a href="http://www.lispworks.com/documentation/lw50/CLHS/Body/f_format.htm">format</a>). Instead of creating a small core language and accompanying it with a large standard library<sup><a id="fnr.6" name="fnr.6" class="footref" href="#fn.6">6</a></sup>, Common Lisp decided to shove everything and the kitchen sink into the language itself.
+</p>
+
+<p>
+If Scheme is too small, Common Lisp is <i>much</i> too big. The enormous number of functions, together with the extensibility of Lisp via macros, means that one person's code could be utterly incomprehensible to another. The large size is in part due to a stunning lack of orthogonality; functions like <code>count-if-not</code> and <code>delete-if-not</code> shouldn't be necessary with function composition.
+</p>
+
+<p>
+It's a real shame that the two defining Lisps took extreme positions along the spectrum of language design. <a href="http://arclanguage.org/">Arc</a>, a much-hyped new Lisp from the early 2000's that was supposed to address these issues, never picked up stream. It wouldn't be until <a href="https://clojure.org/">Clojure</a>'s arrival in 2008 that the world would finally be treated to a well-designed, practical Lisp.
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+Which I return to again and again in a two-steps forward, one-step back fashion.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p class="footpara">
+Interestingly, Cltl1 is only ~500 pages. Half the 2nd edition, it seems, was spent describing <a href="http://www.lispworks.com/documentation/lw51/CLHS/Body/m_loop.htm">loop</a>, <a href="http://www.gigamonkeys.com/book/object-reorientation-classes.html">CLOS</a>, and a few other topics.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.3" name="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p class="footpara">
+<a href="http://www.racket-lang.org/">Racket</a>, a newer dialect of Scheme, seems to have a <a href="https://pkgs.racket-lang.org/">fairly large package repository</a>. No wonder the main site advertises the language as "batteries included".
+</p></div>
+
+<div class="footdef"><sup><a id="fn.4" name="fn.4" class="footnum" href="#fnr.4">4</a></sup> <p class="footpara">
+And that it did. The ANSI standard was published in 1994, Symbolics <a href="http://smbx.org/symbolics-bancruptcy-filed/">filed for bankruptcy in 1996</a>, and Lisp seemed doomed to be consigned to history (or at least the classroom) until <a href="https://clojure.org/">Clojure</a> came along in 2008.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.5" name="fn.5" class="footnum" href="#fnr.5">5</a></sup> <p class="footpara">
+Due to <code>loop</code>'s unlispy syntax, difficult-to-understand behavior, and lack of extensibility.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.6" name="fn.6" class="footnum" href="#fnr.6">6</a></sup> <p class="footpara">
+Which is how <i>all</i> new languages are designed today, for good reason.
+</p></div>
+
+
+</div>
+</div>
