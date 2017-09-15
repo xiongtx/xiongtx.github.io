@@ -3,7 +3,7 @@ title: About
 layout: page
 ---
 
-Hi, I'm TX. Healthcare IT developer, Emacs lover, and clean code fanatic.
+Hi, I'm TX. Developer, Emacs lover, and clean code fanatic.
 
 Here on my personal blog, I write about technologies, especially what I discover on the road to mastering them, as well as things I'm doing to improve the learning process for myself and others.
 
