@@ -6,7 +6,7 @@ layout: page
   <p>
     Posted on {{ page.date | date: '%Y-%m-%d' }}
     {% if page.path %}
-    <a href="{{ site.github.url }}/edit/master/_org/{{ page.path | split: '.' % | first}}.org">Edit on GitHub</a>
+    <a href="{{ site.github.url }}/edit/master/_org/{{ page.path | split: '.' | first}}.org">Edit on GitHub</a>
     {% endif %}
   </p>
 </div>
