@@ -1,0 +1,85 @@
+---
+layout: post
+title: Quantum computing is real
+excerpt: A visit to a quantum computing company...that uses Lisp!
+---
+
+<p>
+Tonight I had the pleasure of visiting <a href="https://www.rigetti.com/">Rigetti Computing</a>, a quantum computing start-up in Berkeley, for a <a href="https://www.meetup.com/balisp/events/244921835/">Lisp at the Frontier of Computation</a> meet-up. While I'm always happy to attend a talk on Lisp, this time I (and I'm sure many other attendees) was drawn more by the opportunity to see quantum computing's outside of academia.
+</p>
+
+<p>
+The night began with a brief tour of the facilities. Whereas most software startups are little more than a collection of desks, chairs, and Macbooks, half of Rigetti's premises is dedicated to serious hardware, the most significant of which are several "fridges" that cool their custom-made<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup> quantum processors (QPUs) to 10 milikelvins. It's all very physics-y and impressive&#x2013;"SCIENCE!", it screams in all caps. We were also shown a <a href="https://fsmedia.imgix.net/a1/16/9d/df/f2e6/479d/8619/9ad419ef6040/an-experimental-8-qubit-chip-from-rigetti.jpeg?auto=format%252Ccompress&w=700">quantum processor</a>, which looks more or less like a standard chip, except for the distinct "sunburst" shapes that indicate qubits.
+</p>
+
+<p>
+The talk by <a href="https://github.com/tarballs-are-good">Robert Smith</a>, director of software at Rigetti, was about using Common Lisp (CL) to build a quantum computing VM (QVM) for <a href="https://www.rigetti.com/index.php/forest">Quil</a><sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup>, the in-house quantum instruction language<sup><a id="fnr.3" name="fnr.3" class="footref" href="#fn.3">3</a></sup>. At this time, real processor time is <i>very</i> valuable, so a good VM is absolutely necessary for testing. Currently, the QVM is even able to simulate <i>more</i> qubits than the real chips, though performance degrades exponentially w.r.t. the number of qubits<sup><a id="fnr.4" name="fnr.4" class="footref" href="#fn.4">4</a></sup>.
+</p>
+
+<p>
+Motivations for using CL include the usual strengths of Lisp, such as expressiveness and rapid iteration, as well as some SBCL specifics, particularly performance. Difficulties include a lack of good libraries (particularly for linear algebra) and no interest on the part of SBCL maintainers to improve performance in key areas<sup><a id="fnr.5" name="fnr.5" class="footref" href="#fn.5">5</a></sup>.
+</p>
+
+<p>
+A few more points from my chat with Robert after the talk:
+</p>
+
+<ul class="org-ul">
+<li>Quantum processors are not better for <i>every</i> problem; a general-purpose computer will use the QPU for certain tasks, just like GPUs.
+</li>
+<li>There's no scientific barrier to quantum computing now<sup><a id="fnr.6" name="fnr.6" class="footref" href="#fn.6">6</a></sup>; it's an engineering (particularly fabrication) problem
+</li>
+<li>Adding qubits is not very difficult; within 5 years, 100's of qubits is possible.
+<ul class="org-ul">
+<li>However, using <a href="https://en.wikipedia.org/wiki/Shor%2527s_algorithm">Shor's algorithm</a><sup><a id="fnr.7" name="fnr.7" class="footref" href="#fn.7">7</a></sup> to crack today's cryptographic security would require <i>10,000's</i> of qubits, which is still a ways off!
+</li>
+</ul>
+</li>
+<li><a href="https://www.dwavesys.com/home">D-Wave</a>, another quantum computing company, does a more limited sort of computing called <a href="https://en.wikipedia.org/wiki/Quantum_annealing">quantum annealing</a>
+<ul class="org-ul">
+<li>Interestingly, D-Wave's also known to use CL, though we don't know for which purposes
+</li>
+</ul>
+</li>
+<li>Nielsen and Chuang's <a href="https://www.amazon.com/Quantum-Computation-Information-10th-Anniversary/dp/1107002176">Quantum Computation and Quantum Information</a> is the recommended book for learning about quantum computing
+</li>
+</ul>
+
+<p>
+All in all, this was a <i>very</i> enlightening night. While quantum computing is quite beyond my grasp at the moment, I'm excited to think where it may be in a decade.
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+The fab used to be on-premise, but later moved to Fremont.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p class="footpara">
+See <a href="https://arxiv.org/pdf/1608.03355.pdf">paper</a>.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.3" name="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p class="footpara">
+As most programmers have a great fear of Lisp, high-level programs are written in Python via <a href="https://github.com/rigetticomputing/pyquil">PyQuil</a>, then compiled down to Quil instructions for running on the QVM.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.4" name="fn.4" class="footnum" href="#fnr.4">4</a></sup> <p class="footpara">
+Beyond 30 or so qubits, the VM becomes unbearably slow, even with 2 <i>TB</i> of RAM.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.5" name="fn.5" class="footnum" href="#fnr.5">5</a></sup> <p class="footpara">
+Not even for pay! This lack of enterprise support is cited as one reason a proprietary CL may be used in the future.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.6" name="fn.6" class="footnum" href="#fnr.6">6</a></sup> <p class="footpara">
+At least not for Rigetti's cloud-based model. Putting a quantum processor in a phone would require new materials with <a href="https://en.wikipedia.org/wiki/Room-temperature_superconductor">much higher superconductivity temperatures</a>.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.7" name="fn.7" class="footnum" href="#fnr.7">7</a></sup> <p class="footpara">
+Shor's algorithm is a quantum algorithm for integer factorization that runs in polynomial time.
+</p></div>
+
+
+</div>
+</div>

@@ -1,0 +1,45 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_HTML
+---
+layout: post
+title: Quantum computing is real
+excerpt: A visit to a quantum computing company...that uses Lisp!
+---
+#+END_HTML
+
+Tonight I had the pleasure of visiting [[https://www.rigetti.com/][Rigetti Computing]], a quantum computing start-up in Berkeley, for a [[https://www.meetup.com/balisp/events/244921835/][Lisp at the Frontier of Computation]] meet-up. While I'm always happy to attend a talk on Lisp, this time I (and I'm sure many other attendees) was drawn more by the opportunity to see quantum computing's outside of academia.
+
+The night began with a brief tour of the facilities. Whereas most software startups are little more than a collection of desks, chairs, and Macbooks, half of Rigetti's premises is dedicated to serious hardware, the most significant of which are several "fridges" that cool their custom-made[fn:1] quantum processors (QPUs) to 10 milikelvins. It's all very physics-y and impressive--"SCIENCE!", it screams in all caps. We were also shown a [[https://fsmedia.imgix.net/a1/16/9d/df/f2e6/479d/8619/9ad419ef6040/an-experimental-8-qubit-chip-from-rigetti.jpeg?auto%3Dformat%252Ccompress&w%3D700][quantum processor]], which looks more or less like a standard chip, except for the distinct "sunburst" shapes that indicate qubits.
+
+The talk by [[https://github.com/tarballs-are-good][Robert Smith]], director of software at Rigetti, was about using Common Lisp (CL) to build a quantum computing VM (QVM) for [[https://www.rigetti.com/index.php/forest][Quil]][fn:2], the in-house quantum instruction language[fn:3]. At this time, real processor time is /very/ valuable, so a good VM is absolutely necessary for testing. Currently, the QVM is even able to simulate /more/ qubits than the real chips, though performance degrades exponentially w.r.t. the number of qubits[fn:4].
+
+Motivations for using CL include the usual strengths of Lisp, such as expressiveness and rapid iteration, as well as some SBCL specifics, particularly performance. Difficulties include a lack of good libraries (particularly for linear algebra) and no interest on the part of SBCL maintainers to improve performance in key areas[fn:5].
+
+A few more points from my chat with Robert after the talk:
+
+- Quantum processors are not better for /every/ problem; a general-purpose computer will use the QPU for certain tasks, just like GPUs.
+- There's no scientific barrier to quantum computing now[fn:6]; it's an engineering (particularly fabrication) problem
+- Adding qubits is not very difficult; within 5 years, 100's of qubits is possible.
+  - However, using [[https://en.wikipedia.org/wiki/Shor%2527s_algorithm][Shor's algorithm]][fn:7] to crack today's cryptographic security would require /10,000's/ of qubits, which is still a ways off!
+- [[https://www.dwavesys.com/home][D-Wave]], another quantum computing company, does a more limited sort of computing called [[https://en.wikipedia.org/wiki/Quantum_annealing][quantum annealing]]
+  - Interestingly, D-Wave's also known to use CL, though we don't know for which purposes
+- Nielsen and Chuang's [[https://www.amazon.com/Quantum-Computation-Information-10th-Anniversary/dp/1107002176][Quantum Computation and Quantum Information]] is the recommended book for learning about quantum computing
+
+All in all, this was a /very/ enlightening night. While quantum computing is quite beyond my grasp at the moment, I'm excited to think where it may be in a decade.
+
+* Footnotes
+
+[fn:1] The fab used to be on-premise, but later moved to Fremont.
+
+[fn:2] See [[https://arxiv.org/pdf/1608.03355.pdf][paper]].
+
+[fn:3] As most programmers have a great fear of Lisp, high-level programs are written in Python via [[https://github.com/rigetticomputing/pyquil][PyQuil]], then compiled down to Quil instructions for running on the QVM.
+
+[fn:4] Beyond 30 or so qubits, the VM becomes unbearably slow, even with 2 /TB/ of RAM.
+
+[fn:5] Not even for pay! This lack of enterprise support is cited as one reason a proprietary CL may be used in the future.
+
+[fn:6] At least not for Rigetti's cloud-based model. Putting a quantum processor in a phone would require new materials with [[https://en.wikipedia.org/wiki/Room-temperature_superconductor][much higher superconductivity temperatures]].
+
+[fn:7] Shor's algorithm is a quantum algorithm for integer factorization that runs in polynomial time.
