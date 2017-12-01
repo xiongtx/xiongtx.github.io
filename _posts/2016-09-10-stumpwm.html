@@ -39,11 +39,11 @@ As it turns out, hacking is <a href="http://www.kaashif.co.uk/2015/06/28/hacking
 
 <div class="org-src-container">
 
-<pre class="src src-common-lisp">(require :swank)
+<pre class="src src-common-lisp">(<span style="color: #F0DFAF; font-weight: bold;">require</span> <span style="color: #BFEBBF;">:swank</span>)
 (swank-loader:init)
-(swank:create-server :port 4004
-                     :style swank:*communication-style*
-                     :dont-close t)
+(swank:create-server <span style="color: #DCDCCC; font-weight: bold;">:port</span> 4004
+                     <span style="color: #DCDCCC; font-weight: bold;">:style</span> swank:*communication-style*
+                     <span style="color: #DCDCCC; font-weight: bold;">:dont-close</span> t)
 </pre>
 </div>
 

@@ -47,10 +47,10 @@ Consider the following implementation of <code>flatten</code> in Scheme:
 
 <div class="org-src-container">
 
-<pre class="src src-scheme">(define (flatten x)
-  (cond ((null? x) '())
+<pre class="src src-scheme">(<span style="color: #F0DFAF; font-weight: bold;">define</span> (<span style="color: #93E0E3;">flatten</span> x)
+  (<span style="color: #F0DFAF; font-weight: bold;">cond</span> ((null? x) '())
         ((pair? x) (append (flatten (car x)) (flatten (cdr x))))
-        (else (list x))))
+        (<span style="color: #F0DFAF; font-weight: bold;">else</span> (list x))))
 </pre>
 </div>
 
@@ -64,10 +64,10 @@ In Scala, the <a href="http://stackoverflow.com/a/24128335/864684">solution</a> 
 
 <div class="org-src-container">
 
-<pre class="src src-scala">def flatten(xs: List[Any]): List[Any] = xs match {
-  case List() =&gt; List()
-  case (y :: ys) :: yss =&gt; flatten(y :: ys) ::: flatten(yss)
-  case y :: ys =&gt; y :: flatten(ys)
+<pre class="src src-scala"><span style="color: #F0DFAF; font-weight: bold;">def</span> <span style="color: #93E0E3;">flatten</span>(xs<span style="color: #F0DFAF; font-weight: bold;">:</span> <span style="color: #7CB8BB;">List</span>[<span style="color: #BFEBBF;">Any</span>])<span style="color: #F0DFAF; font-weight: bold;">:</span> <span style="color: #7CB8BB;">List</span>[<span style="color: #BFEBBF;">Any</span>] <span style="color: #F0DFAF; font-weight: bold;">=</span> xs <span style="color: #F0DFAF; font-weight: bold;">match</span> {
+  <span style="color: #F0DFAF; font-weight: bold;">case</span> <span style="color: #7CB8BB;">List</span>() <span style="color: #F0DFAF; font-weight: bold;">=&gt;</span> <span style="color: #BFEBBF;">List</span>()
+  <span style="color: #F0DFAF; font-weight: bold;">case</span> (<span style="color: #DFAF8F;">y</span> <span style="color: #7CB8BB;">::</span> <span style="color: #DFAF8F;">ys</span>) <span style="color: #BFEBBF;">::</span> <span style="color: #7CB8BB;">yss</span> <span style="color: #F0DFAF; font-weight: bold;">=&gt;</span> flatten(y :: ys) ::: flatten(yss)
+  <span style="color: #F0DFAF; font-weight: bold;">case</span> <span style="color: #DFAF8F;">y</span> <span style="color: #7CB8BB;">::</span> <span style="color: #DFAF8F;">ys</span> <span style="color: #F0DFAF; font-weight: bold;">=&gt;</span> y :: flatten(ys)
 }
 </pre>
 </div>

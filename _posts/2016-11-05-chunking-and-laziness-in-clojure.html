@@ -74,13 +74,13 @@ Now we need to take a look at the <a href="https://github.com/clojure/clojure/bl
 
 <pre class="src src-clojure">([f coll]
    (lazy-seq
-    (when-let [s (seq coll)]
-      (if (chunked-seq? s)
-        (let [c (chunk-first s)
+    (<span style="color: #F0DFAF; font-weight: bold;">when-let</span> [s (seq coll)]
+      (<span style="color: #F0DFAF; font-weight: bold;">if</span> (chunked-seq? s)
+        (<span style="color: #F0DFAF; font-weight: bold;">let</span> [c (chunk-first s)
               size (int (count c))
               b (chunk-buffer size)]
-          (dotimes [i size]
-              (chunk-append b (f (.nth c i))))
+          (<span style="color: #F0DFAF; font-weight: bold;">dotimes</span> [i size]
+              (chunk-append b (f (<span style="color: #94BFF3;">.nth</span> c i))))
           (chunk-cons (chunk b) (map f (chunk-rest s))))
         (cons (f (first s)) (map f (rest s)))))))
 </pre>
@@ -139,8 +139,8 @@ To avoid chunking, we can explicity "<a href="http://www.markhneedham.com/blog/2
 
 <div class="org-src-container">
 
-<pre class="src src-clojure">(defn unchunk [s]
-  (when (seq s)
+<pre class="src src-clojure">(<span style="color: #F0DFAF; font-weight: bold;">defn</span> <span style="color: #93E0E3;">unchunk</span> [s]
+  (<span style="color: #F0DFAF; font-weight: bold;">when</span> (seq s)
     (lazy-seq
       (cons (first s)
             (unchunk (next s))))))
