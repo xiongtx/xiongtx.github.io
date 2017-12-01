@@ -17,7 +17,7 @@ Let's map a side-effecting function like <code>prn</code> over a list<sup><a id=
 
 <div class="org-src-container">
 
-<pre class="src src-clojure">(take 1 (map prn ''(1 2 3 4 5)))
+<pre class="src src-clojure">(take 1 (map prn '(1 2 3 4 5)))
 </pre>
 </div>
 
@@ -87,7 +87,7 @@ Now we need to take a look at the <a href="https://github.com/clojure/clojure/bl
 </div>
 
 <p>
-The difference is that <code>[1 2 3 4 5]</code> goes down the <code>chunked-seq?</code> path, while ~'(1 2 3 4 5)~ does not.
+The difference is that <code>[1 2 3 4 5]</code> goes down the <code>chunked-seq?</code> path, while <code>(1 2 3 4 5)</code> does not.
 </p>
 
 <ul class="org-ul">

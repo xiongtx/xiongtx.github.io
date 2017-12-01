@@ -15,7 +15,7 @@ One of Clojure's more surprising behaviors is the interaction between functions 
 Let's map a side-effecting function like ~prn~ over a list[fn:3]:
 
 #+BEGIN_SRC clojure
-  (take 1 (map prn ''(1 2 3 4 5)))
+  (take 1 (map prn '(1 2 3 4 5)))
 #+END_SRC
 
 You may expect that, since there is a ~(take 1 ...)~, only one number will be printed. This is indeed the case:
@@ -64,7 +64,7 @@ Now we need to take a look at the [[https://github.com/clojure/clojure/blob/cloj
           (cons (f (first s)) (map f (rest s)))))))
 #+END_SRC
 
-The difference is that ~[1 2 3 4 5]~ goes down the ~chunked-seq?~ path, while ~'(1 2 3 4 5)~ does not.
+The difference is that ~[1 2 3 4 5]~ goes down the ~chunked-seq?~ path, while ~(1 2 3 4 5)~ does not.
 
 - ~(seq [1 2 3 4 5])~ returns a ~clojure.lang.PersistentVector$ChunkedSeq~, which is a *chunked seq* (an instance of ~IChunkedSeq~).
 - ~(seq '(1 2 3 4 5))~ simply returns a ~clojure.lang.PersistentList~, which is not.
