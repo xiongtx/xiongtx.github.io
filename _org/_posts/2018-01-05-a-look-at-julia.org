@@ -1,0 +1,33 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_EXPORT html
+---
+layout: post
+title: A look at Julia
+excerpt: Exploring a new scientific programming language
+---
+#+END_EXPORT
+
+I first came across the [[https://julialang.org/][Julia]] programming language while in university, back in 2012. As a math and engineering major, I'd been exposed to [[https://www.mathworks.com/products/matlab.html][MATLAB]] and [[https://www.r-project.org/][R]], specialized programming languages focused on engineering, statistics, visualization, etc. Julia had /just/ been publicly released, and was not particularly easy to use. The central premise of being a high-level language with low-level performance, moreover, seemed too good to be true.
+
+As I've been taking a [[https://www.coursera.org/learn/deep-neural-network/][Deep Learning course]] lately, and therefore quite a bit of Python, I decided to revisit Julia and see where it's at 5 years later. Here are some impressions:
+
+- Pythonic syntax
+  - Easy for anyone familiar with Python to pick up
+- Matrix (n-dimensional array) manipulation is, as in MATLAB, first-class
+  - No ~import numpy as np; np.dot(...)~
+- Performance, via LLVM's JIT compilation, is very good
+  - Not having to explicitly vectorize code reduces mental burden on programmer
+- Below surface syntax, very Lispy
+  - Parser is [[https://discourse.julialang.org/t/the-role-of-femtolisp-in-julia/1902][written in FemtoLisp]]
+  - [[https://docs.julialang.org/en/stable/manual/metaprogramming/][Metaprogramming]] facilities are Lisp-like
+- Making functionality extensible via multiple dispatch is A Good Idea
+- [[https://pkg.julialang.org/][Good number of packages]] available
+
+It's still early days--MATLAB was released in 1984, Python in 1991[fn:1], R in 1993. As a late-comer, Julia has the opportunity to learn from these earlier languages and improve upon their syntax, performance, etc. However, it's an uphill battle to challenge the popularity of these entrenched "industry standards".
+
+Julia provides real benefits over existing languages. It remains to be seen whether those benefits will be enough to gain it a foothold in the scientific computing field, but I'm excited about its future.
+
+* Footnotes
+
+[fn:1] NumPy in 2006, as Numeric in 1995

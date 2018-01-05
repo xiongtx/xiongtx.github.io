@@ -1,0 +1,54 @@
+---
+layout: post
+title: A look at Julia
+excerpt: Exploring a new scientific programming language
+---
+
+<p>
+I first came across the <a href="https://julialang.org/">Julia</a> programming language while in university, back in 2012. As a math and engineering major, I'd been exposed to <a href="https://www.mathworks.com/products/matlab.html">MATLAB</a> and <a href="https://www.r-project.org/">R</a>, specialized programming languages focused on engineering, statistics, visualization, etc. Julia had <i>just</i> been publicly released, and was not particularly easy to use. The central premise of being a high-level language with low-level performance, moreover, seemed too good to be true.
+</p>
+
+<p>
+As I've been taking a <a href="https://www.coursera.org/learn/deep-neural-network/">Deep Learning course</a> lately, and therefore quite a bit of Python, I decided to revisit Julia and see where it's at 5 years later. Here are some impressions:
+</p>
+
+<ul class="org-ul">
+<li>Pythonic syntax
+<ul class="org-ul">
+<li>Easy for anyone familiar with Python to pick up</li>
+</ul></li>
+<li>Matrix (n-dimensional array) manipulation is, as in MATLAB, first-class
+<ul class="org-ul">
+<li>No <code>import numpy as np; np.dot(...)</code></li>
+</ul></li>
+<li>Performance, via LLVM's JIT compilation, is very good
+<ul class="org-ul">
+<li>Not having to explicitly vectorize code reduces mental burden on programmer</li>
+</ul></li>
+<li>Below surface syntax, very Lispy
+<ul class="org-ul">
+<li>Parser is <a href="https://discourse.julialang.org/t/the-role-of-femtolisp-in-julia/1902">written in FemtoLisp</a></li>
+<li><a href="https://docs.julialang.org/en/stable/manual/metaprogramming/">Metaprogramming</a> facilities are Lisp-like</li>
+</ul></li>
+<li>Making functionality extensible via multiple dispatch is A Good Idea</li>
+<li><a href="https://pkg.julialang.org/">Good number of packages</a> available</li>
+</ul>
+
+<p>
+It's still early days&#x2013;MATLAB was released in 1984, Python in 1991<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>, R in 1993. As a late-comer, Julia has the opportunity to learn from these earlier languages and improve upon their syntax, performance, etc. However, it's an uphill battle to challenge the popularity of these entrenched "industry standards".
+</p>
+
+<p>
+Julia provides real benefits over existing languages. It remains to be seen whether those benefits will be enough to gain it a foothold in the scientific computing field, but I'm excited about its future.
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+NumPy in 2006, as Numeric in 1995
+</p></div></div>
+
+
+</div>
+</div>
