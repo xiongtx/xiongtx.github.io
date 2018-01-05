@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Success begets success
 excerpt: To become successful, first become successful
 ---
-#+END_HTML
+#+END_EXPORT
 
 "Sports teaches values" is an old (yet true) cliché. Of all the lessons that sports teaches, the most important is perhaps:
 

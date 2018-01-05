@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Clojure with-redefs gotcha
 excerpt: A Clojure compiler optimization breaks a problematic macro
 ---
-#+END_HTML
+#+END_EXPORT
 
 The ~with-redefs~ macro in Clojure is one of the most problematic. The [[https://clojuredocs.org/clojure.core/with-redefs][description]] says:
 

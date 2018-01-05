@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Augmented reality
 excerpt: A quick recap of where AR is at
 ---
-#+END_HTML
+#+END_EXPORT
 
 I just went to an [[https://www.meetup.com/ARSFBA/events/236282556/][augmented reality meetup]] at the [[https://www.google.com/maps?f%3Dq&hl%3Den&q%3D301%2BHoward%2BStreet,%2BSan%2BFrancisco,%2BCA,%2B94105,%2BUS][Google Launchpad]] with [[https://www.collinchu.com/][a friend]]. A quick recap of the topics discussed and my own thoughts:
 

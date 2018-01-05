@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: RSI and the Kinesis
 excerpt: Repetitive strain injury is no joke
 ---
-#+END_HTML
+#+END_EXPORT
 
 A few weeks ago, I purchased a [[https://www.amazon.com/Kinesis-Advantage2-Ergonomic-Keyboard-KB600/dp/B01KR1C5PY][Kinesis Advantage II]] keyboard in an attempt to find a keyboard that could ward off repetitive strain injury (RSI).
 

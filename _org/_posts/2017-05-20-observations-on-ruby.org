@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Observations on Ruby
 excerpt: Looking back at a language I've leapfrogged
 ---
-#+END_HTML
+#+END_EXPORT
 
 I recently had to interview a candidate who used Ruby, so I prepared a question and implemented a solution in Ruby. Before I could tackle the problem itself, however, I had to first learn Ruby, a language I'd brushed up against many times in the past but never learned.
 

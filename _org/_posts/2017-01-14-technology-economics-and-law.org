@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Technology, economics, and law
 excerpt: Social and legal reactions to the rising value of data
 ---
-#+END_HTML
+#+END_EXPORT
 
 There's an interesting observation about machine learning (ML) algorithms: as data and system size increase, choice of algorithm matters less. With large enough data sets, many algorithms have similar performance. As such, getting more data is key to having a better ML system.
 

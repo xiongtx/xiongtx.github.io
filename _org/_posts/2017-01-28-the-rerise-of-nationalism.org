@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: The rerise of nationalism
 excerpt: The nation-state reasserts itself--to the American advantage
 ---
-#+END_HTML
+#+END_EXPORT
 
 ** Trump the nationalist
 

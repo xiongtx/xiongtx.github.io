@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: The problem with tutorials
 excerpt: Over-simplistic tutorials create bad habits that are hard to break.
 ---
-#+END_HTML
+#+END_EXPORT
 
 An issue I've noticed is that, with technology in particular, *students are
 taught the wrong way to do things before they are taught the right way*. Then

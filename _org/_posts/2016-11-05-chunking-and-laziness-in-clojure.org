@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Laziness and chunking in Clojure
 excerpt: Interesting behavior with Clojure's lazy sequences
 ---
-#+END_HTML
+#+END_EXPORT
 
 ** Surprises with side effects
 

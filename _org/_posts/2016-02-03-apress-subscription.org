@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Getting an Apress subscription
 excerpt: Is an Apress Access subscription worth it?
 ---
-#+END_HTML
+#+END_EXPORT
 
 Recently, I purchased an [[https://www.apress.com/][Apress]] Access subscription for $199.00. It's a pretty
 steep price for subscribing to a single publisher, but I bit the bullet for

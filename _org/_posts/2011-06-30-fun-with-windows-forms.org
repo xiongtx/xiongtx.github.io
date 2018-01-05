@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Fun with Windows Forms
 excerpt: The joys of working with Windows Forms
 ---
-#+END_HTML
+#+END_EXPORT
 
 I'll be using this blog to record my progress in building a Schedule/Grade Recorder using WinForms in C++/CLI. I have been working on this project for 3 weeks and it has been both a frustrating and educational experience
 

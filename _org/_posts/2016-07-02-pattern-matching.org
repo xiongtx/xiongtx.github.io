@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Pattern matching
 excerpt: A great language feature for writing clean code
 ---
-#+END_HTML
+#+END_EXPORT
 
 I've long had a vague idea of what *pattern matching* is, but never really appreciated why it is a desirable feature in programming languages. We recently covered the topic of pattern matching in the [[https://www.coursera.org/learn/progfun1/lecture/cdHAM/lecture-4-6-pattern-matching][Functional Programming Principles in Scala]] course I'm taking, and I feel that I now have a much better understanding of it.
 

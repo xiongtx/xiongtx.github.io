@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: The merits of assembly
 excerpt: Low-level programming can be enlightening
 ---
-#+END_HTML
+#+END_EXPORT
 
 Today, I went to a workshop on low-level programming at [[http://bradfieldcs.com/][Bradfield CS]], a nontraditional computer science school located in [[https://www.google.com/maps/place/Bradfield%2BSchool%2Bof%2BComputer%2BScience/@37.7771207,-122.4100612,15z/data%3D!4m2!3m1!1s0x0:0x6fe3ed861a4c80d8?sa%3DX&ved%3D0ahUKEwjIx7_b6qTQAhWqj1QKHRMgChAQ_BIIbjAR][downtown San Francisco]].
 

@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Do it yourself
 excerpt: It's the only way to truly learn
 ---
-#+END_HTML
+#+END_EXPORT
 
 For the past few days I've been reading [[http://www.paulgraham.com/][Paul Graham's]] classic [[http://www.paulgraham.com/onlisp.html][On Lisp]], a book I've wanted to read for a long time but, until now, lacked both the Common Lisp chops to understand it and the time to spare.
 
@@ -20,6 +20,6 @@ This is an unfortunate parallel between physical and mental training: *you only 
 
 In this spirit, I have decided to try to implement [[https://www.st.cs.uni-saarland.de/edu/seminare/2005/advanced-fp/docs/huet-zipper.pdf][zippers]], based on Gerard Huet's paper, in Emacs Lisp, using Clojure's =[[https://github.com/clojure/clojure/blob/master/src/clj/clojure/zip.clj][clojure.zip]]= and Daniel Martin's =[[https://github.com/danielfm/cl-zipper][cl-zipper]]= as guides. By actually trying to implement everything from scratch, I have already found [[https://github.com/danielfm/cl-zipper/issues/3][some bugs]] in =cl-zipper=.
 
-What this shows, I think, is that code review is truly effective only when two or more individuals try to do the same thing, then review each other's code. If the reviewer hasn't tried to do the task themselves, it's unlikely they'll understand all the intricate details. 
+What this shows, I think, is that code review is truly effective only when two or more individuals try to do the same thing, then review each other's code. If the reviewer hasn't tried to do the task themselves, it's unlikely they'll understand all the intricate details.
 
 There's a snowball's chance in hell this will actually happen at any company, of course, since it's prohibitively costly in time (and therefore money). For projects, in which you've only got one chance to do it right (like landing on the moon), however, this sort of parallel effort, followed by mutual review may be a good way to prevent errors.

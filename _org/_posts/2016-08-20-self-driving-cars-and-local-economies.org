@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Self-driving cars and local economies
 excerpt: What unintended economic impacts might self-driving cars have?
 ---
-#+END_HTML
+#+END_EXPORT
 
 Over the past few days, I have been driving from Madison, WI to Fremont, CA--a journey of [[https://www.google.com/maps/dir/Madison,%2BWI/Fremont,%2BCA/@39.4094874,-123.7222639,4z/am%3Dt/data%3D!3m1!4b1!4m14!4m13!1m5!1m1!1s0x8806536d3a2019ff:0x4e0cfcb5ba484198!2m2!1d-89.4012302!2d43.0730517!1m5!1m1!1s0x808fbf46b7e8caf7:0x8ada313b89d888d4!2m2!1d-121.9885719!2d37.5482697!3e0][over 2,100 miles]]. I am writing this from a motel room near Reno, NV, though I will have finished my trip by the time this is published.
 

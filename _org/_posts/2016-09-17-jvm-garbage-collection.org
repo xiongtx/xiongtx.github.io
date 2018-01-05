@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: JVM garbage collection
 excerpt: Memory management on the JVM
 ---
-#+END_HTML
+#+END_EXPORT
 
 Now that I'm [[https://www.fundingcircle.com/us/simplified-loans/?utm_source%3Dgoogle&utm_medium%3Dcpc&utm_campaign%3DBrand-Search-Alpha&utm_term%3Dfunding_cir&utm_device%3Dc&utm_placement%3D&mkwid%3Ds93IeB55P_dc&pcrid%3D75110439889&pkw%3Dfunding%2520cir&pmt%3De&gclid%3DCj0KEQjw0_O-BRCfjsCw25CYzYoBEiQAqO9BDKyTawip2PrNG9QrWf1J1O-7E2DKBVcOA6L8Toc1sWcaAjiz8P8HAQ][programming Clojure professionally]], I wanted to learn more about Java and the JVM. Much of the work we do involves Java interop with third-party libraries.
 

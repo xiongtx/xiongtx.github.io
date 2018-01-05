@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Category theory
 excerpt: The foundations of Haskell
 ---
-#+END_HTML
+#+END_EXPORT
 
 As I've been learning some Haskell with the excellent [[http://learnyouahaskell.com/chapters][Learn You a Haskell for Great Good!]], I've come across [[https://ncatlab.org/nlab/show/category%2Btheory#idea][category theory]], which is the theoretical mathematical foundation of Haskell, in much the same way that lambda calculus is the foundation of Lisp.
 

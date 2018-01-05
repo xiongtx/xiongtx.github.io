@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Just-in-time education
 excerpt: On the need to interleave school and work
 ---
-#+END_HTML
+#+END_EXPORT
 
 Here's a programming metaphor that I just thought of:
 

@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Using Python with Emacs
 excerpt: A first taste of turning a text editor into an IDE.
 ---
-#+END_HTML
+#+END_EXPORT
 
 
 After trying to build my website using HTML, PHP, and the Bluefish Editor for a while, I decided to learn to use a modern web application framework. Of the two popular choices I know of, Django and Ruby-on-Rails, I chose Django because I am more familiar with Python than Ruby.

@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Crowdfunding and open-source
 excerpt: What is the right economic model for open-source software?
 ---
-#+END_HTML
+#+END_EXPORT
 
 ** Open-source ideals
 

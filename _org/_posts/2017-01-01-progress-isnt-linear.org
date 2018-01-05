@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Progress isn't linear
 excerpt: What can be done in a fresh set of 365 days?
 ---
-#+END_HTML
+#+END_EXPORT
 
 The best advice I've ever heard regarding success is simply
 

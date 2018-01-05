@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Reactive programming
 excerpt: A surprisingly hard concept to define
 ---
-#+END_HTML
+#+END_EXPORT
 
 I'm currently taking the [[https://www.coursera.org/learn/progfun1][Functional Programming in Scala]] course from Coursera, which covers a bit of *functional reactive programming* (FRP). While the course is excellent overall, the material on functional reactive programming seems rushed and incomplete.
 

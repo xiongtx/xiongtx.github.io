@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Split PDF files by bookmarks
 excerpt: Sejda, a Java library and CLI utility for manipulating PDF files.
 ---
-#+END_HTML
+#+END_EXPORT
 
 [[http://www.sejda.org/download/][Sejda]] is a Java library and command line utility for manipulating PDF
 files. It's the best solution I've been able to find for a free, CLI utility

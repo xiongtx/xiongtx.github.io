@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Functional programming in Scala
 excerpt: There was a functional language on the JVM before Clojure?
 ---
-#+END_HTML
+#+END_EXPORT
 
 I recently signed up for the [[https://www.coursera.org/learn/progfun1][Functional Programming Principles in Scala]] specialization on Coursera. Learning from Martin Odersky, an expert in the field of functional programming (and the creator of Scala), is too good an opportunity to pass up. Though I'm quite busy at the moment, good courses like this are usually only held once a year, so if I don't take it now, I'd have to wait until next year.
 

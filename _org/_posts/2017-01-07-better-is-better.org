@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Better is better
 excerpt: Being worse may ease adoption, but does not lead to a better product
 ---
-#+END_HTML
+#+END_EXPORT
 
 Richard P. Gabriel's [[https://www.dreamsongs.com/WorseIsBetter.html][Worse is Better]] is an influential article about why Lisp and its ecosystem, despite many advantages, never became very popular. By the mid-1990's, Lisp Machine manufacturers were mostly dead, and C was /the/ language for operating systems.
 

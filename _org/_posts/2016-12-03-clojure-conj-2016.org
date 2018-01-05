@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Clojure/conj 2016
 excerpt: The premier Clojure conference in the US
 ---
-#+END_HTML
+#+END_EXPORT
 
 I traveled with Funding Circle to [[http://2016.clojure-conj.org/][Clojure/conj 2016]] in Austin, Texas this past week. My first Clojure conference had been Clojure West in Seattle, Washington back in in April 2016, to which I had gone alone still working for Epic.
 

@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Different strokes for different folks
 excerpt: Companies approach technology differently--for good reason
 ---
-#+END_HTML
+#+END_EXPORT
 
 A few months ago, I began working for [[https://www.fundingcircle.com/us/][Funding Circle]], an online marketplace for small business loans. It's been an interesting experience, but a big culture shock in terms of the company's approach to technology.
 

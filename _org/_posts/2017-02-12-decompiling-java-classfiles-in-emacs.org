@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Decompiling Java classfiles in Emacs
 excerpt: If you have an itch, Emacs helps you scratch it
 ---
-#+END_HTML
+#+END_EXPORT
 
 Working with Clojure, I've often run into situations in which I've needed to decompile Java classfiles. This is especially true when working with packages that break backward compatibility[fn:1] (I'm looking at you, [[https://kafka.apache.org/][Kafka]]).
 

@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Prediction vs. analysis
 excerpt: Approaching the future with a crystal ball is the wrong approach
 ---
-#+END_HTML
+#+END_EXPORT
 
 Since earliest history, mankind has wanted to know what the future holds. Entire civilizations have been built around the ruler's supposed ability to gain insight into future events. Many oracles, seers, and fortune tellers have made comfortable livings off of worried masses. Even today, "experts" are brought onto media programs with the expectation that their expertise allows them to "see" what the future holds, from the oil price to Chinese GDP.
 

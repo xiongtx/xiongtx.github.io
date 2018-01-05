@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: It's good to be lazy
 excerpt: Making things for lazy people takes a lot of work
 ---
-#+END_HTML
+#+END_EXPORT
 As part of my attempt to introduce good programming practices to my team at work, I created a presentation on good API design. It draws heavily on material covered by Parse CTO Kevin Lacker's [[https://www.youtube.com/watch?v%3DqCdpTji8nxo][talk at Parse Developer Day 2013]]. The key point that Kevin makes is that
 
 #+BEGIN_QUOTE

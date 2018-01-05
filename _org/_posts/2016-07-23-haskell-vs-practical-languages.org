@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Haskell vs. practical languages
 excerpt: Why are languages favored by academics wildly unpopular in industry?
 ---
-#+END_HTML
+#+END_EXPORT
 
 The [[https://www.coursera.org/learn/progfun1][Functional Programming in Scala]] course I'm taking from Coursera has stimulated a (renewed) interest in [[file+sys:][Haskell]].
 

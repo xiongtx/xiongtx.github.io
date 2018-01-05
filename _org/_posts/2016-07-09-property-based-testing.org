@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Property-based testing
 excerpt: Describe what something is and let the computer generate test cases
 ---
-#+END_HTML
+#+END_EXPORT
 
 I've recently been introduced to [[http://blog.jessitron.com/2013/04/property-based-testing-what-is-it.html][property-based testing]], which takes a different approach to testing programs than the better-known unit tests.
 

@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Don't be a hacker
 excerpt: '"Hacking" is not a satisfactory way of writing software'
 ---
-#+END_HTML
+#+END_EXPORT
 
 I've recently been working on improving the help functions for Emacs (e.g. ~describe-variable~). The particular file I've been looking at is =[[https://github.com/emacs-mirror/emacs/blob/master/lisp/help-fns.el][help-fns.el]]=.
 

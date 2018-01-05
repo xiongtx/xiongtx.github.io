@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Are you one of us?
 excerpt: Interviews are as much about identity as skill
 ---
-#+END_HTML
+#+END_EXPORT
 
 Interviews are hard for both the interviewer and the interviewee. The interviewee's challenges are well-understood and easy to sympathize with; the interviewer's less so, but are no less serious.
 

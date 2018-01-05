@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Starting Emacs from IntelliJ IDEA
 excerpt: For when you really need the ultimate editor
 ---
-#+END_HTML
+#+END_EXPORT
 
 I'm a big Emacs user, but Emacs is still not up to par with "real IDEs" when it comes to doing project configuration, code analysis, refactoring, etc., which take up much more time than text editing.
 

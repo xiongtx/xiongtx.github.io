@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Holding the line
 excerpt: What to do when you're not feeling motivated to get things done
 ---
-#+END_HTML
+#+END_EXPORT
 
 Monday, August 1st was my last day at my current job. I've worked at Epic for just over three years, and it's time to move on to other opportunities.
 

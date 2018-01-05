@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Put aside the math
 excerpt: Programming is not a very mathematical activity
 ---
-#+END_HTML
+#+END_EXPORT
 
 In my latest attempt to understand what a monad is and why it's useful, I've come much further than previous attempts by doing one thing--putting aside the math.
 

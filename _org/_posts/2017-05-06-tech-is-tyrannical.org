@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Tech is tyrannical
 excerpt: Technology is not democratic--it is autocratic
 ---
-#+END_HTML
+#+END_EXPORT
 
 The Greek philosopher Aristotle believed there were three types of government:
 

@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Software as a team sport
 excerpt: The importance of everyone doing things the same way.
 ---
-#+END_HTML
+#+END_EXPORT
 A major difference between working on projects at school and at work is that *work projects compel you to understand that software development is a team sport*.
 
 As with any team sport, it's important that everyone agrees to do things a certain way. The agreed-upon way does not have to be the /best/ way--in fact, it most likely isn't. It just has to be a set of rules that /everyone/ adheres to. As with any set of rules, once you understand them, you can (usually) stray with reason. The key, however, is that *following the rules should be the default behavior*.

@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: A shallow dive into Erlang
 excerpt: Going to the source of great concurrency models
 ---
-#+END_HTML
+#+END_EXPORT
 
 Concurrency is increasingly important for a simple reason: [[http://www.intel.com/content/www/us/en/silicon-innovations/moores-law-technology.html][Moore's Law]] is reaching its limits. That is, the number of transistors on a processor can no longer double every two years, due to fundamental laws of physics and practicalities of chip fabrication.
 

@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Too big a language, too small a language
 excerpt: Programming languages should be as practical as necessary, but no more
 ---
-#+END_HTML
+#+END_EXPORT
 
 I've recently been looking into some Lisp classics, namely:
 

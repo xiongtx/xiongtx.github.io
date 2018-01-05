@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: The mythical software engineer
 excerpt: How much of what most software developers do is "engineering"?
 ---
-#+END_HTML
+#+END_EXPORT
 
 Revisiting [[https://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959][The Mythical Man Month]] recently, I am reminded of a bygone era in software development: an era in which documents were carefully formatted, ties were worn, and people who wrote software were /engineers/.
 

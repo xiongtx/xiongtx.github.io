@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Batteries, the next frontier
 excerpt: No technological breakthrough would be as important as improved batteries
 ---
-#+END_HTML
+#+END_EXPORT
 
 I recently purchased a 13-inch [[https://www.asus.com/us/Notebooks/ASUS-ZenBook-UX305FA/][ASUS UX305FA]] ultrabook. I've long had an [[https://www.asus.com/us/ROG-Republic-Of-Gamers/ROG-G75VX/][ASUS G75VX]], a 17-inch gaming laptop which also serves as a phenomenal workstation replacement, but I've become convinced that increased portability and battery life would increase the amount of work that I got done.
 

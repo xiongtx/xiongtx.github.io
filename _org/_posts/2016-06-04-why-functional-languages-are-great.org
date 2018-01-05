@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Why functional languages are great
 excerpt: Will great features lead to wider adoption?
 ---
-#+END_HTML
+#+END_EXPORT
 
 [[http://blog.jenkster.com/2015/12/what-is-functional-programming.html][Functional programming languages]] are great. As a math major, I'm used to functions /never/ having side effects. In a functional programming language, inputs and outputs are explicit--there's nothing "hidden" from caller. This minimizes "spooky action at a distance"--a function call /here/ won't result in something blowing up /there/.
 

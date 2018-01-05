@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Beyond programming
 excerpt: For developers, it's not enough to "code"
 ---
-#+END_HTML
+#+END_EXPORT
 
 The rise of the [[https://newrelic.com/devops?_bt%3D51484354916&_bk%3D%252Bdev%2520%252Bops&_bm%3Db&_bn%3Dg][DevOps]] role over the past few years has been meteoric. [[https://www.pagerduty.com/][Entire companies]] now exist to serve this niche, and, by all accounts, DevOps personnel are in /very/ high demand[fn:1].
 

@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Basics of an LLC
 excerpt: Some information on setting up an LLC
 ---
-#+END_HTML
+#+END_EXPORT
 
 Taking John Sonmez's advice on treating your career like a personal business, I have been researching LLCs and some basic information on setting them up.
 

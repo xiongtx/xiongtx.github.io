@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Instant gratification
 excerpt: Good tools shorten the development feedback cycle
 ---
-#+END_HTML
+#+END_EXPORT
 
 A feature I really enjoy in [[https://github.com/clojure-emacs/cider][CIDER]], Emacs' Clojure interactive development environment, is the overlaying[fn:1] of evaluation results next to the form being evaluated.
 

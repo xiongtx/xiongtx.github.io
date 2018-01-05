@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: The 70/30 rule
 excerpt: Be more of a producer, less of a consumer
 ---
-#+END_HTML
+#+END_EXPORT
 
 I recently came across [[https://simpleprogrammer.com/][SimpleProgrammer.com]], a blog by John Sonmez providing advice for working programmers on improving both their professional and non-professional lives. John also has a [[https://www.youtube.com/channel/UCFxdcuY-S6yjZGq_2cjilHg][YouTube channel]] where he uploads videos with alarming regularity (multiple a day!), providing very actionable nuggets of wisdom.
 

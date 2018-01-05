@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Corman Lisp
 excerpt: An interesting story of Lisps, by Roger Corman
 ---
-#+END_HTML
+#+END_EXPORT
 
 I had the pleasure today of attending a Common Lisp / Clojure meetup at [[https://www.factual.com/jobs#problems][Factual]] SF. The talk was given by Roger Corman, creator of [[http://www.cormanlisp.com/][Corman Lisp]], on his personal history with Lisps. It was equal parts educational and entertaining, and gave real insight into how different the world of programming was 35 years ago.
 

@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Default editor in GNOME
 excerpt: Changing the default text editor in GNOME.
 ---
-#+END_HTML
+#+END_EXPORT
 
 Here's a quick tip: you can change the default text editor in GNOME (and
 likely any [[https://www.freedesktop.org/wiki/][Free Desktop]]) by creating a =defaults.list= file in

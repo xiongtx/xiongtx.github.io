@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Machine learning and math
 excerpt: A strong math background is essential for machine learning
 ---
-#+END_HTML
+#+END_EXPORT
 
 Machine learning is a hot field these days--just about every big company is investing heavily in ML research and development. It's a far cry from the immediate aftermath of the [[https://en.wikipedia.org/wiki/AI_winter][AI winter]], a period of reduced funding and interest in AI research in the 1980's that was the result of excessive business hype, the winding down of the Cold War, and interest in a new, exciting technology--the internet.
 

@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Java appletviewer
 excerpt: Viewing Java applets when browsers stop supporting them
 ---
-#+END_HTML
+#+END_EXPORT
 
 I had a tough time today trying to view Java applets in the browser.
 

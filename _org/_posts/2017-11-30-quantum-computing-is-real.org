@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Quantum computing is real
 excerpt: A visit to a quantum computing company...that uses Lisp!
 ---
-#+END_HTML
+#+END_EXPORT
 
 Tonight I had the pleasure of visiting [[https://www.rigetti.com/][Rigetti Computing]], a quantum computing start-up in Berkeley, for a [[https://www.meetup.com/balisp/events/244921835/][Lisp at the Frontier of Computation]] meet-up. While I'm always happy to attend a talk on Lisp, this time I (and I'm sure many other attendees) was drawn more by the opportunity to see quantum computing's outside of academia.
 

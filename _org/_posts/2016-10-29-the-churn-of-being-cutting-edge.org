@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: The churn of being cutting edge
 excerpt: Early adoption has its drawbacks
 ---
-#+END_HTML
+#+END_EXPORT
 
 One reason that technology is a young man's game[fn:1] is that there is constant *churn* in the sector. Not /progress/ or /advancement/, necessarily--just rapid change. The only stable technologies are those that people are no longer interested in. Cutting-edge technologies, therefore, are constantly changing and shifting, which imposes a cost on those using them.
 

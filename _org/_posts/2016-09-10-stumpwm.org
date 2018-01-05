@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: StumpWM
 excerpt: A window manager in Common Lisp!
 ---
-#+END_HTML
+#+END_EXPORT
 
 Tiling window managers (WMs) are beloved by hackers everywhere. Not being a hacker, I never paid them much attention, but my experience with the Haskell-based [[http://xmonad.org/][XMonad]] a while back was positive enough that I wanted to try a Lisp-based WM.
 

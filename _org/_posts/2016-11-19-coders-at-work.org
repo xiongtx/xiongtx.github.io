@@ -1,12 +1,12 @@
 #+OPTIONS: toc:nil num:nil
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 ---
 layout: post
 title: Coders at work
 excerpt: Experiences of great programmers are enlightening
 ---
-#+END_HTML
+#+END_EXPORT
 
 I've recently been reading Peter Seibel's [[http://www.apress.com/us/book/9781430219484][Coders at Work]], a collection of interviews with some of the best programmers alive today. Having enjoyed Seibel's [[http://www.gigamonkeys.com/book/][Practical Common Lisp]], I had high expectations for his work, and was not disappointed.
 
