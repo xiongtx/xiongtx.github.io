@@ -1,0 +1,45 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_EXPORT html
+---
+layout: post
+title: Technology shouldn't waste your time
+excerpt: Technology, not just the tech industry, has gone terribly wrong
+---
+#+END_EXPORT
+
+Something's rotten with modern technology. Not just the tech industry, with its moralizing SJWs, (apparently) rampant sexual harassers[fn:1], and post-parody products[fn:2], none of which has anything to do with good business or innovative engineering. No, something is wrong with technology /itself/. That something can be summarized succinctly as:
+
+#+BEGIN_QUOTE
+Modern technology products don't seek to save you time--they seek to waste it.
+#+END_QUOTE
+
+This brief insight has enormous ramifications not just for the tech industry, but for society at large.
+
+It's trivial to point out easy targets like social media. Facebook /can/ be a useful way to broadcast information to a large number of "friends". Twitter /can/ provide valuable updates on important events like natural disasters. The entire business model of these products, though, is to get the user to spend more time on the platform. Every attempt is made to keep the user staring at the screen, so as to put more eyeballs on ads. That these products are designed to waste time is obvious[fn:3].
+
+What's much more insidious is the way other tech products, perhaps inspired by the "success" of social media[fn:4], are jumping on the "waste the user's time" bandwagon. Video games are moving toward subscriptions[fn:5]. Refrigerators want you to enter your preferences and update them regularly. Even [[https://www.theverge.com/2018/1/4/16849400/microsoft-cortana-thermostat-johnson-controls-glas][thermostats need to be AI-powered]] (and cost $319 to boot).
+
+What's at the heart of this problem? I put some credence into [[http://www.mauldineconomics.com/this-week-in-geopolitics/productivity-microchips-and-war][George Friedman's assertion]] that we're 50 years into the microchip revolution and there are no more easy productivity gains. Markets (particularly developed countries) are saturated. How useful is putting a virtual assistant in a thermostat? Not very, but companies like Intel and Microsoft have to try /something/--might as well combine the last buzzword ("internet of things") with the current one ("AI")!
+
+One exception, I've found, is Uber. Ride-sharing saves time relative to driving, taking taxis, or (God forbid) public transportation. Uber doesn't demand I stare at the app all day--only when I need a ride. And the routing algorithms, driver history, pool matches, etc. all deliver real value, which translate to more drivers and more riders. Travis Kalanick may be the black sheep of Silicon Valley today, but he's created something far more useful than Zuck, Jack, or whomever is behind Bananacoin.
+
+In summary. here's something completely obvious:
+
+#+BEGIN_QUOTE
+Technology should save you time
+#+END_QUOTE
+
+That slogan should be plastered atop the entrance of every tech company, though I doubt it'd help. Technologies that's truly transformative--e.g. the fabled robot butler--remain far out of reach. In the meantime, we'll have to settle for refrigerators with LCD screens.
+
+* Footnotes
+
+[fn:1] I haven't met any; maybe because I'm not best buds with Travis Kalanick?
+
+[fn:2] [[https://bananacoin.io/][Bananacoin]], anyone?
+
+[fn:3] Or at least would be to anyone who spent 5 minutes thinking about it. Unfortunately, it seems very few people have 5 minutes to spare out of the 4 hours they spend on social media every day.
+
+[fn:4] Twitter's never made any money in its existence, but hey, you /could/ be the next Facebook!
+
+[fn:5] Don't you dare think you're done after beating the final boss! There's a /lot/ of episodic content to come...
