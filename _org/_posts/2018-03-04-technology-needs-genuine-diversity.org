@@ -1,0 +1,29 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_EXPORT html
+---
+layout: post
+title: Technology needs genuine diversity
+excerpt: Hollow words won't improve the tech industry
+---
+#+END_EXPORT
+
+I've previously [[http://www.tianxiangxiong.com/2018/01/28/technology-shouldnt-waste-your-time.html][written a critique]] of where technology in general and the tech industry in particular has gone terribly wrong. In short, technology today is focused on wasting the user's time instead of delivering real value and productivity gain.
+
+Breaking out of this sad state of affairs requires more than changing the way existing members of the technology industry think and act. Changing the way an individual thinks and acts is difficult; doing so for a /group/ is nigh impossible. Therefore, *to change the tech industry, we need to bring different people into the technology field*.
+
+At first, this seems like yet another clarion call for [[https://www.entrepreneur.com/article/306343]["diversity" in tech]]. Far from it. The end goal of most such initiatives, if they ever go beyond jawboning and virtue signaling, is to create an industry where people [[https://www.youtube.com/watch?v=X70tK5l2z0o][look different, but think the same]]. Genuine change demands diversity of background, life experience, and ideas--things anathema to the incestuous Silicon Valley crowd.
+
+#+BEGIN_QUOTE
+Words mean nothing. Only action has value.
+#+END_QUOTE
+
+One important dimension of diversity is /economic background/. It's no secret that tech workers overwhelmingly come from middle-class families--the modern /petite bourgeoisie/[fn:1]. Children from poor families have little opportunity to be exposed to math or programming, largely because their parents' careers have nothing to do with these fields. This creates a vicious cycle whereby the poor are continuously blocked from lucrative careers and the industry is forever starved of their perspective on society's needs.
+
+To directly address this problem, for the past 1.5 years I've been volunteering with [[https://thesmartprogram.org/][The SMART Program]], an organization that helps children from poor families attend university. SMART has an excellent record of producing first-generation university graduates. I worked primarily as a math tutor for high school students, though I've helped students of every grade on just about every subject.
+
+My own actions are but a drop in the pond, but a /real/ drop in the /right/ pond. I encourage those who wish to tackle the very real issue of diversity in the tech industry to follow in my footsteps and commit themselves to *action that directly address a real problem*.
+
+* Footnotes
+
+[fn:1] This is true even among the immigrant population; few have lept from rural peasantry to an [[https://en.wikipedia.org/wiki/Indian_Institutes_of_Technology][IIT]], though those who did are invariably excellent.
