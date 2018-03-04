@@ -36,7 +36,7 @@ IT departments, therefore, can manage a lot less hardware. They spend much more 
 
 ** Change at the speed of human availability
 
-Software that comes as a service rather than in a box is much more under the company's control, which means that it's easier to modify. And if it's /easier/ to modify, it /will/ be modified more often--and blow up more often. Amazon is one of the first companies to embrace the "software as a service" (Saar) model, and it's not an accident that their developers were among the first to wear pagers.
+Software that comes as a service rather than in a box is much more under the company's control, which means that it's easier to modify. And if it's /easier/ to modify, it /will/ be modified more often--and blow up more often. Amazon is one of the first companies to embrace the "software as a service" (SaaS) model, and it's not an accident that their developers were among the first to wear pagers.
 
 When software is a service, it's harder to write some lines of code, throw it over the fence to QA, and move on. Developers have to *own* their code from development, to deployment, to production. Often, there /is/ no one on the other side of the fence. Funding Circle US, for example, has only one dedicated QA'er[fn:3] for /all/ development teams--nearly 30 developers in total--and no plans to hire more.
 
