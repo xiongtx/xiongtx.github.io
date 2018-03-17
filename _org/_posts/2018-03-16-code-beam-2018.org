@@ -1,0 +1,39 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_EXPORT html
+---
+layout: post
+title: Code BEAM 2018
+excerpt: A reflection on the Code BEAM 2018 conference
+---
+#+END_EXPORT
+
+I've just wrapped up the [[https://www.codesync.global/conferences/code-beam-sf-2018/][Code BEAM 2018]] conference. This is the renamed Erlang and Elixir Factory, which I'd [[http://www.erlang-factory.com/sfbay2017/][attended in 2017]]. The format is exactly the same; it's simply been re-branded to match [[https://codesync.global/conferences/][other conferences run by the same group]].
+
+Overall, I enjoyed last year's event more. Perhaps it's because last year's speakers included [[https://en.wikipedia.org/wiki/Carl_Hewitt][Carl Hewitt]], who invented [[http://worrydream.com/refs/Hewitt-ActorModel.pdfhttp://worrydream.com/refs/Hewitt-ActorModel.pdf][actors]], and [[http://www.wall.org/~larry/][Larry Wall]], creator of Perl, as well as some outstanding talks on distributed systems, chaos engineering etc. Or perhaps it's simply because it was the first time I'd interacted with the Erlang community and saw how Erlang/Elixir are used "out in the wild".
+
+But that's not to say that I didn't enjoy this year's conference. On the contrary, there are a few highlights.
+
+During lunch on the first day, I chatted with Joe Armstrong about the history of Erlang. As it turns out, Erlang was open-sourced by Ericsson because some managers there had /banned/ the use of Erlang[fn:1] in favor of more "mainstream" languages like Java and C++. The Erlang team spent 6 months convincing management to open-source Erlang/OPT, then quit en masse a week later to form a company around the newly open-sourced technology they'd created.
+
+I attended a few talks about Internet of Things (IoT), which seems to be a big theme this year (or perhaps I simply didn't pay it any mind last year). Erlang, of course, began as an embedded language, so it's no surprise there's a lot of interest in using Erlang to collect sensor data etc.
+
+One reason the "IoT revolution" has been slow-burning, despite being a buzzword for a decade, is that are there many different protocols and standards, due to hardware companies' incentives primarily being to lock users onto their platforms. Some of the presenters at the conference are seeking to establish common, open standards for their devices, but it looks to be a uphill slog[fn:2].
+
+Alas, blockchain is another big theme. There's no fewer than three organizations at the conference seeking to build blockchains using Erlang. One of the three is even trying to tacking the aforementioned IoT protocol problem by using an open blockchain-based protocol[fn:3]!
+
+Part of the reason blockchain is everywhere is that its practitioners are invariably evangelists for the technology[fn:4]. I can't think of another technology community whose members try to /sell/ it so aggressively, to the point that "blockchain" seems to be their answer to every problem. I find this grating. Engineers are usually a no-nonsense group, quicker than anyone to point out problems with their own work. Engineers with the personalities of salesmen are...strange, to say the least.
+
+Overall, I enjoyed this year's Code BEAM[fn:5]. Having been to two now, I /may/ go to a third next year, but only if there's a speaker or theme I'm very interested in.
+
+* Footnotes
+
+[fn:1] The ban, as it turns out, was not very effective. Engineers got around the ban by telling management they needed to continue using certain /technologies/--which were written in Erlang! It was also never officially rescinded (in Joe's words, that'd mean they have to admit they did something wrong).
+
+[fn:2] Aside from hardware vendors, there's also the issue of telecom providers, whose networks many devices rely on to transmit data. There's vendor lock-in everywhere!
+
+[fn:3] Or maybe they simply wanted to maximize their odds of being selected for a conference talk by applying as many buzzwords as possible.
+
+[fn:4] And usually for their own ICOs, too.
+
+[fn:5] Especially since it's company-paid 💸.
