@@ -1,0 +1,33 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_EXPORT html
+---
+layout: post
+title: Is it genius or just plain dumping?
+excerpt: Sober conclusions may be drawn comparing services to products
+---
+#+END_EXPORT
+
+Uber [[https://arstechnica.com/cars/2019/05/uber-lost-another-1-billion-last-quarter/][lost $1 billion]] the quarter after IPO. Lyft [[https://www.reuters.com/article/us-lyft-results/lyft-sees-peak-losses-this-year-says-ride-hailing-has-path-to-profit-idUSKCN1SD22F][lost $1.1 billion]] (on far less market share). Didi [[https://techcrunch.com/2019/02/14/didi-reported-1-6-billion-loss/][lost $1.6 billion]] in 2018, despite having a near-monopoly on the Chinese market, and swiftly announced [[https://www.reuters.com/article/us-didi-chuxing-layoffs/china-ride-hailing-giant-didi-to-lay-off-15-percent-staff-this-year-source-idUSKCN1Q40CZ][15% layoffs]]. JD announced [[https://www.bloomberg.com/opinion/articles/2019-04-10/jd-com-s-layoffs-removal-of-minimum-wage-signal-desperation][8% layoffs]] in April, in addition to "adjusting" its courier pay[fn:1]. Meituan's fourth-quarter loss in 2018 doubled compared to the year prior, to [[https://www.reuters.com/article/meituan-results/corrected-meituan-dianping-loss-widens-in-its-second-earnings-since-ipo-idUSL3N20Y1OD][3.4 billion yuan]] (approx. $500 million).
+
+Compared to the previous generation of tech titans like Google, Facebook, and Baidu[fn:2], the new wave of tech companies are wildly unprofitable. Each justified its losses by claiming to be "racing towards the future", and for a while investors bought their stories hook, line, and sinker. But it appears that, in the face of a global economic slowdown, investors are pulling back hard, with Chinese venture capital in Q2 2019 [[https://www.bloomberg.com/news/articles/2019-07-09/china-s-venture-capital-boom-shows-signs-of-turning-into-a-bust][falling 77%]] compared to the year prior.
+
+So what's wrong with this new generation of companies?
+
+First, the ones listed above all have /physical/ operations. Uber, Lyft, and Didi are ride-sharing apps. JD is an online store with a large logistics division. And Meituan, though it bills itself as a "one-stop shop for services", is overwhelmingly known for food delivery. It shouldn't be surprising that they're physically-based, as the old companies have monopolized digital-only businesses from search to social media, making it near-impossible for new entrants to compete.
+
+Physical businesses don't scale nearly as well as digital ones, and some physical limitations can't be overcome without a big change to the technology or business model. The cost of ride-sharing and food delivery, for example, is constrained by the fact that a /person/ needs to perform the task of getting from point A to point B, which requires time and fuel. Absent self-driving cars and delivery drones (precisely the pipe dreams these companies sell investors), there's a hard floor on the cost.
+
+But if efficiency gains are limited, how can these companies grow at the gangbuster rates investors demand in exchange for tolerating their yawning losses, especially in the face of intense competition? There's only one way: subsidize the service in order to lure more users. Meituan's explosive growth, for example, is in large part due to the fact that food is often [[https://www.bloomberg.com/features/2019-meituan-china-delivery-empire/][cheaper on the app than at the restaurant]].
+
+It doesn't take an economic genius to realize that when you subsidize something, its price lowers, and there'll be greater demand for it. But it's the /degree/ to which these companies need to subsidize their products and services that should give investors most pause. In the Meituan example, a plate of roast duck cost /80% less/ on the app than in-store, which is completely illogical. Almost surely, that plate of duck is being sold at a loss to the customer, with Meituan making up the difference to the restaurant.
+
+There's a word for selling something below its price of production: [[https://www.investopedia.com/terms/d/dumping.asp][dumping]]. While usually used in the context of international trade, the term is equally valid when applied to domestic firms. The legality of dumping is complex; under WTO rules, it's legal unless the receiving country can demonstrate its industries have been hurt by the practice, which frankly doesn't seem like a high burden of proof. Domestic dumping, however, faces few (if any) restrictions. If investors want to give ride-sharing apps billions of dollars to subsidize consumers, squeezing out taxi companies in the process, what's there to stop them?
+
+Ultimately, the constraint on these companies' money-losing will be investor patience. Even with ultra-low interest rates, you can only lose so much money for so long. When the monetary tide recedes, there will no doubt be many casualties in the tech industry.
+
+* Footnotes
+
+[fn:1] The company hasn't turned a profit since 2009, 5 years before IPO.
+
+[fn:2] Baidu did suffer a [[https://www.cnn.com/2019/05/17/tech/baidu-stock-earnings-loss/index.html][small loss in Q1 2019]], but it's the first such instance in 14 years, and likely a blip.
