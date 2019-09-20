@@ -1,0 +1,85 @@
+---
+layout: post
+title: An adventure in resizing partitions
+excerpt: A simple task is surprisingly hard
+---
+
+<p>
+Recently I began working with some <a href="https://www.virtualbox.org">VirtualBox</a> VMs. My <a href="https://www.amazon.com/gp/product/B00SGS7ZH4/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&amp;psc=1">Asus Zenbook</a>, which comes with 256 GB of SSD dual-booted with Windows and Fedora, soon found its Fedora installation aching for more disk space.
+</p>
+
+<p>
+So I fired up <a href="https://gparted.org">GParted</a>, shrank the Windows partition, and tried to extend the Fedora one. Well, turns out you can't modify a partition that GParted is running from (duh!), so I created a <a href="https://docs.fedoraproject.org/en-US/quick-docs/creating-and-using-a-live-installation-image/index.html">Fedora Live USB</a> with <a href="https://docs.fedoraproject.org/en-US/fedora/f30/install-guide/install/Preparing_for_Installation/#_fedora_media_writer">Fedora Media Writer</a>, booted into the live image, and installed GParted. I moved the unallocated space to the right of several partitions, but it came to the Fedora partition, I again found that I couldn't modify it. What's going on?
+</p>
+
+<p>
+Turns out that the Fedora partition is set up as a <a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-lvm-concepts-terminology-and-operations">logical volume group</a><sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>. The volume group contains several logical volumes like <code>root</code>, <code>home</code> (the one I'm interested in adding more space to), and <code>swap</code>. By default, Fedora uses swap space when it's available, and since <code>swap</code> is being used, the partition is locked. So I had to turn off swap and unmount the partition:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">swapoff -a
+umount /dev/fedora/swap
+</pre>
+</div>
+
+<p>
+And now I'm able to extend it! Phew!
+</p>
+
+<p>
+After GParted finished resizing the partitions, I rebooted and&#x2026;disaster! After being stuck on the logo for what seemed like an eternity, Fedora dropped into a <code>dracut</code> console and complained that
+</p>
+
+<blockquote>
+<p>
+Warning: /dev/fedora/swap does not exist
+</p>
+</blockquote>
+
+<p>
+Turns out that by turning off swap and resizing the partition, I'd <a href="https://creativeandcritical.net/help-articles/how-to-safely-delete-swap-volume-extend-root-volume-fedora-20">gotten rid of the swap volume</a> altogether!
+</p>
+
+<p>
+OK, no need to panic. After <code>exit</code> from <code>dracut</code>, Fedora was able to reboot. A look at the <a href="https://wiki.gnome.org/Apps/SystemMonitor">System Monitor</a>, though, confirmed that no swap space was being used. This is a real <a href="https://haydenjames.io/linux-performance-almost-always-add-swap-space/">bummer for performance</a>, so I had to add the swap space back.
+</p>
+
+<p>
+The easiest way to do this was to create a logical volume with the same name as the old one so that I didn't need to modify <code>/etc/fstab</code>. Fortunately, the internet is <a href="https://www.2daygeek.com/how-to-create-extend-swap-partition-in-linux-using-lvm/">full of good tutorials</a> on how to do this:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">sudo lvcreate -L 8G -n swap fedora
+sudo mkswap /dev/fedora/swap
+sudo swapon -va
+</pre>
+</div>
+
+<p>
+Great! I've got swap space back.
+</p>
+
+<p>
+A look at <code>df -h</code>, however, showed that <code>/dev/mapper/fedora-home</code> hadn't actually increased in size. Even though we'd increased the size of the volume group, we hadn't specified that the space should be used by a logical volume and file system. So it's off to the internet again to <a href="https://www.rootusers.com/lvm-resize-how-to-increase-an-lvm-partition/">figure out how to do that</a>:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">sudo lvextend -l +100%FREE /dev/fedora/home <span style="color: #5F7F5F;"># </span><span style="color: #7F9F7F;">to use all the free space in the volume group</span>
+sudo resize2fs /dev/fedora/home <span style="color: #5F7F5F;"># </span><span style="color: #7F9F7F;">since the volume is ext4</span>
+</pre>
+</div>
+
+<p>
+Finally! I've enough disk space to work with my VMs without running into <code>DISK_FULL</code> errors.
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+This is the default for new Fedora installations, though in my case it's not really necessary, as I only have one hard drive.
+</p></div></div>
+
+
+</div>
+</div>
