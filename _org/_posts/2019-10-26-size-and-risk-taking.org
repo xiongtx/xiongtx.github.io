@@ -1,0 +1,45 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_EXPORT html
+---
+layout: post
+title: Size and risk taking
+excerpt: The larger the organization, the less risk it can bear
+---
+#+END_EXPORT
+
+I recently came across news that [[https://www.ubisoft.com/][Ubisoft]], the large game publisher, saw [[https://www.cnbc.com/2019/10/25/ubisoft-ubi-stock-down-20percent-on-game-delays-and-profit-warning.html][its shares tank]] after poor sales of its [[https://www.metacritic.com/game/pc/tom-clancys-ghost-recon-breakpoint][latest game]].
+
+Big publishers and their games coming under [[https://www.pcgamer.com/anthem-review/][withering criticism]] is nothing new, but what is refreshing is a CEO who, in a [[https://ubistatic19-a.akamaihd.net/comsite_common/en-US/images/14ubisoft%2520-%25202019-20%2520targets%2520update_tcm99-358144_tcm99-196733-32.pdf][financial update]], correctly identified the issues with the company's products:
+
+- Consumer weariness with high frequency of sequels
+- Subpar implementation of features
+- Lack of distinction / innovation
+
+These problems are in fact  related, and have the same root cause:
+
+#+BEGIN_QUOTE
+A desire to continue doing what's worked in the past, avoid rocking the boat, and churn out more of the same, just bigger and "better"
+#+END_QUOTE
+
+This is hardly unique to Ubisoft, or even the games industry. It's true of [[https://www.inc.com/jason-aten/googles-pixel-4-announcement-was-least-exciting-phone-launch-ever-heres-why-thats-actually-googles-best-move.html][electronics]], [[https://www.forbes.com/sites/jeanbaptiste/2013/06/27/ford-admits-auto-industry-slow-to-innovate-praises-silicon-valley-video/][automobiles]], [[https://www.usatoday.com/story/tech/2015/08/19/column-why-healthcare-innovation-taking-so-long/32005105/][healthcare]], and more. Change is feared, blocked, and resisted until the point at which it's overwhelming and inevitable. Proactive change--i.e. innovation--is lauded as a goal by everyone and honestly pursued by virtually no one.
+
+This phenomenon can seem counter-intuitive: we tend to believe that entities with more resources should be able to take more risk. It's /obvious/ they should be able to muster those resources to do what less well-endowed competitors can't do, do it faster, and better survive failure.
+
+The problem with this perspective is that we're only looking at one side of being resource-rich--namely the advantages. Less obvious are the drawbacks.
+
+First of all, the *prejudice of success*. To succeed, a company had to navigate complex economic, social, and political landscapes. Out of a sea of competitors, they survived and prospered. They'll come to believe, then, that the values and methods that got them to the top are timeless and universal, and that any deviation is a path to failure.
+
+Second, the *large impact of failure*. Large companies have lots of investors, suppliers, employees, and customers. With state-owned enterprises and certain industries, such as defense, government is a major player. If your profit is $500 million instead of $1 billion this quarter, the repercussions could be huge--workers may be laid off, offices closed, politicians put in the awkward position of having to explain why they gave you tax breaks, etc.
+
+Third, the *nonalignment of interests*. Different people have different goals. A large group of people invariably has many conflicting goals. Some incompatibilities occur at a high level: engineers don't care about the company's finances, sales couldn't be less concerned with what they're selling, HR has its own agenda, and so on. Then there's the innumerable clashes at the lower level between groups and personalities, driven by any mix of idealism, greed, lust for power, and whatever other human frailties find fertile expression amid crowds.
+
+And finally, the *high cost of coordination*. While the network effect (also known as [[https://en.wikipedia.org/wiki/Metcalfe%2527s_law][Metcalfe's Law]]) is key to the success of many companies, especially in media and technology, it imposes a cost on all organizations' decision-making. The more people are involved, the harder it is to discuss an topic, make a decision, and implement it. N^2 communication is a mathematical and therefore unavoidable problem. That's why almost all successful organizations, from [[https://www.theguardian.com/technology/2018/apr/24/the-two-pizza-rule-and-the-secret-of-amazons-success][Amazon]] to the [[https://science.howstuffworks.com/navy-seal17.htm][Navy Seals]], emphasize small, autonomous teams to keep the cost of coordination down.
+
+So if small entities have will but not the means, and large entities have means but not the will, is innovation simply impossible? Obviously not, but it does mean that innovation is a fragile flower that survives, let alone thrives, only under particular conditions.
+
+For a large organization, the key is *fear*. American automobile company GM ignored competition and churned out clunkers for years until the 2009 financial crisis and subsequent bailout forced it to change tack. In the years since, GM developed [[https://cars.usnews.com/cars-trucks/chevrolet/cruze][well-reviewed small vehicles]], purchased an [[https://fortune.com/2016/03/11/gm-buying-self-driving-tech-startup-for-more-than-1-billion/][autonomous driving startup]], and underwent significant reorganization (read: [[https://www.foxbusiness.com/industrials/gms-14000-layoffs-by-the-numbers][layoffs]]). Whether GM can turn itself around remains to be seen, but fear of complete collapse was essential to breaking decades of wrong thinking and bad habits.
+
+For a small entity, the key is *hope*. Reasonable people don't quit their well-paying jobs to grind 16 hrs. a day, 7 days a week at a startup--what keeps them going is the prospect of a massive future payout, whether money, fame, influence, or whatever else motivates human beings. Unlike large organizations, small ones aren't motivated much by fear--fear is omnipresent, as everyone knows that the success rate of new businesses is very low, and the fear of loss less a Damocles' Sword as they've little to lose anyway.
+
+Understanding these differences is key to getting innovation out of organizations large and small. Unfortunately, from my observations, they're not well-understood at all, whether by Fortune 500 CEOs or startup founders. Too often, bad incentives result in waste and stagnation--but it doesn't have to be that way.
