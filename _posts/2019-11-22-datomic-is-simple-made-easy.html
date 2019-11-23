@@ -1,0 +1,52 @@
+---
+layout: post
+title: Datomic is simple made easy
+excerpt: The hits keep coming from Cognitect
+---
+
+<p>
+I've recently begun evaluating <a href="https://www.datomic.com">Datomic</a> for a project at work. Though the product has been around for <a href="https://www.youtube.com/watch?v=Cym4TZwTCNU">over 7 years</a>, it's the first opportunity I've had to investigate it in depth<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>. Having had some experience with it, I've come to really like it, and will provide some thoughts on why I think Datomic is the <i>right</i> database for many applications.
+</p>
+
+<p>
+In Datomic, all data is stored as <a href="https://docs.datomic.com/on-prem/glossary.html#datom">datoms</a>, 5-tuples of entity-attribute-value-transaction-added. <b>Data is immutable</b>. Once you put (<i>assert</i>") a datom (a <i>fact</i>) into the database, it's there forever. A new fact can supersede, but not remove<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>, an old fact. This has amazing implications for <b>information retention</b>. Ever wanted to run a report against your data or experiment with a "what if" scenario from 6 months ago? With Datomic, it's as easy as <a href="https://docs.datomic.com/on-prem/clojure/index.html#datomic.api/as-of">requesting a snapshot</a> of the database on that date.
+</p>
+
+<p>
+The system is <b>easy to reason about</b>. Transactions are <a href="https://docs.datomic.com/on-prem/acid.html">ACID</a> and serial, so there's a total ordering of events, which is <a href="https://docs.datomic.com/on-prem/log.html">available via the API</a> as data structures to easily inspect and manipulate. This is a <i>much</i> simpler model than the various <a href="https://www.postgresql.org/docs/current/transaction-iso.html">transaction isolation levels</a> seen in RDBMS systems. It does limit the system's write performance, but many applications are more read than write-intensive, and a single thread kept busy, not contending with others, can be highly efficient.
+</p>
+
+<p>
+<b>Read performance</b>, which Datomic is designed for, is dependent on caching and storage. Queries can be <a href="https://docs.datomic.com/on-prem/caching.html">cached</a>, and there's never a need to evict outdated data because the they're immutable facts that are <i>always true</i>. As memory is getting <a href="https://jcmit.net/memoryprice.htm">cheaper</a> and more plentiful very quickly, especially via cloud providers like AWS, Datomic's performance stands to benefit as many users' result sets&#x2013;or even entire databases&#x2013;can be held in memory. The same is true r.e. <a href="https://docs.datomic.com/on-prem/storage.html">storage</a>, which is separated from other database concerns. Datomic can make use of various storage backends, from in-memory (amazing performance for tests) to <a href="http://cassandra.apache.org/">Cassandra</a> (highly scalable &amp; distributed).
+</p>
+
+<p>
+The <a href="https://docs.datomic.com/on-prem/query.html">query language</a>, which seems formidable at first, has a number of advantages, including <b>composability</b>, due to use of data structures instead of strings, and <b>expressiveness</b>, thanks to the power of Datalog, the subset of Prolog the query language is based on. Logic programming makes navigating relationships between entities a breeze, as it spares the user the worry of going from here to there or there to here.
+</p>
+
+<p>
+Speaking of navigation, "everything is a datom" makes <a href="https://docs.datomic.com/on-prem/indexes.html">indexing</a> straightforward. There are only a few to worry about, and most are automatic&#x2013;no worrying about which columns in which tables to index based on usage patterns. The configuration judgment calls<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup> and pervasive manual tweaking typical of other databases just isn't present in Datomic. And like the transaction log, indexes are <a href="https://docs.datomic.com/on-prem/clojure/index.html#datomic.api/index-range">exposed via the API</a> as data structures, in case you need to do something the query language can't do fast enough.
+</p>
+
+<p>
+There's a lot more to Datomic that can be discussed, but the point is this: the good folks at Cognitect designed a database chock full of lessons learned and good ideas from the past 40 years, which translates to a downright <i>pleasing</i> product to work with. I highly recommend anyone starting a new project to give Datomic a try; even if you decide it's not right for you, I guarantee you'll have learned a lot about database design from the experience.
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+Previous attempts at playing with it in my own time had been discouraged by the closed source, <a href="https://docs.datomic.com/on-prem/architecture.html">novel architecture</a>, and alien, <a href="https://en.wikipedia.org/wiki/Datalog">Datalog</a>-inspired <a href="https://docs.datomic.com/on-prem/query.html">query language</a>.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+There's an <a href="https://docs.datomic.com/on-prem/excision.html">excision API</a> that serves as an escape valve for e.g. regulatory and performance needs, but in general once something is in Datomic, it's there forever.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
+Which doesn't mean there aren't <a href="https://docs.datomic.com/on-prem/system-properties.html">things to configure</a>&#x2013;just different, higher-level, more interesting decisions to be made.
+</p></div></div>
+
+
+</div>
+</div>
