@@ -1,0 +1,43 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_EXPORT html
+---
+layout: post
+title: The return of big government
+excerpt: Internal and external factors alike demand a more powerful state
+---
+#+END_EXPORT
+
+Republicans love tax cuts, and Donald Trump, being a businessman, was happy to [[https://en.wikipedia.org/wiki/Tax_Cuts_and_Jobs_Act_of_2017][go along with that]]. The move to reduce corporate tax rates to the [[https://www.taxpolicycenter.org/briefing-book/how-do-us-corporate-income-tax-rates-and-revenues-compare-other-countries][middle of the OECD pack]] was enough to make the US the world's [[https://www.cnbc.com/2018/10/17/us-named-the-worlds-most-competitive-economy.html][most competitive economy]] in 2018 and [[https://www.cnbc.com/2019/10/08/singapore-overtakes-us-to-become-most-competitive-country-wef-says.html][second in 2019]][fn:1].
+
+But tax cuts don't equal small government, something Republicans are supposed to be enthusiastic about[fn:2]. And given both internal and external pressures, small government is a pipe dream. We're headed for a much bigger role for the state over the next generation, and it won't be something any politician can stop. There are three main reasons: demographics, economic imbalances, and China.
+
+Demographically, the Baby Boomers are entering mass retirement. The process began in 2009[fn:3] and will continue until around 2030[fn:4]. This means a large rise in government expenditure (for social security and healthcare, especially for those who haven't saved enough for retirement) and lower demand for consumer products (those purchased by the coveted 25-54 age bracket), which damages companies and therefore tax revenue. The result will be not just higher taxes, but more government services to cater to an elderly population less able to do things for themselves.
+
+Economic imbalances seem straightforward, but are actually much more complex. The [[https://www.washingtonpost.com/blogs/ezra-klein/post/who-are-the-99-percent/2011/08/25/gIQAt87jKL_blog.html]["99-percent"]] protests of the post-financial crisis era focus on the classic (and boring) "rich vs. poor" narrative, but more thorough analysis reveals a deeper problem: that of insufficient consumer demand.
+
+Aging demography is one contributor, not only due to the retirees' own reduced consumption but also via knock-on effects: since many retirees haven't saved enough, and government faces intense pressure not to raise taxes, the only way out is asset inflation via central bank money-printing[fn:5] so that retirees' feel a wealth effect. The high cost of land, housing, etc. reduces spending power for everything else, depressing the whole economy. Add to this the [[https://www.aei.org/carpe-diem/chart-of-the-day-century-price-changes-1997-to-2017/][disproportionately rising costs]] of healthcare, education and other essentials, and it's no wonder consumers, particularly young people, feel pinched.
+
+Then there's the international factor, [[https://www.financialsense.com/blog/18948/why-us-debt-must-continue-rise][laid out so elegantly]] by Michael Pettis of Peking University. China, Japan, and Germany (in fact, the EU as a whole), not to mention smaller countries like South Korea, all run significant surpluses against the United States, in effect using American consumer demand to drive their economies. Exports comprise nearly 50% of German GDP, 45% of Korea's and so on[fn:6]. This is totally unsustainable and does great damage to the U.S., from lost jobs to higher debt. Slowly but surely, the narrative is turning on [[https://www.forbes.com/sites/kenrapoza/2018/10/16/china-and-u-s-pushing-a-de-globalization-wave/][globalization]], [[https://twitter.com/realdonaldtrump/status/1069970500535902208?lang=en]["free trade"]], and [[https://www.bloomberg.com/opinion/articles/2019-08-01/trade-deficit-could-be-reduced-under-baldwin-hawley-senate-bill][global capital flows]].
+
+Finally, there's China. Not only is the Middle Kingdom the biggest factor in U.S. trade imbalances, but it's become a full-spectrum threat, from [[https://www.scmp.com/news/china/military/article/3042083/pentagon-head-says-china-has-become-top-us-military-priority?utm_term=Autofeed&utm_medium=Social&utm_content=article&utm_source=Twitter#Echobox=1576278112][military]] to [[https://www.nytimes.com/reuters/2019/11/21/business/21reuters-usa-china-huawei-tech.html][technology]] to [[https://www.nytimes.com/2014/10/10/world/asia/chinas-plan-for-regional-development-bank-runs-into-us-opposition.html][political influence]]. The U.S. is responding by accelerating its development of [[https://www.armscontrol.org/act/2019-09/news/us-university-speed-hypersonic-development][hypersonic missiles]] and [[https://asia.nikkei.com/Business/Aerospace-Defense/Pentagon-seeks-to-triple-AI-warfare-budget-to-meet-China-s-rise][tripling]] the Pentagon's AI budget. Corporate titans like Jeff Bezos are [[https://www.ft.com/content/b38c5cf6-198a-11ea-97df-cc63de1d73f4][taking advantage of this]] to try and land large contracts[fn:7]. The government is also [[https://www.bloomberg.com/news/features/2019-12-10/the-u-s-government-s-mistrust-of-chinese-americans?utm_content=businessweek&utm_source=twitter&utm_medium=social&cmpid=socialflow-twitter-businessweek&utm_campaign=socialflow-organic][cracking down]] on Chinese espionage, especially in [[https://www.bloomberg.com/news/articles/2019-12-09/u-s-says-accused-apple-secrets-thief-had-patriot-missile-file][companies]] and [[https://www.npr.org/2019/06/28/728659124/fbi-urges-universities-to-monitor-some-chinese-students-and-scholars-in-the-u-s][universities]]. All this requires not only more government spending but broader /authority/. In the information age, enemies don't necessarily wear camouflage and spend their time on the other side of the trench. If corporations and universities are unwilling to crack down on enemy action due to financial and ideological interests, government will have to intervene--[[https://www.axios.com/peter-thiel-says-fbi-cia-should-probe-google-9846a042-e689-49bc-bdc7-595988ce5d8c.html][harshly]].
+
+All this must make for a depressing read if you're a libertarian. Good--I despise libertarians[fn:8]. But regardless of how you or I feel, the trend is clear and unalterable--bigger government is on its way.
+
+* Footnotes
+
+[fn:1] Such rankings, done by the World Economy Forum, should be taken w/ a grain of salt. But they do reflect a certain perspective, namely that of bureaucratic think-tankers whose opinions investors disproportionately value.
+
+[fn:2] Though given that Trump's [[http://www.tianxiangxiong.com/2017/01/28/the-rerise-of-nationalism.html][nationalist-populist]] stance has circa 95% approval rating among Republicans and 60% among independents, such "conventional wisdom" is likely as bullshit as anything else in D.C.
+
+[fn:3] One wonders about the relationship between the financial crisis and the start of mass retirement, especially r.e. the housing market
+
+[fn:4] For a delightful presentation on /global/ demographics, see [[https://youtu.be/pKVQDUQR8I4?t=451][Peter Zeihan]].
+
+[fn:5] As an anecdote, my parents purchased their house in 2010 for roughly twice the price it'd been 20 years ago. Less than 10 yrs. later, the price had doubled again.
+
+[fn:6] It's no surprise, then, than in the midst of global slowdown and trade war these exporters are being [[https://www.ft.com/content/35297126-fa60-11e9-a354-36acbbb0d9b6][hit harder]] than everyone else.
+
+[fn:7] Bezos' wholly-owned mouthpiece, The Washington Post, is one of President Trump's most vociferous critics, resulting in Amazon [[https://www.cnbc.com/2019/12/09/amazon-blames-trump-for-losing-jedi-cloud-contract.html][losing]] a $10 billion Pentagon cloud computing contract earlier this year.
+
+[fn:8] I dislike ideologues in general, but libertarianism's stubborn insistence that "free trade" is /always/ good, even when the other side is viciously mercantilist, rivals communism in its economic illiteracy and practical damage.
