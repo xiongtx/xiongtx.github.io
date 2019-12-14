@@ -1,6 +1,6 @@
 ---
 title: TX
-subtitle: Mastering technologies, one day at a time
+subtitle: A cohesive thought is a good starting point
 layout: page
 ---
 
