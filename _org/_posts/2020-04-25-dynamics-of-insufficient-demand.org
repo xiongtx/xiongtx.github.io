@@ -1,0 +1,35 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_EXPORT html
+---
+layout: post
+title: Dynamics of insufficient demand
+excerpt: We're not used to dealing with the economic problem of excess production
+---
+#+END_EXPORT
+
+For most of human history we've dealt with economic problems of insufficient supply. There was never enough land, labor, money, or whatever other resource was necessary for production, leading to scarcities of food, clothing, & other consumer goods. Famines were common, children ran around without shoes, and wars were fought over a few acres of fertile land.
+
+Since the Industrial Revolution, however, insufficient supply has become an increasingly rare problem. Agricultural advances made scaling production easier and more profitable, drastically reducing the amount of labor required. The same story played out in industries from textiles to transportation. Post-WWII and post-Cold War globalization have sent this trend into overdrive as global supply chains optimized costs for each step of the manufacturing process. Absent short-term disruptions like natural disasters, shortage of /any/ product is nearly unheard of in a developed country.
+
+So what's the problem? Excess production makes companies unprofitable, forcing them to cut costs, among which is reduction of wages and labor. This further reduces demand as lower-earning or unemployed people have to consume less, creating a vicious cycle. Scale this to entire industries and the result is massive economic shock. Hardest-hit are countries whose domestic consumption is low and rely on foreign demand, i.e. exports, to sustain their economies. In the 1920's, this was the United States[fn:1].
+
+Arithmetically, there are two ways to resolve the excess supply problem. One is to suppress production. During the Great Depression, the [[https://www.britannica.com/topic/National-Industrial-Recovery-Act][National Industrial Recovery Act]] of 1933 placed production quotas on industries and prevented new companies from joining the business alliances setting the quotas. The [[https://livinghistoryfarm.org/farminginthe30s/crops_17.html][Agricultural Adjustment Act]] did the same for farm products, with the government buying animal herds solely to cull and paying farmers to leave fields fallow.
+
+This provoked intense political controversy, but more importantly did not resuscitate the economy. Economic historians continue to debate why, but it seems fairly obvious that a healthy economy is one under the virtuous cycle of profit and growth[fn:2], and suppressing production (while maintaining consumption via government spending) only temporarily stops, but does not reverse, the aforementioned vicious cycle.
+
+The other way is to boost demand, which is precisely what WWII did. Suddenly there was insatiable appetite for everything from canned food to steel. More importantly, post-War programs like [[https://www.armytimes.com/home-hq/va-loan-center/2017/12/14/va-loan-history-101-from-world-war-ii-to-todays-benefit/][low-interest mortgages]] for veterans upped domestic consumption while reconstruction in Europe and Japan provided foreign demand. This finally reestablished the virtuous economic cycle.
+
+But hang on--in the 20's, as now, there were lots of poor people who could barely put food on the table. So how is it that there was excess production when there's clearly so much room to boost demand for this sizable part of the population?
+
+That, of course, is a question about wealth distribution. As Peking University's Michael Pettis has [[https://carnegieendowment.org/chinafinancialmarkets/55084][written about for years]], income inequality reduces demand and is a cause of the excess supply problem. 100 years ago, Henry Ford understood this well: he paid [[https://www.npr.org/2014/01/27/267145552/the-middle-class-took-off-100-years-ago-thanks-to-henry-ford][high wages]] at his factories to ensure that workers could afford his cars and reduced work hours so they could have time to use them. However, even Ford could not stand against the bigger economic trend; when President Herbert Hoover implored him in the early days of the Depression to help the economy, Ford [[https://www.amazon.com/gp/video/detail/B073KQ5GSR/ref=atv_dp_season_select_s1][boosted wages]]; but when demand collapsed across the country and losses mounted, he threw in the towel and laid off 2/3 of the workforce.
+
+The global economy today clearly suffers from insufficient demand. Moreover, the demand is unevenly distributed, with China, Europe, Japan, South Korea, and many other countries running trade surpluses and relying on US (and to some extent UK) demand to sustain their economies. This untenable situation is ending with a tariff here, a Buy American order there, and Wuhan coronavirus everywhere.
+
+How countries deal with insufficient demand is going to be /the/ economic issue of the next generation. Will it be via a hands-off approach that allows business failures and skyrocketing unemployment to persist for many years? Politically, that'd be hard to swallow. Will it be instead through gov't management and suppression of production? Not only are the effects of this dubious, but doing so requires either an increase in unemployment or public debt. Or will it be by redistribution of wealth that boosts demand? Not only would this be politically fraught, but deep changes to economic structure are necessary for sustainability. Regardless of what happens, our lives at the end of this process will be drastically different from now.
+
+* Footnotes
+
+[fn:1] Today [[https://www.nytimes.com/reuters/2020/04/24/world/europe/24reuters-germany-economy-ifo.html][Germany]], [[https://www.reuters.com/article/us-southkorea-economy-gdp/south-korea-posts-biggest-gdp-fall-since-2008-as-pandemic-cripples-demand-idUSKCN22503A][South Korea]], and [[https://www.scmp.com/economy/china-economy/article/3079432/coronavirus-demand-shock-add-frost-snow-chinas-trade-economy][China]] are on the front lines of the trade and demand shock.
+
+[fn:2] Actually, this depends on the country. Some, like Japan, may be satisfied with stability instead of growth. The United States certainly isn't built for that.
