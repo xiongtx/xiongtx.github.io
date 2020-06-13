@@ -1,0 +1,38 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_EXPORT html
+---
+layout: post
+title: Cryptography
+excerpt: An elegant area of computer science
+---
+#+END_EXPORT
+
+Over the past few weeks I've been looking into cryptography, an area of computer science I've not had the chance to explore much before. I decided to start by taking a Coursera specialization on [[https://www.coursera.org/specializations/introduction-applied-cryptography?][Introduction to Applied Cryptography]], which turned out to be a high-quality program, rather to my surprise[fn:1].
+
+The specialization comprises 4 courses:
+
+- [[https://www.coursera.org/learn/classical-cryptosystems/home/week/1][Classical Cryptosystems and Core Concepts]]
+- [[https://www.coursera.org/learn/mathematical-foundations-cryptography][Mathematical Foundations of Cryptography]]
+- [[https://www.coursera.org/learn/symmetric-crypto][Symmetric Cryptography]]
+- [[https://www.coursera.org/learn/asymmetric-crypto][Asymmetric Cryptography]]
+
+In particular, the first two courses, taught by Prof. William Bahn, are both comprehensive and rigorous. The latter two courses, taught by Prof. Sang-Yoon Chang, are noticeably less so. Nonetheless, the overall program is a very worthwhile introduction to a broad and exciting field.
+
+In the first course we learn about the history of cryptography, both /cryptology/, the study of hiding information, and /cryptanalysis/, the study of how to decode it. Together, the two comprise cryptography. From the [[https://en.wikipedia.org/wiki/Scytale][scytale]] of ancient Greece to the [[https://en.wikipedia.org/wiki/Caesar_cipher][Caesar cipher]] used by the famed Roman general to the [[https://en.wikipedia.org/wiki/Vigen%25C3%25A8re_cipher][Vigenère cipher]] of early Renaissance that was considered unbreakable for 300 yrs., we see that humans have sought clever ways to hide information since time immemorial. We also see how to break these codes using [[https://en.wikipedia.org/wiki/Frequency_analysis][frequency analysis]], how [[https://en.wikipedia.org/wiki/Polyalphabetic_cipher][polyalphabetic ciphers]] hinder frequency analysis by hiding the distribution of letters, and how the only truly unbreakable cipher is the [[https://en.wikipedia.org/wiki/One-time_pad][one-time pad]], which relies on pure randomness.
+
+In the second course, probably my favorite, we launch into the mathematics behind cryptography. Modular arithmetic and primes are introduced as the foundations for important results like [[https://en.wikipedia.org/wiki/Euler%2527s_theorem][Euler's Theorem]]. The [[https://en.wikipedia.org/wiki/Chinese_remainder_theorem][Chinese Remainder Theorem]] is presented as a different way of /representing/ numbers, which is a mind-opening insight. Finally, probabilistic primality testing[fn:2] via [[https://en.wikipedia.org/wiki/Fermat%2527s_little_theorem][Fermat's little theorem]] and the [[https://en.wikipedia.org/wiki/Miller%25E2%2580%2593Rabin_primality_test][Miller-Rabin test]] are covered.
+
+In the third course, we delve into symmetric cryptography, in which encryption and decryption use the same key, a secret that is shared between sender and receiver. The differences between /block ciphers/ (which encrypt a fixed number of bits at a time) and /stream ciphers/ (which encrypt a stream of data byte by byte) are presented. An /ideal block cipher/ is shown to be one that randomly (but reversibly) maps inputs and outputs[fn:3]. The [[https://en.wikipedia.org/wiki/Feistel_cipher][Feistel cipher]], an approximation of an ideal block cipher, and [[https://en.wikipedia.org/wiki/Data_Encryption_Standard][DES]], the widely used standard based on the Feistel cipher, are covered, as is the later replacement [[https://en.wikipedia.org/wiki/Advanced_Encryption_Standard][AES]].
+
+Finally, in the fourth course, asymmetric cryptography is presented. For millenia it was widely assumed that cryptography had to be symmetric. This made secret distribution a major weak point, allowing only the largest organizations, like nation-states, to use cryptography. Asymmetric cryptography changed this by allowing two parties to establish secure communication by sending each other /non-secret/ information. This is the idea behind [[https://en.wikipedia.org/wiki/RSA_(cryptosystem)][RSA]], which relies on the difficulty of prime factorization to allow parties to authenticate each other and send confidential information, and [[https://en.wikipedia.org/wiki/Diffie%25E2%2580%2593Hellman_key_exchange][Diffie-Hellman key exchange]], which relies on the hardness of the [[https://en.wikipedia.org/wiki/Discrete_logarithm][discrete log problem]] to allow two parties to end up with a shared secret.
+
+Cryptography is at the heart of cybersecurity, a field that is exploding in importance as more activity goes digital. Its foundation is mathematics, which gives it a beauty, elegance, and intellectual challenge that many of its practitioners find intoxicating. I've only scratched the surface here, and will eagerly look for opportunities to learn more in the future.
+
+* Footnotes
+
+[fn:1] Coursera has been moving away from its founding principles of "university education for all" in the direction of rivals like Udemy and Udacity, hosting low-quality "nanodegrees" and corporate certification programs. It's still centered around university-generated content, though, so occasional gems do shine through.
+
+[fn:2] The first deterministic, polynomial-time primality test, [[https://en.wikipedia.org/wiki/AKS_primality_test][AKS]], was published in 2002, but its /theoretical/ polynomial-time is much too slow in practice.
+
+[fn:3] The theme of absolute security being equivalent to randomness is a recurring one, and has been noted before with one-time pads.

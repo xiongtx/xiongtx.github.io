@@ -1,0 +1,63 @@
+---
+layout: post
+title: Cryptography
+excerpt: An elegant area of computer science
+---
+
+<p>
+Over the past few weeks I've been looking into cryptography, an area of computer science I've not had the chance to explore much before. I decided to start by taking a Coursera specialization on <a href="https://www.coursera.org/specializations/introduction-applied-cryptography?">Introduction to Applied Cryptography</a>, which turned out to be a high-quality program, rather to my surprise<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>.
+</p>
+
+<p>
+The specialization comprises 4 courses:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.coursera.org/learn/classical-cryptosystems/home/week/1">Classical Cryptosystems and Core Concepts</a></li>
+<li><a href="https://www.coursera.org/learn/mathematical-foundations-cryptography">Mathematical Foundations of Cryptography</a></li>
+<li><a href="https://www.coursera.org/learn/symmetric-crypto">Symmetric Cryptography</a></li>
+<li><a href="https://www.coursera.org/learn/asymmetric-crypto">Asymmetric Cryptography</a></li>
+</ul>
+
+<p>
+In particular, the first two courses, taught by Prof. William Bahn, are both comprehensive and rigorous. The latter two courses, taught by Prof. Sang-Yoon Chang, are noticeably less so. Nonetheless, the overall program is a very worthwhile introduction to a broad and exciting field.
+</p>
+
+<p>
+In the first course we learn about the history of cryptography, both <i>cryptology</i>, the study of hiding information, and <i>cryptanalysis</i>, the study of how to decode it. Together, the two comprise cryptography. From the <a href="https://en.wikipedia.org/wiki/Scytale">scytale</a> of ancient Greece to the <a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar cipher</a> used by the famed Roman general to the <a href="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher">Vigenère cipher</a> of early Renaissance that was considered unbreakable for 300 yrs., we see that humans have sought clever ways to hide information since time immemorial. We also see how to break these codes using <a href="https://en.wikipedia.org/wiki/Frequency_analysis">frequency analysis</a>, how <a href="https://en.wikipedia.org/wiki/Polyalphabetic_cipher">polyalphabetic ciphers</a> hinder frequency analysis by hiding the distribution of letters, and how the only truly unbreakable cipher is the <a href="https://en.wikipedia.org/wiki/One-time_pad">one-time pad</a>, which relies on pure randomness.
+</p>
+
+<p>
+In the second course, probably my favorite, we launch into the mathematics behind cryptography. Modular arithmetic and primes are introduced as the foundations for important results like <a href="https://en.wikipedia.org/wiki/Euler%27s_theorem">Euler's Theorem</a>. The <a href="https://en.wikipedia.org/wiki/Chinese_remainder_theorem">Chinese Remainder Theorem</a> is presented as a different way of <i>representing</i> numbers, which is a mind-opening insight. Finally, probabilistic primality testing<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup> via <a href="https://en.wikipedia.org/wiki/Fermat%27s_little_theorem">Fermat's little theorem</a> and the <a href="https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test">Miller-Rabin test</a> are covered.
+</p>
+
+<p>
+In the third course, we delve into symmetric cryptography, in which encryption and decryption use the same key, a secret that is shared between sender and receiver. The differences between <i>block ciphers</i> (which encrypt a fixed number of bits at a time) and <i>stream ciphers</i> (which encrypt a stream of data byte by byte) are presented. An <i>ideal block cipher</i> is shown to be one that randomly (but reversibly) maps inputs and outputs<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup>. The <a href="https://en.wikipedia.org/wiki/Feistel_cipher">Feistel cipher</a>, an approximation of an ideal block cipher, and <a href="https://en.wikipedia.org/wiki/Data_Encryption_Standard">DES</a>, the widely used standard based on the Feistel cipher, are covered, as is the later replacement <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a>.
+</p>
+
+<p>
+Finally, in the fourth course, asymmetric cryptography is presented. For millenia it was widely assumed that cryptography had to be symmetric. This made secret distribution a major weak point, allowing only the largest organizations, like nation-states, to use cryptography. Asymmetric cryptography changed this by allowing two parties to establish secure communication by sending each other <i>non-secret</i> information. This is the idea behind <a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">RSA</a>, which relies on the difficulty of prime factorization to allow parties to authenticate each other and send confidential information, and <a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">Diffie-Hellman key exchange</a>, which relies on the hardness of the <a href="https://en.wikipedia.org/wiki/Discrete_logarithm">discrete log problem</a> to allow two parties to end up with a shared secret.
+</p>
+
+<p>
+Cryptography is at the heart of cybersecurity, a field that is exploding in importance as more activity goes digital. Its foundation is mathematics, which gives it a beauty, elegance, and intellectual challenge that many of its practitioners find intoxicating. I've only scratched the surface here, and will eagerly look for opportunities to learn more in the future.
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+Coursera has been moving away from its founding principles of "university education for all" in the direction of rivals like Udemy and Udacity, hosting low-quality "nanodegrees" and corporate certification programs. It's still centered around university-generated content, though, so occasional gems do shine through.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+The first deterministic, polynomial-time primality test, <a href="https://en.wikipedia.org/wiki/AKS_primality_test">AKS</a>, was published in 2002, but its <i>theoretical</i> polynomial-time is much too slow in practice.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
+The theme of absolute security being equivalent to randomness is a recurring one, and has been noted before with one-time pads.
+</p></div></div>
+
+
+</div>
+</div>
