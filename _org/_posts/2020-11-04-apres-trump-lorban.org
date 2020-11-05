@@ -12,7 +12,8 @@ The 2020 US presidential election has proven to be a close race, but one which i
 
 Biden's (presumed) win will be one of the closest in American history, despite voluminous predictions of a [[https://twitter.com/ggreenwald/status/1323827437092962306?s=20][landslide victory]] backed by the most [[https://www.nytimes.com/2020/11/02/upshot/trump-polls-errors.html]["reliable" polls]]. Particularly galling to Democrats must be their crushing defeat in Florida, where Trump seized [[https://www.nbcnews.com/news/latino/trump-cultivated-latino-vote-florida-it-paid-n1246226][48% of the Hispanic vote]], improving on his 2016 numbers by 60%. In fact, nearly /every/ group except seniors and non-college educated whites swung more GOP this time around, as shown by NYT's analysis[fn:2]:
 
-[[file:images/2020-11-04-poll-swings.png]]
+#+attr_html: :width 100%
+[[file:{{site.baseurl}}/images/2020-11-04-poll-swings.png]]
 
 Trump's loss, when confirmed, will boil down to Arizona[fn:3], Wisconsin, and Michigan, the latter two of which he'd won in 2016 on a highly un-Republican platform of fighting against free trade and globalization. For Trump, it must be particularly frustrating to lose those critical states in the Rust Belt, given that he's delivered on a number of promises for them, from imposing [[https://www.nytimes.com/2018/09/17/us/politics/trump-china-tariffs-trade.html][tariffs on China]] to [[https://www.whitehouse.gov/briefings-statements/president-donald-j-trumps-united-states-mexico-canada-agreement-delivers-historic-win-american-workers/][replacing NAFTA]].
 
