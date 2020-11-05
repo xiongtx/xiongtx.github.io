@@ -1,0 +1,53 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_EXPORT html
+---
+layout: post
+title: Après Trump, l'Orban
+excerpt: The nationalist populist transformation of the GOP will continue
+---
+#+END_EXPORT
+
+The 2020 US presidential election has proven to be a close race, but one which incumbent Donald Trump seems likely to lose. The presumed victor, Joe Biden, will face a GOP-controlled Senate and slimmer Democratic majority in the House, making it unlikely that he'll get any policy items through in the next 2 years[fn:1]. At 77 years old (78 by inauguration) he is unlikely to seek another term, making his vice-presidential pick Kamala Harris and the dynamics of a 2024 election the most consequential outcomes of this race.
+
+Biden's (presumed) win will be one of the closest in American history, despite voluminous predictions of a [[https://twitter.com/ggreenwald/status/1323827437092962306?s=20][landslide victory]] backed by the most [[https://www.nytimes.com/2020/11/02/upshot/trump-polls-errors.html]["reliable" polls]]. Particularly galling to Democrats must be their crushing defeat in Florida, where Trump seized [[https://www.nbcnews.com/news/latino/trump-cultivated-latino-vote-florida-it-paid-n1246226][48% of the Hispanic vote]], improving on his 2016 numbers by 60%. In fact, nearly /every/ group except seniors and non-college educated whites swung more GOP this time around, as shown by NYT's analysis[fn:2]:
+
+[[file:images/2020-11-04-poll-swings.png]]
+
+Trump's loss, when confirmed, will boil down to Arizona[fn:3], Wisconsin, and Michigan, the latter two of which he'd won in 2016 on a highly un-Republican platform of fighting against free trade and globalization. For Trump, it must be particularly frustrating to lose those critical states in the Rust Belt, given that he's delivered on a number of promises for them, from imposing [[https://www.nytimes.com/2018/09/17/us/politics/trump-china-tariffs-trade.html][tariffs on China]] to [[https://www.whitehouse.gov/briefings-statements/president-donald-j-trumps-united-states-mexico-canada-agreement-delivers-historic-win-american-workers/][replacing NAFTA]].
+
+Much ink will be spilled over the next days and months on how and why Trump lost, nearly all of which will be complete nonsense. We'll no doubt also see lots of media speculation as to where the GOP goes from here, with the establishment press assuming that the party will "return to normal", i.e. a mid-2000's stance favoring Wall St., big business, etc.
+
+But given the GOP's political trajectory and overall performance, it's unlikely to turn away from the current path. In fact, Trump was not the impetus for the GOP's transformation into a populist party; that began with the [[https://www.bbc.com/news/world-us-canada-11317202][Tea Party Movement]], which arose in the aftermath of the financial crisis. He'd simply found an organization in flux and shoved it in the direction it was going anyway.
+
+Trump's ideological influence is mainly in three areas: rejecting free-trade orthodoxy, abandoning fiscal conservatism, and [[https://www.politico.com/story/2018/10/22/trump-nationalist-926745][embracing nationalism]]. In none of these areas is the GOP likely to retreat. There's perhaps no better indication of this than the [[https://www.newsweek.com/sen-mitt-romney-disinvited-cpac-2020-after-voting-hear-witness-testimony-impeachment-trial-1485186][disinvitation of Mitt Romney]], the party's 2012 presidential candidate, from CPAC, the biggest conservative political conference. Romney and his ilk are now in the political wilderness, regardless of whether Trump remains with the party.
+
+This transformation of the GOP is part of what I call the *globalization recession*. As with economies, sociopolitical trends like globalization do not progress monotonically. There are periods of surge, as during the post-Cold War 90's, and times of retrenchment, as since the financial crisis. The reversal of globalization, reflected in data like [[https://www.economist.com/the-economist-explains/2016/10/11/why-is-world-trade-growth-slowing][slower trade growth]], is a trend that no presidential candidate or political party can stop. It's something that'll play out over a generation[fn:4].
+
+The GOP today seems to be where the Hungarian Fidesz Party was in 2002, when then-PM Viktor Orban, having served one term as prime minister, led his party to a narrow defeat. A few years later, in the aftermath of the financial crisis, Fidesz stormed back to a supermajority after the opposition Socialists imploded. Since then, the party has dominated Hungarian politics via a platform of nationalism, cultural conservatism, and generous welfare policies. Foreign media and the EU accuse Hungary of [[https://www.reuters.com/article/us-eu-ministers-hungary-poland/eu-executive-sees-poland-hungary-backsliding-on-democracy-idUSKBN1YE1GA]["democratic backsliding"]], pointing to examples like the state media regularly siding with the ruling party[fn:5], though the country holds [[https://www.nytimes.com/2018/04/09/world/europe/hungary-election-orban-fidesz.html][free elections]] regularly[fn:6]. These criticisms from abroad, however, are if anything helpful to Orban and his narrative and Hungary is being attacked by foreign forces.
+
+Orban and Fidesz's approach to politics is something the GOP seems to be slowly adopting, even if it's convergent evolution rather than active imitation. Rejection of free trade is one step, embrace of nationalism another. A third, abandoning fiscal conservatism, is something that the party has yet to openly commit to but already doing in practice. The missing piece, perhaps the most important, is using the newfound "flexibility" on gov't spending to create programs that benefit supporters. After all, patronage networks are much more resilient than electoral victories[fn:7]. Programs benefiting Republican constituents, from [[https://www.npr.org/sections/thesalt/2019/12/31/790261705/farmers-got-billions-from-taxpayers-in-2019-and-hardly-anyone-objected][farm subsidies]] to [[https://www.post-gazette.com/business/powersource/2020/07/14/Pennsylvania-petrochemical-tax-credit-fertilizer-dry-natural-gas-Marcellus-Utica-fracking/stories/202007140122][petrochemical tax credits]], already exist, but the GOP will have to find one that massively expands its reach[fn:8].
+
+Vox, a liberal news site, has [[https://www.vox.com/2020/5/21/21256324/viktor-orban-hungary-american-conservatives][seen the trend clearly]]. So have [[https://www.worldpoliticsreview.com/articles/29144/is-the-u-s-at-risk-of-mirroring-hungary-s-democratic-backsliding][other publications]]. They attribute it to "increased authoritarianism" in the party's ideology, but this is a simplistic analysis. The GOP has underdone a radical shift, starting with the Obama terms and accelerating under Trump, into becoming a nationalist populist [[https://www.theguardian.com/us-news/2019/dec/17/steve-bannon-working-class-republicans-labour][workers' party]]. Today, the biggest businesses ([[https://www.newsweek.com/big-tech-employees-donate-overwhelmingly-2020-democrats-1515430][Big Tech]]) and [[https://www.npr.org/2020/08/17/902626429/wall-streets-big-money-is-betting-on-biden-and-democrats-in-2020][Wall St.]] donate overwhelmingly to Democrats, a point [[https://www.realclearpolitics.com/video/2020/11/02/bernie_sanders_democratic_party_has_become_a_party_of_coastal_elites_good_people.html][noted]] (and hardly opposed by) the not-often-independent socialist Bernie Sanders[fn:9]. The Democrats have undergone no such shift despite the efforts of progressives within the party. From its leadership to its policies, the party is little changed from a decade ago.
+
+The next GOP presidential candidate is going to be a much harder nationalist, one willing to spend money on populist programs like child tax credits or national health insurance. Just as Trump broke with party orthodoxy to outflank Democrats on trade, the future candidate will be looking to outflank the party on some other area to capture workers who've voted blue since FDR. While the results of the next election are yet unknown, the trend is clear: nationalist populism is here to stay.
+
+* Footnotes
+
+[fn:1] Which is just as well, since he doesn't /have/ any policy.
+
+[fn:2] This data is preliminary; studies will no doubt be done on voter behavior in this election for years to come.
+
+[fn:3] Where Trump's arch-foe within the GOP, John McCain, had been senator, and where McCain's widow published an [[https://www.usatoday.com/story/opinion/2020/11/02/mccain-why-republican-votes-biden-column/6113484002/][op-ed]] urging support for Biden.
+
+[fn:4] Supporters of globalization should take heart: in the greater scheme of things, globalization is without a doubt the dominant trend. Plot recessions on a GDP graph over 100 years and you'll barely notice them. Similarly, reversals of globalization are merely periods when people need to collect themselves and figure out how to deal with the changes.
+
+[fn:5] To these critics, state media should instead always [[https://www.telegraph.co.uk/news/uknews/1317114/BBC-admits-Labour-bias-on-Newsnight-broadcast.html][side with the Leftist parties]], regardless of whether they're in power.
+
+[fn:6] Charges of "unfairness" seem to only arise when one side wins. When the [[https://www.bbc.com/news/world-europe-50039847][opposite occurs]], the validity of the vote is never called into question.
+
+[fn:7] Patronage is something the Democrats understand well. The best example of this is perhaps [[https://en.wikipedia.org/wiki/Tammany_Hall][Tammany Hall]], the Democrats' NYC political machine from 1786 (before the Constitution was adopted) to the mid-20th century. Today, the Democrats dominate inner-cities and minority communities, just as Tammany Hall did, by positioning themselves as the supplier of gov't benefits.
+
+[fn:8] A good example is Fidesz's [[https://www.cnbc.com/2019/02/11/have-four-or-more-babies-in-hungary-and-youll-pay-no-income-tax-for-life.html][child tax credit]], which also plays into the cultural conservatism of "Hungary for Hungarians"."
+
+[fn:9] A man who, despite positioning himself as a radical and being run over by twice by the Democratic Party during primaries, endorsed the establishment candidate both times. Fool me once...
