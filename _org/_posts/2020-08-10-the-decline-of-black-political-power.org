@@ -4,7 +4,7 @@
 ---
 layout: post
 title: The decline of black political power
-excerpt: Co-option by others and arithmetic reality demand a different stratgy
+excerpt: Co-option by others and arithmetic reality demand a different strategy
 ---
 #+END_EXPORT
 
