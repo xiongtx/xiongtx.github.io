@@ -1,0 +1,101 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_EXPORT html
+---
+layout: post
+title: The Identity Stack
+excerpt: How identity works in America and why intersectionality isn't it
+---
+#+END_EXPORT
+
+A few years ago Dilbert cartoonist Scott Adams began espousing the idea of a "[[https://www.youtube.com/watch?v=PP91WmrgpBE][talent stack]]", which caught my attention in the context of a sea of attempts to explain then-candidate Donald Trump's campaign success.
+
+Adams [[https://www.scottadamssays.com/trumps-talent-stack-systems-versus-goals/][pointed out]] that Trump, in politics as in business, isn't particularly good at any one thing but has built a /system of skills/ that allow him to navigate any situation, including running for president. And indeed, supporters saw in Trump precisely what they wanted to see--a successful businessman, a political outsider, an alpha male, a Christian, and so on. In some cases they were right; in others, almost entirely wrong; but Adams was absolutely correct that the talent stack Trump had accrued over a lifetime put him head and shoulders above competitors.another piece
+
+After the election, I began thinking about this idea of "stacking" seemingly unrelated things into a useful system in the context of [[https://www.vox.com/the-highlight/2019/5/20/18542843/intersectionality-conservatism-law-race-gender-discrimination][intersectionality]], a strain of modern American political thought that seeks to define an individual as the "intersection" of various factors, such as race, gender, sexuality, etc. Of course, individuals have a bevy of attributes, but rather than being descriptive, intersectionality treats these attributes as definitive. This gives rise to ideas like the "[[https://www.nationalreview.com/2016/05/transgender-bathroom-college-campus-feminism-poststructuralism-academic-theory-modesty/][victimhood totem pole]]", which causes media to agonize over whether to take the side of a gay white female or that of a transgender black male over bathroom access.
+
+Rather than whine about the amount of public oxygen taken up by such inanity, I wanted to better understand why these ideas have spread. Just as there are no "revolutions" in technology, but rather plodding evolution that the broader public pays no attention to until a critical threshold is reached, there are no "revolutions" in politics either. I posited that intersectionality must have deep roots in American culture and political thought, and set out to explore why.
+
+** Identity and the Old World
+
+What is identity? Fundamentally, it is a means of distinguishing "us" from "them". "We" share an identity; "they" do not. Identity is a question of loyalty, but since we have no means to unambiguously determine what lies in men's hearts, we must resort to judging each other by the visible and demonstrable. These include inalienable attributes such skin color, but also cultural elements such as clothing[fn:1].
+
+As communities grew larger, they became more diverse, and the question of identity became more important as it was the basic prerequisite for organizing a complex society. The question of who is "us" became tied into questions of political rights, economic privileges, civic responsibilities, and more--a lot was at stake. As such, access to identities became more controlled via mechanisms such as citizenship, which flourished among the classical Greeks, and rigid cultural tenets, as practiced by the ancient Chinese. Adjacent questions like:
+
+- What defines "us"?
+- Who can become "us"?
+- Under what circumstances does someone leave "us"?
+
+arose and had to be answered satisfactorily. And the answer, invariably, was a tighter and tighter set of conditions, a *purity test*, for acceptance into an identity.
+
+What is the difference between a Czech and a Slovak? I asked myself this question a few years go on a trip to Central Europe. To my eyes they were, quite frankly, the same. And they, in turn, may well ask, "what is the difference between a Chinese and a Korean?", because to their eyes there's none. From a far enough perspective, these purity tests are nonsensical; but up close, they are everything to the peoples involved. The Czechs and Slovaks are different enough that they [[https://en.wikipedia.org/wiki/Dissolution_of_Czechoslovakia][refused to live in the same country]], while the Koreans fought [[https://en.wikipedia.org/wiki/Goguryeo%E2%80%93Sui_War][massive wars]] against the Chinese centuries ago to maintain a distinct identity. In Europe and Asia, to this day, identity is guarded and in many ways defined by these purity tests.
+
+** Identity and the New World
+
+In the beginning, the New World's concept of identity was the same as that of the Old World. The small number of European settlers had no desire to be swallowed up by the large number of natives, and so distinctions had to be drawn clearly. The English in North America practiced a strategy of keeping to themselves and not intermarrying, or in general interacting with, the natives. The Spanish in South America adopted a different strategy of dividing up [[https://www.nuestraverdad.com/post/spanish-caste-system][mixes of people into castes]].
+
+What the New World faced that the Old World didn't, however, was a constant influx of peoples that every generation or so upended the existing demographic & identity structure. In his [[https://founders.archives.gov/documents/Franklin/01-04-02-0080#BNFN-01-04-02-0080-fn-0014-ptr][1751 pamphlet]] /Observations Concerning the Increase of Mankind/, Ben Franklin noted that "whites", namely English and German Saxons, were very few; and that if Britain did not adopt policies that favored rather than suppressed its people in North America, other "swarthy" Germans, "Palatine boors", would "Germanize us instead of our Anglifying them, and will never adopt our Language or Customs, any more than they can acquire our Complexion".
+
+The Germans did, in fact, become the [[https://www.economist.com/united-states/2015/02/05/the-silent-minority][largest ethnic group]] in the United States, though it took a few generations longer than Franklin feared. But German did not become the dominant language or culture; instead, generations later, the German-run Puck magazine would be a [[https://www.irishcentral.com/roots/history/the-history-behind-famous-1889-anti-irish-puck-magazine-cartoon][leading critic of Irish immigration]], portraying the latter as unassimilable Papist Celts. The Irish, in turn, would engage in [[https://historyofyesterday.com/the-beer-wars-of-the-1920s-1867c0da6ee2?gi=8b92ccbf0117][bitter conflict]] with later-comers such as Italians, ostensibly over criminal proceeds but fundamentally over their hard-won place in American society. The cycle repeats itself to the present day, but something else began to occur, unique to the New World--the emergence of an identity based on *diversity* rather than purity.
+
+** Purity and Diversity
+
+In the early 19th Century, a North American with native ancestry would strive to keep that fact a secret. It certainly wasn't something to be brought up voluntarily in polite company. By the late 19th Century, however, it'd become fashionable to claim that one had a little bit of Apache or Cherokee in them; and in modern times prominent individuals might even [[https://www.washingtonpost.com/politics/elizabeth-warren-apologizes-for-calling-herself-native-american/2019/02/05/1627df76-2962-11e9-984d-9b8fba003e81_story.html][lie about such heritage]] altogether.
+
+When and why did this change take place? And why, at the time being a bit (though not too much) Native American became fashionable, being a bit black was as socially unacceptable as ever?
+
+The answer, I suspect, lies in the *utility of an identity attribute*. In the late 19th and early 20th centuries, [[https://www.migrationpolicy.org/programs/data-hub/charts/immigrant-population-over-time][immigration to the United States surged]]. In 1916, during WWI, Teddy Roosevelt [[https://web.archive.org/web/20140328025514/http://theodore-roosevelt.com/images/research/txtspeeches/672.pdf][urged against]] the phenomenon of "hyphenated Americans", whom he considered "not an American at all". Anxiety about foreigners was high, colored by war, as it had been in Ben Franklin's time during the Anglo-French contention over North America. The established population looked at the sea of foreigners swarming the country and asked, "how do we distinguish ourselves from them"?
+
+The most obvious answer might be to resort to purity and emphasize one's Englishness, as that is the nation's founding culture. The problem was that by now much of the established population was mixed with the Germans, Irish, Swedish, etc. While the new Southern and Central Europeans were certainly viewed as racially inferior, emphasizing ethnic differences wasn't enough. A different sort of "purity" had to be established, one based on historical and political factors, not just bloodline.
+
+Some could claim their ancestors had fought in the American Revolution[fn:2]. Some, going back even further, that they were descendants of the Mayflower Pilgrims[fn:3]. But in this contest there was a "trump card" which could anchor one's chronological legitimacy back thousands rather than hundreds of years--being part native.
+
+By this time, the Native Americans had ceased to be a threat, its leaders reduced to [[https://www.history.com/news/the-unlikely-alliance-between-buffalo-bill-and-sitting-bull][curious entertainment]] for the masses. Claiming to be part native no longer carried with it the political or security implications from a few generations ago. And as being of "mixed blood", e.g. English, Scottish, and German, was already rather common, the taboo around being any kind of "mixed" had already been weakened. But while one might merely acknowledge being part German, or sheepishly admit to being part Irish, the claim to being part native was something different--an explicit invocation of a marginal identity attribute, one with which nearly all claimants had little genuine engagement, for social, economic, and political gain.
+
+Note--the key phrase here is *social, economic, and political gain*. While claiming to be part native increased one's legitimacy via ties to the land, as well as exposed oneself to advantageous policies being introduced to uplift the Indians, claiming to be part /black/ offered no such advantages. Blacks were still very much a denigrated minority, and the less association with them the better.
+
+In a strange way, claiming to be part native was still sort of an appeal to purity--it just prioritized chronological purity in favor of the ethnic kind. Nonetheless, it opened the door to an ideology about identity unique to the New World, where /this, that, and the other/ became more valued than /this and only this/. *American identity became diverse*. Thus, we came to an inflection point between the Old World model and the New, at a time when American civilization was coming into its own and distinguishing itself from the European parent.
+
+** A Nation of Clubs
+
+Political commentator [[https://anncoulter.com/][Ann Coulter]] and I don't agree on much, but I must credit her with a comment that greatly advanced my understanding of the United States. In an interview with [[https://www.nytimes.com/2018/10/16/nyregion/proud-boys-gavin-mcinnes.html][Gavin McInnes]], the much-maligned founder of the [[https://wausaupilotandreview.com/2017/11/26/controversial-proud-boys-embrace-western-values-reject-feminism-and-political-correctness/][Proud Boys]] group, Ann expressed approval of said group by talking about how her father had belonged to a number of men's clubs, all of which had disappeared due to liberalism, feminism, and the like. "America," she said, "was a nation of clubs."
+
+I chewed on this comment for a while. In American schools, clubs are a vitally important part of the culture and educational process. Unlike other countries, where exams are the only determinant of college acceptance, club involvement and in particular leadership are taken very seriously here. The stereotypical American high schooler captains two sports, plays in the marching band, leads the debate club, and somehow still finds time to accrue community service hours. Outside of school, clubs proliferate even further, from professional organizations to political parties to PTAs. America is indeed "a nation of clubs".
+
+These clubs serve to socialize young people with their peers, teach them responsibility, and allow a few to take the reins of leadership early in life. But there's something more--they allow the practice of diverse identity. On the football team you might be one sort of person; in band another; and on the debate team a third. These personalities and associated social circles don't necessarily overlap, so the individual ends up at the intersection of many things, ready to engage with and profit from any of them. If the football team's having a party, you can have a good time; if band is performing somewhere exotic, you get to travel; and if the debate team gets to hobnob with well-connected politicians, you're there too.
+
+This is the sort of diversity people mean when they say that "[[https://greatergood.berkeley.edu/article/item/how_diversity_makes_us_smarter][diversity makes us stronger]]". Individuals, at the intersection of groups which they may join, leave, or move between freely, can benefit and in turn benefit from each. Analogous to Scott Adams' talent stack, an *identity stack* can be constructed that offers an individual opportunities they would not have under a purity-based system, and enriches society with the fruits of their novel and profitable combination.
+
+This all sounds well and good, but what is its relationship to the politics of "intersectionality"? Why does the latter lead to ridiculous disputes and foment controversy?
+
+** Union vs. Intersection
+
+Until now we've used the word "intersection" in a general sense to mean "at the nexus of". To explain the politics of intersectionality, however, we have to resort to a stricter definition, and differentiate [[http://www.differencebetween.net/language/words-language/difference-between-union-and-intersection/][/intersection/ from /union/]].
+
+In mathematics, a union is an /or/ relationship. One could say that they're black /or/ a woman /or/ LGBT--they are /any/ of those things, or /all/ of them, or some combination thereof. A union takes a maximalist approach, and exposes the greatest surface area for interaction.
+
+An /intersection/, on the other hand, is an /and/ relationship. If one is black /and/ a woman /and/ LGBT, they are /all/ of those things only, and someone who is /not/ all of those things--say, someone who is only black and a woman--is not the same. It takes a minimalist approach, exposing the least surface area for interaction.
+
+When discussing a talent/identity stack, we really mean a union of skills or attributes, not an intersection of them. Being able to program /or/ do finance is useful in that we can interact with different fields and different communities. In contrast, only being able to work with others who are also simultaneously capable of programming and doing finance limits oneself to a very small community. In a sense, *union is diversity, while intersection is purity*.
+
+The problem with political intersectionality, then, is that it is focused on the intersection instead of the union, *an ideology of purity masquerading in the language of diversity*. Having gotten people "in the door" via an appeal to a deeply-rooted American idea of diverse identity, intersectionality then rejects the tenets of the idea entirely in favor of the purity test. Worse, it tries to have its cake and eat it too, by demanding the benefits of each useful identity attribute--diversity quotas for being black, chivalrous treatment for being a woman, etc.--despite practicing exclusion rather than inclusion. It is a wolf in sheep's clothing, and the fierce debates we see are between those trying to kill the wolf and those trying to defend the "sheep".
+
+As with most purity-oriented identities, it is unsustainable and self-destructive. Practitioners are constantly trying to one-up each other by [[https://www.usnews.com/news/elections/articles/2019-12-23/purity-tests-divide-democrats][devising ever more restrictive rules]] on who gets to be a good intersectionalist[fn:4]. Someone who fulfills eight of nine criteria is impure and must be [[https://www.nytimes.com/2020/08/18/world/asia/china-cai-xia-expelled-communist-party.html][expelled from the party]]. The movement is a ravenous beast with a bottomless appetite for former adherents newly found to be lacking in motivation and faith; it will not stop until it's completely [[https://www.spectator.com.au/2018/11/when-the-left-eats-itself/][eaten itself]], but not before trying to take a bite out of everyone else.
+
+** Intersectionality vs. the Identity Stack
+
+From this perspective, it should be no surprise that what has arisen to counter the "intersectional cult" is another purity-oriented movement--[[https://www.newstatesman.com/world/europe/2022/06/austria-far-right-found-new-enemy-lgbtq-community][white nationalism]]. What adherents to the latter believe, if only intuitively, is that the former is in fact a purity-based movement; that it means to exclude them as well as others, and even to do them harm; and that the response is to fight fire with fire. Like the Communists and Fascists who fed off of each other in the early 20th Century, at the core these ideologies are more similar than they are different--both are hostile to the basic freedom of people to choose who they are, what they believe, and how to engage with it.
+
+What's the answer to these issues? Aside from tackling the economic causes that underpin political movements, we must promote the idea of the identity stack--that people are the union of all their identity attributes, not a narrow intersection of them. An individual who's mentally placed themselves in a narrow group will hear nothing of the outside world or care for anything besides the group's supposed interests. They are lost to society and indeed to reason itself.
+
+There is another topic of discussion here, that of the hijacking of minority identity attributes by dominant groups for political purpose, but it would take another whole essay to even begin to tackle it, so I will leave it for the future if I ever get to it. One attribute--being black--is touched up on [[http://www.tianxiangxiong.com/2020/08/10/the-decline-of-black-political-power.html][another piece]], /The Decline of Black Political Power/. This piece can be seen as a generalization of that one, and may itself be expanded into a more general idea still; we shall see.
+
+* Footnotes
+
+[fn:1] /Huaxia/, an archaic term for Chinese civilization, refers in part to the [[https://en.wikipedia.org/wiki/Huaxia][flowery clothing]] that early Chinese wore.
+
+[fn:2] The [[https://www.dar.org/archives/four-founders][Daughters of the American Revolution]] was founded, not coincidentally, in 1890.
+
+[fn:3] The [[https://themayflowersociety.org/about/][Society of Mayflower Descendants]] first emerged in 1894
+
+[fn:4] Or Progressive Democrat, on the electoral front
