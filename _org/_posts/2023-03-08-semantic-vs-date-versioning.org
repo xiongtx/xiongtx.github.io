@@ -1,0 +1,43 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_EXPORT html
+---
+layout: post
+title: Semantic vs. Date Versioning
+excerpt: Versioning software with dates is the superior way
+---
+#+END_EXPORT
+
+A very popular versioning scheme in software development is [[https://semver.org/][semantic versioning]] (semver), in which versions take a ~MAJOR.MINOR.PATCH~ format. These elements have the following semantics:
+
+1. ~MAJOR~ version when you make incompatible API changes
+2. ~MINOR~ version when you add functionality in a backwards compatible manner
+3. ~PATCH~ version when you make backwards compatible bug fixes
+
+For a long time I also followed this convention, but over the years I've come to realize it has a number of weaknesses.
+
+To start, the major version is meant to indicate a backwards-incompatible change. This implies that if the major version /doesn't/ change, you should be confident in updating to a new version of a library without breaking your code.
+
+Is this what happens in practice? All too often, no. Semantic versioning merely states what /should/ happen; it gives no guarantees that this is what /actually/ happens. Compatibility-breaking can occur in many and subtle ways. Keeping the signature of a function the same but changing the return value for certain inputs, for example, is a breaking change. This sort of thing can be easily overlooked during testing, and even well-intentioned developers often introduce breaking changes without realizing it.
+
+Breaking compatibility annoys users, so many library authors have a tendency to keep their libraries in beta, i.e. major version 0, forever. That way they can introduce breaking changes as they see fit without being drowned in complaints. This was the case with [[https://insideclojure.org/2020/02/18/lib-version/][many Clojure libraries]], for example, even though some had been in widespread use for years /without/ introducing any breaking changes.
+
+The opposite type of "gaming the system" occurs with end-user facing software such as [[https://www.reddit.com/r/firefox/comments/yn5mc1/why_is_every_update_a_major_version_number_change/][web browsers]]. Because people have a tendency to think "bigger number = better", Chrome (which as a project started much later than Firefox) began bumping major versions aggressively in order to "catch up". Firefox responded in turn, so the two today are always within a few versions of each other.
+
+Failing to keep compatibility promises and actively gaming the version bumping both result in a versioning scheme that initially promised to be "semantic" deviating from that standard. Pretty soon ~x,y.z~ end up meaning nothing in particular, except for the developer's own estimate of changes being big or small. Thus, you learn not to trust projects when they promise to use "semantic versioning" and use the version number only for ordering.
+
+So what's a better versioning scheme?
+
+Some swear by hash-based versioning, which has the advantage of integrating well with Git and unambiguously identifying a commit. But hash-based versioning has poor readability and doesn't order the versions.
+
+Personally, I prefer timestamp versioning, which has a number of advantages.
+
+A timestamp communicates important information--namely, when a package was released. Timestamps are obviously ordered and can be compared against each other. For an actively and consistently developed project, time serves as a good proxy for how much change a version introduced. If I see that the current version was released one month ago, the previous version six months ago, and the one before that eight months ago, I can reasonably conclude that significant changes were introduced between the current and previous versions, more than that between the previous version and the one before it. Such a heuristic is not a guarantee, but it is useful.
+
+This comparability is true not only for a particular project, but even across projects. If project =A='s latest version is from one month ago, but =B='s is from two years ago, I may suspect the two will have some issues integrating with each other. Such heuristics cannot be applied with semantic or hash versions.
+
+Unlike major versions in semver, timestamps don't make any claims the versioning scheme itself cannot guarantee, such as compatibility. How seriously compatibility is respected differs from project to project, with those keeping compatibility often becoming more popular because others can [[https://youtu.be/oyLBGkS5ICk?t=4102][trust and build upon them]]. A versioning scheme, at best, can communicate the developer's /intent/, but since it is incapable of /guaranteeing/ an outcome, users quickly learn to distrust it.
+
+By not making claims about compatibility, but instead communicating how much time has passed between the version you have vs. the one you want to upgrade to, timestamp versions allow the user to make a judgment call as to whether they want to investigate compatibility issues. If the two versions are separated by only two weeks, in all likelihood compatibility isn't an issue. If it's been a year, it may be worth investigating the changelogs to see what's broken.
+
+Ultimately, a good versioning system is about communicating some useful information to the developer. One that makes claims it can't back up, such as semver, or comes across as inscrutable, such as hash-based versioning, makes the developer's life harder instead of easier. Timestamp versioning is simple and doesn't offer guarantees it can't enforce, which is why it's the versioning scheme I prefer.
