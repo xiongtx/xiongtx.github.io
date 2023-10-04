@@ -3,7 +3,7 @@
 #+BEGIN_EXPORT html
 ---
 layout: post
-title: The Sino-Russian Delusion
+title: The Sino-Russian delusion
 excerpt: We need to focus on real threats rather than imagined ones
 ---
 #+END_EXPORT

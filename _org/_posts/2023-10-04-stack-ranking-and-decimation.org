@@ -1,0 +1,61 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_EXPORT html
+---
+layout: post
+title: Stack ranking and decimation
+excerpt: Job cuts rarely impact power structures as they're supposed to
+---
+#+END_EXPORT
+
+Earlier this year, Blizzard's World of Warcraft Classic development lead Brian Birmingham was [[https://www.ign.com/articles/former-blizzard-manager-opens-up-about-being-fired-for-protesting-ranking-system][terminated]] over protesting the practice of [[https://lattice.com/library/what-is-stack-ranking-and-why-is-it-a-problem][stack ranking]]. Stack ranking, [[https://www.wsj.com/articles/SB10001424052702303789604579198281053673534][pioneered]] by legendary GE CEO Jack Welch, involves grading all employees on a bell curve, with a small number of employees--usually between 5 and 15 percent--always marked as "needing improvement". Being ranked on the lower end of the bell curve, of course, has implications for compensation and career development.
+
+** The fairness of the curve
+
+#+BEGIN_QUOTE
+Yes, I realize that some believe the bell-curve aspect of differentiation is "cruel." That always strikes me as odd. We grade children in school, often as young as 9 or 10, and no one calls that cruel. But somehow adults can't take it? Explain that one to me.
+#+END_QUOTE
+
+Being graded on a curve should be familiar to anyone who's gone though an American high school, and I do not recall any objection to the practice during my time as a student. Why, then, is it a matter of controversy in the corporate world?
+
+The most obvious issue is that a lot more is at stake for adults. Aside from pay and promotion, reviews are a major criterion for layoffs. While a bad grade is unpleasant, it hardly has the life-altering impact of a pink slip. The analogy with school may be more apt if being graded on the low end of a curve carried with it a risk of expulsion. Were this case, students and parents would surely be up in arms.
+
+School is also a far more artificial environment than work, and this artificiality allows for a certain impression of "fairness". All students in a class are subject to the same assignments and exams, so the argument is often made that everyone is on an even playing field. That students have wildly different resources outside the classroom is a fact which most dismiss.
+
+What's harder to ignore, however, is that a corporate environment, although artificial in its own way, has no pretense of fairness. Individual's tasks and team's projects differ, so that evaluations are far more subjective. Furthermore, while teachers are expected to treat all students equally, managers are under no such obligation. Line managers and their reports are, in some sense, peers, and reviews are as likely to be a reflection of personal rapport as they are of work outcomes.
+
+Welch claims that "differentiation"--his preferred term for stack ranking--produces "consistency, transparency, and candor". None of these attributes, however, is inherently linked to grading on a curve; nor is any of them the inevitable result of doing so. Birmingham exercised candor in saying how he felt no one on his team needed to be classified as not meeting expectations. The company swiftly--and non-transparently--terminated him.
+
+** Theory, practice, and constraints
+
+A number of major companies, such as [[https://www.shrm.org/resourcesandtools/hr-topics/compensation/pages/stack-ranking-microsoft.aspx][Microsoft]], have tried and abandoned stack ranking. But does the practice of marking a certain proportion of employees as underperformers--with an eye towards eventually getting rid of them--have no merit? After all, not every hiring choice will be correct, and hardly anyone can disagree that organizations--especially large ones--carry dead weight. And if a company runs into difficulty, surely laying off the poorly reviewed employees first is the way to go?
+
+Here is where it's important to differentiate between theory and practice. In theory, purging a company of its bottom 10% performers raises the average performance--this is merely arithmetic, the result of reducing the weaker parts of the organization and growing its stronger components.
+
+In practice--as seen at Blizzard, Microsoft, and elsewhere--cuts are subject to the political constraints of the org tree, with the quota being passed recursively downward until it reaches the line manager. The result is punishment inflicted evenly to all teams alike, thereby failing to effect any "differentiation" at all. Teams that do well--such as [[https://www.gamespot.com/articles/wow-classics-success-surprised-blizzard-dev-thought-it-would-only-appeal-to-core-fans/1100-6487853/https://www.gamespot.com/articles/wow-classics-success-surprised-blizzard-dev-thought-it-would-only-appeal-to-core-fans/1100-6487853/][WoW Classic]]--feel they are being punished targeted despite being successful, while teams that do poorly lose only a smattering of personnel--the same proportion as good teams, no less--and are thus under no pressure to change. Rather than alter the company's structure, which should be the goal, stack ranking as practiced by most organizations instead reinforces it.
+
+This induces perverse outcomes, such as making team members jostle with each other instead of other teams or companies. The reason is simple--they're being graded against other team members, so that's who their competitors are. Welch's claim that "if you want teamwork, you identify it as a value" conveniently glosses over how such "identified values" should be incentivized. Absent any compensating factor, individuals quickly find that the best way to game the system is to reduce risk taking, join weaker teams, and sabotage their peers. Welch would no doubt protest that these are not the "correct" implementations of his strategy, but the ease with which a strategy can be correctly implemented is a metric by which it must be evaluated. Otherwise, Communism should receive full marks merely for the perfection of its utopian ideals.
+
+** What have the Romans done for us?
+
+There is another argument in favor of stack ranking--particular the "rank and yank" version that Welch himself abhors--which is that periodic cuts keep employees on their toes and prevent them from getting too comfortable (i.e. lazy) with their jobs.
+
+One commonly cited example is Facebook (Meta), which had virtually uninterrupted headcount growth from its founding in 2004 to [[https://www.cbsnews.com/sanfrancisco/news/facebook-parent-meta-plans-to-lay-off-another-10000-employees/][late 2022]], and has long had a reputation for keeping people around who did little, had [[https://fortune.com/2023/03/16/meta-hoarded-us-like-pokemon-cards-former-staffer-fight-for-work-mark-zuckerberg/][little to do]], or both--a place where one could be paid good money to "[[https://www.insider.com/rest-and-vest-millionaire-engineers-who-barely-work-silicon-valley-2017-7][rest and vest]]". Since the recent waves of job cuts, the story goes, Facebook has gotten serious, dumped less money on [[https://www.cnbc.com/2023/02/01/meta-lost-13point7-billion-on-reality-labs-in-2022-after-metaverse-pivot.html][losing initiatives]] like the metaverse, and [[https://www.nytimes.com/2023/07/26/technology/meta-earnings-second-quarter.html][refocused on profits]].
+
+That the stick should accompany the carrot is hardly a new idea. The Romans had the practice of /decimatio/, whereby a military unit accused of major failings would have [[https://en.wikipedia.org/wiki/Decimation_(punishment)][every man in ten killed]]. The 10% figure is, coincidentally or not, close to what stack ranking typically uses. There are some important distinctions between the intentions of decimation and stack ranking, however, that are worth considering the context of a "punishment is good and necessary" narrative.
+
+First of all, decimation was not a regular occurrence. It was utilized only in extreme cases where units exhibited unforgivable behavior such as cowardice, not merely for losing a battle. And it was usually applied to small groups of men (no larger than a cohort) who were viewed as directly responsible for each other. That's why a key attribute of decimation was that the 10% had to be killed by their fellow solders--the point was to ensure the death of one man had psychological impact on the other nine, shaming them for their collective failure. It's also why the men marked for death were chosen not for individual performance but randomly, so that the remainder would suffer survivor's guilt knowing that they were equally responsible for the outcome.
+
+Decimation also became increasingly rare as the Roman army professionalized. During the early to mid republic, legions were raised from the citizenry when a war started. This meant that armies were often ill-trained and prone to breaking under pressure, necessitating the use of decimation--among other punishments--as a means of ensuring that amateur citizen-soldiers were more afraid of the commanders behind than the enemy in front. With the switch to professional soldiers during the imperial period, however, such tactics were unnecessary and even counterproductive. Men who'd fought alongside each other for years would balk at the idea of killing their comrades, and generals who demanded imposed such punishments would quickly lose support.
+
+The professionals to whom stack ranking is often applied--software developers, investment bankers, etc.--tend to have options and don't have to put up with "punishment". For lower-end jobs, such as warehouse work, the [[https://www.theverge.com/2022/10/17/23409920/amazon-third-hires-attrition-cost-workforce][churn rate is already high]], so regular cuts won't make much of an impact. It's not clear, then, to whom job cuts as an intimidation tactic is best applied.
+
+** How to manage an organization
+
+What most large companies should realize is that rewarding and punishing individuals is a goal in and of itself. If the company is doing well, no one cares about carrying dead weight. If the company isn't doing well, a 10% cut won't save it.
+
+If the goal is to allow more successful parts of the company to expand and less successful ones to shrink, top-down cuts are not a good solution. If such cuts are executed down the org tree, the result is that good teams are cut just as much as bad ones. Centralizing the decision-making of cuts rarely works out either, as high-level executives are not familiar enough with day-to-day operations to even know which teams do well and which do poorly.
+
+A better solution, as many companies have found, is to allow parts of the company to operate autonomously. Each component manages its own personnel, finances, etc., and contracts for services with other components. The components that do well naturally attract employees from other parts of the company, in addition to having resources to hire and expand. Ones that do poorly shrink for want of resources. Aside from some high-level, company-wide guidelines, each component decides how it manages its systems of hiring, firing, promotion, and compensation, creating an ecosystem of experiments that constantly rewards success.
+
+Welch brought GE's valuation to new heights, but the company has struggled since he left, despite his handpicked successors studiously applying his methods. And whatever stack ranking's merits may be, that it's rejected by successful individuals such as Birmingham is itself an issue, as no company can succeed long by pushing away good people. Though there's no single correct corporate management philosophy, some are clearly more successful than others--and stack ranking is one that seems destined for the dustbin of history.

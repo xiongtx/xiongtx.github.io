@@ -3,7 +3,7 @@
 #+BEGIN_EXPORT html
 ---
 layout: post
-title: Whiplash and the Cult of Sacrifice
+title: Whiplash and the cult of sacrifice
 excerpt: Don't mistake sacrifice achieving your goals
 ---
 #+END_EXPORT
