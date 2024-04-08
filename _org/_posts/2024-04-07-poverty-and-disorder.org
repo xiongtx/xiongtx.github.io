@@ -1,0 +1,74 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_EXPORT html
+---
+layout: post
+title: Poverty and disorder
+excerpt: One should not be mistaken for the other
+---
+#+END_EXPORT
+
+In the minds of many, poverty is the source of all sins. Problems as diverse as violent crime, drug abuse, mental illness, and divorce are all laid at the feet of poverty. This single explanation for all social ills is attractive in its simplicity, allowing for a reflexive solution to every problem: give money to the poor. The poor have a [[https://newsroom.ucla.edu/releases/raising-minimum-wage-lowers-divorce-rate][higher divorce rate]], so increase the minimum wage. They have a [[https://digitalcommons.iwu.edu/cgi/viewcontent.cgi?article=1530][higher crime rate]], so enroll them in welfare programs. Government's job is to transfer money between different groups, and public policy is nothing more than figuring out which groups should receive how much.
+
+Despite giving money to the poor to reduce poverty and limit its "inevitable" consequences being unquestioned dogma, it has a terrible track record. From 1960's [[https://www.history.com/topics/1960s/great-society][Great Society]] programs to today's [[https://basicincome.stanford.edu/about/what-is-ubi/][universal basic income]] experiments, writing checks does not seem to "solve" poverty. In fact, it does remarkably little to disrupt it, and excels in creating new problems such as ghettoization. Why?
+
+** Why not just wipe out the poor?
+
+Today we speak of ills "caused by" poverty, but historically poverty itself was considered an ill. The word "villain" is derived simply from [[https://www.merriam-webster.com/wordplay/the-villain-in-the-history-of-the-word-villain-isnt-the-villain][villager]], the uneducated workers whom feudal lords considered the lowest of the low. There was nothing controversial about the belief that "poor = bad" until near-modern times, when revolutions overthrew the nobility and politics fell to the masses.
+
+The early 20th century is known as the [[https://www.loc.gov/classroom-materials/united-states-history-primary-source-timeline/progressive-era-to-new-era-1900-1929/][Progressive Era]] for the energetic reforms that took place, many of which sought to improve the conditions of the poor. Efforts included both private initiatives, such as the [[https://dp.la/primary-source-sets/settlement-houses-in-the-progressive-era][settlement house]] movement, as well as legislation, such as the [[https://www.archives.gov/milestone-documents/keating-owen-child-labor-act][Keating-Ownen Child Labor Act of 1916]]. Yet, these solutions were recognized as band-aids. Helping the poor was like bailing water out of a boat; the more important question was how to prevent water from getting into the boat in the first place. What could be done to prevent the emergence of new generations of poor people?
+
+The answer, progressives believed, was [[https://teachingamericanhistory.org/document/chapter-19-the-progressive-era-eugenics/][eugenics]]. Since Darwinian evolution showed that species advance via their best progeny[fn:1], it doesn't take a [[https://www.nature.com/articles/s41437-020-00394-6][pioneering statistician]] to see that improving the population required letting "good" people reproduce and preventing "bad" ones from doing so. Therefore, the logic goes, [[https://www.pbs.org/independentlens/blog/unwanted-sterilization-and-eugenics-programs-in-the-united-states/][forced sterilization programs]] were a benefit to society.
+
+Unfortunately for these [[https://pubmed.ncbi.nlm.nih.gov/36395223/][leading intellectuals]], eugenics became passé at the end of WWII. While developing countries still engaged in [[https://www.britannica.com/topic/one-child-policy][population control]] as a poverty alleviation strategy, developed countries had to find other solutions. And since the one thing they had plenty of was money, that became the go-to tool for tackling the poverty problem.
+
+** From lack of wealth to lack of order
+
+Traveling through poor neighborhoods in the United States, what stands out is not decrepit buildings or old cars. Fox News was bashed for an [[https://www.foxnews.com/story/the-specter-of-poverty-in-america][article]] years ago about how the poor in America have refrigerators, televisions, cell phones, and often personal automobiles. Yet to an Indian villager or Chinese peasant such things may be luxuries indeed. It's simply a fact that poverty in a developed country is not like poverty in a developing one. The problem is that this is far from the whole story.
+
+What's truly shocking about American poverty is its /disorder/. **People are not merely poor--their lives are in chaos**. Employment, if any, is unstable. Families are broken, with children growing up amidst a gaggle of step-siblings, none of whose fathers is around[fn:2]. Substance abuse is rampant, as are arguments and domestic violence. Sanitation, not only in the streets but even inside of homes, is poor. One comes away with the feeling that these people are not merely lacking money, but some basic element of /humanity/.
+
+This is where the comparison with developing countries is eye-opening. Those people may be truly, wretchedly poor, to the extent of not having running water. Yet, their lives are orderly. In every hut there's an intact family with a father and mother, not to mention extended relatives beyond. Every day there is work to do--backbreaking field labor, yes, but it's constant and predictable. There's hardly money for food, so certainly none for drugs, with the exception of natural stimulants like [[https://www.dea.gov/factsheets/khat][khat]]. Events, particularly religious ones, are duly observed, and traditions are carefully maintained.
+
+Poverty, it seems, involves more than money. It's possible to have less poverty of wealth, yet greater poverty of values. Which is worse? Many who grew up poor but with a stable family[fn:3] recall a happy childhood and go on to success, yet few with imprisoned fathers and alcoholic mothers remember their youth fondly, and they're not likely to be high achievers in life.
+
+[[https://www.vance.senate.gov/about/][J.D. Vance]] makes this point in his best-selling memoir [[https://www.amazon.com/Hillbilly-Elegy-Memoir-Family-Culture/dp/0062300547][Hillbilly Elegy]]. His grandparents grew up dirt poor and eloped from the Appalachian foothills in Kentucky to an industrial town in Ohio, where they achieved a middle-class life. Yet their hillbilly values, such as frequent verbal and sometimes violent confrontations, led to instability in the home. Both of their daughters got pregnant in high school and had to forego college. One cleaned up her act and eventually married a good man; the other, Vance's mother, was not so lucky, plunging into a destructive vortex of bad relationships and drugs despite at times having a six-figure household income. Money, it seems, couldn't fix her problems.
+
+** Elite detachment and resultant chaos
+
+What causes chaos? How do previously orderly communities descend into chaos?
+
+Economists point to [[https://www.epi.org/publication/botched-policy-responses-to-globalization/][deindustrialization]] as the problem, noting that high-paying, stable factory jobs were replaced in many places with low-wage, volatile service jobs. This goes back to the idea that lack of money leads to poverty and is the root of all evil. Yet it's clearly insufficient to explain why pre-industrial communities, which were even poorer, were not chaotic. And it's not the decline of Armco, the steel company that employed Vance's grandfather and gave them a middle-class life, that turned Vance's mother from class salutorian to someone the police knew by name.
+
+Dinesh D'Souza, who analyzed the phenomenon of black poverty from an [[https://www.youtube.com/watch?v=ac_B-xiWWZU][immigrant perspective]], noted that desegregation had an unexpected bad outcome for black neighborhoods. Black elites, i.e. the upper-middle-class professionals who play a leading role in society, were suddenly faced with a choice: stay in poor black neighborhoods or join better-off white ones. Many chose the latter, depriving thriving black communities of their leaders overnight. Those who were left had no experience in organizing a community, and chaos ensued.
+
+This aligns well with Vance's story about the decline of his birthplace, Middletown, Ohio. Armco's struggles was an immense economic hit, but it's not merely lower tax revenue that sent the city into decline. Instead, it's a process by which those with options left, while those without were forced to stay. Vance, who joined the Marines after high school and ended up at Yale Law School, never went back to Middletown to live, even after returning to Ohio to launch his political career. Over time, this process filtered out everyone with money, connections, or skills, the people who comprise the leadership class of any community. What was left were the dregs of society, who had neither the will nor means to prevent things from falling apart.
+
+Two things, then, seem responsible for a community's descent into chaos:
+
+- An initial shock, such as the closure of a factory
+- Elites leaving for greener pastures
+
+Take Detroit, the poster boy for urban decline. Today's narrative of Detroit's fall from grace centers around deindustrialization and the poor fortunes of American automakers. Yet Detroit's problems began much sooner, such that by the 70's it was already the [[https://www.youtube.com/watch?v=kpJy38HNjMU][punchline of jokes]]. The initial shock was the [[https://www.history.com/topics/1960s/1967-detroit-riots][1967 riots]], which prompted [[https://en.wikipedia.org/wiki/White_flight][white flight]] to the suburbs. Since whites tended to be the skilled professionals who organized society, prospects for those who remained became steadily worse, such that those who did not initially leave became convinced that exit was the best option. This vicious cycle continues to the modern day, with Detroit's population a [[https://en.wikipedia.org/wiki/Detroit#Demographics][third of its 1950 peak]] and still falling.
+
+From D'Souza and Vance's observations, it's not just whites who leave. Blacks leave black neighborhoods, and whites leave white neighborhoods too. Everywhere, elites are finding that they can do better by beating feet. This process of **elite detachment** goes by many names--white flight, black flight, brain drain, and more, depending on who's involved. Yet the consequences are the same in every case. When those previously responsible for leadership and organization leave their posts in haste, the result is chaos.
+
+** Is elite detachment always bad?
+
+In drafting this piece, I've received some objection that putting the blame for chaos in poor neighborhoods on exiting middle-class professionals is unfair. Seeking out better opportunities is a core American value and each individual's right. It's why many take big risks to come to this country, so how can I condemn it?
+
+It's important to note that I've made no moral judgment against those who leave or those who remain, merely observed the process by which communities degrade, and argued that this organizational disintegration, more than material decline, is responsible for the social ills that sprout up in the aftermath.
+
+That being said, it's worth asking: what responsibilities do an elite have to a community?
+
+Feudal lords could not simply abandon their lands, which were passed down through generations. They were obligated to defend their serfs against banditry and invasion, if only because doing so was necessary to defend their own wealth. Middletown's most famous building, the [[https://www.historicalhomesofamerica.com/post/take-a-tour-of-sorg-mansion-the-1887-ohio-castle-that-cost-1-million-to-build][Sorg Mansion]], was constructed by a tobacco magnate who employed much of the town's population. Could the Sorg family have simply upped and left? Probably not, as too much of their business, and therefore themselves, was entwined with the town and its people.
+
+Today, things are very different. Technology and finance companies can [[https://www.statesman.com/story/business/2021/12/01/tesla-headquarters-officially-move-austin-factory/8828422002/][move their headquarters]], or even [[https://www.reuters.com/business/hedge-fund-citadel-move-headquarters-miami-chicago-2022-06-23/][entire workforces]], to take advantage of lower taxes and friendlier regulation. IT workers can work remotely, businesses don't think twice about outsourcing jobs, and hardly any middle-class professional considers themselves tied to where they were born or went to school. [[https://taylorpearson.me/optionality/][Optionality]] is praised, while [[https://www.businessinsider.com/loyalty-employee-employer-job-security-broken-work-companies-bosses-2024-1][loyalty is held in contempt]]. Modern elites are more detached than ever, which means that the process of chaos-descent is faster than ever. That's something we should all be concerned about.
+
+* Footnotes
+
+[fn:1] Evolution is actually about survival of the "fittest", which is very different from what people think of as the "best".
+
+[fn:2] And sometimes not even know
+
+[fn:3] Such as my own parents
