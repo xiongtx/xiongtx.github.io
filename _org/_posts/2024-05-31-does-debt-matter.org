@@ -1,0 +1,59 @@
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_EXPORT html
+---
+layout: post
+title: Does debt matter?
+excerpt: It depends on who's paying
+---
+#+END_EXPORT
+
+Rising global debt has been a problem for decades. The IMF [[https://www.imf.org/en/Blogs/Articles/2023/09/13/global-debt-is-returning-to-its-rising-trend][recently noted]] that debt has again risen in 2023. A decline in 2022 was due to an arithmetic effect--as countries returned to normal economic activity after the pandemic, GDP grew faster than debt, but only because it'd collapsed in 2020. Many countries also saw significant debt growth during the pandemic as a result of [[https://www.brookings.edu/articles/the-fiscal-policy-response-to-the-pandemic/][fiscal response]] to prop up business and employment. High and growing debt has led to hand-wringing over potential ramifications, such as "[[https://www.nytimes.com/2023/12/18/business/economy/government-debt-bond-vigilantes.html][bond vigilantes]]" on Wall Street threatening to lead a "buyer's strike" on US treasuries and ratings agencies [[https://www.reuters.com/world/china/fitch-downgrades-outlook-china-negative-affirms-a-rating-2024-04-10/#:~:text=BEIJING%2C%20April%2010%20(Reuters),shift%20to%20new%20growth%20models.][cutting the outlook]] on Chinese government bonds to negative. How big a problem, then, is debt, and how worried should we be?
+
+** Who's responsible for what debt?
+
+Statistical agencies like the IMF tend to present debt as a single-value metric, such as percentage of GDP. This makes for neat graphs, but it's not useful for understanding who's responsible for debt and what the consequences are.
+
+Some organizations, such as the BIS, attempt to break down debt into [[https://stats.bis.org/statx/toc/CRE.html][finer categories]] like credit to businesses, households, and governments. This, however, comes with a powerful implicit assumption that these sectors are separate and well-defined, which rarely holds outside Anglo-Saxon economies.
+
+Take China, a country whose [[https://www.reuters.com/breakingviews/chinas-growth-is-buried-under-great-wall-debt-2023-09-13/][rapid debt growth]] over the past fifteen years has drawn intense scrutiny. Beijing's message to international finance is that such worries are groundless, given that central government debt is merely [[https://www.reuters.com/world/china/china-orders-indebted-local-governments-halt-some-infrastructure-projects-2024-01-19/#:~:text=Beijing%20is%20concerned%20about%20potential,central%20government%20debt%20at%2021%25.][20% of GDP]], putting the Chinese government among the most fiscally sound in the world. Global investors, however, are unconvinced. They know that most public spending in China is actually the responsibility of regional governments, which have [[https://www.reuters.com/world/china/china-instructs-banks-roll-over-local-government-debt-sources-2023-10-17/][far higher debt levels]].
+
+Moreover, state-owned enterprises (SOEs) play a [[https://www.forbes.com/sites/china/2010/08/31/guo-jin-min-tui/?sh=4cadc4d7524f][large and growing role]] in the Chinese economy. The [[https://www.spglobal.com/_assets/documents/ratings/research/global-debt-leverage-1.pdf][high debt levels]] of SOEs are not merely due to corruption and poor management, but the inevitable result of governments using them as policy instruments to create jobs, generate GDP, finance welfare spending, and more. Banks are [[https://asia.nikkei.com/Business/Markets/China-debt-crunch/China-s-property-crisis-hits-small-regional-banks-harder-than-big-players][particularly vulnerable]] to this, since capital allocation is the fount of economic activity. Should SOE debt, then, be considered corporate or public debt? There's no right answer, yet the choice has major implications on what the moral narrative and policy recommendations are.
+
+SOEs, moreover, are not the only ambiguous actors in China. Nominally commercial entities like [[https://www.ft.com/content/014d324f-0423-4345-ab54-532b98165e29][Baoshang Bank]] can easily come under de facto government control, and local governments chafing under Beijing's [[https://economictimes.indiatimes.com/news/international/world-news/china-mulls-record-local-debt-quota-wider-budget-deficit/articleshow/96864254.cms?from=mdr][bond quotas]] have invented a novel entity, the [[https://www.pimco.com/gbl/en/insights/local-government-financing-vehicles-a-growing-risk-for-chinas-economy][local government financing vehicle]] (LGFV), private entities whose sole purpose is to raise money for government spending and whose only means of repayment is cash from government coffers. The innovation doesn't stop there--local governments have also issued high-interest rate "[[https://bfi.uchicago.edu/wp-content/uploads/BFI_WP_201929.pdf][wealth management products]]" via both banks and "[[https://www.brookings.edu/articles/shadow-banking-in-china-a-primer/][shadow banks]]"  to raise money, and long before that [[https://www.reuters.com/world/china/chinas-state-owned-developers-dominate-sales-land-markets-2023-surveys-2024-01-02/][colluded with property developers]] to seize and sell land via "public-private partnerships".
+
+The key takeaway is that assigning debt by borrower is a mostly useless exercise, especially in countries where the line between public and private is unclear. **If debt is to be classified, it should be by payer**.
+
+In jurisdictions where borrowers can game the system, however, it's rarely clear whom the ultimate payer is. Chinese local governments raise money via private entities precisely so they can dodge responsibility when bills come due. Yet investors are none too worried, because they understand that Beijing cannot afford the political cost of defaults on supposedly government-backed investment products, so it will ultimately act to [[https://www.chicagotribune.com/2013/05/07/latest-china-bailout-reveals-risk-of-local-governments-hidden-debts/][stem losses]] and make investors whole. This shows how intertwined financial and political economy are[fn:1], and how attempts to separate "government", "business", and "household" are often speculative at best.
+
+** Is debt indicative of financial health?
+
+It would be a poor financial analyst who assesses the health of a company by looking only at its liabilities while ignoring the asset side of the balance sheet. Other factors, such as repayment schedules and ability to raise additional capital, must also be taken into account. Drawing conclusions about countries by looking only at public-sector debt-to-GDP makes even less sense, as states have resources--such as the ability to print money--that companies do not.
+
+The [[https://en.wikipedia.org/wiki/1998_Russian_financial_crisis#:~:text=The%20Russian%20financial%20crisis%20(also,economies%20of%20many%20neighboring%20countries.][1998 Russian financial crisis]], which resulted in sovereign default, occurred at a time when government [[https://www.brookings.edu/wp-content/uploads/2001/01/2001a_bpea_kharas.pdf][debt-to-GDP]] was 77%--high by developing country standards, but far from critical. Argentina, which has defaulted [[https://www.cfr.org/backgrounder/argentinas-struggle-stability#:~:text=Argentina%20is%20Latin%20America's%20second,its%20sovereign%20debt%20nine%20times.][nine times]], has rarely had a debt-to-GDP of more than 100%. Japan, on the other hand, has a debt-to-GDP of [[https://www.imf.org/external/datamapper/d@FPP/USA/FRA/JPN/GBR/SWE/ESP/ITA/ZAF/IND][over 260%]], yet no one is concerned about a Japanese default. In fact, being able to sustain higher debt is one of the distinguishing features of developed economies vs. developing ones, as the latter tend to lack the financial institutions to facilitate higher borrowing, which is precisely what puts them at greater risk of default.
+
+One lesson from the Russian and Argentine experiences is that borrowing in a currency you don't control can become very problematic, very quickly. As commodity producers, both relied heavily on exports and foreign investment to generate the dollars needed to service their debts. Once their forex holdings fell below a certain level, markets got spooked, central banks had to devalue, and debt ratios skyrocketed, which retrospectively made previous borrowing "irresponsible". Countries such as South Korea, which learned its lesson in the [[https://www.hofstra.edu/pdf/biz_mlc_lee1.pdf][Asian Financial Crisis]], have learned to defend against this by maintaining massive forex reserves, which severely distorts global trade patterns[fn:2].
+
+** What is a crisis?
+
+There's a glib saying on Wall Street that [[https://creditwritedowns.com/2020/03/we-are-now-in-a-financial-crisis.html][all financial crises are liquidity crises]]. This is probably because liquidity crises are the only type of crisis Wall Street cares about. Different entities have different definitions of "crisis", however. Reagan's famous [[https://www.goodreads.com/quotes/59923-recession-is-when-your-neighbor-loses-his-job-depression-is][quote about recessions and depressions]] reflects the fact that individuals are primarily concerned about their employment, not the stock market[fn:3]. Survey 100 random people today and hardly anyone can tell you what GDP /is/, let alone how /much/ it is.
+
+In 1993 Japan accounted for [[https://www.jstor.org/stable/43296056][18% of global GDP]]. By 2023, it was down to 3.3%, an unprecedented decline in modern economic history. Yet unemployment did not surge and the population therefore did not riot. Instead, the price Japan paid was primarily opportunity cost. As the government dealt with the [[https://www.imf.org/external/pubs/nft/2000/bubble/][asset bubble implosion]] by allocating capital to existing firms, thereby starving newer companies of investment, the country went from a leader in industries such as electronics to a laggard. This trade-off minimizes social and political costs but maximizes economic ones, with the [[https://finance.yahoo.com/quote/%5EN225/][Nikkei 225]] not recovering its previous high for three decades.
+
+When contemplating claims about a "crisis", therefore, the most important question is: a crisis for whom?
+
+** Can we choose to have less debt?
+
+Michael Pettis' excellent [[https://carnegieendowment.org/china-financial-markets/2019/02/why-us-debt-must-continue-to-rise?lang=en][Why US Debt Must Continue to Rise]] argues that both a trade deficit and income inequality force an economy to choose between unemployment and debt. Since the latter is far less politically combustible than the former, it's not much of a choice.
+
+Those who believe a reduction in government spending is the obvious solution to debt need to think through a few factors. If transfer payments are reduced, the government may accrue less debt, but the former recipients of those payments may compensate by taking on more. If they cannot, aggregate demand will decline, which would discourage companies from investing and result in layoffs, thereby increasing unemployment. The unemployed would either further depress demand, creating a vicious cycle, or take on debt to maintain their consumption. Suppressing debt in one part of the economy, then, may inflate it in another, and pile financial distress costs on top.
+
+This shows that it's important to think about economics systematically. Indeed, this is the marquee difference between "common sense" household finance and national economics. Households are responsible only for themselves, while nations must balance the conflicting interests of many actors.
+
+* Footnotes
+
+[fn:1] In fact, politics and economics two sides of the same coin, in that both fundamentally have to do with the organization of people.
+
+[fn:2] An important issue that we don't cover here.
+
+[fn:3] [[https://www.wsj.com/finance/stocks/stocks-americans-own-most-ever-9f6fd963][Barely 30%]] of Americans owned stocks during Reagan's time.
