@@ -1,0 +1,206 @@
+---
+layout: post
+title: Virtual threads
+excerpt: Is concurrency on the JVM more tractable?
+---
+
+<p>
+Java 21 saw <a href="https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html#GUID-DC4306FC-D6C1-4BCC-AECE-48C32C1A8DAA">virtual threads</a>, which is part of the concurrency-focused <a href="https://openjdk.org/projects/loom/">Project Loom</a>, graduate to platform release. I decided to <a href="https://www.infoworld.com/article/3678148/intro-to-virtual-threads-a-new-approach-to-java-concurrency.html">check it out</a> and learned a few things about Java concurrency along the way.
+</p>
+
+<div id="outline-container-orga11d841" class="outline-2">
+<h2 id="orga11d841">Platform threads</h2>
+<div class="outline-text-2" id="text-orga11d841">
+<p>
+The basic unit of execution in Java has long been the <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Thread.html">thread</a>, now called <a href="https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html#GUID-2BCFC2DD-7D84-4B0C-9222-97F9C7C6C521">platform thread</a> to distinguish it from virtual thread. A JVM thread is a thin wrapper around an OS thread&#x2013;that is, there is a one-to-one relationship between JVM and OS threads.
+</p>
+
+<p>
+The problem is that threads are expensive to create. They share code, data, and heap, but have separate stacks. The <a href="https://stackoverflow.com/a/27324590/864684">default stack size</a> for my JVM is 2048 KB, or 2 MB, so a few thousand threads will exhaust memory. When trying to create 10,000 threads, we get:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-clojure">{<span style="color: #BFEBBF;">:type</span> java.lang.OutOfMemoryError
+ <span style="color: #BFEBBF;">:message</span> unable to create native thread: possibly out of memory or <span style="color: #7CB8BB;">process</span>/resource limits reached
+ <span style="color: #BFEBBF;">:at</span> [java.lang.Thread start0 Thread.java -2]}
+</pre>
+</div>
+
+<p>
+So we have to be careful not to create too many at once. This can be done by reusing threads with a <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html">ThreadPoolExecutor</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e4ece8" class="outline-2">
+<h2 id="org4e4ece8">Blocking vs. asynchronous IO</h2>
+<div class="outline-text-2" id="text-org4e4ece8">
+<p>
+A major source of performance issues for applications is <a href="https://medium.com/coderscorner/tale-of-client-server-and-socket-a6ef54a74763">blocking IO</a>. When a thread services a request by talking to some external system, it may need to wait a long time for a response. While the thread is waiting, it cannot do anything else, such as service another request.
+</p>
+
+<p>
+An alternative is asynchronous IO. Instead of waiting, the thread returns immediately. When the response is ready, it's fed to a callback which is then scheduled for execution. This style of programming is especially popular with languages such as JavaScript, which is single-threaded and thus really can't afford to block.
+</p>
+
+<p>
+Let's take a look at blocking IO, in this case an HTTP <code>GET</code> request. First, we see that there are 10 cores for execution:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(.availableProcessors (<span style="color: #7CB8BB;">Runtime</span>/getRuntime))
+<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">=&gt; 10</span>
+</pre>
+</div>
+
+<p>
+We launch 1,000 threads to hit a test endpoint that delays responses by 1 second.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(require '[clj-http.client <span style="color: #BFEBBF;">:as</span> http]
+         '[taoensso.timbre <span style="color: #BFEBBF;">:as</span> log])
+
+(import java.lang.Thread
+        (java.util.concurrent CountDownLatch Executors))
+
+(<span style="color: #F0DFAF; font-weight: bold;">let</span> [n 1000
+      div (/ n 10)
+      latch (CountDownLatch. n)
+      threads (<span style="color: #F0DFAF; font-weight: bold;">for</span> [i (range n)
+                    <span style="color: #BFEBBF;">:let</span> [f #(<span style="color: #F0DFAF; font-weight: bold;">do</span>
+                               (<span style="color: #7CB8BB;">http</span>/get <span style="color: #CC9393;">"https://httpstat.us/200?sleep=1000"</span>)
+                               (<span style="color: #F0DFAF; font-weight: bold;">when</span> (zero? (mod i div))
+                                 (<span style="color: #7CB8BB;">log</span>/info i))
+                               (.countDown latch))]]
+                (Thread. f))]
+  (time (<span style="color: #F0DFAF; font-weight: bold;">do</span>
+          (<span style="color: #F0DFAF; font-weight: bold;">doseq</span> [th threads]
+            (.start th))
+          (.await latch))))
+</pre>
+</div>
+
+<p>
+How long should this take? Well, 10 cores can execute 10 threads at once. Due to the specified delay, each call takes at least 1 second<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>, so in total this should take at least 100 seconds, right?
+</p>
+
+<p>
+Wrong. This actually takes less than 5 seconds. Why? Because although each JVM thread does blocking IO on the HTTP call, the corresponding OS threads are not run continuously until their JVM threads finish. Instead, the CPU scheduler uses <a href="https://en.wikipedia.org/wiki/Preemption_(computing)#Preemptive_multitasking">preemptive multitasking</a> to make sure each thread receives an opportunity to start running early on. This means the 1,000 threads all get to make the HTTP call, wait, and return, resulting in significant time savings.
+</p>
+
+<p>
+The issue here is that we're creating 1,000 threads. As mentioned, threads are expensive, and we may not want to create so many. Using a thread pool, we can limit ourselves to 100 threads:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(<span style="color: #F0DFAF; font-weight: bold;">let</span> [ex (<span style="color: #7CB8BB;">Executors</span>/newFixedThreadPool 100)
+      n 1000
+      div (/ n 10)
+      latch (CountDownLatch. n)]
+  (time (<span style="color: #F0DFAF; font-weight: bold;">do</span>
+          (<span style="color: #F0DFAF; font-weight: bold;">doseq</span> [i (range n)
+                  <span style="color: #BFEBBF;">:let</span> [f #(<span style="color: #F0DFAF; font-weight: bold;">do</span>
+                             (<span style="color: #7CB8BB;">http</span>/get <span style="color: #CC9393;">"https://httpstat.us/200?sleep=1000"</span>)
+                             (<span style="color: #F0DFAF; font-weight: bold;">when</span> (zero? (mod i div))
+                               (<span style="color: #7CB8BB;">log</span>/info i))
+                             (.countDown latch))]]
+            (.submit ex <span style="color: #DCDCCC; background-color: #3F3F3F;">^</span><span style="color: #7CB8BB;">Runnable</span> f))
+          (.await latch))))
+</pre>
+</div>
+
+<p>
+This now takes around 20 seconds, or 4x longer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge90b848" class="outline-2">
+<h2 id="orge90b848">Virtual threads</h2>
+<div class="outline-text-2" id="text-orge90b848">
+<p>
+So what happens if we use virtual threads?
+</p>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(<span style="color: #F0DFAF; font-weight: bold;">let</span> [n 1000
+      div (/ n 10)
+      latch (CountDownLatch. n)]
+  (time (<span style="color: #F0DFAF; font-weight: bold;">do</span>
+          (<span style="color: #F0DFAF; font-weight: bold;">doseq</span> [i (range n)
+                  <span style="color: #BFEBBF;">:let</span> [f #(<span style="color: #F0DFAF; font-weight: bold;">do</span>
+                             (<span style="color: #7CB8BB;">http</span>/get <span style="color: #CC9393;">"https://httpstat.us/200?sleep=1000"</span>)
+                             (<span style="color: #F0DFAF; font-weight: bold;">when</span> (zero? (mod i div))
+                               (<span style="color: #7CB8BB;">log</span>/info i))
+                             (.countDown latch))]]
+            (<span style="color: #7CB8BB;">Thread</span>/startVirtualThread f))
+          (.await latch))))
+</pre>
+</div>
+
+<p>
+This takes around 5 seconds, the same as using platform threads, albeit it's much more resource efficient due to using a <code>ForkJoinPool</code> to <a href="https://openjdk.org/jeps/444#Scheduling-virtual-threads">schedule the virtual threads</a> instead of creating an OS thread per JVM thread. The pool, by default, has as many platform threads as available processors (in our case, 10).
+</p>
+
+<blockquote>
+<p>
+The parallelism of the scheduler is the number of platform threads available for the purpose of scheduling virtual threads. By default it is equal to the number of available processors, but it can be tuned with the system property <code>jdk.virtualThreadScheduler.parallelism</code>.
+</p>
+</blockquote>
+
+<p>
+So why aren't we seeing the slowdown that we saw when using a threadpool with platform threads? Well, that's the key feature of virtual threads&#x2013;the runtime automatically <a href="https://openjdk.org/jeps/444#Preserving-the-thread-per-request-style-with-virtual-threads">parks them</a> when a blocking IO call is made.
+</p>
+
+<blockquote>
+<p>
+When code running in a virtual thread calls a blocking I/O operation in the <code>java.*</code> API, the runtime performs a non-blocking OS call and automatically suspends the virtual thread until it can be resumed later.
+</p>
+</blockquote>
+
+<p>
+This means that while one virtual thread is awaiting the HTTP response, others can be run by the threadpool. This is what allows for a thread-based programming style without the penalty of blocking.
+</p>
+
+<p>
+Since virtual threads are cheap, we should be able to increase the number of threads to 10,000, right? Well, no. We get the following:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java">Exception <span style="color: #7CB8BB;">in</span> <span style="color: #93E0E3;">thread</span> <span style="color: #CC9393;">""</span> <span style="color: #BFEBBF;">java</span>.<span style="color: #BFEBBF;">net</span>.SocketException: Too many open files
+    at java.base/<span style="color: #BFEBBF;">sun</span>.<span style="color: #BFEBBF;">nio</span>.<span style="color: #BFEBBF;">ch</span>.Net.socket0(<span style="color: #7CB8BB;">Native</span> <span style="color: #DFAF8F;">Method</span>)
+    at java.base/<span style="color: #BFEBBF;">sun</span>.<span style="color: #BFEBBF;">nio</span>.<span style="color: #BFEBBF;">ch</span>.Net.socket(Net.java:534)
+    at java.base/<span style="color: #BFEBBF;">sun</span>.<span style="color: #BFEBBF;">nio</span>.<span style="color: #BFEBBF;">ch</span>.Net.socket(Net.java:528)
+</pre>
+</div>
+
+<p>
+The problem is that HTTP requests create socket connections, which are <a href="https://stackoverflow.com/a/56052606/864684">treated as files</a> and use <a href="https://en.wikipedia.org/wiki/File_descriptor#:~:text=In%20Unix%20and%20Unix%2Dlike,a%20pipe%20or%20network%20socket.">file descriptors</a>, of which each process is given a limited number. On Mac OSX, the <a href="https://questdb.io/blog/max-open-file-limit-macos-jvm/">limit is 10240</a>, which can by altered with the <code>-XX:-MaxFDLimit</code> JVM option.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga12afad" class="outline-2">
+<h2 id="orga12afad">Sharp around the edges</h2>
+<div class="outline-text-2" id="text-orga12afad">
+<p>
+There are still some issues with virtual threads, however. One is <a href="https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html#GUID-704A716D-0662-4BC7-8C7F-66EE74B1EDAD">pinning</a>, the binding of a virtual thread to a platform thread, which undermines the M-to-N advantage. This can occur when a virtual thread tries to park inside of a <code>synchonized</code> block, or when it invokes native code. It's not always clear when this can happen, especially with <a href="https://blog.ydb.tech/how-we-switched-to-java-21-virtual-threads-and-got-deadlock-in-tpc-c-for-postgresql-cca2fe08d70b">code you didn't write</a>. The <a href="https://openjdk.org/jeps/425">JEP</a> suggests that the issue with <code>synchonized</code> may be <a href="https://news.ycombinator.com/item?id=39012631">resolved soon</a>, so it's probably better to wait until that happens before moving to production.
+</p>
+
+<p>
+Though virtual threads are still new, the promise of writing code in a linear style using the familiar construct of threads instead of breaking it into async tasks along occurrences of blocking IO is very attractive. For years developers have relied on an assortment of frameworks to deal with concurrency, and it's encouraging to see the JVM team addressing longstanding pain points.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+The HTTP call can actually take anywhere from 1.5 to 3 seconds due to server and network variance..
+</p></div></div>
+
+
+</div>
+</div>
