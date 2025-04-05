@@ -1,0 +1,174 @@
+---
+layout: post
+title: Generating classes in Clojure
+excerpt: JVM adventures await!
+---
+
+<p>
+I rarely use the <a href="https://clojure.github.io/clojure/clojure.core-api.html#clojure.core/gen-class">:gen-class</a> facility in Clojure, but when I do, I usually trip over one issue or another. After finally spending some time to read the <a href="https://clojure.org/reference/compilation">documentation</a> and peruse <a href="https://github.com/clojure/clojure">source code</a>, I've got a better understanding of how it all fits together.
+</p>
+<div id="outline-container-org4d79c4d" class="outline-2">
+<h2 id="org4d79c4d">Write that down, write that down!</h2>
+<div class="outline-text-2" id="text-org4d79c4d">
+<p>
+When Clojure code is evaluated, the compiler generates JVM bytecode and loads it into memory. For various reasons, such as improved startup time, it can be advantageous to compile namespaces into actual classfiles. These compiled namespaces need to be <code>:import</code>'ed instead of <code>:require</code>'ed.
+</p>
+
+<p>
+A namespace is normally compiled into a class ending in <code>__init</code>. For the simplest namespace:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(<span style="color: #F0DFAF; font-weight: bold;">ns</span> <span style="color: #7CB8BB;">clj-genclass.core</span>)
+</pre>
+</div>
+
+<p>
+We can compile with <a href="https://leiningen.org/">Leiningen</a>:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">lein compile clj-genclass.core
+</pre>
+</div>
+
+<p>
+And see the class <code>core__init.class</code> under <code>target/classes/clj_genclass</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-org2696914" class="outline-2">
+<h2 id="org2696914">Lookin' fresh</h2>
+<div class="outline-text-2" id="text-org2696914">
+<p>
+The resulting class isn't very convenient to work with, however. That's where <code>:gen-class</code> come in: it provides a large number of options<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> that make the generated class more like the Java library classes we interop with.
+</p>
+
+<p>
+To automatically compile classes before starting a Lein REPL, the namespace needs to be added under <a href="https://codeberg.org/leiningen/leiningen/src/commit/8cda41784545bef71d1d605d739f4935c8fe4f21/sample.project.clj#L280">:aot</a> in <code>project.clj</code>. Consider the following:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(<span style="color: #F0DFAF; font-weight: bold;">ns</span> <span style="color: #7CB8BB;">clj-genclass.MyClass</span>
+  (<span style="color: #BFEBBF;">:gen-class</span>
+   <span style="color: #BFEBBF;">:constructors</span> {[String] []}
+   <span style="color: #BFEBBF;">:init</span> init
+   <span style="color: #BFEBBF;">:state</span> state
+   <span style="color: #BFEBBF;">:methods</span> [[print [] void]]))
+
+(<span style="color: #F0DFAF; font-weight: bold;">defn</span> <span style="color: #93E0E3;">-init</span>
+  [txt]
+  [[] txt])
+
+(<span style="color: #F0DFAF; font-weight: bold;">defn</span> <span style="color: #93E0E3;">-print</span>
+  [this]
+  (println (.state this)))
+</pre>
+</div>
+
+<p>
+Running <code>lein repl</code>, we see that the class is compiled:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">$ lein repl
+Compiling clj-genclass.MyClass
+nREPL server started on port 57734 on host 127.0.0.1 - nrepl://127.0.0.1:57734
+</pre>
+</div>
+
+<p>
+And can be immediately imported and used:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">clj-genclass.core=&gt; (import <span style="color: #CC9393;">'clj_genclass.MyClass)</span>
+<span style="color: #CC9393;">clj_genclass.MyClass</span>
+
+<span style="color: #CC9393;">clj-genclass.core=&gt; (.print (MyClass. "My own class"))</span>
+<span style="color: #CC9393;">My own class</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org39ceb9d" class="outline-2">
+<h2 id="org39ceb9d">The function is dead, long live the function</h2>
+<div class="outline-text-2" id="text-org39ceb9d">
+<p>
+If we update <code>MyClass</code>'s <code>-print</code> method, e.g.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(<span style="color: #F0DFAF; font-weight: bold;">defn</span> <span style="color: #93E0E3;">-print</span>
+  [this]
+  (println <span style="color: #CC9393;">"foo"</span> (.state this)))
+</pre>
+</div>
+
+<p>
+We can see the changes take place either by compiling the class in the REPL:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">clj-genclass.core=&gt; (compile <span style="color: #CC9393;">'clj-genclass.MyClass)</span>
+<span style="color: #CC9393;">clj-genclass.MyClass</span>
+
+<span style="color: #CC9393;">clj-genclass.core&gt; (import '</span>clj_genclass.MyClass)
+clj_genclass.MyClass
+
+clj-genclass.core&gt; (.print (MyClass. <span style="color: #CC9393;">"My own class"</span>))
+foo My own class
+</pre>
+</div>
+
+<p>
+Or just evaluating it in <a href="https://github.com/clojure-emacs/cider">CIDER</a>. <code>lein compile</code> does <i>not</i> work because it only writes to classfiles and doesn't load anything into memory.
+</p>
+</div>
+</div>
+<div id="outline-container-org620822b" class="outline-2">
+<h2 id="org620822b">The old switcheroo</h2>
+<div class="outline-text-2" id="text-org620822b">
+<p>
+Classes in Java are loaded by instances of <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/ClassLoader.html">ClassLoader</a><sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>. Once an instance of <code>ClassLoader</code> has loaded a class, it must always <a href="https://docs.oracle.com/javase/specs/jvms/se21/html/jvms-5.html#jvms-5.3.2">return what it already loaded</a>. This means that it cannot reload a class whose definition has changed.
+</p>
+
+<p>
+To get around this, Clojure takes advantage of the fact that a class is distinguished not just by its name but also <a href="https://docs.oracle.com/javase/specs/jvms/se21/html/jvms-5.html#jvms-5.3.2">by its classloader</a>. Every time a form is (re)evaluated, a <a href="https://github.com/clojure/clojure/blob/clojure-1.12.0/src/jvm/clojure/lang/Compiler.java#L7662">new instance</a> of Clojure's own <a href="https://github.com/clojure/clojure/blob/clojure-1.12.0/src/jvm/clojure/lang/DynamicClassLoader.java">DynamicClassLoader</a> is used. We can see this in action:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">clj-genclass.core=&gt; (defn foo [] <span style="color: #CC9393;">"foo"</span>)
+<span style="color: #5F7F5F;">#</span><span style="color: #7F9F7F;">'clj-genclass.core/foo</span>
+
+clj-genclass.core=&gt; (.getClassLoader (.getClass foo))
+<span style="color: #5F7F5F;">#</span><span style="color: #7F9F7F;">object[clojure.lang.DynamicClassLoader 0x41f045a1 "clojure.lang.DynamicClassLoader@41f045a1"]</span>
+
+clj-genclass.core=&gt; (defn foo [] <span style="color: #CC9393;">"bar"</span>)
+<span style="color: #5F7F5F;">#</span><span style="color: #7F9F7F;">'clj-genclass.core/foo</span>
+
+clj-genclass.core=&gt; (.getClassLoader (.getClass foo))
+<span style="color: #5F7F5F;">#</span><span style="color: #7F9F7F;">object[clojure.lang.DynamicClassLoader 0x32035f8f "clojure.lang.DynamicClassLoader@32035f8f"]</span>
+</pre>
+</div>
+
+<p>
+When <code>foo</code> was redefined, the new version was loaded by a different classloader. All instances of <code>DynamicClassLoader</code> share a <a href="https://github.com/clojure/clojure/blob/clojure-1.12.0/src/jvm/clojure/lang/DynamicClassLoader.java#L26-L27">cache</a> so they can all find previously loaded classes. Classes that are no longer used (such as those that have been redefined) are eventually <a href="https://github.com/clojure/clojure/blob/clojure-1.12.0/src/jvm/clojure/lang/DynamicClassLoader.java#L45">removed</a>.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<code>:gen-class</code> by itself does not compile a class&#x2013;it only specifies <i>how</i> a class should be compiled.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Except for the classes of the Java Runtime itself, which are loaded by a <a href="https://docs.oracle.com/javase/jndi/tutorial/beyond/misc/classloader.html">boostrap classloader</a> written written in native code.
+</p></div></div>
+
+
+</div>
+</div>
