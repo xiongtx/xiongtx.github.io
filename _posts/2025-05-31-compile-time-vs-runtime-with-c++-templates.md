@@ -56,7 +56,7 @@ unsigned int sum() {
     if constexpr (N == 1) {
         return 1;
     } else {
-        return N + sum<N - 1>();
+        return N + sum<N-1>();
     }
 };
 ```
@@ -75,10 +75,10 @@ unsigned int sum() {
     if constexpr (N == 1) {
         return 1;
     }
-    return N + sum<N - 1>();
+    return N + sum<N-1>();
 };
 ```
 
-The `return N + sum<N - 1>();` is not in the `else` branch, so it's not discarded.
+The `return N + sum<N-1>();` is not in the `else` branch, so it's not discarded.
 
 [^1]: The C++ community certainly agrees, as evidenced by the enduring popularity of [Modern C++ Design](https://www.amazon.com/Modern-Design-Generic-Programming-Patterns/dp/0201704315), a book that puts templates at the heart of C++ design patterns.
