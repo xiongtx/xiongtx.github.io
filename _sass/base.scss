@@ -5,7 +5,7 @@
 @import "solarized";
 
 /* Fonts */
-$main-font:"Roboto Mono", monospace;
+$main-font: "Roboto Mono", monospace;
 $main-color: #444;
 $font-size: 18px;
 
@@ -20,12 +20,15 @@ $heading-color:#222;
 $secondary-color:#777;
 $border-color:#ccc;
 $quote-border-color:#eee;
+$table-header-color: #f2f2f2;
+$table-alt-row-color: #f9f9f9;
 
 @mixin font-feature-settings($features...) {
     // scss-lint:disable VendorPrefix
     font-feature-settings: $features;
     -webkit-font-feature-settings: $features;
 }
+
 body {
     // Enable a couple of nice font features
     @include font-feature-settings("onum", "kern", "liga", "clig", "dlig", "calt");
@@ -38,6 +41,7 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
+
 @media screen and (min-width: 900px) {
     // Larger devices
     .container {
@@ -58,6 +62,26 @@ body {
 
 .navbar-brand {
     padding: 7px;
+}
+
+// Tables
+
+table {
+    margin: 1em 0;
+}
+
+th, td {
+    border: 1px solid $border-color;
+    padding: 8px;
+}
+
+th {
+    background-color: $table-header-color;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: $table-alt-row-color;
 }
 
 /* @media screen and (min-width: 650px) { */
