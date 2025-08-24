@@ -157,7 +157,7 @@ clj-genclass.core=> (.getClassLoader (.getClass foo))
 
 When `foo` was redefined, the new version was loaded by a different classloader. All instances of `DynamicClassLoader` share a [cache](https://github.com/clojure/clojure/blob/clojure-1.12.0/src/jvm/clojure/lang/DynamicClassLoader.java#L26-L27) so they can all find previously loaded classes. Classes that are no longer used (such as those that have been redefined) are eventually [removed](https://github.com/clojure/clojure/blob/clojure-1.12.0/src/jvm/clojure/lang/DynamicClassLoader.java#L45).
 
-## Footnotes
+---
 
 [^1]: `:gen-class` by itself does not compile a class--it only specifies *how* a class should be compiled.
 

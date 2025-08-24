@@ -86,4 +86,6 @@ Date:   Thu Jun 19 12:48:12 2025 -0700
 
 So we see that `c7e761c` is the one that deleted `B`.
 
+---
+
 [^1]: In Magit, `magit-blame-reverse` must be used on a _blob_--a file being visited from an older commit. Checking out the older commit and calling `magit-blame-reverse` from the file doesn't work, as it would be the most recent known state.
