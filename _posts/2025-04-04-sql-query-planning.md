@@ -12,7 +12,7 @@ Consider a query that joins 4 tables \\( \\{T_1, T_2, T_3, T_4\\} \\) together. 
 
 ## Southpaws only
 
-In System R, only [left deep](https://docs.oracle.com/en/database/oracle/oracle-database/23/tgsql/glossary.html#GUID-5697281B-74F7-4AF2-A73F-3CC1A96EA947) join plans were considered, meaning that for a join $$(R, T)$$, only $$R$$ can be the result of joins, while $$T$$ must be a base table. Thus, $$((T_1, T_2), T_3)$$ is allowed, but $$((T_1, T_2), (T_3, T_4))$$ (a [bushy join](https://docs.oracle.com/en/database/oracle/oracle-database/23/tgsql/glossary.html#GUID-4E921FAD-0F1B-47E7-A1A4-EAAAD5E043AB)) is not. This reduces the number of cases that needed to be considered.
+In System R, only [left deep](https://docs.oracle.com/en/database/oracle/oracle-database/23/tgsql/glossary.html#GUID-5697281B-74F7-4AF2-A73F-3CC1A96EA947) join plans were considered, meaning that for a join $$(R, T)$$, only $$R$$ can be the result of joins, while $$T$$ must be a base table. Thus, $$((T_1, T_2), T_3)$$ is allowed, but $$((T_1, T_2), (T_3, T_4))$$ (a [bushy join](https://docs.oracle.com/en/database/oracle/oracle-database/23/tgsql/glossary.html#GUID-4E921FAD-0F1B-47E7-A1A4-EAAAD5E043AB)) is not. This reduces the number of cases that need to be considered.
 
 We build the solution by starting with single tables, then calculating the cost of joining two tables, three tables, and so on. When joining \\( k \\) tables \\( \\{T_1, \dots, T_k\\} \\), we have \\( k \\) possibilities to consider: \\( ((T_j \mid j \neq i) , T_i) \\) for \\( i \in \\{1, \dots, k\\} \\). So the total number of cases to consider for \\( n \\) tables is:
 
@@ -64,6 +64,6 @@ Costs were also reduced via a **selectivity factor** \\( F \\) based on the pred
 
 ## Oldie but goodie
 
-Given the age of this paper, it's impressive how well it's held up. Modern databases have more features, such as bushy join plans, [hash joins](https://use-the-index-luke.com/sql/join/hash-join-partial-objects), [genetic algorithms](https://www.postgresql.org/docs/17/geqo-pg-intro.html), etc., but the basics are still the same: parse a query, consider the possible access paths, assign costs, and pick the optimal solution.
+Given the age of this paper, it's impressive how well it holds up. Modern databases have more features, such as bushy join plans, [hash joins](https://use-the-index-luke.com/sql/join/hash-join-partial-objects), [genetic algorithms](https://www.postgresql.org/docs/17/geqo-pg-intro.html), etc., but the basics are still the same: parse a query, consider the possible access paths, assign costs, and pick the optimal solution.
 
 Selinger's work showed that declarative queries could be made performant, setting the stage for relational databases to replace hierarchical ([IMS](https://www.ibm.com/docs/en/zos-basic-skills?topic=product-ims-database-manager)) and network ([CODASYL](https://en.wikipedia.org/wiki/CODASYL)) databases, thus saving future programmers a whole lot of headache. For that, we should all be grateful.
