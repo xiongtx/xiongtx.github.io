@@ -1,4 +1,4 @@
-<ol class="post-list">
+<ul class="post-list">
   {% for post in include.posts limit: include.limit %}
   {% if include.skip_current_page and post.id == page.id %}
   {% continue %}
@@ -7,34 +7,22 @@
 
   <li class="post-list-item">
 
-    <!-- Post date -->
-    {% if post.date %}
-    <span class="post-list-date">{{ post.date | date: "%F"}}</span>
-    {% else %}
-    <span class="post-list-date">not published</span>
-    <span class="post-list-short-date">n.a.</span>
-    {% endif %}
-
-    <!-- Date-title separator -->
-    <span>: </span>
-
-    <!-- Post title -->
-    <span class="post-list-title">
-      <a href="{{ url }}">{{ post.title | escape }}</a>
-    </span>
+    <h3>
+      <!-- Post date -->
+      {% if post.date %}
+      {{ post.date | date: "%F"}}
+      {% else %}
+      not published
+      {% endif %}
+       : <a href="{{ url }}">{{ post.title | escape }}</a>
+    </h3>
 
     <!-- Post excerpt -->
-    {% if post.excerpt and include.include_excerpt %}
-
-    <div class="post-list-teaser">
-      {{ post.excerpt | strip_html | truncatewords: 50}}
-      <p>
-	<a href="{{ url }}">Read more…</a>
-      </p>
-    </div>
+    {% if include.include_excerpt %}
+    <p>{{ post.content | strip_html | truncate: 200 }}</p>
     {% endif %}
 
   </li>
 
   {% endfor %}
-</ol>
+</ul>

@@ -30,6 +30,42 @@
       padding-bottom: 20px;
       }
 
+      #search-results {
+        margin-top: 20px;
+      }
+
+      #search-results-list,
+      .post-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      #search-results-list li,
+      .post-list-item {
+        margin-bottom: 10px;
+        padding: 10px 0;
+      }
+
+      #search-results-list li h3,
+      .post-list-item h3 {
+        margin-top: 0;
+      }
+
+      #search-results-list li p,
+      .post-list-item p {
+        color: #666;
+      }
+
+      #search-results-list li a,
+      .post-list-item a {
+        text-decoration: none;
+      }
+
+      code {
+        color: #333;
+        background-color: #f5f5f5;
+      }
+
     </style>
   </head>
 
@@ -56,10 +92,17 @@
           <!-- Navbar links -->
           <div class="collapse navbar-collapse" id="main-navbar">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="{{ site.baseurl }}/archive.html">Posts</a></li>
+              <li><a href="{{ site.baseurl }}/index.html">Home</a></li>
+              <li><a href="{{ site.baseurl }}/archive.html">Archives</a></li>
               <li><a href="{{ site.baseurl }}/projects.html">Projects</a></li>
               <li><a href="{{ site.baseurl }}/about.html">About</a></li>
             </ul>
+            <form class="navbar-form navbar-right" role="search" onsubmit="return false;">
+              <div class="form-group" style="position: relative;">
+                <input type="text" id="search-input" class="form-control" placeholder="Search" style="padding-right: 30px;">
+                <button type="button" id="search-clear" style="display: none; position: absolute; right: 5px; top: 50%; transform: translateY(-50%); border: none; background: none; cursor: pointer; padding: 5px; font-size: 16px; color: #999;">&times;</button>
+              </div>
+            </form>
           </div>
         </div>
       </nav>
@@ -67,6 +110,12 @@
       <!-- Content -->
       <div id="content">
         {{ content }}
+      </div>
+
+      <!-- Search Results -->
+      <div id="search-results" style="display: none;">
+        <h2>Search Results</h2>
+        <ul id="search-results-list"></ul>
       </div>
 
       <!-- Footer -->
@@ -88,6 +137,123 @@
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script>
+      var searchIndex = null;
+      var searchData = null;
+      var searchReady = false;
+
+      // Load search data
+      fetch('{{ site.baseurl }}/search.json')
+        .then(response => response.json())
+        .then(data => {
+          searchData = data;
+          searchIndex = lunr(function () {
+            this.ref('url');
+            this.field('title', { boost: 10 });
+            this.field('content');
+            this.field('tags', { boost: 5 });
+            this.field('category');
+
+            data.forEach(function (doc) {
+              this.add(doc);
+            }, this);
+          });
+          searchReady = true;
+
+          // Execute search if there's a pending query
+          var searchInput = document.getElementById('search-input');
+          if (searchInput && searchInput.value.length > 2) {
+            performSearch(searchInput.value);
+            document.getElementById('search-clear').style.display = 'block';
+          }
+        });
+
+      // Search function
+      function performSearch(query) {
+        if (!searchIndex || !query) {
+          document.getElementById('search-results').style.display = 'none';
+          document.getElementById('content').style.display = 'block';
+          return;
+        }
+
+        var results = searchIndex.search(query);
+        displayResults(results);
+      }
+
+      // Display results
+      function displayResults(results) {
+        var searchResultsList = document.getElementById('search-results-list');
+        searchResultsList.innerHTML = '';
+
+        if (results.length === 0) {
+          document.getElementById('content').style.display = 'none';
+          document.getElementById('search-results').style.display = 'block';
+          searchResultsList.innerHTML = '<li>No results found</li>';
+          return;
+        }
+
+        document.getElementById('content').style.display = 'none';
+        document.getElementById('search-results').style.display = 'block';
+
+        results.slice(0, 10).forEach(function (result) {
+          var item = searchData.find(function (post) {
+            return post.url === result.ref;
+          });
+
+          if (item) {
+            var li = document.createElement('li');
+            var excerpt = item.content.substring(0, 200) + '...';
+            li.innerHTML = '<h3>' + item.date + ' : <a href="' + item.url + '">' + item.title + '</a></h3>' +
+                          '<p>' + excerpt + '</p>';
+            searchResultsList.appendChild(li);
+          }
+        });
+      }
+
+      // Bind search input
+      document.addEventListener('DOMContentLoaded', function () {
+        var searchInput = document.getElementById('search-input');
+        var searchClear = document.getElementById('search-clear');
+
+        function updateSearch() {
+          var query = searchInput.value;
+
+          // Show/hide clear button
+          if (query.length > 0) {
+            searchClear.style.display = 'block';
+          } else {
+            searchClear.style.display = 'none';
+          }
+
+          if (query.length > 2) {
+            performSearch(query);
+          } else if (query.length === 0) {
+            document.getElementById('search-results').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+          }
+        }
+
+        if (searchInput) {
+          searchInput.addEventListener('keyup', updateSearch);
+
+          // Execute search on page load if there's a value
+          if (searchInput.value.length > 0) {
+            updateSearch();
+          }
+        }
+
+        if (searchClear) {
+          searchClear.addEventListener('click', function () {
+            searchInput.value = '';
+            searchClear.style.display = 'none';
+            document.getElementById('search-results').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+            searchInput.focus();
+          });
+        }
+      });
+    </script>
   </body>
 
 </html>
