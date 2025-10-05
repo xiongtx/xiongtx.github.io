@@ -10,3 +10,5 @@ vendor/
 
 # Caches
 .sass-cache/
+
+.claude
