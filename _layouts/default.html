@@ -70,6 +70,40 @@
         border: none;
       }
 
+      .highlight {
+        position: relative;
+      }
+
+      .highlight .copy-button {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        padding: 8px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 0;
+      }
+
+      .highlight:hover .copy-button {
+        opacity: 1;
+      }
+
+      .highlight .copy-button:hover {
+        background-color: #f0f0f0;
+      }
+
+      .highlight .copy-button:active {
+        background-color: #e0e0e0;
+      }
+
     </style>
   </head>
 
@@ -263,6 +297,11 @@
       var checkIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
 
       document.querySelectorAll('.highlight').forEach(function(codeBlock) {
+        // Skip if button already exists
+        if (codeBlock.querySelector('.copy-button')) {
+          return;
+        }
+
         var button = document.createElement('button');
         button.className = 'copy-button';
         button.innerHTML = copyIcon;

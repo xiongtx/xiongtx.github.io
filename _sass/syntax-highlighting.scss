@@ -210,35 +210,4 @@
 }
 .highlight {
   background-color: #f8f8f8;
-  position: relative;
-}
-
-.highlight .copy-button {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  padding: 8px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 0;
-}
-
-.highlight:hover .copy-button {
-    opacity: 1;
-}
-
-.highlight .copy-button:hover {
-  background-color: #f0f0f0;
-}
-
-.highlight .copy-button:active {
-  background-color: #e0e0e0;
 }
