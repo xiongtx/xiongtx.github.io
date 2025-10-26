@@ -129,3 +129,8 @@ tr:nth-child(even) {
         display: inline;
     }
 }
+
+// Code inside links should show link color
+a code {
+    color: inherit;
+}
