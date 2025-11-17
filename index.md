@@ -1,6 +1,6 @@
 ---
 title: TX
-subtitle: A cohesive thought is a good starting point
+subtitle: A cohesive thought is a good start
 layout: page
 ---
 
