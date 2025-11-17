@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What Actually Destroys Employment: A Multifaceted Analysis"
+title: What Actually Destroys Jobs
 excerpt: Technology alone is not to blame for loss of jobs
 ---
 

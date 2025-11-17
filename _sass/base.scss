@@ -134,3 +134,31 @@ tr:nth-child(even) {
 a code {
     color: inherit;
 }
+
+// Post header with title and date
+.post-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+
+    .page-title {
+        flex: 1;
+        margin: 0;
+    }
+
+    .post-date {
+        color: $secondary-color;
+        margin: 0;
+        white-space: nowrap;
+    }
+}
+
+// Post audio player
+.post-audio {
+    margin-bottom: 1.5rem;
+
+    audio {
+        width: 50%;
+    }
+}

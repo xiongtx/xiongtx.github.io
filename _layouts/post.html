@@ -1,11 +1,31 @@
 ---
-layout: page
+layout: default
 ---
 
-<div class="post-info">
-  <p>
-    Posted on {{ page.date | date: '%Y-%m-%d' }}
-  </p>
-</div>
+<article>
+  <header class="page-header">
+    <div class="post-header-wrapper">
+      <h1 class="page-title">
+        {{ page.title }}
+        {% if page.subtitle %}
+        <small>{{ page.subtitle }}</small>
+        {% endif %}
+      </h1>
+      <p class="post-date">
+        {{ page.date | date: '%Y-%m-%d' }}
+      </p>
+    </div>
+  </header>
 
-{{ content }}
+  {% if page.audio %}
+  <div class="post-audio">
+    <audio controls preload="auto">
+      <source src="{{ page.audio }}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  {% endif %}
+
+  {{ content }}
+
+</article>
