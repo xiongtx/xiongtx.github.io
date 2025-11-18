@@ -154,6 +154,20 @@ a code {
     }
 }
 
+// Post list title and date
+.post-list-title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+
+    .post-list-date {
+        color: $secondary-color;
+        font-size: 0.75em;
+        white-space: nowrap;
+    }
+}
+
 // Post audio player
 .post-audio {
     margin-bottom: 1.5rem;
