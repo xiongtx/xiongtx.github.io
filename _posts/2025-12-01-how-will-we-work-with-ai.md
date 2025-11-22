@@ -52,16 +52,6 @@ What's more likely is weak scaling: AI allows workers to produce more output in 
 
 This distinction matters for expectations about AI's societal impact. Strong scaling would mean broadly shared gains through reduced working hours. Weak scaling means productivity gains flow primarily to those who can leverage AI to increase their output--and to their employers, who capture the surplus.
 
-## Three reactions to productivity gains
-
-People react to productivity-enhancing technology in broadly three ways[^1]. The first are the ambitious, excited by the prospect of doing more. They see AI as a force multiplier and are eager to apply more effort for greater gains. These are the ones who'll work 60-hour weeks with AI assistants to produce what previously took teams of people.
-
-The second are the practical, who see an opportunity to achieve the same results with less effort. They'll use AI to maintain their current output while reclaiming time for other pursuits--family, hobbies, rest. This is the vision of technology as liberator.
-
-The third are the lazy, who want to apply no effort now that machines are supposedly capable of the work. They expect AI to handle everything while they coast. This group is in for a rude awakening; as we've seen, AI cannot accelerate all work, and the parts it can't are precisely those requiring human judgment and effort.
-
-The ambitious will do well--they always have in times of technological change. The practical might be all right for a time, but will eventually be replaced by superior technology or people who are better at using it. The lazy will be swiftly obsoleted. Which reaction dominates will shape AI's broader impact on work; if the ambitious set the pace, competitive pressure will force everyone to keep up.
-
 ## Productivity and work hours
 
 History suggests that work hours are determined not by productivity but by competitive pressures. When competition is slack, organizations take it easy. When it's fierce, demands intensify--including on labor. In the early days of a technological revolution, when outcomes are highly uncertain, the pressure is for maximum resource application, from capital to labor.
@@ -69,6 +59,10 @@ History suggests that work hours are determined not by productivity but by compe
 The [Industrial Revolution](https://en.wikipedia.org/wiki/Industrial_Revolution) did not initially reduce work hours--it increased them. Factory workers in the early 19th century routinely worked 12-16 hour days, six days a week. The productivity gains from mechanization didn't translate into leisure; they translated into more output and more profit. The [40-hour work week](https://en.wikipedia.org/wiki/Eight-hour_day) wasn't a natural result of machines speeding up processes. It was won through decades of labor organizing, strikes, and sometimes violence.
 
 When work hours are limited by employers, it's often because forward-thinking industrialists recognize that excessive hours undermine productivity. [Henry Ford](https://www.history.com/articles/henry-ford-40-hour-work-week) was rare in understanding that supply and demand must balance--Ford workers who lacked the money to buy cars or the time to use them represented an unsustainable operation. Such enlightened self-interest is the exception, not the rule.
+
+People react to productivity-enhancing technology in broadly three ways[^1]. The first are the ambitious, excited by the prospect of doing more. They see AI as a force multiplier and are eager to apply more effort for greater gains. These are the ones who'll work 60-hour weeks with AI assistants to produce what previously took teams of people. The second are the practical, who see an opportunity to achieve the same results with less effort. They'll use AI to maintain their current output while reclaiming time for other pursuits--family, hobbies, rest. This is the vision of technology as liberator. The third are the lazy, who want to apply no effort now that machines are supposedly capable of the work. They expect AI to handle everything while they coast. This group is in for a rude awakening; as we've seen, AI cannot accelerate all work, and the parts it can't are precisely those requiring human judgment and effort.
+
+The ambitious will do well--they always have in times of technological change. The practical might be all right for a time, but will eventually be replaced by superior technology or people who are better at using it. The lazy will be swiftly obsoleted. Which reaction dominates will shape AI's broader impact on work; if the ambitious set the pace, competitive pressure will force everyone to keep up.
 
 AI is arriving during a period of intensifying global competition--between companies racing to dominate new markets, and between nations vying for technological supremacy. In this environment, expecting productivity gains to result in shorter work hours is naive. The more likely outcome is that those gains will be captured as increased output, with workers expected to produce more, not work less. Any reduction in work hours will come, as it always has, from collective action and policy--not from the technology itself.
 
