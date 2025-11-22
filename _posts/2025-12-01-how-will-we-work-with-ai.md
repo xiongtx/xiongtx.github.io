@@ -4,80 +4,80 @@ title: How will we work with AI?
 excerpt: What AI productivity will actually look like
 ---
 
-The tech industry is [abuzz](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier) with claims of massive productivity gains from AI. Consultants project trillions in economic value, and vendors promise tools that'll make workers 10x more effective. But productivity gains, no matter the source, are subject to fundamental constraints. Chief among them is [Amdahl's law](https://en.wikipedia.org/wiki/Amdahl%27s_law), which places hard limits on how much any improvement can speed up overall performance.
+The tech industry is [abuzz](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier) with claims of massive productivity gains from AI. Consultants project trillions in economic value, and vendors promise tools that will make workers 10x more effective. Yet productivity gains, regardless of source, are subject to fundamental constraints--and AI is no exception.
 
-## Benchmarks vs. iteration
+## Amdahl's law
 
-One problem with current AI benchmarks is their focus on whether models can solve well-defined problems in one shot, or perhaps a few attempts. [SWE-bench](https://www.swebench.com/) measures if a model can fix a GitHub issue. [HumanEval](https://github.com/openai/human-eval) checks if it can implement a function given a docstring. These are useful for comparing models, but they don't reflect how quality work actually gets done.
-
-Real intellectual work is iterative. An artist starts with a rough sketch based on skeletal structure, then applies multiple passes filling in detail--shading, texture, color. A writer produces drafts, each one tightening arguments and clarifying prose. A programmer writes code, tests it, refactors, and repeats. Quality emerges through refinement, not through getting it right the first time.
-
-More fundamentally, intellectual work is a search process. The space of possible solutions is vast, and the task is to explore and partition that space until a specific solution comes into view. Early stages are amorphous--broad strokes that establish direction. Later stages add constraints, making the solution less vague and more concrete. This is true whether you're designing a building, writing a legal brief, or architecting software.
-
-AI tools that excel at one-shot generation may struggle with this iterative process. They can produce plausible first drafts, but incorporating feedback, maintaining consistency across revisions, and progressively refining toward a goal remain challenging. The human role, then, is not just to prompt but to guide--to be the editor, the critic, the one who knows when "good enough" has been reached.
-
-There's also a psychological dimension. [Parkinson's law of triviality](https://en.wikipedia.org/wiki/Law_of_triviality), or "bike-shedding," describes how managers feel obligated to offer superficial critiques to demonstrate their contribution. Humans exhibit the same behavior when working with AI--in a sense, they are managing the model. Even if a superb AI system could one-shot everything perfectly, it wouldn't feel satisfactory if it couldn't subsequently incorporate modifications according to human desires, regardless of whether those modifications actually improve the result. The ability to iterate isn't just about quality; it's about ownership.
-
-## The persistence of programming
-
-A corollary to [Clarke's third law](https://en.wikipedia.org/wiki/Clarke%27s_three_laws): any sufficiently precise instruction is indistinguishable from code. Programming may change--we may no longer write Java, just as today's programmers rarely write the machine code that was bread and butter to earlier generations. But the English that will be effective in "programming" AI is not going to be imprecise everyday patois. It will need to be specific, unambiguous, and logically structured--in other words, code by another name.
-
-Few people who know English become successful authors like J.K. Rowling or Stephen King. Fluency in a language doesn't mean fluency in using it precisely and effectively. There's no reason to believe the masses will become programmers just because the syntax shifts from Python to natural language. The skill of breaking down problems, specifying requirements, and thinking systematically will remain as rare and valuable as ever.
-
-## The law of diminishing speedups
-
-Amdahl's law, formulated by computer scientist Gene Amdahl in 1967, states that the speedup of a system is limited by the portion that cannot be improved. Mathematically:
+[Amdahl's law](https://en.wikipedia.org/wiki/Amdahl%27s_law), formulated by computer scientist Gene Amdahl in 1967, states that the speedup of a system is limited by the portion that cannot be improved. Mathematically:
 
 $$S = \frac{1}{(1 - p) + \frac{p}{s}}$$
 
-Where $S$ is the overall speedup, $p$ is the proportion of work that can be accelerated, and $s$ is the speedup factor for that portion. Even if $s$ approaches infinity--that is, some part of the task becomes instantaneous--the overall speedup is bounded by $\frac{1}{1 - p}$.
+Where $S$ is the overall speedup, $p$ is the proportion of work that can be accelerated, and $s$ is the speedup factor for that portion. Even if $s$ approaches infinity--that is, some portion becomes instantaneous--the overall speedup is bounded by $\frac{1}{1 - p}$.
 
-Consider a task where AI can accelerate 50% of the work. Even if AI makes that portion infinitely fast, the overall speedup is only 2x. If AI can accelerate 90% of the work, the maximum speedup is 10x. To achieve the 100x improvements often touted by AI proponents, 99% of work would need to be AI-acceleratable--a bar that's unrealistic for most knowledge work.
+Consider a task where AI can accelerate 50% of the work. Even if AI completes that portion infinitely fast, the overall speedup is only 2x. If AI can accelerate 90%, the maximum speedup is 10x. To achieve the 100x improvements often claimed by AI proponents, 99% of work would need to be AI-acceleratable--an unrealistic bar for most knowledge work.
 
 ## What AI can and cannot accelerate
 
-AI excels at certain tasks: generating boilerplate code, summarizing documents, answering well-defined questions, and pattern matching across large datasets. These are tasks with clear inputs, outputs, and success criteria.
+AI excels at tasks with clear inputs, outputs, and success criteria: generating boilerplate code, summarizing documents, answering well-defined questions, and pattern matching across large datasets.
 
-But much of knowledge work doesn't fit this mold. Defining the problem, understanding stakeholder needs, navigating organizational politics, making judgment calls with incomplete information--these remain stubbornly human activities. A programmer might use AI to write code faster, but still spends hours in meetings clarifying requirements, debugging integration issues, and explaining trade-offs to non-technical colleagues.
+Much of knowledge work does not fit this profile. Defining the problem, understanding stakeholder needs, navigating organizational politics, and making judgment calls with incomplete information remain human activities. A programmer may use AI to write code faster, yet still spend hours in meetings clarifying requirements, debugging integration issues, and explaining trade-offs to non-technical colleagues.
 
-The proportion of work that AI can accelerate varies widely by domain. Data entry and transcription? Perhaps 90%. Creative strategy and leadership? Maybe 10%. Most jobs fall somewhere in between, with AI-acceleratable portions often smaller than enthusiasts assume.
+The proportion of work that AI can accelerate varies by domain. Data entry and transcription: perhaps 90%. Creative strategy and leadership: perhaps 10%. Most occupations fall in between, with AI-acceleratable portions often smaller than enthusiasts assume.
 
-## Implications for productivity claims
+## Implications for productivity
 
-This framework helps explain why real-world productivity gains from AI often [disappoint](https://www.nytimes.com/2024/08/25/technology/ai-productivity-tools.html) relative to expectations. A tool that makes coding 5x faster sounds transformative, but if coding is only 30% of a developer's job, the overall productivity gain is closer to 1.5x. Still valuable, but not the revolution promised.
+This framework explains why real-world productivity gains from AI often [disappoint](https://www.nytimes.com/2024/08/25/technology/ai-productivity-tools.html) relative to expectations. A tool that makes coding 5x faster sounds transformative, but if coding constitutes only 30% of a developer's job, the overall productivity gain is closer to 1.5x--valuable, but not revolutionary.
 
-It also suggests where to focus AI development efforts. Rather than making already-fast tasks faster, the bigger wins come from expanding the proportion of work that AI can handle at all. This is why [agentic systems]({% post_url 2025-11-17-agentic-utopia-deferred %}) are so appealing--they promise to take on entire workflows, not just individual tasks.
+The framework also suggests where to focus AI development. Rather than accelerating already-fast tasks, the greater gains come from expanding the proportion of work AI can handle at all. This explains the appeal of [agentic systems]({% post_url 2025-11-17-agentic-utopia-deferred %}): they promise to assume entire workflows, not just individual tasks.
 
 ## Strong scaling vs. weak scaling
 
-In parallel computing, there's a crucial distinction between [strong and weak scaling](https://hpc-wiki.info/hpc/Scaling). Strong scaling means completing the same amount of work in less time. Weak scaling means completing more work in the same amount of time.
+In parallel computing, [strong and weak scaling](https://hpc-wiki.info/hpc/Scaling) represent distinct objectives. Strong scaling means completing the same work in less time. Weak scaling means completing more work in the same time.
 
-Many envision AI enabling strong scaling--workers finish their tasks faster and enjoy more leisure. But Amdahl's law suggests this is constrained by the irreducible portion of work that AI cannot accelerate. If 40% of a job resists automation, no amount of AI improvement will reduce work hours by more than 60%.
+Many envision AI enabling strong scaling--workers finish tasks faster and enjoy more leisure. But Amdahl's law constrains this by the irreducible portion of work that AI cannot accelerate. If 40% of a job resists automation, no amount of AI improvement will reduce work time by more than 60%.
 
-What's more likely is weak scaling: AI allows workers to produce more output in the same hours. A developer writes more features. A lawyer handles more cases. A designer creates more variations. The employer's preference aside, this may be the only technically feasible option. When the non-AI-acceleratable portion of work sets a floor on time spent, the only way to capture AI's benefits is to increase the AI-acceleratable portion--that is, do more of the work AI is good at.
+What is more likely is weak scaling: AI enables workers to produce more output in the same hours. A developer writes more features. A lawyer handles more cases. A designer creates more variations. When the non-AI-acceleratable portion of work sets a floor on time spent, the only way to capture AI's benefits is to increase the AI-acceleratable portion--that is, to do more of the work AI can speed up.
 
-This distinction matters for expectations about AI's societal impact. Strong scaling would mean broadly shared gains through reduced working hours. Weak scaling means productivity gains flow primarily to those who can leverage AI to increase their output--and to their employers, who capture the surplus.
+This distinction matters for societal expectations. Strong scaling would mean broadly shared gains through reduced working hours. Weak scaling means productivity gains flow primarily to those who leverage AI to increase output--and to employers who capture the surplus.
 
 ## Productivity and work hours
 
-History suggests that work hours are determined not by productivity but by competitive pressures. When competition is slack, organizations take it easy. When it's fierce, demands intensify--including on labor. In the early days of a technological revolution, when outcomes are highly uncertain, the pressure is for maximum resource application, from capital to labor.
+History indicates that work hours are determined not by productivity but by competitive pressures. When competition is slack, organizations ease off. When it intensifies, demands increase--including on labor. In the early stages of technological revolution, when outcomes are uncertain, the pressure favors maximum resource application, from capital to labor.
 
-The [Industrial Revolution](https://en.wikipedia.org/wiki/Industrial_Revolution) did not initially reduce work hours--it increased them. Factory workers in the early 19th century routinely worked 12-16 hour days, six days a week. The productivity gains from mechanization didn't translate into leisure; they translated into more output and more profit. The [40-hour work week](https://en.wikipedia.org/wiki/Eight-hour_day) wasn't a natural result of machines speeding up processes. It was won through decades of labor organizing, strikes, and sometimes violence.
+The [Industrial Revolution](https://en.wikipedia.org/wiki/Industrial_Revolution) did not initially reduce work hours--it increased them. Factory workers in the early 19th century routinely worked 12-16 hour days, six days a week. Productivity gains from mechanization did not translate into leisure; they translated into more output and profit. The [40-hour work week](https://en.wikipedia.org/wiki/Eight-hour_day) was not a natural consequence of machines accelerating processes. It was won through decades of labor organizing, strikes, and sometimes violence.
 
-When work hours are limited by employers, it's often because forward-thinking industrialists recognize that excessive hours undermine productivity. [Henry Ford](https://www.history.com/articles/henry-ford-40-hour-work-week) was rare in understanding that supply and demand must balance--Ford workers who lacked the money to buy cars or the time to use them represented an unsustainable operation. Such enlightened self-interest is the exception, not the rule.
+When employers do limit work hours, it is often because forward-thinking industrialists recognize that excessive hours undermine productivity. [Henry Ford](https://www.history.com/articles/henry-ford-40-hour-work-week) was exceptional in understanding that supply and demand must balance--Ford workers who lacked the money to buy cars or the time to use them represented an unsustainable operation. Such enlightened self-interest is the exception, not the rule.
 
-People react to productivity-enhancing technology in broadly three ways[^1]. The first are the ambitious, excited by the prospect of doing more. They see AI as a force multiplier and are eager to apply more effort for greater gains. These are the ones who'll work 60-hour weeks with AI assistants to produce what previously took teams of people. The second are the practical, who see an opportunity to achieve the same results with less effort. They'll use AI to maintain their current output while reclaiming time for other pursuits--family, hobbies, rest. This is the vision of technology as liberator. The third are the lazy, who want to apply no effort now that machines are supposedly capable of the work. They expect AI to handle everything while they coast. This group is in for a rude awakening; as we've seen, AI cannot accelerate all work, and the parts it can't are precisely those requiring human judgment and effort.
+People react to productivity-enhancing technology in three ways[^1]. The ambitious see AI as a force multiplier and apply more effort for greater gains--working longer hours with AI assistants to produce what previously required teams. The practical see an opportunity to achieve the same results with less effort, reclaiming time for other pursuits. The complacent expect AI to handle everything while they coast; they will find that AI cannot accelerate all work, and the parts it cannot are precisely those requiring human judgment.
 
-The ambitious will do well--they always have in times of technological change. The practical might be all right for a time, but will eventually be replaced by superior technology or people who are better at using it. The lazy will be swiftly obsoleted. Which reaction dominates will shape AI's broader impact on work; if the ambitious set the pace, competitive pressure will force everyone to keep up.
+The ambitious will prosper--they always have during technological change. The practical may fare well temporarily, but will eventually be displaced by superior technology or more capable users. The complacent will be rapidly obsoleted. If the ambitious set the pace, competitive pressure will compel everyone to keep up.
 
-AI is arriving during a period of intensifying global competition--between companies racing to dominate new markets, and between nations vying for technological supremacy. In this environment, expecting productivity gains to result in shorter work hours is naive. The more likely outcome is that those gains will be captured as increased output, with workers expected to produce more, not work less. Any reduction in work hours will come, as it always has, from collective action and policy--not from the technology itself.
+AI is arriving during intensifying global competition--between companies racing to dominate new markets and nations vying for technological supremacy. In this environment, expecting productivity gains to result in shorter work hours is naive. The more likely outcome is that gains will be captured as increased output, with workers expected to produce more, not work less. Any reduction in work hours will come, as it always has, from collective action and policy--not from technology itself.
 
-## The irreducible human element
+## Benchmarks vs. iteration
 
-Amdahl's law isn't just a limitation--it's a reminder that productivity is about more than raw speed. The parts of work that resist automation are often the most valuable: creativity, judgment, relationship-building, and navigating ambiguity. These aren't inefficiencies to be optimized away, but core competencies that define human contribution.
+Current AI benchmarks focus on whether models can solve well-defined problems in one shot, or perhaps a few attempts. [SWE-bench](https://www.swebench.com/) measures whether a model can fix a GitHub issue. [HumanEval](https://github.com/openai/human-eval) tests whether it can implement a function given a docstring. These are useful for comparing models, but do not reflect how quality work is actually done.
 
-AI will continue to deliver real productivity gains, but they'll be bounded by the nature of work itself. Those expecting AI to eliminate the need for human effort will be disappointed. Those who understand AI as a tool for accelerating specific tasks--while remaining clear-eyed about which tasks those are--will benefit the most.
+Intellectual work is iterative. An artist begins with a rough sketch based on skeletal structure, then applies successive passes--shading, texture, color. A writer produces drafts, each tightening arguments and clarifying prose. A programmer writes code, tests it, refactors, and repeats. Quality emerges through refinement, not through initial correctness.
+
+More fundamentally, intellectual work is a search process. The space of possible solutions is vast, and the task is to explore and partition that space until a specific solution emerges. Early stages are broad strokes that establish direction. Later stages add constraints, progressively concretizing the solution. This holds whether designing a building, writing a legal brief, or architecting software.
+
+AI tools that excel at one-shot generation may struggle with iteration. They can produce plausible first drafts, but incorporating feedback, maintaining consistency across revisions, and progressively refining toward a goal remain challenging. The human role is not merely to prompt but to guide--to edit, critique, and determine when sufficiency has been reached.
+
+There is also a psychological dimension. [Parkinson's law of triviality](https://en.wikipedia.org/wiki/Law_of_triviality), or "bike-shedding," describes how managers feel obligated to offer superficial critiques to demonstrate contribution. Humans exhibit the same behavior when working with AI--they are, in effect, managing the model. Even if an AI system could produce perfect output in one shot, it would not feel satisfactory if it could not subsequently incorporate modifications according to human preferences, regardless of whether those modifications improve the result. The ability to iterate is not just about quality; it is about ownership.
+
+## The persistence of programming
+
+A corollary to [Clarke's third law](https://en.wikipedia.org/wiki/Clarke%27s_three_laws): any sufficiently precise instruction is indistinguishable from code. Programming may change--we may no longer write Java, just as today's programmers rarely write the machine code that was standard for earlier generations. But the English that effectively "programs" AI will not be imprecise everyday speech. It will need to be specific, unambiguous, and logically structured--code by another name.
+
+Few who know English become successful authors like J.K. Rowling or Stephen King. Fluency in a language does not confer fluency in using it precisely and effectively. There is no reason to believe the masses will become programmers merely because syntax shifts from Python to natural language. The skill of decomposing problems, specifying requirements, and thinking systematically will remain rare and valuable.
+
+## Conclusion
+
+AI will deliver real productivity gains, but they will be bounded by fundamental constraints. Amdahl's law limits overall speedup to the proportion of work that can be accelerated. Much knowledge work--problem definition, judgment, human coordination--resists acceleration. Historical patterns suggest productivity gains will be captured as increased output, not reduced hours.
+
+Those who benefit most will be those who understand AI as a tool for accelerating specific tasks while remaining clear-eyed about which tasks those are. Expecting AI to eliminate the need for human effort will lead to disappointment. The irreducible elements of work--creativity, judgment, relationship-building, navigating ambiguity--are not inefficiencies to be optimized away. They are the core competencies that define human contribution.
 
 ---
 
-[^1]: There's a fourth category--those who react with [Luddite](https://en.wikipedia.org/wiki/Luddite) hostility to new technology--but they're outside the scope of this discussion.
+[^1]: There is a fourth category--those who react with [Luddite](https://en.wikipedia.org/wiki/Luddite) hostility to new technology--but they are outside the scope of this discussion.
