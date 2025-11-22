@@ -1,10 +1,20 @@
 ---
 layout: post
-title: AI and Amdahl's law
-excerpt: AI productivity gains are bounded by the work AI can accelerate
+title: Working with AI
+excerpt: What AI productivity will actually look like
 ---
 
 The tech industry is [abuzz](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier) with claims of massive productivity gains from AI. Consultants project trillions in economic value, and vendors promise tools that'll make workers 10x more effective. But productivity gains, no matter the source, are subject to fundamental constraints. Chief among them is [Amdahl's law](https://en.wikipedia.org/wiki/Amdahl%27s_law), which places hard limits on how much any improvement can speed up overall performance.
+
+## Benchmarks vs. iteration
+
+One problem with current AI benchmarks is their focus on whether models can solve well-defined problems in one shot, or perhaps a few attempts. [SWE-bench](https://www.swebench.com/) measures if a model can fix a GitHub issue. [HumanEval](https://github.com/openai/human-eval) checks if it can implement a function given a docstring. These are useful for comparing models, but they don't reflect how quality work actually gets done.
+
+Real intellectual work is iterative. An artist starts with a rough sketch based on skeletal structure, then applies multiple passes filling in detail--shading, texture, color. A writer produces drafts, each one tightening arguments and clarifying prose. A programmer writes code, tests it, refactors, and repeats. Quality emerges through refinement, not through getting it right the first time.
+
+More fundamentally, intellectual work is a search process. The space of possible solutions is vast, and the task is to explore and partition that space until a specific solution comes into view. Early stages are amorphous--broad strokes that establish direction. Later stages add constraints, making the solution less vague and more concrete. This is true whether you're designing a building, writing a legal brief, or architecting software.
+
+AI tools that excel at one-shot generation may struggle with this iterative process. They can produce plausible first drafts, but incorporating feedback, maintaining consistency across revisions, and progressively refining toward a goal remain challenging. The human role, then, is not just to prompt but to guide--to be the editor, the critic, the one who knows when "good enough" has been reached.
 
 ## The law of diminishing speedups
 
