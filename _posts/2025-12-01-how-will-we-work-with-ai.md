@@ -60,7 +60,7 @@ The second are the practical, who see an opportunity to achieve the same results
 
 The third are the lazy, who want to apply no effort now that machines are supposedly capable of the work. They expect AI to handle everything while they coast. This group is in for a rude awakening; as we've seen, AI cannot accelerate all work, and the parts it can't are precisely those requiring human judgment and effort.
 
-Which reaction dominates will shape AI's impact on work. If the ambitious set the pace, competitive pressure will force everyone to keep up. If the practical prevail, we might see a healthier balance. The lazy, of course, will simply be left behind.
+The ambitious will do well--they always have in times of technological change. The practical might be all right for a time, but will eventually be replaced by superior technology or people who are better at using it. The lazy will be swiftly obsoleted. Which reaction dominates will shape AI's broader impact on work; if the ambitious set the pace, competitive pressure will force everyone to keep up.
 
 ## Productivity and work hours
 
