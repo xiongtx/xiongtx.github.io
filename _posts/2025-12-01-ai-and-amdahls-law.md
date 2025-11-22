@@ -30,6 +30,16 @@ This framework helps explain why real-world productivity gains from AI often [di
 
 It also suggests where to focus AI development efforts. Rather than making already-fast tasks faster, the bigger wins come from expanding the proportion of work that AI can handle at all. This is why [agentic systems]({% post_url 2025-11-17-agentic-utopia-deferred %}) are so appealing--they promise to take on entire workflows, not just individual tasks.
 
+## Strong scaling vs. weak scaling
+
+In parallel computing, there's a crucial distinction between [strong and weak scaling](https://hpc-wiki.info/hpc/Scaling). Strong scaling means completing the same amount of work in less time. Weak scaling means completing more work in the same amount of time.
+
+Many envision AI enabling strong scaling--workers finish their tasks faster and enjoy more leisure. But Amdahl's law suggests this is constrained by the irreducible portion of work that AI cannot accelerate. If 40% of a job resists automation, no amount of AI improvement will reduce work hours by more than 60%.
+
+What's more likely is weak scaling: AI allows workers to produce more output in the same hours. A developer writes more features. A lawyer handles more cases. A designer creates more variations. The employer's preference aside, this may be the only technically feasible option. When the non-AI-acceleratable portion of work sets a floor on time spent, the only way to capture AI's benefits is to increase the AI-acceleratable portion--that is, do more of the work AI is good at.
+
+This distinction matters for expectations about AI's societal impact. Strong scaling would mean broadly shared gains through reduced working hours. Weak scaling means productivity gains flow primarily to those who can leverage AI to increase their output--and to their employers, who capture the surplus.
+
 ## The irreducible human element
 
 Amdahl's law isn't just a limitation--it's a reminder that productivity is about more than raw speed. The parts of work that resist automation are often the most valuable: creativity, judgment, relationship-building, and navigating ambiguity. These aren't inefficiencies to be optimized away, but core competencies that define human contribution.
