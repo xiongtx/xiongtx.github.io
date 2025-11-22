@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with AI
+title: How will we work with AI?
 excerpt: What AI productivity will actually look like
 ---
 
