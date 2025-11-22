@@ -72,6 +72,14 @@ A corollary to [Clarke's third law](https://en.wikipedia.org/wiki/Clarke%27s_thr
 
 Few who know English become successful authors like J.K. Rowling or Stephen King. Fluency in a language does not confer fluency in using it precisely and effectively. There is no reason to believe the masses will become programmers merely because syntax shifts from Python to natural language. The skill of decomposing problems, specifying requirements, and thinking systematically will remain rare and valuable.
 
+## Beyond text: multimodal interaction
+
+More speculatively, text may not remain the primary interface for AI interaction. Andrej Karpathy has [argued](https://x.com/karpathy/status/1980397031542989305) that it may make more sense for LLM inputs to be images rather than tokenized text. Text rendered as an image preserves information that tokenization discards--font, color, layout, emphasis--and allows a single image patch to encode what would require multiple tokens. Tokenizers, in this view, are a non-end-to-end legacy module that introduces unnecessary complexity; visually identical characters may map to different tokens due to Unicode encoding differences.
+
+This perspective may be influenced by Karpathy's background in computer vision, but it points to a broader trend: multimodal interaction. Google's [AI Studio](https://aistudio.google.com/live) already offers a feature where users can share their screen with an AI and discuss what they are both looking at--a PDF, a diagram, a codebase. The experience resembles conversation with a colleague more than interaction with a chatbot. Both parties see the same artifact and can reference it directly.
+
+If this mode of interaction matures, it could change how we think about AI collaboration. Rather than laboriously describing context in text prompts, users would simply show the AI what they are working on. The AI would perceive the same visual information a human colleague would. This could reduce the friction of context transfer and make AI assistance feel less like programming and more like conversation--though the underlying need for precision and clarity would remain.
+
 ## Conclusion
 
 AI will deliver real productivity gains, but they will be bounded by fundamental constraints. Amdahl's law limits overall speedup to the proportion of work that can be accelerated. Much knowledge work--problem definition, judgment, human coordination--resists acceleration. Historical patterns suggest productivity gains will be captured as increased output, not reduced hours.
