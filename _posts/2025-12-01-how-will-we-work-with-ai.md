@@ -76,9 +76,17 @@ Few who know English become successful authors like J.K. Rowling or Stephen King
 
 More speculatively, text may not remain the primary interface for AI interaction. Andrej Karpathy has [argued](https://x.com/karpathy/status/1980397031542989305) that it may make more sense for LLM inputs to be images rather than tokenized text. Text rendered as an image preserves information that tokenization discards--font, color, layout, emphasis--and allows a single image patch to encode what would require multiple tokens. Tokenizers, in this view, are a non-end-to-end legacy module that introduces unnecessary complexity; visually identical characters may map to different tokens due to Unicode encoding differences.
 
-This perspective may be influenced by Karpathy's background in computer vision, but it points to a broader trend: multimodal interaction. Google's [AI Studio](https://aistudio.google.com/live) already offers a feature where users can share their screen with an AI and discuss what they are both looking at--a PDF, a diagram, a codebase. The experience resembles conversation with a colleague more than interaction with a chatbot. Both parties see the same artifact and can reference it directly. Voice is equally promising; OpenAI's [Realtime API](https://platform.openai.com/docs/guides/realtime) demonstrates superb understanding of speech, enabling fluid verbal interaction that feels natural rather than stilted.
+This perspective may be influenced by Karpathy's background in computer vision, but it points to a broader trend: multimodal interaction. Google's [AI Studio](https://aistudio.google.com/live) already offers a feature where users can share their screen with an AI and discuss what they are both looking at--a PDF, a diagram, a codebase. The experience resembles conversation with a colleague more than interaction with a chatbot. Both parties see the same artifact and can reference it directly.
 
 If this mode of interaction matures, it could change how we think about AI collaboration. Rather than laboriously describing context in text prompts, users would simply show the AI what they are working on. The AI would perceive the same visual information a human colleague would. This could reduce the friction of context transfer and make AI assistance feel less like programming and more like conversation--though the underlying need for precision and clarity would remain.
+
+## Voice interaction
+
+Voice is equally promising as an interface modality. OpenAI's [Realtime API](https://platform.openai.com/docs/guides/realtime) demonstrates superb understanding of speech, enabling fluid verbal interaction that feels natural rather than stilted. Voice models can also use tools effectively, executing actions on the user's behalf while maintaining conversational flow.
+
+One limitation is that voice models are typically trained for low latency rather than deep reasoning. Responsiveness matters in conversation; long pauses feel unnatural. This creates a tension between speed and depth. A potential solution is for voice models to call text models as tools when complex reasoning is required. The voice model handles real-time interaction while delegating analytical tasks to a model optimized for careful thought.
+
+This architecture is reminiscent of Daniel Kahneman's [Thinking, Fast and Slow](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555). The voice model functions as System 1--fast, intuitive, conversational. The text model functions as System 2--slow, deliberate, analytical. Just as humans benefit from both modes of cognition, AI systems may need both to handle the full range of tasks users present.
 
 ## Conclusion
 
