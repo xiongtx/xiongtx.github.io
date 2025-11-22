@@ -50,6 +50,14 @@ What's more likely is weak scaling: AI allows workers to produce more output in 
 
 This distinction matters for expectations about AI's societal impact. Strong scaling would mean broadly shared gains through reduced working hours. Weak scaling means productivity gains flow primarily to those who can leverage AI to increase their output--and to their employers, who capture the surplus.
 
+## Productivity and work hours
+
+History suggests that work hours are determined not by productivity but by competitive pressures. When competition is slack, organizations take it easy. When it's fierce, demands intensify--including on labor. In the early days of a technological revolution, when outcomes are highly uncertain, the pressure is for maximum resource application, from capital to labor.
+
+The [Industrial Revolution](https://en.wikipedia.org/wiki/Industrial_Revolution) did not initially reduce work hours--it increased them. Factory workers in the early 19th century routinely worked 12-16 hour days, six days a week. The productivity gains from mechanization didn't translate into leisure; they translated into more output and more profit. The [40-hour work week](https://en.wikipedia.org/wiki/Eight-hour_day) wasn't a natural result of machines speeding up processes. It was won through decades of labor organizing, strikes, and sometimes violence.
+
+AI is arriving during a period of intensifying global competition--between companies racing to dominate new markets, and between nations vying for technological supremacy. In this environment, expecting productivity gains to result in shorter work hours is naive. The more likely outcome is that those gains will be captured as increased output, with workers expected to produce more, not work less. Any reduction in work hours will come, as it always has, from collective action and policy--not from the technology itself.
+
 ## The irreducible human element
 
 Amdahl's law isn't just a limitation--it's a reminder that productivity is about more than raw speed. The parts of work that resist automation are often the most valuable: creativity, judgment, relationship-building, and navigating ambiguity. These aren't inefficiencies to be optimized away, but core competencies that define human contribution.
