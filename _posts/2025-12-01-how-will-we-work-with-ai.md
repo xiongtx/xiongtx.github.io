@@ -18,6 +18,12 @@ AI tools that excel at one-shot generation may struggle with this iterative proc
 
 There's also a psychological dimension. [Parkinson's law of triviality](https://en.wikipedia.org/wiki/Law_of_triviality), or "bike-shedding," describes how managers feel obligated to offer superficial critiques to demonstrate their contribution. Humans exhibit the same behavior when working with AI--in a sense, they are managing the model. Even if a superb AI system could one-shot everything perfectly, it wouldn't feel satisfactory if it couldn't subsequently incorporate modifications according to human desires, regardless of whether those modifications actually improve the result. The ability to iterate isn't just about quality; it's about ownership.
 
+## The persistence of programming
+
+A corollary to [Clarke's third law](https://en.wikipedia.org/wiki/Clarke%27s_three_laws): any sufficiently precise instruction is indistinguishable from code. Programming may change--we may no longer write Java, just as today's programmers rarely write the machine code that was bread and butter to earlier generations. But the English that will be effective in "programming" AI is not going to be imprecise everyday patois. It will need to be specific, unambiguous, and logically structured--in other words, code by another name.
+
+Few people who know English become successful authors like J.K. Rowling or Stephen King. Fluency in a language doesn't mean fluency in using it precisely and effectively. There's no reason to believe the masses will become programmers just because the syntax shifts from Python to natural language. The skill of breaking down problems, specifying requirements, and thinking systematically will remain as rare and valuable as ever.
+
 ## The law of diminishing speedups
 
 Amdahl's law, formulated by computer scientist Gene Amdahl in 1967, states that the speedup of a system is limited by the portion that cannot be improved. Mathematically:
