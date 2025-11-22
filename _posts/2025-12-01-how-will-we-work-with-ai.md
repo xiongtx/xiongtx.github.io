@@ -16,6 +16,8 @@ More fundamentally, intellectual work is a search process. The space of possible
 
 AI tools that excel at one-shot generation may struggle with this iterative process. They can produce plausible first drafts, but incorporating feedback, maintaining consistency across revisions, and progressively refining toward a goal remain challenging. The human role, then, is not just to prompt but to guide--to be the editor, the critic, the one who knows when "good enough" has been reached.
 
+There's also a psychological dimension. [Parkinson's law of triviality](https://en.wikipedia.org/wiki/Law_of_triviality), or "bike-shedding," describes how managers feel obligated to offer superficial critiques to demonstrate their contribution. Humans exhibit the same behavior when working with AI--in a sense, they are managing the model. Even if a superb AI system could one-shot everything perfectly, it wouldn't feel satisfactory if it couldn't subsequently incorporate modifications according to human desires, regardless of whether those modifications actually improve the result. The ability to iterate isn't just about quality; it's about ownership.
+
 ## The law of diminishing speedups
 
 Amdahl's law, formulated by computer scientist Gene Amdahl in 1967, states that the speedup of a system is limited by the portion that cannot be improved. Mathematically:
