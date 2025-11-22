@@ -56,6 +56,8 @@ History suggests that work hours are determined not by productivity but by compe
 
 The [Industrial Revolution](https://en.wikipedia.org/wiki/Industrial_Revolution) did not initially reduce work hours--it increased them. Factory workers in the early 19th century routinely worked 12-16 hour days, six days a week. The productivity gains from mechanization didn't translate into leisure; they translated into more output and more profit. The [40-hour work week](https://en.wikipedia.org/wiki/Eight-hour_day) wasn't a natural result of machines speeding up processes. It was won through decades of labor organizing, strikes, and sometimes violence.
 
+When work hours are limited by employers, it's often because forward-thinking industrialists recognize that excessive hours undermine productivity. [Henry Ford](https://www.history.com/articles/henry-ford-40-hour-work-week) was rare in understanding that supply and demand must balance--Ford workers who lacked the money to buy cars or the time to use them represented an unsustainable operation. Such enlightened self-interest is the exception, not the rule.
+
 AI is arriving during a period of intensifying global competition--between companies racing to dominate new markets, and between nations vying for technological supremacy. In this environment, expecting productivity gains to result in shorter work hours is naive. The more likely outcome is that those gains will be captured as increased output, with workers expected to produce more, not work less. Any reduction in work hours will come, as it always has, from collective action and policy--not from the technology itself.
 
 ## The irreducible human element
