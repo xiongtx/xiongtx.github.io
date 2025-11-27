@@ -26,7 +26,7 @@ The proportion of work that AI can accelerate varies by domain. Data entry and t
 
 ## Implications for productivity
 
-This framework explains why real-world productivity gains from AI often [disappoint](https://www.nytimes.com/2024/08/25/technology/ai-productivity-tools.html) relative to expectations. A tool that makes coding 5x faster sounds transformative, but if coding constitutes only 30% of a developer's job, the overall productivity gain is closer to 1.5x--valuable, but not revolutionary.
+This framework explains why real-world productivity gains from AI often [disappoint](https://www.nytimes.com/2024/08/25/technology/ai-productivity-tools.html) relative to expectations. A tool that makes coding 5x faster sounds transformative, but if coding constitutes only 30% of a developer's job, the overall productivity gain is closer to 1.3x--valuable, but not revolutionary.
 
 Economic analysis supports this skepticism. MIT economist Daron Acemoglu, who shared the 2024 Nobel Prize in Economic Sciences, [estimates](https://news.mit.edu/2024/what-do-we-know-about-economics-ai-1206) that AI will produce only a 1.1 to 1.6 percent increase in GDP over the next 10 years--roughly 0.05 percent annual productivity gain. His methodology is grounded in concrete constraints: only 20% of U.S. job tasks are exposed to AI capabilities, and only 23% of computer vision tasks that could ultimately be automated can be profitably automated within the next decade. These figures stand in stark contrast to projections from McKinsey suggesting AI could add $17.1 to $25.6 trillion to the global economy. Acemoglu's concern is that "we currently have the wrong direction for AI"--too much focus on automation, not enough on augmenting workers with expertise and information.
 
