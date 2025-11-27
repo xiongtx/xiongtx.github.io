@@ -86,6 +86,8 @@ More fundamentally, intellectual work is a search process. The space of possible
 
 AI tools that excel at one-shot generation may struggle with iteration. They can produce plausible first drafts, but incorporating feedback, maintaining consistency across revisions, and progressively refining toward a goal remain challenging. The human role is not merely to prompt but to guide--to edit, critique, and determine when sufficiency has been reached.
 
+What we want from AI is what we want from a skilled colleague: not one-shot implementation, but the ability to analyze high-level problems and offer insights, alternatives, and even rebuttals. A good colleague questions assumptions, identifies edge cases, proposes different approaches, and pushes back when a proposed solution has flaws. Current AI systems are improving at this, but the benchmark focus on correctness rather than collaboration quality means progress in these dimensions remains undervalued and undermeasured.
+
 There is also a psychological dimension. [Parkinson's law of triviality](https://en.wikipedia.org/wiki/Law_of_triviality), or "bike-shedding," describes how managers feel obligated to offer superficial critiques to demonstrate contribution. Humans exhibit the same behavior when working with AI--they are, in effect, managing the model. Even if an AI system could produce perfect output in one shot, it would not feel satisfactory if it could not subsequently incorporate modifications according to human preferences, regardless of whether those modifications improve the result. The ability to iterate is not just about quality; it is about ownership.
 
 ## Multimodal interaction
