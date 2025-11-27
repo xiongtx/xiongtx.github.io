@@ -72,6 +72,14 @@ A corollary to [Clarke's third law](https://en.wikipedia.org/wiki/Clarke%27s_thr
 
 Few who know English become successful authors like J.K. Rowling or Stephen King. Fluency in a language does not confer fluency in using it precisely and effectively. There is no reason to believe the masses will become programmers merely because syntax shifts from Python to natural language. The skill of decomposing problems, specifying requirements, and thinking systematically will remain rare and valuable.
 
+## Shifting narratives
+
+The narrative surrounding AI productivity has undergone a remarkable reversal, with little accountability from those who promoted the original thesis. Early claims suggested that junior developers using AI would overtake senior developers--that access to AI tools would level the playing field by compensating for lack of experience. The implication was that expertise mattered less when everyone had an AI assistant.
+
+The current narrative has inverted completely. Now the claim is that senior developers using AI will obsolete junior developers. AI, it turns out, is most effective in the hands of those who already know what they are doing. Senior developers can delegate routine tasks to AI while focusing on architecture, trade-offs, and system design. Junior developers, lacking this foundation, struggle to evaluate AI output or know what to ask for. The skill gap has not closed; if anything, it has widened.
+
+This shift reveals something important about AI productivity tools: they amplify existing capabilities rather than replace them. A mediocre developer with AI assistance remains mediocre--possibly even worse, if they accept AI suggestions uncritically. An expert developer with AI assistance becomes more productive by offloading routine work while maintaining judgment over the results. The same pattern likely holds across domains: AI benefits those who already possess deep knowledge of their field.
+
 ## Beyond text: multimodal interaction
 
 More speculatively, text may not remain the primary interface for AI interaction. Andrej Karpathy has [argued](https://x.com/karpathy/status/1980397031542989305) that it may make more sense for LLM inputs to be images rather than tokenized text. Text rendered as an image preserves information that tokenization discards--font, color, layout, emphasis--and allows a single image patch to encode what would require multiple tokens. Tokenizers, in this view, are a non-end-to-end legacy module that introduces unnecessary complexity; visually identical characters may map to different tokens due to Unicode encoding differences.
