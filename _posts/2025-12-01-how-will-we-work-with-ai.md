@@ -38,6 +38,16 @@ This historical perspective clarifies both Acemoglu's modest estimates and Karpa
 
 The framework also suggests where to focus AI development. Rather than accelerating already-fast tasks, the greater gains come from expanding the proportion of work AI can handle at all. This explains the appeal of [agentic systems]({% post_url 2025-11-17-agentic-utopia-deferred %}): they promise to assume entire workflows, not just individual tasks.
 
+## Strong scaling vs. weak scaling
+
+Beyond constraints on magnitude lies the question of how productivity gains manifest. In parallel computing, [strong and weak scaling](https://hpc-wiki.info/hpc/Scaling) represent distinct objectives. Strong scaling means completing the same work in less time. Weak scaling means completing more work in the same time.
+
+Many envision AI enabling strong scaling--workers finish tasks faster and enjoy more leisure. But Amdahl's law constrains this by the irreducible portion of work that AI cannot accelerate. If 40% of a job resists automation, no amount of AI improvement will reduce work time by more than 60%.
+
+What is more likely is weak scaling: AI enables workers to produce more output in the same hours. A developer writes more features. A lawyer handles more cases. A designer creates more variations. When the non-AI-acceleratable portion of work sets a floor on time spent, the only way to capture AI's benefits is to increase the AI-acceleratable portion--that is, to do more of the work AI can speed up.
+
+This distinction matters for societal expectations. Strong scaling would mean broadly shared gains through reduced working hours. Weak scaling means productivity gains flow primarily to those who leverage AI to increase output--and to employers who capture the surplus.
+
 ## Shifting narratives
 
 The theoretical constraints of Amdahl's law find empirical support in how AI productivity narratives have evolved. Early claims, prevalent in the immediate aftermath of ChatGPT's November 2022 launch, suggested that AI would democratize programming--that access to AI tools would level the playing field by compensating for lack of experience. GitHub Copilot launched in June 2022 with reports that developers completed tasks [55% faster](https://www.technologyreview.com/2023/12/06/1084457/ai-assistants-copilot-changing-code-software-development-github-openai/), fueling optimism that the barrier to entry for programming would collapse.
@@ -51,16 +61,6 @@ This shift reveals something important about AI productivity tools: they amplify
 Why does expertise remain so valuable despite AI assistance? A corollary to [Clarke's third law](https://en.wikipedia.org/wiki/Clarke%27s_three_laws) provides insight: any sufficiently precise instruction is indistinguishable from code. Programming may change--we may no longer write Java, just as today's programmers rarely write the machine code that was standard for earlier generations. But the English that effectively "programs" AI will not be imprecise everyday speech. It will need to be specific, unambiguous, and logically structured--code by another name.
 
 Few who know English become successful authors like J.K. Rowling or Stephen King. Fluency in a language does not confer fluency in using it precisely and effectively. There is no reason to believe the masses will become programmers merely because syntax shifts from Python to natural language. The skill of decomposing problems, specifying requirements, and thinking systematically will remain rare and valuable.
-
-## Strong scaling vs. weak scaling
-
-Beyond the question of who benefits from AI lies the question of how those benefits manifest. In parallel computing, [strong and weak scaling](https://hpc-wiki.info/hpc/Scaling) represent distinct objectives. Strong scaling means completing the same work in less time. Weak scaling means completing more work in the same time.
-
-Many envision AI enabling strong scaling--workers finish tasks faster and enjoy more leisure. But Amdahl's law constrains this by the irreducible portion of work that AI cannot accelerate. If 40% of a job resists automation, no amount of AI improvement will reduce work time by more than 60%.
-
-What is more likely is weak scaling: AI enables workers to produce more output in the same hours. A developer writes more features. A lawyer handles more cases. A designer creates more variations. When the non-AI-acceleratable portion of work sets a floor on time spent, the only way to capture AI's benefits is to increase the AI-acceleratable portion--that is, to do more of the work AI can speed up.
-
-This distinction matters for societal expectations. Strong scaling would mean broadly shared gains through reduced working hours. Weak scaling means productivity gains flow primarily to those who leverage AI to increase output--and to employers who capture the surplus.
 
 ## Productivity and work hours
 
