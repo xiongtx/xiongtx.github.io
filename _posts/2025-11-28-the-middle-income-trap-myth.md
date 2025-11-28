@@ -28,6 +28,14 @@ The standard narrative blames the 1997 Asian financial crisis, commodity depende
 
 Meanwhile, the Thai countryside remains dominated by subsistence rice farming. Malaysia's rural Malay population lags far behind urban Chinese Malaysians. Brazil's northeast, home to a quarter of the population, has income levels comparable to Central America. These aren't countries that failed to develop; they're countries where development stopped at the city limits.
 
+## The modo hoc fallacy
+
+Comparing countries by GDP growth rates commits what might be called the *modo hoc* fallacy--judging something by its raw material while ignoring the arrangement. Two countries both posting 8% annual growth could be doing so for entirely different reasons, one sustainable and the other not. South Korea in the 1970s and Thailand in the 1990s both exhibited rapid growth, but the underlying structures were worlds apart. Korea was building broad-based industrial capacity with heavy investment in education; Thailand was riding a wave of cheap labor and foreign capital that would crash spectacularly in 1997.
+
+The cultural and political institutions of a country determine how capable it is of pivoting when the limits of its current development model are reached. As economist Michael Pettis [has argued](https://carnegieendowment.org/china-financial-markets/2014/06/the-four-stages-of-chinese-growth), drawing on Alexander Gerschenkron's work on economic backwardness, a development model that has delivered benefits to the ruling class for a long period becomes extraordinarily difficult to change. The very elites who benefited from the old model--export manufacturers, resource extractors, real estate developers--become vested interests blocking the transition to a new one.
+
+This is why the "trap" appears so sticky. It's not that countries lack the knowledge or resources to develop differently; it's that the people in charge have no incentive to change course. The factory owners and mining magnates who grew rich on cheap rural labor aren't eager to support policies that would raise wages, improve rural education, or redistribute land. The growth model that made them wealthy is the growth model they'll defend, even as it runs out of steam.
+
 ## The productivity red herring
 
 Standard middle income trap theory holds that countries get stuck because they can't make the transition from labor-intensive manufacturing to innovation-driven growth. They lack the educational infrastructure, R&D capacity, or institutional support for high-value industries.
