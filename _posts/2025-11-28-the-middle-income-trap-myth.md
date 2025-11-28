@@ -14,6 +14,16 @@ The problem is that these islands of prosperity float in seas of poverty. Drive 
 
 When economists calculate GDP per capita, they're averaging the Shanghai banker with the Gansu farmer, the Mexico City executive with the Chiapas subsistence grower. The resulting figure--solidly "middle income"--obscures a reality of extreme bifurcation. There is no unified economy gradually climbing the development ladder; there are effectively two separate countries sharing a flag.
 
+## The poster children
+
+Consider the canonical examples of middle income stagnation: Thailand, Malaysia, and Brazil. In the 1980s and 1990s, these countries seemed poised to join the ranks of developed nations. Thailand and Malaysia were [Asian Tigers](https://en.wikipedia.org/wiki/Four_Asian_Tigers) in waiting, with growth rates that suggested convergence with Japan and South Korea within a generation. Brazil, with its vast resources and diversified economy, was perpetually the "country of the future."
+
+Yet decades later, all three remain stuck. Thailand's GDP per capita, adjusted for purchasing power, is roughly where South Korea's was in 1990. Malaysia has made progress but still lags far behind its neighbor Singapore. Brazil's income per capita has barely budged since the turn of the millennium.
+
+The standard narrative blames the 1997 Asian financial crisis, commodity dependence, or failure to move up the value chain. But Bangkok, Kuala Lumpur, and São Paulo tell a different story. These cities boast world-class infrastructure, sophisticated financial sectors, and thriving tech scenes. Their elites live lives indistinguishable from those of their counterparts in Tokyo or New York. The "trap" hasn't prevented these countries from achieving development--it's prevented them from spreading it.
+
+Meanwhile, the Thai countryside remains dominated by subsistence rice farming. Malaysia's rural Malay population lags far behind urban Chinese Malaysians. Brazil's northeast, home to a quarter of the population, has income levels comparable to Central America. These aren't countries that failed to develop; they're countries where development stopped at the city limits.
+
 ## The productivity red herring
 
 Standard middle income trap theory holds that countries get stuck because they can't make the transition from labor-intensive manufacturing to innovation-driven growth. They lack the educational infrastructure, R&D capacity, or institutional support for high-value industries.
