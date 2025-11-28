@@ -16,7 +16,11 @@ When economists calculate GDP per capita, they're averaging the Shanghai banker 
 
 ## The poster children
 
-Consider the canonical examples of middle income stagnation: Thailand, Malaysia, and Brazil. In the 1980s and 1990s, these countries seemed poised to join the ranks of developed nations. Thailand and Malaysia were [Asian Tigers](https://en.wikipedia.org/wiki/Four_Asian_Tigers) in waiting, with growth rates that suggested convergence with Japan and South Korea within a generation. Brazil, with its vast resources and diversified economy, was perpetually the "country of the future."
+Consider the canonical examples of middle income stagnation: Thailand, Malaysia, and Brazil. All three went through so-called economic miracles, periods of rapid growth that dazzled Wall Street and inspired breathless projections. Analysts drew straight lines decades into the future, predicting convergence with the developed world within a generation.
+
+What these projections missed was the structure of the growth itself. The "miracles" were built on exploitation of vast rural workforces, whether for resource extraction, plantation agriculture, or low-wage manufacturing. Peasants flooded into factories and mines, producing enormous GDP gains as their labor shifted from subsistence farming to the formal economy. This is the easy part of development--the [Lewis turning point](https://en.wikipedia.org/wiki/Lewis_model), where surplus rural labor gets absorbed into modern industry.
+
+But this kind of growth is self-limiting. Once the pool of cheap rural labor is exhausted--or, more accurately, once the easy-to-exploit portion is absorbed--growth rates inevitably slow. The remaining rural population is too remote, too uneducated, or too politically marginalized to be profitably integrated. And so the "miracle" ends, not because the country hit some technological ceiling, but because it ran out of people willing to work for next to nothing.
 
 Yet decades later, all three remain stuck. Thailand's GDP per capita, adjusted for purchasing power, is roughly where South Korea's was in 1990. Malaysia has made progress but still lags far behind its neighbor Singapore. Brazil's income per capita has barely budged since the turn of the millennium.
 
