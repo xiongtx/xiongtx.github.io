@@ -28,6 +28,14 @@ The standard narrative blames the 1997 Asian financial crisis, commodity depende
 
 Meanwhile, the Thai countryside remains dominated by subsistence rice farming. Malaysia's rural Malay population lags far behind urban Chinese Malaysians. Brazil's northeast, home to a quarter of the population, has income levels comparable to Central America. These aren't countries that failed to develop; they're countries where development stopped at the city limits.
 
+## The original sin
+
+Countries reliant on the primary sector for wealth are especially vulnerable to this pattern. The canonical example is Argentina, which in the early 20th century ranked among the five wealthiest nations in the world. Beef exports to Europe made Buenos Aires one of the globe's most glamorous capitals, with architecture and cultural institutions rivaling Paris. Economists of the era confidently predicted Argentina would soon surpass most of Europe.
+
+A century later, Argentina is synonymous with economic dysfunction--a cautionary tale of inflation, default, and squandered potential. What happened? The same pattern that would later afflict Thailand and Brazil. Wealth from commodity exports concentrated in the hands of a landed oligarchy, the *estancieros*, who had no incentive to industrialize or educate the rural poor. When global beef prices fluctuated and competitors emerged, there was no diversified economy to fall back on, and no broad middle class to sustain domestic demand.
+
+Argentina's tragedy wasn't inevitable. Australia and Canada also built early wealth on primary exports--wool, wheat, minerals--yet successfully transitioned to diversified, high-income economies. The difference was political: Australia and Canada distributed land more broadly, invested in universal education, and built institutions that allowed for economic adaptation. Argentina's oligarchs, like Brazil's *fazendeiros* and Thailand's Bangkok elite, preferred to keep the gains for themselves. The result was a century of stagnation punctuated by periodic crises, each one blamed on some external factor rather than the fundamental distribution problem at its core.
+
 ## The modo hoc fallacy
 
 Comparing countries by GDP growth rates commits what might be called the *modo hoc* fallacy--judging something by its raw material while ignoring the arrangement. Two countries both posting 8% annual growth could be doing so for entirely different reasons, one sustainable and the other not. South Korea in the 1970s and Thailand in the 1990s both exhibited rapid growth, but the underlying structures were worlds apart. Korea was building broad-based industrial capacity with heavy investment in education; Thailand was riding a wave of cheap labor and foreign capital that would crash spectacularly in 1997.
