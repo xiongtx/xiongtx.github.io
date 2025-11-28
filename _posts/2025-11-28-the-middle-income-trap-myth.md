@@ -48,7 +48,9 @@ What they haven't demonstrated is the capacity--or willingness--to spread the fr
 
 The middle income trap is fundamentally a problem of political economy, not financial economy. It's not about lacking capital, technology, or know-how. It's about power--who has it, and who decides where resources flow.
 
-In countries that have successfully made the jump to high-income status, such as South Korea and Taiwan, land reform, universal education, and robust social safety nets ensured that growth lifted all boats[^1]. These policies were not inevitable outcomes of development; they were political choices made by governments that, for various reasons, chose broad-based prosperity over concentrated wealth.
+In countries that have made the jump to high-income status, such as South Korea and Taiwan, land reform, universal education, and robust social safety nets ensured that growth lifted all boats[^1]. These policies were not inevitable outcomes of development; they were political choices made by governments that, for various reasons, chose broad-based prosperity over concentrated wealth.
+
+We should be hesitant, however, about calling even these cases unqualified successes. South Korea's productivity remains below the OECD average, while its working hours are among the longest in the developed world. The country's suicide rate is one of the highest globally, and its fertility rate scrapes the bottom of international rankings. Escaping the middle income trap, it turns out, is not the same as building a society where people actually want to live and raise children. Korea distributed the gains of growth more broadly than Thailand or Brazil, but it did so by creating a pressure-cooker society that is now imploding demographically[^2].
 
 Countries stuck in the "trap" have made different choices. Their elites have captured the benefits of growth while insulating themselves from pressure to share. Weak institutions, corruption, and fragmented political systems make it difficult to implement the redistributive policies that would spread prosperity from urban cores to rural peripheries.
 
@@ -63,3 +65,5 @@ The middle income trap, then, is less a trap and more a choice--or rather, the a
 ---
 
 [^1]: South Korea's land reform in the 1950s, for example, was among the most thorough in history, breaking up large estates and distributing them to tenant farmers. This created a broad base of stakeholders with interests in the country's economic success.
+
+[^2]: South Korea's total fertility rate fell to 0.72 in 2023, the lowest of any country in the world. At this rate, each generation will be less than a third the size of the one before.
