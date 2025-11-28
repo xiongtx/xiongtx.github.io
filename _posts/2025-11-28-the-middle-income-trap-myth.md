@@ -52,6 +52,8 @@ In countries that have made the jump to high-income status, such as South Korea 
 
 We should be hesitant, however, about calling even these cases unqualified successes. South Korea's productivity remains below the OECD average, while its working hours are among the longest in the developed world. The country's suicide rate is one of the highest globally, and its fertility rate scrapes the bottom of international rankings. Escaping the middle income trap, it turns out, is not the same as building a society where people actually want to live and raise children. Korea distributed the gains of growth more broadly than Thailand or Brazil, but it did so by creating a pressure-cooker society that is now imploding demographically[^2].
 
+Wealth also remains highly concentrated. The [chaebols](https://en.wikipedia.org/wiki/Chaebol)--family-run conglomerates like Samsung, Hyundai, and LG--account for roughly 10% of employment but contribute around two-thirds of GDP. Samsung alone represents nearly a quarter of the Korean economy. There are, in effect, two types of Korean workers: those with coveted positions at a chaebol, and everyone else working at the chicken shop[^3]. The land reform of the 1950s redistributed agricultural wealth, but the industrial wealth that replaced it has reconcentrated in a handful of dynastic families.
+
 Countries stuck in the "trap" have made different choices. Their elites have captured the benefits of growth while insulating themselves from pressure to share. Weak institutions, corruption, and fragmented political systems make it difficult to implement the redistributive policies that would spread prosperity from urban cores to rural peripheries.
 
 ## The uncomfortable implication
@@ -67,3 +69,5 @@ The middle income trap, then, is less a trap and more a choice--or rather, the a
 [^1]: South Korea's land reform in the 1950s, for example, was among the most thorough in history, breaking up large estates and distributing them to tenant farmers. This created a broad base of stakeholders with interests in the country's economic success.
 
 [^2]: South Korea's total fertility rate fell to 0.72 in 2023, the lowest of any country in the world. At this rate, each generation will be less than a third the size of the one before.
+
+[^3]: "Chicken shop" (*chimaek* joints serving fried chicken and beer) is shorthand for the small businesses that employ most Koreans who don't land chaebol jobs. Many are opened by retirees pushed out of corporate positions in middle age, with limited prospects elsewhere.
