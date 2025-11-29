@@ -2,6 +2,7 @@
 layout: post
 title: Will AI replace programmers?
 excerpt: Job losses will not be due to technology alone
+audio: /audio/2025-08-21-will-ai-replace-programmers.mp3
 ---
 
 There has been a lot of doom and gloom about software development in recent years. Computer science, long one of the most in-demand majors in the job market, is seeing [above-average](https://www.newsweek.com/computer-science-popular-college-major-has-one-highest-unemployment-rates-2076514) unemployment rates. Big Tech firms like [Google](https://www.cnbc.com/2023/01/20/google-to-lay-off-12000-people-memo-from-ceo-sundar-pichai-says.html), [Meta](https://www.reuters.com/technology/facebook-owner-meta-starts-final-round-layoffs-2023-05-24/), and [Microsoft](https://www.cnbc.com/2025/07/02/microsoft-laying-off-about-9000-employees-in-latest-round-of-cuts.html) have laid off 10,000's of workers over the past two years alone. AI is cited as a [major reason](https://www.theverge.com/news/644943/shopify-ceo-memo-ai-hires-job) why companies need [more GPUs](https://www.barrons.com/articles/ai-data-centers-nvidia-openai-adbe1545) and fewer staff. In 2019 I predicted a [coming IT crunch]({% post_url 2019-03-01-the-coming-it-crunch %}) due to a surge in computer science enrollment meeting a plateau in demand[^1]; is the crunch here, and will AI prevent us from ever recovering?
