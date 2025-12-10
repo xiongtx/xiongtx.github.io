@@ -2,6 +2,7 @@
 layout: post
 title: All the wrong numbers
 excerpt: Economic data often give false impressions
+audio: /audio/2024-12-12-all-the-wrong-numbers.mp3
 ---
 
 One commonly cited reason for the Democrats' defeat in the latest election is [the poor economy](https://www.washingtonpost.com/politics/2024/11/20/why-harris-lost-democrats-lessons/). In the lead-up to the vote, [90% of voters](https://news.gallup.com/poll/651719/economy-important-issue-2024-presidential-vote.aspx) rated candidates' economic positions as "very important" or "extremely important", and Trump won [60% of voters](https://www.wsj.com/economy/economy-election-trump-voters-c4c2e9a3) who cited it as their top issue. Media's claims that the US economy was the [envy of the world](https://www.msnbc.com/rachel-maddow-show/maddowblog/robust-us-economy-leaving-rich-countries-dust-rcna177130) came across to many as gaslighting at a time when [fewer than a quarter](https://www.pewresearch.org/politics/2024/05/23/views-of-the-nations-economy-may-2024/) of Americans rated it as decent, and implorations that newspapers try harder to [spread the good news](https://www.thenation.com/article/economy/debate-economy-bad-media/) could only be viewed as more partisan hackery after their blatant lying to [defend Biden's mental acuity](https://www.cnn.com/2024/06/06/media/wall-street-journal-biden-mental-acuity/index.html).
