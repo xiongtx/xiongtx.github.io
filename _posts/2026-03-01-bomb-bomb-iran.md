@@ -2,6 +2,7 @@
 layout: post
 title: Bomb, bomb Iran
 excerpt: High-powered explosives are sometimes necessary for diplomacy
+audio: /audio/2026-03-01-bomb-bomb-iran.mp3
 ---
 
 On February 28, 2026, the US and Israel started a massive aerial campaign against Iran, named [Operation Epic Fury](https://www.whitehouse.gov/articles/2026/03/peace-through-strength-president-trump-launches-operation-epic-fury-to-crush-iranian-regime-end-nuclear-threat/) by the Americans and [Operation Roaring Lion](https://www.timesofisrael.com/liveblog_entry/israel-names-its-operation-against-iran-lions-roar/) by the Israelis. The first wave of attacks [killed](https://www.timesofisrael.com/trump-says-evil-khamenei-is-dead-israeli-official-says-his-body-has-been-found/) Ayatollah Khameini and [dozens of associates](https://www.aa.com.tr/en/middle-east/4-top-iranian-military-officials-killed-in-us-israeli-strikes/3844750), including the armed forces chief-of-staff, IRGC commander, deputy head of intelligence, and more. So many were eliminated that President Trump joked that his "preferred" successors to Khameini are [no longer available](https://x.com/jonkarl/status/2028299468223676673).
