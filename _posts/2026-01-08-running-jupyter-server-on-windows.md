@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Runnying Jupyter server on Windows
+title: Running Jupyter server on Windows
 excerpt: Maybe I should have just installed Linux
 ---
 
