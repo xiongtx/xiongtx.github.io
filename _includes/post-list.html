@@ -17,9 +17,12 @@
         {% endif %}
       </span>
     </h3>
+    {% if include.include_excerpt and post.excerpt %}
+    <p>{{ post.excerpt }}</p>
+    {% endif %}
 
-    <!-- Post excerpt -->
-    {% if include.include_excerpt %}
+    <!-- Post content preview -->
+    {% if include.include_preview %}
     <p>{{ post.content | strip_html | truncate: 200 }}</p>
     {% endif %}
 
