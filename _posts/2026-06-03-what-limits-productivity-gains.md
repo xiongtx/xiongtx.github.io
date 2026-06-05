@@ -64,7 +64,7 @@ In an echo of the early 20th century, nations are now engineering demand through
 
 [^1]: Most corporate developers _wish_ their day was partitioned like this.
 
-[^2]: This, of course, is the outcome companies want to see, as opposed to the programmer going home at 1:00 PM. Claims that AI, or any technology, will help bring about the [4-hour workday](https://www.axios.com/2025/06/29/ai-productivity-four-day-work-week) are as deluded as they are historically illiterate.
+[^2]: This, of course, is the outcome companies want to see, as opposed to the programmer going home at 1:00 PM. Claims that AI, or any technology, will help bring about the [4-hour workday](https://www.axios.com/2025/06/29/ai-productivity-four-day-work-week) are delusional.
 
 [^3]: This is especially true in fields like law or banking, where document review and number crunching are done by recent college grads, while partners earn their keep by hosting cocktail parties for potential clients.
 
