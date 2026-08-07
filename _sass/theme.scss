@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+//
+// Theme tokens
+//
+// Every color in the site resolves through one of these custom properties, so
+// light and dark are the same stylesheet with two sets of values.
+//
+// Resolution order:
+//   1. :root                                    -> light (the default)
+//   2. prefers-color-scheme: dark, unopted-out  -> dark (follow the OS)
+//   3. [data-theme="dark"]                      -> dark (explicit choice)
+//
+// The `data-theme` attribute is set by an inline script in the document head
+// before first paint, so an explicit choice never flashes the wrong theme.
+//
+
+@mixin light-theme {
+    color-scheme: light;
+
+    --bg: #fff;
+    --bg-elevated: #f8f8f8;      // navbar
+    --bg-inline-code: #f5f5f5;
+    --bg-input: #fff;
+
+    --text: #444;
+    --text-heading: #444;        // headings sit flat with body text in light
+    --text-muted: #777;
+    --text-faint: #999;
+    --text-code: #333;
+
+    --border: #ccc;
+    --border-subtle: #eee;       // page-header rule, hr, blockquote
+    --border-navbar: #e7e7e7;
+
+    --link: #337ab7;
+    --link-hover: #23527c;
+
+    --table-header-bg: #f2f2f2;
+    --table-alt-bg: #f9f9f9;
+
+    --button-bg: #fff;
+    --button-bg-hover: #f0f0f0;
+    --button-bg-active: #e0e0e0;
+
+    --selection-bg: rgba(51, 122, 183, 0.22);
+
+    --logo-filter: none;
+
+    // Syntax highlighting: GitHub light, matching Rouge's default output.
+    --hl-bg: #f8f8f8;
+    --hl-comment: #999988;
+    --hl-comment-strong: #999999;
+    --hl-keyword: #000000;
+    --hl-type: #445588;
+    --hl-decorator: #3c5d5d;
+    --hl-number: #009999;
+    --hl-string: #d14;
+    --hl-regex: #009926;
+    --hl-symbol: #990073;
+    --hl-name: #008080;
+    --hl-builtin: #0086b3;
+    --hl-namespace: #555555;
+    --hl-function: #990000;
+    --hl-tag: #000080;
+    --hl-entity: #800080;
+    --hl-operator: #000000;
+    --hl-whitespace: #bbbbbb;
+    --hl-generic: #999999;
+    --hl-generic-output: #888888;
+    --hl-generic-error: #aa0000;
+    --hl-diff-fg: #000000;
+    --hl-diff-add-bg: #ddffdd;
+    --hl-diff-del-bg: #ffdddd;
+    --hl-error-fg: #a61717;
+    --hl-error-bg: #e3d2d2;
+}
+
+@mixin dark-theme {
+    color-scheme: dark;
+
+    // Ink rather than black: a cool near-black keeps the monospace body text
+    // from haloing the way pure #000 does, and leaves room for the code block
+    // and navbar to sit a step above the page without a border doing the work.
+    --bg: #15171c;
+    --bg-elevated: #1a1d23;
+    --bg-inline-code: #1e222a;
+    --bg-input: #1a1d23;
+
+    --text: #c5cad3;
+    --text-heading: #e8ebf0;
+    --text-muted: #8b939f;
+    --text-faint: #6f7783;
+    --text-code: #ccd2db;
+
+    --border: #2f3540;
+    --border-subtle: #262b34;
+    --border-navbar: #262b34;
+
+    --link: #78b4f0;
+    --link-hover: #a8cef7;
+
+    --table-header-bg: #21252d;
+    --table-alt-bg: #1a1d23;
+
+    --button-bg: #21252d;
+    --button-bg-hover: #2a2f39;
+    --button-bg-active: #333945;
+
+    --selection-bg: rgba(120, 180, 240, 0.26);
+
+    // The logo is a red seal on an opaque white field, which would read as a
+    // lit tile on a dark navbar. Inverting lightness while restoring hue turns
+    // the white to ink and leaves the seal red -- a chop on dark paper.
+    --logo-filter: invert(1) hue-rotate(180deg);
+
+    // Syntax highlighting: GitHub dark dimmed, chosen over a full-contrast dark
+    // theme so code blocks stay quieter than the prose around them.
+    --hl-bg: #1b1f27;
+    --hl-comment: #768390;
+    --hl-comment-strong: #909dab;
+    --hl-keyword: #f47067;
+    --hl-type: #dcbdfb;
+    --hl-decorator: #6cb6ff;
+    --hl-number: #6cb6ff;
+    --hl-string: #96d0ff;
+    --hl-regex: #96d0ff;
+    --hl-symbol: #dcbdfb;
+    --hl-name: #f69d50;
+    --hl-builtin: #6cb6ff;
+    --hl-namespace: #adbac7;
+    --hl-function: #dcbdfb;
+    --hl-tag: #8ddb8c;
+    --hl-entity: #dcbdfb;
+    --hl-operator: #f47067;
+    --hl-whitespace: #444c56;
+    --hl-generic: #768390;
+    --hl-generic-output: #909dab;
+    --hl-generic-error: #ff938a;
+    --hl-diff-fg: #adbac7;
+    --hl-diff-add-bg: #1b4721;
+    --hl-diff-del-bg: #78191b;
+    --hl-error-fg: #ffa198;
+    --hl-error-bg: #3c1618;
+}
+
+:root {
+    @include light-theme;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        @include dark-theme;
+    }
+}
+
+:root[data-theme="dark"] {
+    @include dark-theme;
+}

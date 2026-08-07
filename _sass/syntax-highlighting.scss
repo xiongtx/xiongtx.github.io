@@ -1,213 +1,167 @@
+//
+// Rouge syntax highlighting.
+//
+// Token colors come from the theme tokens in _theme.scss, so the same rules
+// serve both light and dark. Weights and slants are shared between themes.
+//
+
+.highlight {
+  background-color: var(--hl-bg);
+  color: var(--text-code);
+}
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
-.highlight .cm {
-  color: #999988;
+
+// Comments
+.highlight .cm,
+.highlight .c1,
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: var(--hl-comment);
   font-style: italic;
 }
 .highlight .cp {
-  color: #999999;
+  color: var(--hl-comment-strong);
   font-weight: bold;
-}
-.highlight .c1 {
-  color: #999988;
-  font-style: italic;
 }
 .highlight .cs {
-  color: #999999;
+  color: var(--hl-comment-strong);
   font-weight: bold;
   font-style: italic;
 }
-.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
-  color: #999988;
-  font-style: italic;
-}
+
+// Errors
 .highlight .err {
-  color: #a61717;
-  background-color: #e3d2d2;
+  color: var(--hl-error-fg);
+  background-color: var(--hl-error-bg);
 }
+
+// Generic (diffs, shell sessions, headings)
 .highlight .gd {
-  color: #000000;
-  background-color: #ffdddd;
+  color: var(--hl-diff-fg);
+  background-color: var(--hl-diff-del-bg);
 }
 .highlight .ge {
-  color: #000000;
+  color: var(--hl-diff-fg);
   font-style: italic;
 }
 .highlight .gr {
-  color: #aa0000;
+  color: var(--hl-generic-error);
 }
 .highlight .gh {
-  color: #999999;
+  color: var(--hl-generic);
 }
 .highlight .gi {
-  color: #000000;
-  background-color: #ddffdd;
+  color: var(--hl-diff-fg);
+  background-color: var(--hl-diff-add-bg);
 }
 .highlight .go {
-  color: #888888;
+  color: var(--hl-generic-output);
 }
 .highlight .gp {
-  color: #555555;
+  color: var(--hl-namespace);
 }
 .highlight .gs {
   font-weight: bold;
 }
 .highlight .gu {
-  color: #aaaaaa;
+  color: var(--hl-generic);
 }
 .highlight .gt {
-  color: #aa0000;
+  color: var(--hl-generic-error);
 }
-.highlight .kc {
-  color: #000000;
-  font-weight: bold;
-}
-.highlight .kd {
-  color: #000000;
-  font-weight: bold;
-}
-.highlight .kn {
-  color: #000000;
-  font-weight: bold;
-}
-.highlight .kp {
-  color: #000000;
-  font-weight: bold;
-}
-.highlight .kr {
-  color: #000000;
+
+// Keywords
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .k, .highlight .kv,
+.highlight .sa {
+  color: var(--hl-keyword);
   font-weight: bold;
 }
 .highlight .kt {
-  color: #445588;
+  color: var(--hl-type);
   font-weight: bold;
 }
-.highlight .k, .highlight .kv {
-  color: #000000;
-  font-weight: bold;
-}
-.highlight .mf {
-  color: #009999;
-}
-.highlight .mh {
-  color: #009999;
-}
-.highlight .il {
-  color: #009999;
-}
-.highlight .mi {
-  color: #009999;
-}
-.highlight .mo {
-  color: #009999;
-}
+
+// Numbers
+.highlight .mf,
+.highlight .mh,
+.highlight .il,
+.highlight .mi,
+.highlight .mo,
 .highlight .m, .highlight .mb, .highlight .mx {
-  color: #009999;
+  color: var(--hl-number);
 }
-.highlight .sa {
-  color: #000000;
-  font-weight: bold;
-}
-.highlight .sb {
-  color: #d14;
-}
-.highlight .sc {
-  color: #d14;
-}
-.highlight .sd {
-  color: #d14;
-}
-.highlight .s2 {
-  color: #d14;
-}
-.highlight .se {
-  color: #d14;
-}
-.highlight .sh {
-  color: #d14;
-}
-.highlight .si {
-  color: #d14;
-}
-.highlight .sx {
-  color: #d14;
+
+// Strings
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .s2,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .s1,
+.highlight .s, .highlight .dl {
+  color: var(--hl-string);
 }
 .highlight .sr {
-  color: #009926;
-}
-.highlight .s1 {
-  color: #d14;
+  color: var(--hl-regex);
 }
 .highlight .ss {
-  color: #990073;
+  color: var(--hl-symbol);
 }
-.highlight .s, .highlight .dl {
-  color: #d14;
-}
-.highlight .na {
-  color: #008080;
+
+// Names
+.highlight .na,
+.highlight .no,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi,
+.highlight .nv, .highlight .vm {
+  color: var(--hl-name);
 }
 .highlight .bp {
-  color: #999999;
+  color: var(--hl-comment-strong);
 }
 .highlight .nb {
-  color: #0086B3;
+  color: var(--hl-builtin);
 }
 .highlight .nc {
-  color: #445588;
+  color: var(--hl-type);
   font-weight: bold;
 }
-.highlight .no {
-  color: #008080;
-}
 .highlight .nd {
-  color: #3c5d5d;
+  color: var(--hl-decorator);
   font-weight: bold;
 }
 .highlight .ni {
-  color: #800080;
+  color: var(--hl-entity);
 }
-.highlight .ne {
-  color: #990000;
-  font-weight: bold;
-}
-.highlight .nf, .highlight .fm {
-  color: #990000;
-  font-weight: bold;
-}
+.highlight .ne,
+.highlight .nf, .highlight .fm,
 .highlight .nl {
-  color: #990000;
+  color: var(--hl-function);
   font-weight: bold;
 }
 .highlight .nn {
-  color: #555555;
+  color: var(--hl-namespace);
 }
 .highlight .nt {
-  color: #000080;
+  color: var(--hl-tag);
 }
-.highlight .vc {
-  color: #008080;
-}
-.highlight .vg {
-  color: #008080;
-}
-.highlight .vi {
-  color: #008080;
-}
-.highlight .nv, .highlight .vm {
-  color: #008080;
-}
-.highlight .ow {
-  color: #000000;
-  font-weight: bold;
-}
+
+// Operators
+.highlight .ow,
 .highlight .o {
-  color: #000000;
+  color: var(--hl-operator);
   font-weight: bold;
 }
+
 .highlight .w {
-  color: #bbbbbb;
-}
-.highlight {
-  background-color: #f8f8f8;
+  color: var(--hl-whitespace);
 }

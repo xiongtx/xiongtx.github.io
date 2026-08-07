@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "theme";
 @import "normalize";
 @import "bootstrap";
 @import "fonts";
@@ -6,7 +7,6 @@
 
 /* Fonts */
 $main-font: "Roboto Mono", monospace;
-$main-color: #444;
 $font-size: 18px;
 
 $sans-font: "Roboto", sans-serif;
@@ -14,14 +14,6 @@ $sans-font-size: 0.93em;
 
 $mono-font: "Roboto Mono", monospace;
 $mono-font-size: 0.83em;
-
-/* Colors */
-$heading-color:#222;
-$secondary-color:#777;
-$border-color:#ccc;
-$quote-border-color:#eee;
-$table-header-color: #f2f2f2;
-$table-alt-row-color: #f9f9f9;
 
 @mixin font-feature-settings($features...) {
     // scss-lint:disable VendorPrefix
@@ -32,7 +24,8 @@ $table-alt-row-color: #f9f9f9;
 body {
     // Enable a couple of nice font features
     @include font-feature-settings("onum", "kern", "liga", "clig", "dlig", "calt");
-    color: $main-color;
+    background-color: var(--bg);
+    color: var(--text);
     font-family: $main-font;
     font-size: $font-size;
 }
@@ -50,7 +43,7 @@ body {
 }
 
 .page-footer {
-    border-top: 1px solid $border-color;
+    border-top: 1px solid var(--border);
     font-size: 0.86em;
     margin-top: 5rem;
     padding: .5rem;
@@ -71,17 +64,17 @@ table {
 }
 
 th, td {
-    border: 1px solid $border-color;
+    border: 1px solid var(--border);
     padding: 8px;
 }
 
 th {
-    background-color: $table-header-color;
+    background-color: var(--table-header-bg);
     font-weight: bold;
 }
 
 tr:nth-child(even) {
-    background-color: $table-alt-row-color;
+    background-color: var(--table-alt-bg);
 }
 
 /* @media screen and (min-width: 650px) { */
@@ -148,7 +141,7 @@ a code {
     }
 
     .post-date {
-        color: $secondary-color;
+        color: var(--text-muted);
         margin: 0;
         white-space: nowrap;
     }
@@ -162,7 +155,7 @@ a code {
     gap: 1rem;
 
     .post-list-date {
-        color: $secondary-color;
+        color: var(--text-muted);
         font-size: 0.75em;
         white-space: nowrap;
     }
@@ -176,3 +169,6 @@ a code {
         width: 100%;
     }
 }
+
+// Loaded last: overrides Bootstrap's hardcoded colors with theme tokens.
+@import "components";

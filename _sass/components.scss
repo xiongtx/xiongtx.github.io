@@ -1,0 +1,283 @@
+@charset "UTF-8";
+
+//
+// Site chrome and Bootstrap overrides.
+//
+// Bootstrap 3 hardcodes its palette, so every surface it colors is re-declared
+// here against the theme tokens. In light mode these resolve to the values
+// Bootstrap already used -- the rules are a no-op until the theme flips.
+//
+
+// ---------------------------------------------------------------- Typography
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-heading);
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
+.text-muted,
+blockquote footer, blockquote small {
+    color: var(--text-muted);
+}
+
+a {
+    color: var(--link);
+}
+
+a:hover,
+a:focus {
+    color: var(--link-hover);
+}
+
+hr {
+    border-top-color: var(--border-subtle);
+}
+
+blockquote {
+    border-left-color: var(--border-subtle);
+}
+
+abbr[title] {
+    border-bottom-color: var(--text-muted);
+}
+
+.page-header {
+    border-bottom-color: var(--border-subtle);
+}
+
+::selection {
+    background-color: var(--selection-bg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    body {
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+}
+
+// --------------------------------------------------------------------- Code
+
+code {
+    color: var(--text-code);
+    background-color: var(--bg-inline-code);
+}
+
+pre {
+    color: var(--text-code);
+    background-color: var(--hl-bg);
+    border-color: var(--border);
+}
+
+// ------------------------------------------------------------------- Navbar
+
+.navbar-default {
+    background-color: var(--bg-elevated);
+    border-color: var(--border-navbar);
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-text,
+.navbar-default .navbar-nav > li > a {
+    color: var(--text-muted);
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: var(--text-heading);
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: var(--text-heading);
+    background-color: var(--button-bg-hover);
+}
+
+.navbar-default .navbar-toggle {
+    border-color: var(--border);
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: var(--button-bg-hover);
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: var(--text-muted);
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: var(--border-navbar);
+}
+
+// The seal logo ships as red on an opaque white field. Left alone it would
+// glow on a dark navbar; the token inverts lightness and restores hue.
+.navbar-brand img {
+    filter: var(--logo-filter);
+}
+
+// -------------------------------------------------------------------- Forms
+
+.form-control {
+    color: var(--text);
+    background-color: var(--bg-input);
+    border-color: var(--border);
+}
+
+.form-control:focus {
+    border-color: var(--link);
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: var(--text-faint);
+}
+
+// --------------------------------------------------------- Layout and lists
+
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#search-results {
+    margin-top: 20px;
+}
+
+#search-results-list,
+.post-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#search-results-list li,
+.post-list-item {
+    margin-bottom: 0;
+    padding: 5px 0;
+}
+
+#search-results-list li h3,
+.post-list-item h3 {
+    margin-top: 0;
+}
+
+#search-results-list li p,
+.post-list-item p {
+    color: var(--text-muted);
+}
+
+#search-results-list li a,
+.post-list-item a {
+    text-decoration: none;
+}
+
+#search-clear {
+    color: var(--text-faint);
+}
+
+#search-clear:hover {
+    color: var(--text);
+}
+
+// ------------------------------------------------------- Code copy buttons
+
+.highlight pre {
+    border: none;
+}
+
+.highlight {
+    position: relative;
+}
+
+.highlight .copy-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 8px;
+    color: var(--text-muted);
+    background-color: var(--button-bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+}
+
+.highlight:hover .copy-button,
+.highlight .copy-button:focus-visible {
+    opacity: 1;
+}
+
+.highlight .copy-button:hover {
+    color: var(--text);
+    background-color: var(--button-bg-hover);
+}
+
+.highlight .copy-button:active {
+    background-color: var(--button-bg-active);
+}
+
+// ------------------------------------------------------------ Theme toggle
+
+.theme-toggle {
+    cursor: pointer;
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: -2px;
+}
+
+// Each state carries its own icon and label; CSS picks one so the correct
+// state is painted with the page rather than swapped in after scripts run.
+.theme-swap {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.theme-swap svg {
+    width: 1.05em;
+    height: 1.05em;
+    display: block;
+}
+
+.theme-swap-light {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        .theme-swap-dark { display: none; }
+        .theme-swap-light { display: inline-flex; }
+    }
+}
+
+:root[data-theme="dark"] {
+    .theme-swap-dark { display: none; }
+    .theme-swap-light { display: inline-flex; }
+}
+
+// The label is redundant next to the other nav items on wide screens, but the
+// collapsed menu is a list of words -- a lone icon there reads as a mistake.
+@media (min-width: 768px) {
+    .theme-toggle-label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+    }
+}

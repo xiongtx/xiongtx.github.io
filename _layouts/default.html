@@ -12,6 +12,27 @@
     </title>
 
 
+    <meta name="theme-color" id="theme-color-meta" content="#ffffff">
+
+    <script>
+      // Apply a saved theme before first paint so the page never flashes the
+      // wrong one. No saved theme means follow the OS, which CSS handles.
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          if (saved === 'dark' || saved === 'light') {
+            document.documentElement.setAttribute('data-theme', saved);
+          }
+          var dark = saved
+            ? saved === 'dark'
+            : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document
+            .getElementById('theme-color-meta')
+            .setAttribute('content', dark ? '#15171c' : '#ffffff');
+        } catch (e) {}
+      })();
+    </script>
+
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ site.baseurl }}/stylesheets/style.css" rel="stylesheet" />
 
@@ -24,87 +45,6 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-    <style>
-      body {
-      padding-top: 20px;
-      padding-bottom: 20px;
-      }
-
-      #search-results {
-        margin-top: 20px;
-      }
-
-      #search-results-list,
-      .post-list {
-        list-style-type: none;
-        padding: 0;
-      }
-
-      #search-results-list li,
-      .post-list-item {
-        margin-bottom: 0;
-        padding: 5px 0;
-      }
-
-      #search-results-list li h3,
-      .post-list-item h3 {
-        margin-top: 0;
-      }
-
-      #search-results-list li p,
-      .post-list-item p {
-        color: #666;
-      }
-
-      #search-results-list li a,
-      .post-list-item a {
-        text-decoration: none;
-      }
-
-      code {
-        color: #333;
-        background-color: #f5f5f5;
-      }
-
-      .highlight pre {
-        border: none;
-      }
-
-      .highlight {
-        position: relative;
-      }
-
-      .highlight .copy-button {
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        padding: 8px;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        cursor: pointer;
-        opacity: 0;
-        transition: opacity 0.2s ease-in-out;
-        z-index: 10;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        line-height: 0;
-      }
-
-      .highlight:hover .copy-button {
-        opacity: 1;
-      }
-
-      .highlight .copy-button:hover {
-        background-color: #f0f0f0;
-      }
-
-      .highlight .copy-button:active {
-        background-color: #e0e0e0;
-      }
-
-    </style>
   </head>
 
   <body>
@@ -134,11 +74,23 @@
               <li><a href="{{ site.baseurl }}/archive.html">Archives</a></li>
               <li><a href="{{ site.baseurl }}/projects.html">Projects</a></li>
               <li><a href="{{ site.baseurl }}/about.html">About</a></li>
+              <li>
+                <a href="#" id="theme-toggle" class="theme-toggle" role="button" title="Switch to dark theme" aria-label="Switch to dark theme">
+                  <span class="theme-swap theme-swap-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <span class="theme-toggle-label">Dark</span>
+                  </span>
+                  <span class="theme-swap theme-swap-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <span class="theme-toggle-label">Light</span>
+                  </span>
+                </a>
+              </li>
             </ul>
             <form class="navbar-form navbar-right" role="search" onsubmit="return false;">
               <div class="form-group" style="position: relative;">
                 <input type="text" id="search-input" class="form-control" placeholder="Search" style="padding-right: 30px;">
-                <button type="button" id="search-clear" style="display: none; position: absolute; right: 5px; top: 50%; transform: translateY(-50%); border: none; background: none; cursor: pointer; padding: 5px; font-size: 16px; color: #999;">&times;</button>
+                <button type="button" id="search-clear" style="display: none; position: absolute; right: 5px; top: 50%; transform: translateY(-50%); border: none; background: none; cursor: pointer; padding: 5px; font-size: 16px;">&times;</button>
               </div>
             </form>
           </div>
@@ -171,6 +123,63 @@
         </p>
       </footer>
     </div>
+
+    <script>
+      // Theme toggle. Absent an explicit choice the page follows the OS, so
+      // the first click resolves the current appearance and flips it.
+      (function () {
+        var root = document.documentElement;
+        var toggle = document.getElementById('theme-toggle');
+        var meta = document.getElementById('theme-color-meta');
+        var systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+        function currentTheme() {
+          var explicit = root.getAttribute('data-theme');
+          if (explicit === 'dark' || explicit === 'light') {
+            return explicit;
+          }
+          return systemDark.matches ? 'dark' : 'light';
+        }
+
+        function sync() {
+          var theme = currentTheme();
+          var next = theme === 'dark' ? 'light' : 'dark';
+          if (meta) {
+            meta.setAttribute('content', theme === 'dark' ? '#15171c' : '#ffffff');
+          }
+          if (toggle) {
+            toggle.setAttribute('title', 'Switch to ' + next + ' theme');
+            toggle.setAttribute('aria-label', 'Switch to ' + next + ' theme');
+          }
+        }
+
+        if (toggle) {
+          toggle.addEventListener('click', function (event) {
+            event.preventDefault();
+            var next = currentTheme() === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-theme', next);
+            try {
+              localStorage.setItem('theme', next);
+            } catch (e) {}
+            sync();
+          });
+        }
+
+        function onSystemChange() {
+          if (!root.hasAttribute('data-theme')) {
+            sync();
+          }
+        }
+
+        if (systemDark.addEventListener) {
+          systemDark.addEventListener('change', onSystemChange);
+        } else if (systemDark.addListener) {
+          systemDark.addListener(onSystemChange);
+        }
+
+        sync();
+      })();
+    </script>
 
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
