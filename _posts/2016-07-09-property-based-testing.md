@@ -1,0 +1,37 @@
+---
+layout: post
+title: Property-based testing
+excerpt: Describe what something is and let the computer generate test cases
+---
+
+I've recently been introduced to [property-based testing](http://blog.jessitron.com/2013/04/property-based-testing-what-is-it.html), which takes a different approach to testing programs than the better-known unit tests.
+
+With unit tests, the programmer must come up with individual test cases. Therefore, the test suite is only as good as the programmer's ability to find [edge cases](https://en.wikipedia.org/wiki/Edge_case). Most people are not good at finding edge cases. They are, by definition, "situations that occur only at an extreme operating parameter", which are situations that we usually do not think about or encounter.
+
+Furthermore, the number of test cases can grow exponentially with the number of operating parameters. If there are 10 existing test cases, and a new, independent parameter with 5 (representative) values is introduced, then number of necessary test cases skyrockets to 50.
+
+Property-based testing moves up a level of abstraction by allowing the programmer to define **properties** of a program and letting the test framework generate test cases. This makes defining tests more declarative, which is a good thing.
+
+For example, suppose that we want to test the functionality of a [heap](https://en.wikipedia.org/wiki/Heap_(data_structure)) implementation. Instead of having to construct an example heap for each test case, we can write a **generator** that creates a random heap. The example below is in Scala, taken from a [Coursera course](https://www.coursera.org/learn/progfun2/programming/DF4y7/quickcheck) on functional programming:
+
+```scala
+// Generate a heap of type H
+lazy val genHeap: Gen[H] = for {
+  n <- arbitrary[A]
+  h <- frequency((1, const(empty)), (9, genHeap))
+} yield insert(n, h)
+```
+
+We can then specify the properties, i.e. expected behaviors, of the heap. For example, if we insert an element into an empty heap, then delete the minimum, the resulting heap should be empty. This can be expressed as follows:
+
+```scala
+property("insertThenDelete") = forAll { (n: A) =>
+  isEmpty(deleteMin(insert(n, empty)))
+}
+```
+
+The test framework will use the generator to generate a (configurable) number of arbitrary heaps, then check that this property holds for all of them. The number of test cases, or **coverage**, is much greater than any unit test suite can provide.
+
+We can do other cool things, like **shrinking** a failing test case to include only relevant parameters with representative values. I have only begun to scratch the surface of this new testing technique, but it seems like a definite step forward from unit testing.
+
+Property-based testing was first introduced in the Haskell community with the [QuickCheck](https://hackage.haskell.org/package/QuickCheck) library, which has since been ported to many other languages, including [Scala](https://www.scalacheck.org/) and [Clojure](https://github.com/clojure/test.check). There are [some](https://www.youtube.com/watch?v=zi0rHwfiX1Q) [great](https://www.infoq.com/presentations/automated-testing-2015) [talks](https://www.infoq.com/presentations/testing-techniques-case-study) by John Hughes, author of QuickCheck, about property-based testing and how its use has uncovered very subtle bugs in various programs.

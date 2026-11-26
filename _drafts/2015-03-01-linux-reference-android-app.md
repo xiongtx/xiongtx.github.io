@@ -4,7 +4,7 @@ title: "Linux Reference Android App"
 date: 2015-03-01
 ---
 
-I've been looking for a way to learn about Linux in a "flashcard" fashion for some time, but never really found a good way until I came across the [Linux Reference Pro](https://play.google.com/store/apps/details?id%3Dcom.poash.linuxreferencepro) application on the Google Play store. There is a free version available at [Linux Reference Free](https://play.google.com/store/apps/details?id%3Dcom.poash.linuxreferencelite), but the pro version is only $0.99 and gets rid of the annoying ads that plague free Android apps, so it's a worthwhile purchase.
+I've been looking for a way to learn about Linux in a "flashcard" fashion for some time, but never really found a good way until I came across the [Linux Reference Pro](https://play.google.com/store/apps/details?id=com.poash.linuxreferencepro) application on the Google Play store. There is a free version available at [Linux Reference Free](https://play.google.com/store/apps/details?id=com.poash.linuxreferencelite), but the pro version is only $0.99 and gets rid of the annoying ads that plague free Android apps, so it's a worthwhile purchase.
 
 Unlike many other apps on the Play Store, this app does more than display a few "cheatsheet" images. It actually bothers to put its content into proper Android Widgets like `ListViews`. Considering the multitude of similar apps that try to take the easy way out, this deserves applause.
 

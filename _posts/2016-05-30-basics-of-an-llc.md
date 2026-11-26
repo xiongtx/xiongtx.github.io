@@ -1,0 +1,26 @@
+---
+layout: post
+title: Basics of an LLC
+excerpt: Some information on setting up an LLC
+---
+
+Taking John Sonmez's advice on treating your career like a personal business, I have been researching LLCs and some basic information on setting them up.
+
+## What are LLCs?
+
+LLCs, or _limited-liability corporations_, are basically legal entities that allow you to separate your business assets from your personal assets.
+
+- With a sole proprietorship or partnership, you are personally responsible for any damages from lawsuits, etc.
+- With an LLC, the most that can happen is that you'll lose your business assets--not your car, home, etc.
+
+As with all businesses, LLCs have to be registered within a state. An LLC registered in a state is a _domestic_ LLC in that state and a _foreign_ LLC to other states. Foreign LLCs have to jump through more hoops--file more documents, pay higher yearly fees to remain registered, etc.
+
+## How do I set one up?
+
+Simply go to the state's website--Wisconsin's is [here](https://www.wdfi.org/corporations/forms/corp183forms.htm)--and fill out some documents. The filing fee for Wisconsin as of May 30, 2016 is $130 online and $170 in paper.
+
+If you don't want to do all the paperwork yourself, legal services for this sort of thing is _very_ affordable. I got a lot of good information from a single phone call with [LegalZoom](https://www.legalzoom.com/). If I register for an LLC, I'll probably choose this route. The reason is simple--there's no point climbing a learning curve (in this case, filing legal paperwork for a business) _once_; your time is better spent on other things.
+
+## What about taxes?
+
+Taxation is a whole different topic from registration, and I won't try to cover it here. Talking to a tax professional would be a good idea.

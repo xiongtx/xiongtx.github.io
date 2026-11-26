@@ -1,0 +1,63 @@
+---
+layout: post
+title: Whiplash and the cult of sacrifice
+excerpt: Don't mistake sacrifice achieving your goals
+---
+
+One of my favorite films of recent years is [Whiplash](https://www.imdb.com/title/tt2582802/), the directorial debut of Damien Chazelle. It's about a jazz drummer student's obsession with becoming the next "great" like Charlie Parker and his relationship with an instructor willing to push him to the edge. The broader theme is the pursuit of glory and the sacrifices one must be willing to make to get there.
+
+Whiplash is a work that inspires strong feelings, particularly regarding the instructor, Fletcher. Fletcher's tyrannical methods, including belittling, screaming at, and even hitting students, are presented in an ambivalent light as brutal but effective. This "old school" approach is seen by some as [evil and abusive](https://www.youtube.com/watch?v=3ixabhe6o44&ab_channel=TheVileEye) and others as [the last vestiges of a lost culture of excellence](https://www.youtube.com/watch?v=yrAQBAv7PeM&t=3s&ab_channel=TheBarkingYears). The main character, Neyman, is also polarizing, as over the course of the film his obsession deepens, leading him further down Fletcher's path and costing him every other aspect of his life.
+
+The wildly disparate takes on the movie, at the core, represents two differences of opinion.
+
+The first is whether one buys into the idea that greatness only comes at great (personal) cost. To pursue his dream, Neyman learns to look down on his father, breaks up with his girlfriend, and buys wholesale into Fletcher's world view. He puts up with Fletcher's abuse and even suffers through a serious injury in order to not miss an exhibition. Fletcher is a man with no family, no friends, nothing besides music and the hope of shepherding the next Charlie Parker--and Neyman's determined to follow his path.
+
+The second is whether, if one accepts this premise at face value, such "greatness" is worth the cost. In perhaps the movie's most critical scene, Neyman [asserts to his family](https://www.youtube.com/watch?v=RSDmo-gJ8XY&ab_channel=JohnAugust) that he's rather "die drunk, broke, at 34 and have people at a dinner table talk about [him] than live to be rich and sober at 90 and nobody remember who [he is]." Clearly, Neyman's idea of greatness is not wealth, not even fame per se as defined by the tabloids, but a lasting impact on the world after him. He wants his existence to have a worth that transcends his own lifespan, and music is his means of achieving that.
+
+## The Cult of Sacrifice
+
+Early human civilizations around the world developed remarkably similar ideas around sacrifice. As humans learned to trade and barter, they applied the same process to the universe. If something important--say, a good harvest--is desired, then something valuable must be given. Temples sprang up where men could offer sacrifice to the gods--first food and incense, then animals, and finally human beings.
+
+In some cultures the Cult of Sacrifice was so strong that even the most mundane, like the rising of the sun, couldn't be taken for granted. Every night the [Aztecs extracted the hearts of men](https://en.wikipedia.org/wiki/Human_sacrifice_in_Aztec_culture) so that there would be light the following morning. And since the sun rose every day they performed human sacrifice, it came to be taken for granted that continued sacrifice guaranteed continued sunrises. Correlation became causation, and blood became the currency of the universe.
+
+As cultures developed, sacrifices tended to become less literal and more symbolic. In Christianity, God orders Abraham to sacrifice his son Isaac, then stays his hand and has a ram sacrificed instead. Later, God sacrifices his only son, Jesus, who dies for men's sins. As Jesus was the sacrifice, men had no place sacrificing other men, and so human--or even animal--sacrifice became taboo.
+
+There's something primal about the idea of sacrifice, however, and cultures often revert to it in times of distress. During the Black Death, processions of men called Flagellants [whipped themselves bloody](https://historyinnumbers.com/events/black-death/flagellants/), hoping that by punishing themselves they could convince God to stay his hand with plague. And during droughts in ancient China, the rural poor often resorted to human sacrifice--officially banned--to coax precipitation from the heavens.
+
+## The Mechanical Universe
+
+It is, perhaps, the greatest punchline in all of civilization that this most fundamental of ideas--that of a sentimental universe with which one could barter--turns out to be false. The universe, we've learned, is purely mechanical, adhering to mathematical rules that men can discover and understand, but not influence or control. The rising of the sun has nothing to do with ripping out men's hearts, self-flagellation does nothing against bacteria-induced plague, and cutting the throats of children does not manifest a drop of rain.
+
+This fact is comforting to some, yet terrifying to others. The former thinks that there's something miraculous about a universe which, of all the ways that it could be subjective and unfair, happens to be rule-based and predictable. The latter cannot accept that prayers, tears, and even blood cannot bend reality their way, that they have to accept things as they are or change the world by their own hand.
+
+## One Cult Among Many
+
+Whiplash, in case it isn't clear by now, is a member of the Cult of Sacrifice. It establishes the premise that a steep personal price must be extracted for a shot at greatness, and asks the audience whether it's worth the cost.
+
+Critics who think Fletcher is a monster and Neyman a brainwashed drone don't accept this premise, but they mostly have little to say besides spewing outrage. What's curious is that they can't come up with any counterexamples to this idea that one must give up what is most precious to them--family, friends, love--in order to pursue success. Therefore, I'll delve into a few here.
+
+In The Barking Years' video, he discusses the success of Indiana University basketball coach [Bobby Knight](https://en.wikipedia.org/wiki/Bob_Knight), a notoriously hard-driving man who, more than once, choked players out of anger. With three NCAA championships under his belt, however, Knight has a long list of supporters, many of whom claim his tough methods were necessary to win. Perhaps we cannot discount that Knight's brutal regime was one path to victory, but is it the only one? Is the Cult of Sacrifice the one true religion?
+
+The career of another legendary coach, UCLA's [John Wooden](https://en.wikipedia.org/wiki/John_Wooden), suggests not. During a 12-year span at UCLA, Wooden won 10 championships, including a mind-boggling seven straight, comfortably beating Knight's record (and that of any other coach, by a long mile). Yet, Wooden was [recounted by all of his former players](https://www.pennlive.com/sports/2018/05/abusive_college_coaches_penn_s.html) as a kind and decent figure, who "treated his students as players second and human beings first." To be sure, Wooden isn't without controversy--[Knight and others](https://www.cbssports.com/college-basketball/news/bob-knight-slams-legendary-coach-john-wooden-says-ucla-cheated-in-recruiting/) have accused him of unfair recruiting practices, which likely played a role in UCLA's unprecedented era of dominance. But between shady recruiting and choking players, it's clear who's the real villain.
+
+Another example, one which had a big impact on my own thinking long before I saw Whiplash, is that of mathematician Grigori Perelman. A few years ago Perelman had solved one of the most famous outstanding problems in mathematics, proving the [Poincaré Conjecture](https://en.wikipedia.org/wiki/Poincar%C3%A9_conjecture). After being offered the $1 million Millennium Prize for this accomplishment, Perelman declined, claiming that another mathematician, Richard Hamilton, had made contributions [as significant as his own](https://www.math.columbia.edu/~woit/wordpress/?p=3056).
+
+Perelman's humility is no surprise. The man is notorious for his idiosyncratic lifestyle, refusing academic appointments and scoffing at financial rewards while [living with his mother](https://www.notablebiographies.com/supp/Supplement-Mi-So/Perelman-Grigory.html#:~:text=He%20moved%20in%20with%20his,his%20colleagues%20for%20several%20years.). By all accounts he's a hermit with no friends, alienated even from the small global mathematics community, all for the pursuit of mathematical purity. One need not look very hard to see the parallels between Perelman and Neyman, their shared self-abnegation in service of some grand idea.
+
+But what about the other contributor, Richard Hamilton, who according to Perelman himself had as large a contribution to the proof? Hamilton, it turns out, is no recluse. He's taught at many universities, has a family, and is known to enjoy [sailing](https://math.cas.lehigh.edu/2019-everett-pitcher-lecture-series-richard-s-hamilton-columbia-university) and [horseback riding](https://www.hawaii.edu/news/2022/02/28/mathematician-richard-hamilton/). For the last phase of his career, he took an adjunct position at the University of Hawaii. Clearly, Hamilton knows how to enjoy life.
+
+Perhaps some will sniff that history will remember that Perelman solved the conjecture, not Hamilton. Yet the nature of scientific discovery is such that who actually crosses the finish line first is often a matter of luck. Perelman had the good fortune of being able to build upon Hamilton's work, and if he hadn't come up with a proof, someone else would have, likely in short order. This is not to deny Perelman's accomplishment, merely to point out that living like a monk was not the singular key to his success.
+
+## Self-Flagellation and the Universe
+
+What do the stories of Knight vs. Wooden and Perelman vs. Hamilton tell us? At the very least, they should demonstrate that there's more than one path to success, that brutality and force isn't the only path to greatness. They are, after all, means, not ends. Often, an encouraging word works better than a scolding to inspire someone to do their best work.
+
+We've covered the critics of Whiplash's theme, but what about its defenders, who are just as passionate? The raw, emotional agreement with its message by some viewers appears to come from a belief that society has become too soft, that modern culture no longer values the pursuit of excellence at all cost[^1], and that Western civilization itself is in distress.
+
+A few years before Whiplash, Yale professor Amy Chua [published an article](https://www.wsj.com/articles/SB10001424052748704111504576059713528698754) suggesting "American" parenting, with its lax discipline and emphasis on children's self-fulfillment, isn't pushing kids to reach their potential as much as "Chinese" parenting, where expectations are high and rules strictly enforced. Against the backdrop of a recent recession and the "rise of China" narrative, this article quickly electrified the readership, with some fiercely criticizing Chua for "abusing" her children and others vociferously defending her ways--ways which, they claim, America itself used to believe in, back when it was "great".
+
+If there's something to be learned from the audience reaction to Whiplash, it's that how one receives its message depends very much on one's preconception of the world--whether it's a stable universe of rules, or a chaotic one where blood sacrifices are necessary. Most who defend Whiplash's narrative of a path to greatness are not in any sense "great" themselves, nor have they any hope to be. In grasping at something they don't understand, they can only turn inward, to that most ancient of ideas. Like Aztec priests, medieval flagellants, and starving Chinese peasants, they hope to satiate a cruel universe with their own suffering in exchange for something valuable. They are likely to be disappointed.
+
+---
+
+[^1]: Whether "culture" ever did is taken as a given, but without offering any proof.

@@ -1,0 +1,21 @@
+---
+layout: post
+title: Observations on Ruby
+excerpt: Looking back at a language I've leapfrogged
+---
+
+I recently had to interview a candidate who used Ruby, so I prepared a question and implemented a solution in Ruby. Before I could tackle the problem itself, however, I had to first learn Ruby, a language I'd brushed up against many times in the past but never learned.
+
+The first hour, of course, was spent setting up Emacs. I largely copied the [Ruby configs of Prelude](https://github.com/bbatsov/prelude/blob/master/modules/prelude-ruby.el), a popular Emacs "starter kit".
+
+After that, I dove into the finer points of the Ruby language. Here are some observations:
+
+- Syntax is nice for a non-Lisp
+- Community is large, so there are a lot of answers to basic questions on platforms like StackOverflow
+- Documentation is good
+- Function style is encouraged: `map` instead of `for`, etc.
+- Missing the basics of "true" functional languages, e.g. immutable data structures
+
+Overall, Ruby is a nice language, but I can see why some in Ruby community have embraced Clojure. Clojure takes many of the nice things about Ruby--reasonable syntax, functional style, etc.--further than Ruby does or ever will. Bozhidar made the same point in a [presentation on Ruby 4.0](https://speakerdeck.com/bbatsov/ruby-4-dot-0-to-infinity-and-beyond-rubyconf-dot-by-2017), in which he argues that languages like Clojure and [Elixir](http://elixir-lang.org/) are the "next-gen" Ruby.
+
+Discussions with colleagues and friends have convinced me that functional programming is still a very niche thing. In the meantime, languages like Ruby can gently nudge people in the right direction.
